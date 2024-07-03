@@ -1,2 +1,2 @@
-# Algoritmia
-Web sobre nociones de algoritmia y ejemplos de algoritmos básicos y avanzados
+# Primero de bachillerato
+Web de la asignatura "Programación, Redes y Sistemas Informáticos I" del IES San Vicente
