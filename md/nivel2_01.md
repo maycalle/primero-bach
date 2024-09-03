@@ -1,7 +1,5 @@
 # Introducción a los sistemas informáticos
 
-Un **sistema informático** es un conjunto de componentes físicos y programas que trabajan juntos para procesar, almacenar y transmitir información. Esto incluye tanto el **hardware** (computadoras, servidores, discos duros y redes) como el **software** (sistemas operativos, aplicaciones y programas). 
-
 Este bloque está estructurado en tres secciones principales, que se desarrollan en el siguiente orden: 
 
 - **Componentes básicos de un sistema informático**:
