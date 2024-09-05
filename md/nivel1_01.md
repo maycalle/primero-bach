@@ -9,8 +9,8 @@ Python es un lenguaje de programación muy popular en la actualidad, conocido po
 ## 2. Características clave
 
 - **Sencillez y legibilidad**
-  * **Python es como el amigo que habla claro y directo**. Su código se parece mucho al lenguaje que usamos todos los días, así que no tienes que lidiar con símbolos raros o estructuras complicadas. Todo está diseñado para que leer y escribir código sea fácil y natural.
-  * **Usa espacios al inicio de cada línea para agrupar instrucciones**, lo que ayuda a mantener el código limpio y bien organizado. Cuando organizas tus notas en un cuaderno, usas espacios para mantener todo ordenado y claro, ¿verdad? Python hace lo mismo.
+    - **Python es como el amigo que habla claro y directo**. Su código se parece mucho al lenguaje que usamos todos los días, así que no tienes que lidiar con símbolos raros o estructuras complicadas. Todo está diseñado para que leer y escribir código sea fácil y natural.
+    - **Usa espacios al inicio de cada línea para agrupar instrucciones**, lo que ayuda a mantener el código limpio y bien organizado. Cuando organizas tus notas en un cuaderno, usas espacios para mantener todo ordenado y claro, ¿verdad? Python hace lo mismo.
 
 - **Multifuncionalidad**
   
