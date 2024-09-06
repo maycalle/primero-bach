@@ -1,4 +1,4 @@
-# Introducción a Python
+# Primeros pasos con Python
 
 Hoy vamos a sumergirnos en el emocionante mundo de Python, un lenguaje de programación fácil de aprender y muy poderoso. ¿Listos para empezar a programar? 
 
@@ -13,4 +13,28 @@ Python es un lenguaje de programación muy popular hoy en dia, conocido por su s
 * **Ciencia de Datos y Análisis:** Python es la herramienta preferida para analizar grandes volúmenes de datos. Con bibliotecas como *Pandas* y *Matplotlib*, puedes explorar datos, crear gráficos y descubrir patrones interesantes.
 
 * **Inteligencia Artificial y Machine Learning:** Python es el lenguaje de referencia en el campo de la inteligencia artificial y el aprendizaje automático. Herramientas como *TensorFlow* y *Scikit-Learn* permiten construir modelos que pueden aprender y hacer predicciones.
+
+## 2. ¿Cómo instalarlo?
+
+En casa 
+
+En las Aulas
+
+## 3. ¿Cómo probarlo?
+
+python --version
+
+## 4. ¿Cómo programar en Python?
+
+VSCode + plugin Python de Microsoft
+
+## 5. Nuestro primer programa
+
+## 6. Es tu turno
+
+Modificar
+
+
+
+
 
