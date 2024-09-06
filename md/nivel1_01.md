@@ -17,7 +17,7 @@ Python es un lenguaje de programación muy popular hoy en dia, conocido por su s
 ## 2. ¿Cómo instalarlo?
 
 En casa 
-* Descargar Python desde su (web oficial)[https://marketplace.visualstudio.com/items?itemName=ms-python.python]
+* Descargar Python desde su [web oficial](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 * Marcar la casilla para añadir el intérprete al PATH
 
 
@@ -45,13 +45,13 @@ Visual Studio Code
 * Muy personalizable con las extensiones
 
 Instalación en casa
-* Descargar versión desde (web oficial)[https://code.visualstudio.com/]
+* Descargar versión desde [web oficial](https://code.visualstudio.com/)
 * Instalar extensión Python de Microsoft
 
 Instalación en el aula
 
 
-Editores online para programas simples: (Programiz)[https://www.programiz.com/python-programming/online-compiler/]
+Editores online para programas simples: [Programiz](https://www.programiz.com/python-programming/online-compiler/)
 
 VSCode + plugin Python de Microsoft
 
