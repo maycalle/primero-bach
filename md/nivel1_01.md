@@ -21,7 +21,7 @@ En casa
 * Marcar la casilla para añadir el intérprete al PATH
 
 
-En las Aulas
+En clase
 * Accede a tu ordenador de clase con tu **identidad digital**
 * Accede a la **Botiga d'Aplicacions**. En el caso de no tener la *Botiga d'Aplicacions* en el escritorio, búscala en la barra de búsqueda del equipo. 
 * En la ventana principal de la *Botiga d'Aplicacions* se mostrarán todas las aplicaciones disponibles para ser instaladas. Recorre el listado hasta encontrar la aplicación que quieras instalar (en este caso, Python) o ve directamente al cuadro de búsqueda para introducir el nombre.
