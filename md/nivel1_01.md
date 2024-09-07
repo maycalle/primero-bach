@@ -106,19 +106,15 @@ Si estás en casa, instalar **VSCode** también es muy sencillo. Solo sigue esto
 
 **Configurando Visual Studio Code para Python**
 
-Ya tenemos Visual Studio Code instalado, ¡genial! Pero todavía nos falta un pequeño detalle: preparar el entorno para trabajar con Python. Esto es como configurar tu espacio de trabajo para que todo esté ordenado y funcione sin problemas.
+Aunque ya tengas Python y VSCode listos, ¡aún nos falta un detalle!. Para que programar sea más fácil y fluido, necesitamos instalar la **extensión de Python** en nuestro IDE. Con esta maravilla, podrás escribir, ejecutar y depurar tus programas sin sudar la gota gorda.
 
-1. **Instala la extensión de Python para VSCode**
-   
-Aunque ya tengas Python y VSCode listos, ¡no hemos terminado aún!. Para que programar sea más fácil y fluido, necesitamos instalar la **extensión de Python**. Con esta maravilla, podrás escribir, ejecutar y depurar tus programas sin sudar la gota gorda.
-
-Para instalarla, sigue este [enlace](https://marketplace.visualstudio.com/items?itemName=ms-python.python) ¡Es tan fácil como hacer clic!
+Para instalarla, sigue este [enlace](https://marketplace.visualstudio.com/items?itemName=ms-python.python) ¡Es tan fácil como hacer clic en **Install**!
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
 </div>
 
-Durante el proceso de instalación, VSCode te pedirá permiso para abrirse. Aparecerá una pestaña con toda la info sobre la extensión. Lo único que tienes que hacer es pulsar **Install**, y la instalación comenzará automáticamente. 
+Durante el proceso de instalación, VSCode te pedirá permiso para abrirse. Aparecerá una pestaña con toda la info sobre la extensión. Lo único que tienes que hacer es volver a pulsar **Install**, y la instalación comenzará automáticamente. 
 
 ¡Y listo! Ahora tu Visual Studio Code estará preparado para trabajar con Python como un campeón.
 
@@ -126,22 +122,25 @@ Durante el proceso de instalación, VSCode te pedirá permiso para abrirse. Apar
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python2.png" width="50%">
 </div>
 
-2. **Abre la carpeta donde quieras trabajar**
-
-Ahora que ya tenemos todo configurado, ¡es hora de empezar a crear! En VSCode, para comenzar a trabajar, necesitamos abrir la carpeta donde vas a guardar tus archivos Python.
-
-Sigue estos pasos:
-1. Ve al menú Archivo > Abrir carpeta.
-2. Elige la carpeta donde quieras guardar tu proyecto Python.
-3. ¡Listo! Ahora podrás ver esa carpeta en el panel izquierdo del explorador de archivos de VSCode. Desde allí, puedes crear los archivos y carpetas que necesites. ¡Es como tu cuaderno de notas digitales para Python!      
-
 **¿Y si quiero probar algo rápido sin instalar nada?**
 
 No siempre tienes que instalar un programa completo para probar un par de líneas de código. Si solo quieres hacer una prueba rápida, ¡existen opciones online! 
 
 Uno de los mejores editores en línea para Python es **[Programiz](https://www.programiz.com/python-programming/online-compiler/)**. Solo tienes que abrirlo, escribir tu código, y hacer clic en ejecutar. ¡Es como programar en cualquier parte, sin complicaciones!
 
+<div style="margin-bottom: 10px" align="center">
+    <img style="border: 1px solid black" src="/primero-bach/img/inicio_programiz.png" width="50%">
+</div>
+
 ## 5. Nuestro primer programa
+
+Ahora que ya tenemos todo configurado, ¡es hora de empezar a crear! En VSCode, para comenzar a trabajar, necesitamos abrir la carpeta donde vas a guardar tus archivos Python.
+
+Sigue estos pasos:
+1. Ve al menú **Archivo > Abrir carpeta**.
+2. Elige la carpeta donde quieras guardar tu proyecto Python.
+3. ¡Listo! Ahora podrás ver esa carpeta en el panel izquierdo del explorador de archivos de VSCode. Desde allí, puedes crear los archivos y carpetas que necesites. ¡Es como tu cuaderno de notas digitales para Python!      
+
 
 ## 6. Es tu turno
 
