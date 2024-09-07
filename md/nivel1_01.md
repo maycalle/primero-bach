@@ -33,19 +33,19 @@ Si queremos trabajar desde casa en un sistema Windows, seguiremos los siguientes
 * Descargar Python desde su [web oficial](https://www.python.org/downloads/)
 
 <div align="center">
-    <img src="/primero-bach/img/instalacion_python.png" width="40%">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python.png" width="40%">
 </div>
 
 * Selecciona la opción "Install now". MUY IMPORTANTE, marca la casilla "Add python.exe to PATH" para añadir el intérprete al PATH. 
 
 <div align="center">
-    <img src="/primero-bach/img/instalacion_python2.png" width="40%">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python2.png" width="40%">
 </div>
 
 * Si todo ha ido bien, verás una pantalla como la siguiente:
   
 <div align="center">
-    <img src="/primero-bach/img/instalacion_python3.png" width="40%">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python3.png" width="40%">
 </div>
 
 
@@ -53,7 +53,7 @@ Si queremos trabajar desde casa en un sistema Windows, seguiremos los siguientes
 
 Instalar extensión Python para VSCode(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 <div align="center">
-    <img src="/primero-bach/img/instalacion_extension_python.png" width="50%">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
 </div>
 
 ## 3. ¿Cómo probarlo?
@@ -64,7 +64,7 @@ Una vez instalado Python en el sistema, verifica la versión instalada abriendo 
 * Escribe "cmd" o "Símbolo del sistema" en la barra de búsqueda. Verás que aparece una aplicación llamada Símbolo del sistema o Command Prompt.
 
 <div align="center">
-    <img src="/primero-bach/img/terminal_comandos_windows.png" width="50%">
+    <img style="border: 1px solid black" src="/primero-bach/img/terminal_comandos_windows.png" width="50%">
 </div>
 
 * Haz clic en Abrir para abrir la terminal de comandos.
@@ -74,7 +74,7 @@ python -V
 python --version
 
 <div align="center">
-    <img src="/primero-bach/img/version_python_instalada.png" width="30%">
+    <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
 </div>
 
 
