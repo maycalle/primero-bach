@@ -24,13 +24,17 @@ En casa
 </div>
 
 
-* Marcar la casilla para añadir el intérprete al PATH
+* Selecciona la opción "Install now". MUY IMPORTANTE, marca la casilla "Add python.exe to PATH" para añadir el intérprete al PATH. 
 
 <div align="center">
     <img src="/primero-bach/img/instalacion_python2.png" width="40%">
 </div>
 
-
+* Si todo ha ido bien, verás una pantalla como la siguiente:
+  
+<div align="center">
+    <img src="/primero-bach/img/instalacion_python3.png" width="40%">
+</div>
 
 
 En clase
