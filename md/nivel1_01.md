@@ -129,7 +129,7 @@ Ya tenemos Visual Studio Code instalado, ¡genial! Pero todavía nos falta un pe
 
 No siempre tienes que instalar un programa completo para probar un par de líneas de código. Si solo quieres hacer una prueba rápida, ¡existen opciones online! 
 
-Uno de los mejores editores en línea para Python es **[Programiz]**(https://www.programiz.com/python-programming/online-compiler/). Solo tienes que abrirlo, escribir tu código, y hacer clic en ejecutar. ¡Es como programar en cualquier parte, sin complicaciones!
+Uno de los mejores editores en línea para Python es **[Programiz](https://www.programiz.com/python-programming/online-compiler/)**. Solo tienes que abrirlo, escribir tu código, y hacer clic en ejecutar. ¡Es como programar en cualquier parte, sin complicaciones!
 
 ## 5. Nuestro primer programa
 
