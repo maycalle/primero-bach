@@ -35,11 +35,13 @@ Ahora que ya sabemos para qué podemos usar Python, ¡vamos a instalarlo! Te ase
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python.png" width="40%">
 </div>
 
-2. Haz clic en "Install now", pero OJO: marca la casilla que dice "Add python.exe to PATH". Esto es muy importante, porque así podrás usar Python desde cualquier parte del sistema.
+
+2. Haz clic en **Install now**, pero **OJO**: marca la casilla que dice **Add python.exe to PATH**. Esto es muy importante, porque así podrás usar Python desde cualquier parte del sistema.
 
 <div align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python2.png" width="40%">
 </div>
+
 
 3. Cuando la instalación termine, verás una pantalla de confirmación (¡y sentirás que ya eres casi un hacker!)
   
@@ -47,22 +49,27 @@ Ahora que ya sabemos para qué podemos usar Python, ¡vamos a instalarlo! Te ase
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python3.png" width="40%">
 </div>
 
+
 ## 3. ¿Cómo probarlo?
 
 Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está funcionando como debe. Aquí te explico cómo verificar que Python esté bien instalado:
 
-1. Haz clic en el botón de Inicio (es el logo de Windows, en la esquina inferior izquierda de la pantalla).
-2. Escribe "cmd" o "Símbolo del sistema" en la barra de búsqueda. 
-3. Haz clic en "Abrir" para lanzar el terminal o pulsa "Enter" (la pantalla negra da algo de respeto, pero es súper útil)
+1. Haz clic en el botón de **Inicio** (es el logo de Windows, en la esquina inferior izquierda de la pantalla).
+2. Escribe **cmd** o **Símbolo del sistema** en la barra de búsqueda. 
+3. Haz clic en **Abrir** para lanzar el terminal o pulsa **Enter** (la pantalla negra da algo de respeto, pero es súper útil)
 
 <div align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/terminal_comandos_windows.png" width="50%">
 </div>
 
+
 4. Una vez dentro, escribe uno de estos comandos:
 
-```sh 
+```shell 
 python -V       
+```
+
+```shell
 python --version
 ```
 
@@ -70,7 +77,9 @@ python --version
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
 </div>
 
-Si todo ha ido bien, verás un número en pantalla que indica la versión de Python que acabas de instalar. ¡Felicidades, ya tienes Python listo para usar!
+
+Si todo ha ido bien, verás un número en pantalla que indica la versión de Python que acabas de instalar. 
+**¡Felicidades, ya tienes Python listo para usar!**
 
 ## 4. ¿Cómo programar en Python?
 
