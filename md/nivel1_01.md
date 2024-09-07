@@ -71,7 +71,7 @@ Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está func
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
 </div>
 
-<p sytle="font-size: 16pt; text-align: center;font-style: bold">¡Felicidades, ya tienes Python listo para usar!</p>
+**¡Felicidades, ya tienes Python listo para usar!**
 
 ## 4. ¿Cómo programar en Python?
 
@@ -108,19 +108,21 @@ Si estás en casa, instalar **VSCode** también es muy sencillo. Solo sigue esto
 
 Ya tenemos Visual Studio Code instalado, ¡genial! Pero todavía nos falta un pequeño detalle: preparar el entorno para trabajar con Python. Esto es como configurar tu espacio de trabajo para que todo esté ordenado y funcione sin problemas.
 
-1. En VSCode, debes abrir la carpeta donde quieras trabajar. Ve al menú **Archivo > Abrir carpeta**, elige la carpeta donde vas a crear tus archivos Python y ¡listo! Puedes empezar a trabajar desde el panel izquierdo del explorador, donde puedes crear todos los archivos y carpetas que necesites.
-      
-2. Instala la extensión de Python: aunque ya tienes Python y VSCode, instalar la extensión de Python hará que todo sea aún más fácil. Con esta extensión, podrás escribir, ejecutar y depurar programas de una manera más sencilla. Para instalarla, simplemente sigue este [enlace](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+1. **Instala la extensión de Python**: aunque ya tienes Python y VSCode, instalar la extensión de Python hará que todo sea aún más fácil. Con esta extensión, podrás escribir, ejecutar y depurar programas de una manera más sencilla. Para instalarla, simplemente sigue este [enlace](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
 </div>
 
+2. **En VSCode, debes abrir la carpeta donde quieras trabajar**. Ve al menú **Archivo > Abrir carpeta**, elige la carpeta donde vas a crear tus archivos Python y ¡listo! Puedes empezar a trabajar desde el panel izquierdo del explorador, donde puedes crear todos los archivos y carpetas que necesites.
+      
+
+
 **¿Y si quiero probar algo rápido sin instalar nada?**
 
 No siempre tienes que instalar un programa completo para probar un par de líneas de código. Si solo quieres hacer una prueba rápida, ¡existen opciones online! 
 
-Uno de los mejores editores en línea para Python es [Programiz](https://www.programiz.com/python-programming/online-compiler/). Solo tienes que abrirlo, escribir tu código, y hacer clic en ejecutar. ¡Es como programar en cualquier parte, sin complicaciones!
+Uno de los mejores editores en línea para Python es **[Programiz]**(https://www.programiz.com/python-programming/online-compiler/). Solo tienes que abrirlo, escribir tu código, y hacer clic en ejecutar. ¡Es como programar en cualquier parte, sin complicaciones!
 
 ## 5. Nuestro primer programa
 
