@@ -64,7 +64,7 @@ Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está func
       * python -V       
       * python --version
   
-    Si todo ha ido bien, verás un número en pantalla que indica la versión de Python que acabas de instalar. 
+5. Si todo ha ido bien, verás un número en pantalla que indica la versión de Python que acabas de instalar. 
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
