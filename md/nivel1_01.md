@@ -18,6 +18,11 @@ Python es un lenguaje de programación muy popular hoy en dia, conocido por su s
 
 En casa 
 * Descargar Python desde su [web oficial](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+<div align="center">
+    <img src="/primero-bach/img/instalacion_python.png" width="70%">
+</div>
+
 * Marcar la casilla para añadir el intérprete al PATH
 
 
