@@ -73,6 +73,10 @@ Una vez instalado Python en el sistema, verifica la versión instalada abriendo 
 python -V       
 python --version
 
+<div align="center">
+    <img src="/primero-bach/img/version_python_instalada.png" width="50%">
+</div>
+
 
 
 ## 4. ¿Cómo programar en Python?
