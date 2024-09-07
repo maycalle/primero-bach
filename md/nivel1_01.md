@@ -35,13 +35,11 @@ Ahora que ya sabemos para qué podemos usar Python, ¡vamos a instalarlo! Te ase
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python.png" width="40%">
 </div>
 
-
 2. Haz clic en **Install now**, pero **OJO**: marca la casilla que dice **Add python.exe to PATH**. Esto es muy importante, porque así podrás usar Python desde cualquier parte del sistema.
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python2.png" width="40%">
 </div>
-
 
 3. Cuando la instalación termine, verás una pantalla de confirmación (¡y sentirás que ya eres casi un hacker!)
   
@@ -62,11 +60,9 @@ Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está func
     <img style="border: 1px solid black" src="/primero-bach/img/terminal_comandos_windows.png" width="50%">
 </div>
 
-
-4. Una vez dentro, escribe uno de estos comandos:
-
-python -V       
-python --version
+4. Una vez dentro, escribe uno de estos comandos: 
+   * python -V       
+   * python --version
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
