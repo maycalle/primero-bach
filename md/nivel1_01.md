@@ -145,19 +145,19 @@ Una vez que tengas esa carpeta lista, **abre VSCode** y sigue estos pasos súper
 4. Crea un archivo Python llamado, por ejemplo, `holamundo.py`. 
 
 <div style="margin-bottom: 10px" align="center">
-    <img style="border: 1px solid black" src="/primero-bach/img/crear_fichero_vscode.png" width="60%">
+    <img style="border: 1px solid black" src="/primero-bach/img/crear_fichero_vscode.png" width="50%">
 </div>
 
 5. Escribe este código dentro del archivo recién creado: `print("Hola")` y guarda el archivo.
 
 <div style="margin-bottom: 10px" align="center">
-    <img style="border: 1px solid black" src="/primero-bach/img/primer_programa_python.png" width="60%">
+    <img style="border: 1px solid black" src="/primero-bach/img/primer_programa_python.png" width="50%">
 </div>
  
 6. Ahora, ¡vamos a ejecutarlo y ver el resultado en acción!. Haz clic derecho sobre tu código y elige **Run Python > Run Python File in Terminal**. ¡Y listo! ¡Tu pantalla te saludará con un gran "Hola"! 🎉
 
 <div style="margin-bottom: 10px" align="center">
-    <img style="border: 1px solid black" src="/primero-bach/img/ejecucion_hola_mundo.png" width="60%">
+    <img style="border: 1px solid black" src="/primero-bach/img/ejecucion_hola_mundo.png" width="50%">
 </div>
 
 ## 6. Es tu turno
