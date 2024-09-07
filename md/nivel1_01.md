@@ -75,52 +75,58 @@ Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está func
 
 ## 4. ¿Cómo programar en Python?
 
-Una vez tengamos Python instalado en nuestro sistema, debemos elegir un IDE apropiado para desarrollar nuestras aplicaciones.
+¡Ahora que ya tenemos Python instalado, es hora de empezar a escribir nuestras primeras líneas de código! Pero para hacerlo de forma cómoda y eficiente, necesitamos un **IDE (Entorno de Desarrollo Integrado)**, que es básicamente un programa que hace que programar sea mucho más fácil y organizado.
 
-Vamos a usar Visual Studio Code, por varias razones:
-* Gratuito
-* Open Source
-* Muy personalizable con las extensiones
+Para nuestro caso, vamos a usar **Visual Studio Code** (VSCode, para los amigos 😎), y lo elegimos porque es:
+
+* Gratuito (¡y a quién no le gusta lo gratis!).
+* Open Source (el código está abierto para que cualquiera lo vea y lo mejore).
+* Superpersonalizable (puedes añadirle un montón de extensiones para adaptarlo a lo que necesites).
 
 **Instalación en los ordenadores de clase**
+
 1. Enciende el ordenador y accede al sistema operativo Windows.
 2. Inicia sesión con tu **identidad digital**.
-3. Busca el icono de la **Botiga d'Aplicacions** en el escritorio. Si no lo encuentras, usa la barra de búsqueda.
-4. En la *Botiga d'Aplicacions*, busca Visual Studio Code. 
-5. Haz clic en **Instalar** y espera pacientemente.
-6. Cuando todo haya terminado, recibirás una notificación confirmando la instalación.
+3. Busca el icono de la **Botiga d'Aplicacions** en el escritorio. Si no lo encuentras, ¡tranquilidad! Usa la barra de búsqueda.
+4. Dentro de la *Botiga d'Aplicacions*, busca Visual Studio Code (no te confundas con otros, este es el bueno). 
+5. Haz clic en **Instalar** y relájate un momento mientras se descarga.
+6. Cuando todo haya terminado, recibirás una notificación de que ya está listo para usarse. ¡Vamoooos!
 
+**Instalación en casa (para sistemas Windows)** 
 
-**Instalación en casa (para sistemas Windows)**
+Si estás en casa, instalar **VSCode** también es muy sencillo. Solo sigue estos pasos:
 
-1. Descarga la última versión desde [web oficial](https://code.visualstudio.com/)
+1. Ve a la web oficial de [Visual Studio Code](https://code.visualstudio.com/) y descarga la última versión (¡que siempre es la mejor!).
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_vscode.png" width="50%">
 </div>
 
-2. Seguir los pasos del instalador.
+2. Abre el archivo descargado y sigue los pasos del instalador. En unos minutos tendrás todo listo para empezar a programar.
 
+**Configurando Visual Studio Code para Python**
 
-Para poder trabajar con Python desde Visual Studio Code, debemos abrir la carpeta donde vayamos a editar los archivos Python (menú Archivo > Abrir carpeta), y luego crear los archivos y carpetas que queramos desde el panel izquierdo del explorador. 
+Ya tenemos Visual Studio Code instalado, ¡genial! Pero todavía nos falta un pequeño detalle: preparar el entorno para trabajar con Python. Esto es como configurar tu espacio de trabajo para que todo esté ordenado y funcione sin problemas.
 
-También es recomendable instalar la extensión Python de Microsoft para poder ejecutar programas y gestionar algunas dependencias que veremos posteriormente.
-
-Instalar extensión Python para VSCode(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+1. En VSCode, debes abrir la carpeta donde quieras trabajar. Ve al menú **Archivo > Abrir carpeta**, elige la carpeta donde vas a crear tus archivos Python y ¡listo! Puedes empezar a trabajar desde el panel izquierdo del explorador, donde puedes crear todos los archivos y carpetas que necesites.
+      
+2. Instala la extensión de Python: aunque ya tienes Python y VSCode, instalar la extensión de Python hará que todo sea aún más fácil. Con esta extensión, podrás escribir, ejecutar y depurar programas de una manera más sencilla. Para instalarla, simplemente sigue este [enlace](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
 </div>
 
-Otra opción es utilizar para alguna prueba sencilla, un editor online, como [Programiz](https://www.programiz.com/python-programming/online-compiler/)
+**¿Y si quiero probar algo rápido sin instalar nada?**
 
+No siempre tienes que instalar un programa completo para probar un par de líneas de código. Si solo quieres hacer una prueba rápida, ¡existen opciones online! 
 
+Uno de los mejores editores en línea para Python es [Programiz](https://www.programiz.com/python-programming/online-compiler/). Solo tienes que abrirlo, escribir tu código, y hacer clic en ejecutar. ¡Es como programar en cualquier parte, sin complicaciones!
 
 ## 5. Nuestro primer programa
 
 ## 6. Es tu turno
 
-Modificar
+
 
 
 
