@@ -114,6 +114,13 @@ Ya tenemos Visual Studio Code instalado, ¡genial! Pero todavía nos falta un pe
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
 </div>
 
+
+<div style="margin-bottom: 10px" align="center">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python2.png" width="50%">
+</div>
+
+
+
 2. **En VSCode, debes abrir la carpeta donde quieras trabajar**. Ve al menú **Archivo > Abrir carpeta**, elige la carpeta donde vas a crear tus archivos Python y ¡listo! Puedes empezar a trabajar desde el panel izquierdo del explorador, donde puedes crear todos los archivos y carpetas que necesites.
       
 
