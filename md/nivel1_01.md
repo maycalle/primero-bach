@@ -74,7 +74,7 @@ python -V
 python --version
 
 <div align="center">
-    <img src="/primero-bach/img/version_python_instalada.png" width="50%">
+    <img src="/primero-bach/img/version_python_instalada.png" width="30%">
 </div>
 
 
