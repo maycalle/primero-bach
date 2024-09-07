@@ -20,7 +20,7 @@ En casa
 * Descargar Python desde su [web oficial](https://www.python.org/downloads/)
 
 <div align="center">
-    <img src="/primero-bach/img/instalacion_python.png" width="50%">
+    <img src="/primero-bach/img/instalacion_python.png" width="40%">
 </div>
 
 * Marcar la casilla para añadir el intérprete al PATH
