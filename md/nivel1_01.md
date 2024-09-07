@@ -23,7 +23,14 @@ En casa
     <img src="/primero-bach/img/instalacion_python.png" width="40%">
 </div>
 
+
 * Marcar la casilla para añadir el intérprete al PATH
+
+<div align="center">
+    <img src="/primero-bach/img/instalacion_python2.png" width="40%">
+</div>
+
+
 
 
 En clase
