@@ -99,19 +99,22 @@ Vamos a usar Visual Studio Code, por varias razones:
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_vscode.png" width="50%">
 </div>
 
+2. Seguir los pasos del instalador.
 
-* Instalar extensión Python de Microsoft
 
+Para poder trabajar con Python desde Visual Studio Code, debemos abrir la carpeta donde vayamos a editar los archivos Python (menú Archivo > Abrir carpeta), y luego crear los archivos y carpetas que queramos desde el panel izquierdo del explorador. 
 
-Editores online para programas simples: [Programiz](https://www.programiz.com/python-programming/online-compiler/)
-
-VSCode + plugin Python de Microsoft
+También es recomendable instalar la extensión Python de Microsoft para poder ejecutar programas y gestionar algunas dependencias que veremos posteriormente.
 
 Instalar extensión Python para VSCode(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
 </div>
+
+Otra opción es utilizar para alguna prueba sencilla, un editor online, como [Programiz](https://www.programiz.com/python-programming/online-compiler/)
+
+
 
 ## 5. Nuestro primer programa
 
