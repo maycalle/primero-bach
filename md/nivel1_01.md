@@ -71,7 +71,7 @@ Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está func
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
 </div>
 
-<p sytle="font-size: 16pt; align:center">**¡Felicidades, ya tienes Python listo para usar!**</p>
+<p sytle="font-size: 16pt; text-align: center;font-style: bold">¡Felicidades, ya tienes Python listo para usar!</p>
 
 ## 4. ¿Cómo programar en Python?
 
@@ -96,7 +96,7 @@ Vamos a usar Visual Studio Code, por varias razones:
 1. Descarga la última versión desde [web oficial](https://code.visualstudio.com/)
 
 <div style="margin-bottom: 10px" align="center">
-    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_vscode.png" width="35%">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_vscode.png" width="50%">
 </div>
 
 
