@@ -129,20 +129,39 @@ No siempre tienes que instalar un programa completo para probar un par de línea
 Uno de los mejores editores en línea para Python es **[Programiz](https://www.programiz.com/python-programming/online-compiler/)**. Solo tienes que abrirlo, escribir tu código, y hacer clic en ejecutar. ¡Es como programar en cualquier parte, sin complicaciones!
 
 <div style="margin-bottom: 10px" align="center">
-    <img style="border: 1px solid black" src="/primero-bach/img/inicio_programiz.png" width="50%">
+    <img style="border: 1px solid black" src="/primero-bach/img/inicio_programiz.png" width="60%">
 </div>
 
 ## 5. Nuestro primer programa
 
-Ahora que ya tenemos todo configurado, ¡es hora de empezar a crear! En VSCode, para comenzar a trabajar, necesitamos abrir la carpeta donde vas a guardar tus archivos Python.
+¡Ha llegado el momento de verdad! Ahora que ya tenemos todo configurado, es hora de ponernos manos a la obra y escribir nuestro primer programa en Python 🚀.
 
-Sigue estos pasos:
-1. Ve al menú **Archivo > Abrir carpeta**.
-2. Elige la carpeta donde quieras guardar tu proyecto Python.
-3. ¡Listo! Ahora podrás ver esa carpeta en el panel izquierdo del explorador de archivos de VSCode. Desde allí, puedes crear los archivos y carpetas que necesites. ¡Es como tu cuaderno de notas digitales para Python!      
+Lo primero que necesitas es **crear una carpeta** donde vas a guardar todos tus archivos Python. Este será tu espacio de trabajo, ¡el lugar donde ocurrirá toda la magia! ✨
 
+Una vez que tengas esa carpeta lista, **abre VSCode** y sigue estos pasos súper sencillos:
+1. Ve al menú **Archivo > Abrir carpeta** o, si tienes tu VSCode en inglés, **File > Open Folder**.
+2. Selecciona la carpeta que acabas de crear.
+3. ¡Y voilá! Ahora esa carpeta aparecerá en el panel izquierdo del explorador de archivos de VSCode. Desde allí, puedes empezar a crear todos los archivos y carpetas que necesites. ¡Es como tu cuaderno, pero lleno de código!
+4. Crea un archivo Python llamado, por ejemplo, `holamundo.py`. 
+
+<div style="margin-bottom: 10px" align="center">
+    <img style="border: 1px solid black" src="/primero-bach/img/crear_fichero_vscode.png" width="60%">
+</div>
+
+5. Escribe este código dentro del archivo recién creado: `print("Hola")` y guarda el archivo.
+
+<div style="margin-bottom: 10px" align="center">
+    <img style="border: 1px solid black" src="/primero-bach/img/primer_programa_python.png" width="60%">
+</div>
+ 
+6. Ahora, ¡vamos a ejecutarlo y ver el resultado en acción!. Haz clic derecho sobre tu código y elige **Run Python > Run Python File in Terminal**. ¡Y listo! ¡Tu pantalla te saludará con un gran "Hola"! 🎉
+
+<div style="margin-bottom: 10px" align="center">
+    <img style="border: 1px solid black" src="/primero-bach/img/ejecucion_hola_mundo.png" width="60%">
+</div>
 
 ## 6. Es tu turno
+
 
 
 
