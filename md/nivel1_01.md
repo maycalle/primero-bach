@@ -17,7 +17,7 @@ Python es un lenguaje de programación muy popular hoy en dia, conocido por su s
 ## 2. ¿Cómo instalarlo?
 
 En casa 
-* Descargar Python desde su [web oficial](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+* Descargar Python desde su [web oficial](https://www.python.org/downloads/)
 
 <div align="center">
     <img src="/primero-bach/img/instalacion_python.png" width="50%">
@@ -33,7 +33,12 @@ En clase
 * Pulsa sobre la opción **Instalar** y espera a que finalice la instalación.
     * Si todo ha ido bien, aparecerá la *notificación en la barra de Inicio* informando de que la instalación ha finalizado correctamente
     * Si el proceso falla, se mostrará la opción de **Reintentar**.
-    
+
+
+Instalar extensión Python para VSCode(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+<div align="center">
+    <img src="/primero-bach/img/instalacion_extension_python.png" width="50%">
+</div>
 
 ## 3. ¿Cómo probarlo?
 
