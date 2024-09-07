@@ -63,38 +63,55 @@ Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está func
 4. Una vez dentro, escribe uno de estos comandos: 
       * python -V       
       * python --version
-  
+
+
 5. Si todo ha ido bien, verás un número en pantalla que indica la versión de Python que acabas de instalar. 
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
 </div>
 
-**¡Felicidades, ya tienes Python listo para usar!**
+<p sytle="font-size: 16pt; align:center">**¡Felicidades, ya tienes Python listo para usar!**</p>
 
 ## 4. ¿Cómo programar en Python?
+
+Una vez tengamos Python instalado en nuestro sistema, debemos elegir un IDE apropiado para desarrollar nuestras aplicaciones.
+
+Vamos a usar Visual Studio Code, por varias razones:
+* Gratuito
+* Open Source
+* Muy personalizable con las extensiones
+
+**Instalación en los ordenadores de clase**
+1. Enciende el ordenador y accede al sistema operativo Windows.
+2. Inicia sesión con tu **identidad digital**.
+3. Busca el icono de la **Botiga d'Aplicacions** en el escritorio. Si no lo encuentras, usa la barra de búsqueda.
+4. En la *Botiga d'Aplicacions*, busca Visual Studio Code. 
+5. Haz clic en **Instalar** y espera pacientemente.
+6. Cuando todo haya terminado, recibirás una notificación confirmando la instalación.
+
+
+**Instalación en casa (para sistemas Windows)**
+
+1. Descarga la última versión desde [web oficial](https://code.visualstudio.com/)
+
+<div style="margin-bottom: 10px" align="center">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_vscode.png" width="35%">
+</div>
+
+
+* Instalar extensión Python de Microsoft
+
+
+Editores online para programas simples: [Programiz](https://www.programiz.com/python-programming/online-compiler/)
+
+VSCode + plugin Python de Microsoft
 
 Instalar extensión Python para VSCode(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
 </div>
-
-Visual Studio Code
-* Gratuito
-* Open Source
-* Muy personalizable con las extensiones
-
-Instalación en casa
-* Descargar versión desde [web oficial](https://code.visualstudio.com/)
-* Instalar extensión Python de Microsoft
-
-Instalación en el aula
-
-
-Editores online para programas simples: [Programiz](https://www.programiz.com/python-programming/online-compiler/)
-
-VSCode + plugin Python de Microsoft
 
 ## 5. Nuestro primer programa
 
