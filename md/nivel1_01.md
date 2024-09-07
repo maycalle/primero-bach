@@ -1,85 +1,83 @@
 # Primeros pasos con Python
 
-Hoy vamos a sumergirnos en el emocionante mundo de Python, un lenguaje de programación fácil de aprender y muy poderoso. ¿Listos para empezar a programar? 
+¡Bienvenidos al emocionante mundo de Python! Un lenguaje de programación que no solo es fácil de aprender, sino que también es increíblemente versátil. ¿Listos para empezar a programar? 
 
 ## 1. ¿Qué es Python?
 
-Python es un lenguaje de programación muy popular hoy en dia, conocido por su simplicidad y versatilidad. Es un **lenguaje de propósito general**, lo que significa que se puede usar para una amplia variedad de tareas:
+Imagina un idioma que puedes aprender rápidamente y te permite hacer casi de todo: eso es Python. Es uno de los lenguajes de programación más populares en la actualidad, y por una buena razón: es sencillo pero potente. ¡Vamos a ver algunas de las cosas que puedes hacer con él!
 
-* **Desarrollo de Videojuegos:** Usando bibliotecas como *Pygame*, puedes diseñar gráficos, crear personajes y programar la lógica del juego. ¡Imagina tu propio videojuego en acción!
+* **Desarrollo de Videojuegos:** ¿Te gustan los videojuegos? ¡Con Python puedes crear los tuyos! Bibliotecas como Pygame te permiten diseñar gráficos, mover personajes y programar toda la acción. 
 
-* **Creación de Aplicaciones Web:** Desde sitios web hasta plataformas en línea, Python se utiliza en el desarrollo de aplicaciones web. Frameworks como *Django* y *Flask* permiten construir aplicaciones web robustas y eficientes.
+* **Aplicaciones Web:** ¿Te gustaría construir tu propia página web o una app que todos usen? Frameworks como Django y Flask son herramientas basadas en Python que te ayudarán a crear aplicaciones web de manera rápida y eficiente. 
 
-* **Ciencia de Datos y Análisis:** Python es la herramienta preferida para analizar grandes volúmenes de datos. Con bibliotecas como *Pandas* y *Matplotlib*, puedes explorar datos, crear gráficos y descubrir patrones interesantes.
+* **Ciencia de Datos y Análisis:** ¿Sabías que Python es la herramienta favorita de los científicos de datos? Con Pandas y Matplotlib puedes analizar montañas de datos, hacer gráficos impresionantes y descubrir patrones inesperados.
 
-* **Inteligencia Artificial y Machine Learning:** Python es el lenguaje de referencia en el campo de la inteligencia artificial y el aprendizaje automático. Herramientas como *TensorFlow* y *Scikit-Learn* permiten construir modelos que pueden aprender y hacer predicciones.
+* **Inteligencia Artificial y Machine Learning:** Python también es el lenguaje estrella en el mundo de la inteligencia artificial. Usando bibliotecas como TensorFlow y Scikit-Learn, puedes construir modelos que aprenden y hacen predicciones. ¡Casi como darle vida a una máquina!
 
 ## 2. ¿Cómo instalarlo?
 
-Para instalar Python, los pasos dependerán del sistema operativo en el que estemos. 
+Ahora que ya sabemos para qué podemos usar Python, ¡vamos a instalarlo! Te aseguro que es más fácil que instalar la última actualización de un videojuego.
 
-Para instalarlo en los ordenadores de clase, sigue los siguientes pasos: 
+**Instalación en los ordenadores de clase**
 
-* Enciende el ordenador y carga el sistema operativo Windows
-* Accede con tu **identidad digital**.
-* Busca el icono de la **Botiga d'Aplicacions** en el escritorio, si no lo encuentras busca la aplicación desde la barra de búsqueda del equipo.
-* En la ventana principal de la *Botiga d'Aplicacions* se mostrarán todas las aplicaciones disponibles para ser instaladas. Recorre el listado hasta encontrar Python o ve directamente al cuadro de búsqueda e introduce "Python".
-* Pulsa sobre la opción **Instalar** y espera a que finalice la instalación.
-    * Si todo ha ido bien, aparecerá la *notificación en la barra de Inicio* informando de que la instalación ha finalizado correctamente
-    * Si el proceso falla, se mostrará la opción de **Reintentar**.
+1. Enciende el ordenador y accede al sistema operativo Windows.
+2. Inicia sesión con tu **identidad digital**.
+3. Busca el icono de la **Botiga d'Aplicacions** en el escritorio. Si no lo encuentras, usa la barra de búsqueda.
+4. En la *Botiga d'Aplicacions*, busca Python. ¡Lo encontrarás fácil!
+5. Haz clic en **Instalar** y espera pacientemente (puedes tomarte un respiro, pero no te vayas muy lejos).
+6. Cuando todo haya terminado, recibirás una notificación confirmando la instalación.
 
-Si queremos trabajar desde casa en un sistema Windows, seguiremos los siguientes pasos:
+**Instalación en casa (para sistemas Windows)**
 
-* Descargar Python desde su [web oficial](https://www.python.org/downloads/)
+1. Ve a la [página oficial de Python](https://www.python.org/downloads/) y descarga la última versión.
 
 <div align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python.png" width="40%">
 </div>
 
-* Selecciona la opción "Install now". MUY IMPORTANTE, marca la casilla "Add python.exe to PATH" para añadir el intérprete al PATH. 
+2. Haz clic en "Install now", pero OJO: marca la casilla que dice "Add python.exe to PATH". Esto es muy importante, porque así podrás usar Python desde cualquier parte del sistema.
 
 <div align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python2.png" width="40%">
 </div>
 
-* Si todo ha ido bien, verás una pantalla como la siguiente:
+3. Cuando la instalación termine, verás una pantalla de confirmación (¡y sentirás que ya eres casi un hacker!)
   
 <div align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/instalacion_python3.png" width="40%">
 </div>
 
-
-
-
-Instalar extensión Python para VSCode(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-<div align="center">
-    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
-</div>
-
 ## 3. ¿Cómo probarlo?
 
-Una vez instalado Python en el sistema, verifica la versión instalada abriendo la terminal de comandos.
+Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está funcionando como debe. Aquí te explico cómo verificar que Python esté bien instalado:
 
-* Haz clic en el botón de Inicio (es el icono de Windows en la esquina inferior izquierda de la pantalla).
-* Escribe "cmd" o "Símbolo del sistema" en la barra de búsqueda. Verás que aparece una aplicación llamada Símbolo del sistema o Command Prompt.
+1. Haz clic en el botón de Inicio (es el logo de Windows, en la esquina inferior izquierda de la pantalla).
+2. Escribe "cmd" o "Símbolo del sistema" en la barra de búsqueda. 
+3. Haz clic en "Abrir" para lanzar el terminal o pulsa "Enter" (la pantalla negra da algo de respeto, pero es súper útil)
 
 <div align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/terminal_comandos_windows.png" width="50%">
 </div>
 
-* Haz clic en Abrir para abrir la terminal de comandos.
-* Escribe alguno de los siguientes comandos y se mostrará la versión actualmente instalada de Python:
+4. Una vez dentro, escribe uno de estos comandos:
 
+```sh 
 python -V       
 python --version
+```
 
 <div align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
 </div>
 
-
+Si todo ha ido bien, verás un número en pantalla que indica la versión de Python que acabas de instalar. ¡Felicidades, ya tienes Python listo para usar!
 
 ## 4. ¿Cómo programar en Python?
+
+Instalar extensión Python para VSCode(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+<div align="center">
+    <img style="border: 1px solid black" src="/primero-bach/img/instalacion_extension_python.png" width="50%">
+</div>
 
 Visual Studio Code
 * Gratuito
