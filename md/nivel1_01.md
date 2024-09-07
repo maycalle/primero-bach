@@ -61,8 +61,8 @@ Ahora que ya tienes Python instalado, vamos a asegurarnos de que todo está func
 </div>
 
 4. Una vez dentro, escribe uno de estos comandos: 
-   * python -V       
-   * python --version
+      * python -V       
+      * python --version
 
 <div style="margin-bottom: 10px" align="center">
     <img style="border: 1px solid black" src="/primero-bach/img/version_python_instalada.png" width="35%">
