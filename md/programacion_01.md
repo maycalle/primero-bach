@@ -162,10 +162,9 @@ Una vez que tengas esa carpeta lista, **abre VSCode** y sigue estos pasos súper
 
 ## 6. Es tu turno
 
+¡Ahora es momento de que tú modifiques el código! Vamos a hacer algunos cambios y a experimentar con el comando `print()`
 
-
-
-
-
-
+1. **Añadir más texto:** modifica el código para que imprima más de una frase.
+2. **Imprimir números:** Python también permite imprimir números. Añade líneas de código que impriman algunos números y observa qué pasa
+3. **Crear tu propio mensaje personalizado:** ¡sé creativo! escribe un mensaje personalizado con lo que esperas aprender en este curso.
 
