@@ -95,6 +95,9 @@ Si quieres cambiar el orden de las operaciones, usa paréntesis.
 
 ```py 
 print(2 + 3 * 4)  # Resultado: 14 (primero se multiplica 3 * 4, luego se suma 2)
+
+
+```py 
 print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluación)
 ```
 
