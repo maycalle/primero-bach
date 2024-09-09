@@ -4,10 +4,11 @@ En esta sesión vamos a aprender más detalles sobre el comando `print()`, explo
 
 ## 1. Más sobre print()
 
-Ya sabemos cómo usar `print()` para mostrar mensajes en pantalla. Ahora vamos a ver cómo lidiar con situaciones más complejas, como incluir apóstrofes o comillas dentro del texto, mediante el uso de comillas simples (' ') y dobles (" ").
-¡Spoiler! Son casi iguales, pero hay detalles importantes.
+Ya sabes cómo usar `print()` para mostrar mensajes en pantalla, pero ahora vamos a aprender cómo manejar situaciones un poco más complejas, como incluir apóstrofes o comillas dentro del texto. 
 
-* **Comillas simples vs. comillas dobles:** puedes usar tanto comillas simples (' ') como comillas dobles (" ") para mostrar texto. Pero, ¿qué pasa si quieres usar un apóstrofe dentro del texto? Aquí es donde la cosa se pone interesante. Mira:
+Python te permite usar tanto comillas simples (' ') como comillas dobles (" "), y aunque funcionan de forma similar, hay algunos detalles importantes que debes conocer.
+
+* **Comillas simples vs. comillas dobles:** Puedes usar cualquiera de las dos para mostrar texto, pero si dentro de tu texto tienes un apóstrofe, ¡atención! Python podría confundirse si usas comillas simples:
 
 ```py
 print('I'm learning Python')    # ¡Error! Python se confunde con el apóstrofe
@@ -19,21 +20,21 @@ print("I'm learning Python")    # OK, las comillas dobles nos salvan
 
 Como ves, cuando hay un apóstrofe, es mejor usar comillas dobles para que Python no se líe.
 
-* **Comillas dobles dentro del texto:** ¿Y si quieres poner comillas dobles dentro del texto? Pues entonces usa comillas simples:
+* **Comillas dobles dentro del texto:** si tu texto incluye comillas dobles, la solución es usar comillas simples alrededor del texto:
 
 ```py
 print('May dice que "Python es genial"')    # OK
 ```
 
-Fácil, ¿no? ¡Un truco sencillo para evitar errores tontos!
-
-* **Caracteres de escape:** si necesitas usar el mismo tipo de comillas dentro y fuera de la cadena, no hay problema. Puedes usar un carácter de escape (\) para decirle a Python que ignore la comilla que va dentro del texto:
+* **Caracteres de escape:** pero, ¿qué pasa si necesitas usar el mismo tipo de comillas dentro y fuera del texto? No te preocupes, puedes usar el carácter de escape (\) para decirle a Python que ignore la comilla y la trate como parte del texto:
 
 ```py
 print("May dice que \"Python es genial\"")  # Comillas dentro del texto, sin dramas
 ```
 
-En conclusión, usa comillas dobles cuando haya apóstrofes, y comillas simples cuando haya comillas dobles en el texto. ¡Así te ahorrarás dolores de cabeza!
+De esta forma, puedes usar el tipo de comillas que quieras sin generar errores.
+
+En conclusión, usa comillas dobles si tu texto contiene apóstrofes, y comillas simples si contiene comillas dobles. Y si necesitas el mismo tipo de comillas dentro y fuera, el carácter de escape te sacará de apuros. ¡Así te ahorrarás dolores de cabeza!
 
 ## 2. Arte ASCII
 
