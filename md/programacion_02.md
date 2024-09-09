@@ -1,7 +1,6 @@
-# 
+# Imprime, calcula y pregunta
 
-Más uso del print comillas
-### 5.1 Sobre el uso de comillas
+## 1. Más sobre print()
 
 En Python, puedes usar comillas simples (' ') o comillas dobles (" ") para escribir texto, y funcionan igual. Entonces, ¿por qué tener las dos opciones? La respuesta es simple: te ahorran problemas cuando tienes apóstrofes o comillas dentro del texto.
 
@@ -11,19 +10,26 @@ En Python, puedes usar comillas simples (' ') o comillas dobles (" ") para escri
 print('I'm learning Python')    # Error
 print("I'm learning Python")    # OK
 ```
-* Si necesitas usar comillas dentro de la cadena, como en El profesor dijo: "Python es genial", usa comillas simples alrededor de todo:
 
-Usa comillas dobles cuando haya apóstrofes, y comillas simples cuando haya comillas dobles en el texto. ¡Así te ahorras errores
-
+* Si necesitas usar comillas dentro de la cadena, como en *May dice que "Python es genial"*, usa comillas simples alrededor de todo:
 
 
-ARTE ASCII
-El arte ASCII es una forma de crear imágenes utilizando únicamente caracteres del conjunto ASCII, que es un estándar de codificación de caracteres. A través de la disposición inteligente de los caracteres, se forman patrones y figuras que crean una ilusión visual de imágenes. Añade un poco de arte a tu programa, ¡la imagen de un perro!
+En conslusión, usa comillas dobles cuando haya apóstrofes, y comillas simples cuando haya comillas dobles en el texto. ¡Así te ahorras dolores de cabeza!
+
+## 2. Arte ASCII
+
+El arte ASCII es una forma de crear imágenes utilizando únicamente caracteres del conjunto ASCII, que es un estándar de codificación de caracteres. 
+
+A través de la disposición inteligente de los caracteres, se forman patrones y figuras que crean una ilusión visual de imágenes. 
+
+Vamos a crear... ¡la imagen de un perro!
 
 ```py
 print("o----'")
 print(" ||||")
 ```
+
+Observa que si en este caso usamos comillas simples en la primera instrucción, nos dará un error. ¿Por qué?
 
 Si lo prefieres, puedes usar tres comillas `'''`en lugar de una, permitiéndote imprimir múltiples líneas de texto con una sentencia `print()`:
 
@@ -41,4 +47,14 @@ print('''
  > ^ <
 ''')
 ```
+
+## 3. Operaciones matemáticas
+
 Operaciones matemáticas, precedencia de operadores
+
+
+## 4. Interacción con el usuario con input()
+
+
+## Es tu turno 
+
