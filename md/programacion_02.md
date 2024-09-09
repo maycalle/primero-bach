@@ -135,7 +135,7 @@ Hasta ahora, tú eras quien le daba las órdenes a Python, pero ¿qué tal si ha
 
 * **Uso básico de input():**
   
-```py 
+```py
 nombre = input("¿Cómo te llamas? ")
 print("Hola, " + nombre + "!")
 ```
