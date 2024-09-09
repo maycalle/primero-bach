@@ -147,7 +147,6 @@ print("Hola, " + nombre + "!")
 Ahora que ya sabes más sobre `print()`, arte ASCII, operaciones matemáticas e interacción con el usuario, ¡es tu momento de crear! Aquí tienes algunas ideas para que experimentes:
 
 * **Crea tu propio arte ASCII:** diseña una figura usando caracteres ASCII. ¿Podrías hacer un coche, un cohete o un animal? ¡Imaginación al poder!
-* 
 * **Un programa sobre ti:** haz que el programa pida el nombre, tu dirección y tu teléfono, y saque todos los datos por pantalla.
 
 
