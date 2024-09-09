@@ -93,11 +93,11 @@ La regla general es seguir este orden:
 
 Si quieres cambiar el orden de las operaciones, usa paréntesis.
 
-```py 
+```py
 print(2 + 3 * 4)  # Resultado: 14 (primero se multiplica 3 * 4, luego se suma 2)
 ```
 
-```py 
+```py
 print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluación)
 ```
 
@@ -131,7 +131,7 @@ print("El año que viene tendré " + str(edad) + " años.")
 
 Hasta ahora, tú eras quien le daba las órdenes a Python, pero ¿qué tal si hacemos que el programa pregunte algo al usuario? Aquí entra en juego `input()`. Este comando permite que el programa espere a que el usuario escriba algo y luego lo usemos en el código.
 
-* Uso básico de input():
+* **Uso básico de input():**
   
 ```py 
 nombre = input("¿Cómo te llamas? ")
