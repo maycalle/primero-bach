@@ -67,13 +67,13 @@ print('''
 
 Python no solo sirve para hacer arte ASCII o mostrar mensajes; también es una calculadora superpoderosa. Vamos a repasar algunas operaciones matemáticas básicas:
 
-* Operaciones básicas:
-    * Suma: +
-    * Resta: -
-    * Multiplicación: *
-    * División: /
-    * Exponentes: ** (por ejemplo, 2 ** 3 es 2 al cubo, o 8)
-    * Módulo (resto de una división): % (ideal para saber si un número es par o impar)
+* **Operaciones básicas:**
+    * **Suma:** +
+    * **Resta:** -
+    * **Multiplicación:** *
+    * **División:** /
+    * **Exponentes:** ** (por ejemplo, 2 ** 3 es 2 al cubo, o 8)
+    * **Módulo (resto de una división):** % (ideal para saber si un número es par o impar)
 
 Prueba esto:
 
@@ -103,19 +103,7 @@ print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluac
 
 ¡Experimenta con tus propios cálculos y verás cómo cambia el resultado dependiendo del orden!
 
-## 4. Tipo de datos en Python
-
-Hay cuatro tipos básicos que vamos a usar mucho:
-
-* **Cadenas de texto (strings):** son secuencias de caracteres, como palabras o frases. Se definen usando comillas simples (' ') o dobles (" "), como hemos visto.
-
-* **Números enteros (int):** son números sin decimales, como el 3 o el 2024.
-
-* **Números decimales (float):** son números con decimales. Se usan cuando necesitas más precisión, como en notas o cálculos científicos. Por ejemplo, 8.5 
-
-* **Valores booleanos (bool):** son valores que solo pueden ser True o False. Son muy útiles cuando se trata de decisiones y condiciones.
-
-## 5. Uso de variables
+## 4. Uso de variables
 
 En Python, una variable es como una "caja" donde puedes guardar un valor, y luego usar ese valor cuando lo necesites.
 
@@ -126,17 +114,19 @@ nombre = "May"
 edad = 45
 ```
 
-* **Usar de una variable:** después de asignar un valor a una variable, puedes usarla en cualquier parte de tu programa. Por ejemplo:
+* **Usar de una variable:** después de asignar un valor a una variable, puedes usarla en cualquier parte de tu programa. Prueba el siguiente código y observa el resultado obtenido:
 
 ```py
-print("Hola " + nombre + ", tienes " + str(edad) + " años.")
+nombre = "May"
+print("Hola, " + nombre) 
 ```
 
 * **Cambiar el valor de una variable:** las variables pueden cambiar de valor en cualquier momento. Puedes hacer algo como esto:
 
 ```py
-edad = edad + 1     # Actualiza la variable edad sumándole 1.
-print("El año que viene tendré " + str(edad) + " años.")
+edad = 45
+edad = edad + 1       # Actualiza la variable edad sumándole 1.    
+print("El año que viene tendré " + edad + " años.")
 ```
 
 ## 6. Interacción con el usuario: input()
