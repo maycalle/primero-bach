@@ -103,7 +103,19 @@ print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluac
 
 ¡Experimenta con tus propios cálculos y verás cómo cambia el resultado dependiendo del orden!
 
-## 4. Uso de variables
+## 4. Tipo de datos en Python
+
+Hay cuatro tipos básicos que vamos a usar mucho:
+
+* **Cadenas de texto (strings):** son secuencias de caracteres, como palabras o frases. Se definen usando comillas simples (' ') o dobles (" "), como hemos visto.
+
+* **Números enteros (int):** son números sin decimales, como el 3 o el 2024.
+
+* **Números decimales (float):** son números con decimales. Se usan cuando necesitas más precisión, como en notas o cálculos científicos. Por ejemplo, 8.5 
+
+* **Valores booleanos (bool):** son valores que solo pueden ser True o False. Son muy útiles cuando se trata de decisiones y condiciones.
+
+## 5. Uso de variables
 
 En Python, una variable es como una "caja" donde puedes guardar un valor, y luego usar ese valor cuando lo necesites.
 
@@ -127,7 +139,7 @@ edad = edad + 1     # Actualiza la variable edad sumándole 1.
 print("El año que viene tendré " + str(edad) + " años.")
 ```
 
-## 5. Interacción con el usuario: input()
+## 6. Interacción con el usuario: input()
 
 Hasta ahora, tú eras quien le daba las órdenes a Python, pero ¿qué tal si hacemos que el programa pregunte algo al usuario? Aquí entra en juego `input()`. Este comando permite que el programa espere a que el usuario escriba algo y luego lo usemos en el código.
 
@@ -140,7 +152,7 @@ print("Hola, " + nombre + "!")
 
 ¡Ahora tu programa puede saludar a cualquiera que lo use! 😄
 
-## 6. Es tu turno 
+## 7. Es tu turno 
 
 Ahora que ya sabes más sobre `print()`, arte ASCII, operaciones matemáticas e interacción con el usuario, ¡es tu momento de crear! Aquí tienes algunas ideas para que experimentes:
 
