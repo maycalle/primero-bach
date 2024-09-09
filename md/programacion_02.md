@@ -147,6 +147,8 @@ print("Hola, " + nombre + "!")
 Ahora que ya sabes más sobre `print()`, arte ASCII, operaciones matemáticas e interacción con el usuario, ¡es tu momento de crear! Aquí tienes algunas ideas para que experimentes:
 
 * **Crea tu propio arte ASCII:** diseña una figura usando caracteres ASCII. ¿Podrías hacer un coche, un cohete o un animal? ¡Imaginación al poder!
-* **Calculadora personalizada:** crea un programa que pida al usuario dos números y realice varias operaciones matemáticas con ellos (suma, resta, multiplicación y división).
-* **Un programa sobre ti:** haz que el programa pida el nombre, la edad y calcule cuántos años tendrás en 5 años. ¡Que Python haga las cuentas por ti!
+* 
+* **Un programa sobre ti:** haz que el programa pida el nombre, tu dirección y tu teléfono, y saque todos los datos por pantalla.
+
+
 
