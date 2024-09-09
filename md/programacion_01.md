@@ -90,7 +90,7 @@ Para nuestro caso, vamos a usar **Visual Studio Code** (VSCode, para los amigos 
 3. Busca el icono de la **Botiga d'Aplicacions** en el escritorio. Si no lo encuentras, ¡tranquilidad! Usa la barra de búsqueda.
 4. Dentro de la *Botiga d'Aplicacions*, busca Visual Studio Code (no te confundas con otros, este es el bueno). 
 5. Haz clic en **Instalar** y relájate un momento mientras se descarga.
-6. Cuando todo haya terminado, recibirás una notificación de que ya está listo para usarse. ¡Vamoooos!
+6. Cuando todo haya terminado, recibirás una notificación de que ya está listo para usarse. 
 
 **Instalación en casa (para sistemas Windows)** 
 
@@ -106,7 +106,7 @@ Si estás en casa, instalar **VSCode** también es muy sencillo. Solo sigue esto
 
 **Configurando Visual Studio Code para Python**
 
-Aunque ya tengas Python y VSCode listos, ¡aún nos falta un detalle!. Para que programar sea más fácil y fluido, necesitamos instalar la **extensión de Python** en nuestro IDE. Con esta maravilla, podrás escribir, ejecutar y depurar tus programas sin sudar la gota gorda.
+Aunque ya tengas Python y VSCode listos, ¡aún nos falta un detalle!. Para que programar sea más sencillo y cómodo, necesitamos instalar la **extensión de Python** en nuestro IDE. Con esta maravilla, podrás escribir, ejecutar y depurar tus programas sin sudar la gota gorda.
 
 Para instalarla, sigue este [enlace](https://marketplace.visualstudio.com/items?itemName=ms-python.python) ¡Es tan fácil como hacer clic en **Install**!
 
@@ -134,7 +134,7 @@ Uno de los mejores editores en línea para Python es **[Programiz](https://www.p
 
 ## 5. Nuestro primer programa
 
-¡Ha llegado el momento de verdad! Ahora que ya tenemos todo configurado, es hora de ponernos manos a la obra y escribir nuestro primer programa en Python 🚀.
+¡Ha llegado el momento de la verdad! Ahora que ya tenemos todo configurado, es hora de ponernos manos a la obra y escribir nuestro primer programa en Python 🚀.
 
 Lo primero que necesitas es **crear una carpeta** donde vas a guardar todos tus archivos Python. Este será tu espacio de trabajo, ¡el lugar donde ocurrirá toda la magia! ✨
 
