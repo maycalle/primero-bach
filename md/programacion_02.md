@@ -26,7 +26,7 @@ Como ves, cuando hay un apóstrofe, es mejor usar comillas dobles para que Pytho
 print('May dice que "Python es genial"')    # OK
 ```
 
-* **Caracteres de escape:** pero, ¿qué pasa si necesitas usar el mismo tipo de comillas dentro y fuera del texto? No te preocupes, puedes usar el carácter de escape (\) para decirle a Python que ignore la comilla y la trate como parte del texto:
+* **Caracteres de escape:** pero, ¿qué pasa si necesitas usar el mismo tipo de comillas dentro y fuera del texto? No te preocupes, puedes usar el carácter de escape (`\`) para decirle a Python que ignore la comilla y la trate como parte del texto:
 
 ```py
 print("May dice que \"Python es genial\"")  # Comillas dentro del texto, sin dramas
