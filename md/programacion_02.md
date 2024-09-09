@@ -95,7 +95,7 @@ Si quieres cambiar el orden de las operaciones, usa paréntesis.
 
 ```py 
 print(2 + 3 * 4)  # Resultado: 14 (primero se multiplica 3 * 4, luego se suma 2)
-
+```
 
 ```py 
 print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluación)
@@ -103,9 +103,48 @@ print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluac
 
 ¡Experimenta con tus propios cálculos y verás cómo cambia el resultado dependiendo del orden!
 
-## 4. Interacción con el usuario con input()
+## 4. Uso de variables
 
+En Python, una variable es como una "caja" donde puedes guardar un valor, y luego usar ese valor cuando lo necesites.
 
+* **Declarar una variable:** para crear una variable, simplemente le das un nombre y le asignas un valor con el signo igual (=). Por ejemplo:
 
-## Es tu turno 
+```py
+nombre = "May"
+edad = 45
+```
+
+* **Usar de una variable:** después de asignar un valor a una variable, puedes usarla en cualquier parte de tu programa. Por ejemplo:
+
+```py
+print("Hola " + nombre + ", tienes " + str(edad) + " años.")
+```
+
+* **Cambiar el valor de una variable:** las variables pueden cambiar de valor en cualquier momento. Puedes hacer algo como esto:
+
+```py
+edad = edad + 1     # Actualiza la variable edad sumándole 1.
+print("El año que viene tendré " + str(edad) + " años.")
+```
+
+## 5. Interacción con el usuario: input()
+
+Hasta ahora, tú eras quien le daba las órdenes a Python, pero ¿qué tal si hacemos que el programa pregunte algo al usuario? Aquí entra en juego `input()`. Este comando permite que el programa espere a que el usuario escriba algo y luego lo usemos en el código.
+
+* Uso básico de input():
+  
+```py 
+nombre = input("¿Cómo te llamas? ")
+print("Hola, " + nombre + "!")
+```
+
+¡Ahora tu programa puede saludar a cualquiera que lo use! 😄
+
+## 6. Es tu turno 
+
+Ahora que ya sabes más sobre `print()`, arte ASCII, operaciones matemáticas e interacción con el usuario, ¡es tu momento de crear! Aquí tienes algunas ideas para que experimentes:
+
+* **Crea tu propio arte ASCII:** diseña una figura usando caracteres ASCII. ¿Podrías hacer un coche, un cohete o un animal? ¡Imaginación al poder!
+* **Calculadora personalizada:** crea un programa que pida al usuario dos números y realice varias operaciones matemáticas con ellos (suma, resta, multiplicación y división).
+* **Un programa sobre ti:** haz que el programa pida el nombre, la edad y calcule cuántos años tendrás en 5 años. ¡Que Python haga las cuentas por ti!
 
