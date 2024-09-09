@@ -7,15 +7,19 @@ En esta sección vamos a conocer algunos de los **tipos de datos** que existen e
 En Python, hay diferentes tipos de datos que puedes usar según lo que necesites almacenar. Los más comunes son:
 
 * **Cadenas de texto (strings):** se usan para almacenar palabras o frases. Se definen con comillas simples (' ') o dobles (" ").
+  
     * Ejemplo: "Hola", 'Python es genial'
 
 * **Números enteros (int):** Son números sin decimales, como edades, cantidades o años.
+  
     * Ejemplo: edad = 17
 
 * **Números decimales (float):** se usan cuando necesitas precisión. Por ejemplo,  para representar medidas o valores que incluyen decimales.
+  
     * Ejemplo: altura = 1.75
 
 * **Valores booleanos (bool):** solo pueden ser `True` *(verdadero)* o `False` *(falso)*. Estos son muy útiles para hacer decisiones en los programas.
+  
     * Ejemplo: es_mayor_de_edad = True
 
 Cada tipo de dato tiene su función, y Python los maneja de manera distinta según lo que necesites hacer. Saber qué tipo de dato estás utilizando es importante para evitar errores y asegurarte de que tu programa funcione correctamente. 
@@ -66,21 +70,20 @@ A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas op
 
 * **float(): convertir a número decimal** 
 
-    La función float() convierte texto o enteros en números con decimales. Muy útil para trabajar con medidas o cálculos científicos.
+    La función `float()` convierte texto o enteros en números con decimales. Muy útil para trabajar con medidas o cálculos científicos.
 
     ```py
     altura = float(input("¿Cuál es tu altura en metros? "))
     print("Tu altura es " + str(altura) + " metros.")
     ``` 
 
-    Con esta conversión, puedes se realizan cálculos con decimales sin perder precisión.
+    Con esta conversión, se realizan cálculos con decimales sin perder precisión.
 
 ## Es tu turno
 
 ¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
 
 * 1. **Calculadora personalizada:** crea un programa que pida al usuario dos números y realice varias operaciones matemáticas con ellos (suma, resta, multiplicación y división).
-* 
   
 
 
