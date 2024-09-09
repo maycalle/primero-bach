@@ -160,11 +160,12 @@ Una vez que tengas esa carpeta lista, **abre VSCode** y sigue estos pasos súper
     <img style="border: 1px solid black" src="/primero-bach/img/ejecucion_hola_mundo.png" width="50%">
 </div>
 
+Si cometes un error, recibirás un mensaje de error indicándote lo qué salió mal !Pruébalo! Borra la última comilla `"` o el último paréntesis `)` (o ambos) y comprueba lo que pasa. Después vuelve a escribir la comilla o el paréntesis, y haz clic en **Run** para asegurarte de que el proyecto vuelve a funcionar correctamente.
+
 ## 6. Es tu turno
 
-¡Ahora es momento de que tú modifiques el código! Vamos a hacer algunos cambios y a experimentar con el comando `print()`
+¡Es tu turno de modificar el código y experimentar con `print()`! Aquí tienes algunas ideas para empezar:
 
-1. **Añadir más texto:** modifica el código para que imprima más de una frase.
-2. **Imprimir números:** Python también permite imprimir números. Añade líneas de código que impriman algunos números y observa qué pasa
-3. **Crear tu propio mensaje personalizado:** ¡sé creativo! escribe un mensaje personalizado con lo que esperas aprender en este curso.
-
+1. **Añadir más texto:** modifica el código para que imprima varias frases seguidas.
+2. **Imprimir números:** Python también permite imprimir números. Sin embargo, hay una diferencia importante: los números no necesitan comillas. Prueba a añadir líneas que muestren algunos números o hagan operaciones matemáticas, como 10 + 5. Si pones comillas, Python tratará el número como texto, pero sin comillas lo verá como un valor numérico. ¡Haz la prueba y verás la diferencia!
+3. **Habla sobre ti:** escribe un programa que cuente algo sobre ti. Combina texto y números; por ejemplo, usa una operación matemática para calcular tu edad: 2024 - tu_año_nacimiento. ¡Python te ayudará a sacar las cuentas!
