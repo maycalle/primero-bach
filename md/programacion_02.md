@@ -103,6 +103,25 @@ print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluac
 
 ¡Experimenta con tus propios cálculos y verás cómo cambia el resultado dependiendo del orden!
 
+**Desafío: calcular con texto**
+
+Ahora que dominas las operaciones matemáticas, te lanzo un reto un poco diferente. ¡¿Sabías que Python también puede hacer "cálculos" con texto?! Puedes usar el operador `+` para concatenar cadenas (juntar textos), y el operador `*` para repetir cadenas.
+
+Pruena el siguiente ejemplo: 
+
+```py
+print('ja ' * 4)
+print('ba' + 'na' * 2)
+print('¡ * 5' + 'Hola' + '!*5')
+```
+
+¿Eres capaz de inventarte palabras? ¡Puedes incluso crear tus propios patrones!
+
+```py
+print('/\ ' * 10)
+print('  \/' * 10)
+```
+
 ## 4. Uso de variables
 
 En Python, una variable es como una "caja" donde puedes guardar un valor, y luego usar ese valor cuando lo necesites.
@@ -137,7 +156,7 @@ Hasta ahora, tú eras quien le daba las órdenes a Python, pero ¿qué tal si ha
   
 ```py
 nombre = input("¿Cómo te llamas? ")
-print("Hola, " + nombre + "!")
+print("¡Hola, " + nombre + "!")
 ```
 
 ¡Ahora tu programa puede saludar a cualquiera que lo use! 😄
@@ -148,6 +167,7 @@ Ahora que ya sabes más sobre `print()`, arte ASCII, operaciones matemáticas e 
 
 * **Crea tu propio arte ASCII:** diseña una figura usando caracteres ASCII. ¿Podrías hacer un coche, un cohete o un animal? ¡Imaginación al poder!
 * **Un programa sobre ti:** haz que el programa pida el nombre, tu dirección y tu teléfono, y saque todos los datos por pantalla.
+* **Tu edad en años de perro:** escribe un programa que pregunte al usuario su edad y, a continuación, ¡le diga su edad en años caninos! Puedes calcular la edad de una persona en años caninos multiplicándola por 7.
 
 
 

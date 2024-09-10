@@ -167,5 +167,5 @@ Si cometes un error, recibirás un mensaje de error indicándote lo qué salió 
 ¡Es tu turno de modificar el código y experimentar con `print()`! Aquí tienes algunas ideas para empezar:
 
 1. **Añadir más texto:** modifica el código para que imprima varias frases seguidas.
-2. **Imprimir números:** Python también permite imprimir números. Sin embargo, hay una diferencia importante: los números no necesitan comillas. Prueba a añadir líneas que muestren algunos números o hagan operaciones matemáticas, como 10 + 5. Si pones comillas, Python tratará el número como texto, pero sin comillas lo verá como un valor numérico. ¡Haz la prueba y verás la diferencia!
+2. **Imprimir números:** Python también permite imprimir números. Sin embargo, hay una diferencia importante: los números no necesitan comillas. Prueba a añadir líneas que muestren algunos números o hagan operaciones matemáticas, como 10 + 5. Si pones comillas, Python tratará el número como texto, pero sin comillas lo verá como un valor numérico. ¡Haz la prueba y verás la diferencia!   
 3. **Habla sobre ti:** escribe un programa que cuente algo sobre ti. Combina texto y números; por ejemplo, usa una operación matemática para calcular tu edad: 2024 - tu_año_nacimiento. ¡Python te ayudará a sacar las cuentas!
