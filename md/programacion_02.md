@@ -1,6 +1,6 @@
 # Imprime, calcula y pregunta
 
-En esta sesión vamos a aprender más detalles sobre el comando `print()`, exploraremos el arte ASCII (sí, ¡dibujos con caracteres!), trabajaremos con operadores matemáticos y, lo más importante, ¡aprender a interactuar con el usuario con `input()`! 
+En esta sesión vamos a aprender más detalles sobre el comando `print()`, exploraremos el arte ASCII, trabajaremos con operadores matemáticos y, lo más importante, ¡aprenderemos a interactuar con el usuario con `input()`! 
 
 ## 1. Más sobre print()
 
@@ -8,7 +8,7 @@ Ya sabes cómo usar `print()` para mostrar mensajes en pantalla, pero ahora vamo
 
 Python te permite usar tanto comillas simples (' ') como comillas dobles (" "), y aunque funcionan de forma similar, hay algunos detalles importantes que debes conocer.
 
-* **Comillas simples vs. comillas dobles:** Puedes usar cualquiera de las dos para mostrar texto, pero si dentro de tu texto tienes un apóstrofe, ¡atención! Python podría confundirse si usas comillas simples:
+* **Comillas simples vs. comillas dobles:** puedes usar cualquiera de las dos para mostrar texto, pero si dentro de tu texto tienes un apóstrofe, ¡atención! Python podría confundirse si usas comillas simples:
 
 ```py
 print('I'm learning Python')    # ¡Error! Python se confunde con el apóstrofe
@@ -34,7 +34,7 @@ print("May dice que \"Python es genial\"")  # Comillas dentro del texto, sin dra
 
 De esta forma, puedes usar el tipo de comillas que quieras sin generar errores.
 
-En conclusión, usa comillas dobles si tu texto contiene apóstrofes, y comillas simples si contiene comillas dobles. Y si necesitas el mismo tipo de comillas dentro y fuera, el carácter de escape te sacará de apuros. ¡Así te ahorrarás dolores de cabeza!
+Resumiendo, usa comillas dobles si tu texto contiene apóstrofes, y comillas simples si contiene comillas dobles. Y si necesitas el mismo tipo de comillas dentro y fuera, el carácter de escape te sacará de apuros. ¡Así te ahorrarás dolores de cabeza!
 
 ## 2. Arte ASCII
 

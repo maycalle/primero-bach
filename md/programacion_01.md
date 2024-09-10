@@ -1,6 +1,6 @@
 # Primeros pasos con Python
 
-¡Bienvenidos al emocionante mundo de Python! Un lenguaje de programación que no solo es fácil de aprender, sino que también es increíblemente versátil. ¿Listos para empezar a programar? 
+¡Bienvenidos al emocionante mundo de Python! Un lenguaje de programación que no solo es fácil de aprender, sino que también es súper versátil. ¿Listos para empezar a programar? 
 
 ## 1. ¿Qué es Python?
 
@@ -16,7 +16,7 @@ Imagina un idioma que puedes aprender rápidamente y te permite hacer casi de to
 
 ## 2. ¿Cómo instalarlo?
 
-Ahora que ya sabemos para qué podemos usar Python, ¡vamos a instalarlo! Te aseguro que es más fácil que instalar la última actualización de un videojuego.
+Ahora que ya sabemos para qué podemos usar Python, ¡vamos a instalarlo! Verás que es más fácil que instalar la última actualización de un videojuego.
 
 **Instalación en los ordenadores de clase**
 
