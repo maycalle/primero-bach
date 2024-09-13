@@ -160,15 +160,14 @@ print("El año que viene tendré " + edad + " años.")
         * Subrayado (_) → estilo más común en Python.
         * camelCase → primera palabra en minúsculas y las siguientes con mayúscula.
 
+
     ```py
     # Ejemplos de nombres válidos
     numero = 12
     numero_cuenta_bancaria = 'ES1100001111222233334444'
     loginUsuario = 'may'
     numero2 = 22
-    ```
-
-    ```py
+    
     # Ejemplos de nombres incorrectos
     2numero = 12 
     numero-cuenta = 'ES1100001111222233334444' 

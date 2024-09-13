@@ -48,7 +48,7 @@ A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas op
 
 * **int(): convertir a número entero** 
 
-    La función `int()` convierte texto o números decimales en números enteros. Pero cuidado, si intentas convertir algo que no es un número en un entero, Python dará un error. Por ejemplo, int("Hola") dará un error.
+    La función `int()` convierte texto o números decimales en números enteros. Pero cuidado, si intentas convertir algo que no es un número en un entero, Python dará un error. Por ejemplo, `int("Hola")` dará un error. 
 
     Se suele utilizar cuando pedimos información al usuario de tipo numérico (edad, año, cantidad, etc) porque todo lo que el usuario introdce con `input()` se almacena como texto, sin importar si introduce números. Si intentas hacer operaciones matemáticas con ese texto, Python no sabrá cómo interpretarlo y lanzará un error.
 
@@ -64,6 +64,7 @@ A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas op
     edad = int(input("¿Cuántos años tienes? "))
     print("El año que viene tendrás " + str(edad + 1) + " años.")   # OK
     ```
+    
     En el ejemplo correcto, observa que: 
     * Primero se convierte el texto introducido por el usuario a un número entero con `int()`, lo que permite realizar operaciones matemáticas.
     * Luego se convierte el resultado de esa operación en texto con `str()` para poder combinarlo con otros fragmentos de texto en el mensaje final.
