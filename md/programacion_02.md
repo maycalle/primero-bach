@@ -151,14 +151,14 @@ print("El año que viene tendré " + edad + " años.")
 * **Sobre los nombres de las variables**: a la hora de asignar un nombre a una variable, hay que seguir estas reglas:
 
     * **Caracteres permitidos:**
-      * Letras (mayúsculas y minúsculas).
-      * Dígitos.
-      * Subrayado _.
-      * No pueden empezar por un dígito.
+        * Letras (mayúsculas y minúsculas).
+        * Dígitos.
+        * Subrayado _.
+        * No pueden empezar por un dígito.
 
     * **Nombres compuestos:** puedes separar las palabras usando:
-      * Subrayado (_) → estilo más común en Python.
-      * camelCase → primera palabra en minúsculas y las siguientes con mayúscula.
+        * Subrayado (_) → estilo más común en Python.
+        * camelCase → primera palabra en minúsculas y las siguientes con mayúscula.
 
     ```py
     # Ejemplos de nombres válidos
