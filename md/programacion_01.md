@@ -162,7 +162,25 @@ Una vez que tengas esa carpeta lista, **abre VSCode** y sigue estos pasos súper
 
 Si cometes un error, recibirás un mensaje de error indicándote lo qué salió mal !Pruébalo! Borra la última comilla `"` o el último paréntesis `)` (o ambos) y comprueba lo que pasa. Después vuelve a escribir la comilla o el paréntesis, y haz clic en **Run** para asegurarte de que el proyecto vuelve a funcionar correctamente.
 
-## 6. Es tu turno
+## 6. Poner comentarios
+
+Los **comentarios** son notas aclaratorias o explicativas que escribes en el código pero que Python ignora cuando ejecuta el programa. Son muy útiles porque te ayudan a organizar tu código, hacer anotaciones para ti mismo o explicar qué hace una parte del programa. Es como cuando en clase tomas notas en los márgenes de tus apuntes, ¡pero en código!
+
+Para crear un comentario de una sola línea en Python, simplemente utiliza el símbolo `#`. Todo lo que escribas después de # será ignorado.
+
+```py
+# Este es un comentario, Python lo ignorará al ejecutar el programa
+print("Hola")  # Esto imprimirá el saludo "Hola" en la pantalla
+```
+
+```py
+# Puedes hacer operaciones matemáticas
+print(10 + 5)  # Esto imprimirá 15
+```
+
+En estos ejemplos, los comentarios `# Este es un comentario` y `# Puedes hacer operaciones matemáticas` no afecta al funcionamiento del programa. Lo mismo ocurre con el comentario añadido al final de las líneas donde usamos `print()`.
+
+## 7. Es tu turno
 
 ¡Es tu turno de modificar el código y experimentar con `print()`! Aquí tienes algunas ideas para empezar:
 
