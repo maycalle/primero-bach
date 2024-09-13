@@ -148,35 +148,33 @@ edad = edad + 1       # Actualiza la variable edad sumándole 1.
 print("El año que viene tendré " + edad + " años.")
 ```
 
-**Sobre los nombres de las variables**
+* **Sobre los nombres de las variables**: a la hora de asignar un nombre a una variable, hay que seguir estas reglas:
 
-A la hora de asignar un nombre a una variable, hay que seguir estas reglas:
+    * **Caracteres permitidos:**
+      * Letras (mayúsculas y minúsculas).
+      * Dígitos.
+      * Subrayado _.
+      * No pueden empezar por un dígito.
 
-* **Caracteres permitidos:**
-    * Letras (mayúsculas y minúsculas).
-    * Dígitos.
-    * Subrayado _.
-    * No pueden empezar por un dígito.
+    * **Nombres compuestos:** puedes separar las palabras usando:
+      * Subrayado (_) → estilo más común en Python.
+      * camelCase → primera palabra en minúsculas y las siguientes con mayúscula.
 
-* **Nombres compuestos:** puedes separar las palabras usando:
-    * Subrayado (_) → estilo más común en Python.
-    * camelCase → primera palabra en minúsculas y las siguientes con mayúscula.
+    ```py
+    # Ejemplos de nombres válidos
+    numero = 12
+    numero_cuenta_bancaria = 'ES1100001111222233334444'
+    loginUsuario = 'may'
+    numero2 = 22
+    ```
 
-```py
-# Ejemplos de nombres válidos
-numero = 12
-numero_cuenta_bancaria = 'ES1100001111222233334444'
-loginUsuario = 'may'
-numero2 = 22
-```
-
-```py
-# Ejemplos de nombres incorrectos
-2numero = 12 # No puede empezar con un dígito.
-numero-cuenta = 'ES1100001111222233334444' #El guion - no está permitido, solo se puede usar el subrayado _.
-login usuario = 'may'  # Los espacios no están permitidos, usa _ para separar palabras.
-print # No se puede usar una palabra reservada de Python como nombre de variable (en este caso, print es una palabra reservada).
-```
+    ```py
+    # Ejemplos de nombres incorrectos
+    2numero = 12 
+    numero-cuenta = 'ES1100001111222233334444' 
+    login usuario = 'may'  
+    print = 3
+    ```
 
 ## 6. Interacción con el usuario: input()
 
