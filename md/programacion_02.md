@@ -42,7 +42,7 @@ Cuando quieras mostrar más de un elemento en un solo ``print()`, tienes dos for
     print("Hola,", nombre, ". Tienes", edad, "años.")
     ```
 
-Observa que Python ha puesto espacios entre los elementos automáticamente, sin que tengas que preocuparte por eso.
+    Observa que Python ha puesto espacios entre los elementos automáticamente, sin que tengas que preocuparte por eso.
 
 2. **Usando el operador `+`**: es otra manera de combinar textos en `print()`. Aquí es importante destacar que solo funciona con cadenas de texto, es decir, todos los elementos que quieras combinar deben ser texto (cadenas). Si estás trabajando con números o variables de otro tipo, deberás convertirlos a texto con la función `str()` (pero no te preocupes, esa parte la veremos más adelante).
 
@@ -51,7 +51,7 @@ Observa que Python ha puesto espacios entre los elementos automáticamente, sin 
     print("Hola, " + nombre + ". ¡Qué alegría verte!")
     ```
 
-Con el operador `+`, no se añaden espacios automáticamente, por lo que debes asegurarte de incluirlos en los lugares correctos dentro de las cadenas.
+    Con el operador `+`, no se añaden espacios automáticamente, por lo que debes asegurarte de incluirlos en los lugares correctos dentro de las cadenas.
 
 ## 2. Arte ASCII
 
@@ -112,9 +112,6 @@ Si quieres cambiar el orden de las operaciones, usa paréntesis.
 
 ```py
 print(2 + 3 * 4)  # Resultado: 14 (primero se multiplica 3 * 4, luego se suma 2)
-```
-
-```py
 print((2 + 3) * 4)  # Resultado: 20 (los paréntesis cambian el orden de evaluación)
 ```
 
@@ -145,24 +142,24 @@ En Python, una variable es como una "caja" donde puedes guardar un valor, y lueg
 
 * **Declarar una variable:** para crear una variable, simplemente le das un nombre y le asignas un valor con el signo igual (=). Por ejemplo:
 
-```py
-nombre = "May"
-edad = 45
-```
+    ```py
+    nombre = "May"
+    edad = 45
+    ```
 
 * **Usar de una variable:** después de asignar un valor a una variable, puedes usarla en cualquier parte de tu programa. Prueba el siguiente código y observa el resultado obtenido:
 
-```py
-nombre = "May"
-print("Hola, " + nombre) 
-```
+    ```py
+    nombre = "May"
+    print("Hola, " + nombre) 
+    ```
 
 * **Cambiar el valor de una variable:** las variables pueden cambiar de valor en cualquier momento. Puedes hacer algo como esto:
 
-```py
-edad = 45
-edad = edad + 1       # Actualiza la variable edad sumándole 1.    
-```
+    ```py
+    edad = 45
+    edad = edad + 1       # Actualiza la variable edad sumándole 1.    
+    ```
 
 * **Sobre los nombres de las variables**: a la hora de asignar un nombre a una variable, hay que seguir estas reglas:
 
@@ -175,7 +172,6 @@ edad = edad + 1       # Actualiza la variable edad sumándole 1.
     * **Nombres compuestos:** puedes separar las palabras usando:
         * Subrayado (_) → estilo más común en Python.
         * camelCase → primera palabra en minúsculas y las siguientes con mayúscula.
-
 
     ```py
     # Ejemplos de nombres válidos
@@ -199,10 +195,10 @@ Básicamente, lo que hace es esperar pacientemente a que el usuario escriba algo
 
 * **Uso básico de input():**
   
-```py
-nombre = input("¿Cómo te llamas? ")
-print("¡Hola, " + nombre + "!")
-```
+    ```py
+    nombre = input("¿Cómo te llamas? ")
+    print("¡Hola, " + nombre + "!")
+    ```
 
 ¡Ahora tu programa puede saludar a cualquiera que lo use! 😄
 
