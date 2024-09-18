@@ -105,10 +105,10 @@ A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas op
 
 ¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
 
-* 1. **Calculadora personalizada:** crea un programa que pida al usuario dos números y realice varias operaciones matemáticas con ellos (suma, resta, multiplicación y división).
-* 2. **Conversión de temperaturas:** crea un programa que convierta una temperatura en grados Celsius introducida por el usuario a grados Fahrenheit usando la siguiente fórmula: Fahrenheit = Celsius * 9/5  + 32
-* 3. **Cálculo del área de un rectángulo:** pide al usuario que introduzca el ancho y el alto de un rectángulo, y calcula el área del rectángulo.
-* 4. **Concatenación de nombres:** pide al usuario que introduzca su nombre y su apellido por separado. Luego, combina ambos en una única cadena que muestre el nombre completo. 
-* 5. **Repetición de texto:** pide al usuario que escriba una palabra y un número. Muestra la palabra repetida el número de veces que el usuario haya indicado.
+* **1. Calculadora personalizada:** crea un programa que pida al usuario dos números y realice varias operaciones matemáticas con ellos (suma, resta, multiplicación y división).
+* **2. Conversión de temperaturas:** crea un programa que convierta una temperatura en grados Celsius introducida por el usuario a grados Fahrenheit usando la siguiente fórmula: Fahrenheit = Celsius * 9/5  + 32
+* **3. Cálculo del área de un rectángulo:** pide al usuario que introduzca el ancho y el alto de un rectángulo, y calcula el área del rectángulo.
+* **4. Concatenación de nombres:** pide al usuario que introduzca su nombre y su apellido por separado. Luego, combina ambos en una única cadena que muestre el nombre completo. 
+* **5. Repetición de texto:** pide al usuario que escriba una palabra y un número. Muestra la palabra repetida el número de veces que el usuario haya indicado.
 * **6. Cálculo de la media:** crea un programa que le pida al usuario 4 números enteros y calcule su media (real). La media debe mostrarse en pantalla con 3 cifras decimales.
 
