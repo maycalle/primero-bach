@@ -43,7 +43,7 @@ Cuando usamos la función `print()` en Python, tenemos varias formas de combinar
 1. **Usando comas**
 La forma más sencilla de combinar varios elementos en un print() es separarlos por comas. Cuando lo haces así, Python automáticamente añade un espacio entre cada elemento. Puedes combinar textos (cadenas de caracteres), números y variables sin ningún problema.
 
-```py 
+```py
 nombre = "May"
 edad = 45
 print("Hola,", nombre, ". Tienes", edad, "años.")
