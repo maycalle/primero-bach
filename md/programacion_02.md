@@ -12,13 +12,10 @@ Python te permite usar tanto comillas simples (' ') como comillas dobles (" "), 
 
 * **Apóstrofes en el texto:** si el texto contiene un apóstrofe ('), y estás usando comillas simples, Python podría confundirse. En ese caso, usa comillas dobles:
 
-```py
-print('I'm learning Python')    # ¡Error! Python se confunde con el apóstrofe
-```
-
-```py
-print("I'm learning Python")    # OK, las comillas dobles nos salvan
-```
+    ```py
+    print('I'm learning Python')    # ¡Error! Python se confunde con el apóstrofe
+    print("I'm learning Python")    # OK, las comillas dobles nos salvan
+    ```
 
 * **Comillas dobles dentro del texto:** si quieres incluir comillas dobles en el texto, usa comillas simples para delimitarlo:
 
