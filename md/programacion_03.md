@@ -1,4 +1,4 @@
-# Tipos de datos y conversión
+# Tipos de Datos, Conversión y Formato
 
 En esta sección vamos a conocer algunos de los **tipos de datos** que existen en Python, desde texto hasta números y valores lógicos. También aprenderemos a convertir entre estos tipos de datos cuando lo necesitemos. Al finalizar, serás capaz de escribir código más flexible y adaptado a distintas situaciones en el mundo real de la programación. ¡Vamos a ello!
 
@@ -101,7 +101,7 @@ A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas op
 
     Con esta conversión, se realizan cálculos con decimales sin perder precisión.
 
-## Es tu turno
+## 4. Es tu turno
 
 ¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
 
