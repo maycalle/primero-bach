@@ -145,7 +145,6 @@ print("Hola, " + nombre)
 ```py
 edad = 45
 edad = edad + 1       # Actualiza la variable edad sumándole 1.    
-print("El año que viene tendré " + edad + " años.")
 ```
 
 * **Sobre los nombres de las variables**: a la hora de asignar un nombre a una variable, hay que seguir estas reglas:
