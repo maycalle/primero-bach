@@ -19,16 +19,16 @@ Python te permite usar tanto comillas simples (' ') como comillas dobles (" "), 
 
 * **Comillas dobles dentro del texto:** si quieres incluir comillas dobles en el texto, usa comillas simples para delimitarlo:
 
-```py
-print('May dice que "Python es genial"')    # OK
-print("May dice que "Python es genial"")    # Error
-```
+    ```py
+    print('May dice que "Python es genial"')    # OK
+    print("May dice que "Python es genial"")    # Error
+    ```
 
 * **Caracteres de escape:** si necesitas usar el mismo tipo de comillas tanto dentro como fuera del texto (por ejemplo, comillas dobles dentro de un texto delimitado por comillas dobles), puedes usar el carácter de escape (`\`) para decirle a Python que ignore la comilla y la trate como parte del texto:
 
-```py
-print("May dice que \"Python es genial\"")  # Comillas dobles dentro del texto y delimitando la cadena, sin dramas
-```
+    ```py
+    print("May dice que \"Python es genial\"")  # Comillas dobles dentro del texto y delimitando la cadena, sin dramas
+    ```
 
 ### 1.2 Combinando mensajes en `print()`
 
@@ -36,20 +36,20 @@ Cuando quieras mostrar más de un elemento en un solo ``print()`, tienes dos for
 
 1. **Usando comas**: es la forma más sencilla de combinar varios elementos en un `print()`. Cuando lo haces así, Python automáticamente añade un espacio entre cada elemento. Puedes combinar textos (cadenas de caracteres), números y variables sin ningún problema.
 
-```py
-nombre = "May"
-edad = 45
-print("Hola,", nombre, ". Tienes", edad, "años.")
-```
+    ```py
+    nombre = "May"
+    edad = 45
+    print("Hola,", nombre, ". Tienes", edad, "años.")
+    ```
 
 Observa que Python ha puesto espacios entre los elementos automáticamente, sin que tengas que preocuparte por eso.
 
 2. **Usando el operador `+`**: es otra manera de combinar textos en `print()`. Aquí es importante destacar que solo funciona con cadenas de texto, es decir, todos los elementos que quieras combinar deben ser texto (cadenas). Si estás trabajando con números o variables de otro tipo, deberás convertirlos a texto con la función `str()` (pero no te preocupes, esa parte la veremos más adelante).
 
-```py
-nombre = "May"
-print("Hola, " + nombre + ". ¡Qué alegría verte!")
-```
+    ```py
+    nombre = "May"
+    print("Hola, " + nombre + ". ¡Qué alegría verte!")
+    ```
 
 Con el operador `+`, no se añaden espacios automáticamente, por lo que debes asegurarte de incluirlos en los lugares correctos dentro de las cadenas.
 
