@@ -24,7 +24,28 @@ En Python, hay diferentes tipos de datos que puedes usar según lo que necesites
 
 Cada tipo de dato tiene su función, y Python los maneja de manera distinta según lo que necesites hacer. Saber qué tipo de dato estás utilizando es importante para evitar errores y asegurarte de que tu programa funcione correctamente. 
 
-## 2. Funciones de conversión de tipos de datos
+## 2. Usando f-string
+
+El nombre **"f-string"** viene de *"formatted string"* (cadena formateada), y su principal ventaja es que te permite combinar texto y variables de forma clara y legible.
+
+Para **crear una f-string**, simplemente antepon una **f** al texto que quieras mostrar. Luego, inserta donde lo necesites (pero siempre dentro de la cadena de texto) cualquier variable o expresión que quieras que se incluya o evalúe dentro de unas llaves **{}**. Python reemplaza las llaves **{}** por el valor de las variables o expresiones que se encuentran dentro, generando un texto formateado de forma automática.
+
+```py
+nombre = "May"
+edad = 45
+print(f"Hola, {nombre}. Tienes {edad} años.")
+```
+
+Puedes **usar las f-strings para para formatear números**, como mostrar decimales con un número determinado de decimales.
+
+```py
+pi = 3.1415926535
+print(f"El valor de pi es {pi:.2f}.")
+```
+
+Observa que **.2f** indica que quieres mostrar el valor de **pi** con 2 decimales.
+
+## 3. Funciones de conversión de tipos de datos
 
 A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas operaciones o para que el programa funcione correctamente. Por ejemplo, convertir un número en texto o al revés. Python tiene funciones integradas que facilitan estas conversiones: 
 
@@ -89,6 +110,5 @@ A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas op
 * 3. **Cálculo del área de un rectángulo:** pide al usuario que introduzca el ancho y el alto de un rectángulo, y calcula el área del rectángulo.
 * 4. **Concatenación de nombres:** pide al usuario que introduzca su nombre y su apellido por separado. Luego, combina ambos en una única cadena que muestre el nombre completo. 
 * 5. **Repetición de texto:** pide al usuario que escriba una palabra y un número. Muestra la palabra repetida el número de veces que el usuario haya indicado.
-  
-
+* **6. Cálculo de la media:** crea un programa que le pida al usuario 4 números enteros y calcule su media (real). La media debe mostrarse en pantalla con 3 cifras decimales.
 
