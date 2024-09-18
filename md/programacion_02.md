@@ -36,6 +36,31 @@ De esta forma, puedes usar el tipo de comillas que quieras sin generar errores.
 
 Resumiendo, usa comillas dobles si tu texto contiene apóstrofes, y comillas simples si contiene comillas dobles. Y si necesitas el mismo tipo de comillas dentro y fuera, el carácter de escape te sacará de apuros. ¡Así te ahorrarás dolores de cabeza!
 
+**Combinando mensajes en `print()`**
+
+Cuando usamos la función `print()` en Python, tenemos varias formas de combinar textos o mensajes y mostrarlos juntos en la pantalla. Veamos dos maneras principales de hacerlo:
+
+1. **Usando comas**
+La forma más sencilla de combinar varios elementos en un print() es separarlos por comas. Cuando lo haces así, Python automáticamente añade un espacio entre cada elemento. Puedes combinar textos (cadenas de caracteres), números y variables sin ningún problema.
+
+```py 
+nombre = "May"
+edad = 45
+print("Hola,", nombre, ". Tienes", edad, "años.")
+```
+
+Observa que Python ha puesto espacios entre los elementos automáticamente, sin que tengas que preocuparte por eso.
+
+2. **Usando el operador `+`**
+Otra manera de combinar textos en `print()` es usar el operador `+`. Aquí es importante destacar que solo funciona con cadenas de texto, es decir, todos los elementos que quieras combinar deben ser texto (cadenas). Si estás trabajando con números o variables de otro tipo, deberás convertirlos a texto con la función `str()` (pero no te preocupes, esa parte la veremos más adelante).
+
+```py
+nombre = "May"
+print("Hola, " + nombre + ". ¡Qué alegría verte!")
+```
+
+Con el operador `+`, no se añaden espacios automáticamente, por lo que debes asegurarte de incluirlos en los lugares correctos dentro de las cadenas.
+
 ## 2. Arte ASCII
 
 Vamos a ponernos creativos. El arte ASCII es una forma de hacer dibujos usando solo caracteres. No es exactamente como dibujar con un lápiz, pero te sorprendería lo que se puede lograr. 
@@ -176,7 +201,9 @@ edad = edad + 1       # Actualiza la variable edad sumándole 1.
 
 ## 6. Interacción con el usuario: input()
 
-Hasta ahora, tú eras quien le daba las órdenes a Python, pero ¿qué tal si hacemos que el programa pregunte algo al usuario? Aquí entra en juego `input()`. Este comando permite que el programa espere a que el usuario escriba algo y luego lo usemos en el código.
+Hasta ahora, tú eras quien le daba las órdenes a Python, pero ¿qué tal si hacemos que el programa pregunte algo al usuario? Aquí entra en juego `input()`. 
+
+Básicamente, lo que hace es esperar pacientemente a que el usuario escriba algo y presione **Enter**. Una vez que lo hace, el contenido que ha escrito se captura como texto (¡siempre como texto!).
 
 * **Uso básico de input():**
   
@@ -192,8 +219,10 @@ print("¡Hola, " + nombre + "!")
 Ahora que ya sabes más sobre `print()`, arte ASCII, operaciones matemáticas e interacción con el usuario, ¡es tu momento de crear! Aquí tienes algunas ideas para que experimentes:
 
 * **Crea tu propio arte ASCII:** diseña una figura usando caracteres ASCII. ¿Podrías hacer un coche, un cohete o un animal? ¡Imaginación al poder!
-* **Un programa sobre ti:** haz que el programa pida el nombre, tu dirección y tu teléfono, y saque todos los datos por pantalla.
-* **Tu edad en años de perro:** escribe un programa que pregunte al usuario su edad y, a continuación, ¡le diga su edad en años caninos! Puedes calcular la edad de una persona en años caninos multiplicándola por 7.
+* **Un programa sobre ti:** haz que tu programa le pregunte al usuario algunos datos personales, como su nombre, dirección y número de teléfono, y luego muestre toda esa información en pantalla.
+* **Dime tu animal favorito:** escribe un programa que le pregunte al usuario cuál es su animal favorito. Luego, responde con un mensaje personalizado. 
+  Por ejemplo, si el usuario te ha contestado que su animal favorito son los *gatos*, puedes mostrar un mensaje similar a este: "Me gustan los *gatos*, pero mi animal favorito es el perro" 
+
 
 
 

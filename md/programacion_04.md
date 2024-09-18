@@ -1,8 +1,10 @@
 # Más tipos de operadores
 
+Hasta ahora, hemos visto cómo Python nos permite hacer operaciones matemáticas básicas con sus operadores aritméticos, pero este lenguaje tiene más operadores bajo la manga, y algunos son realmente útiles. ¡Vamos a conocerlos!
+
 ## 1. Operadores relacionales
 
-Cuando queremos comparar dos elementos, Python nos ofrece los operadores relacionales. Estos operadores devuelven un valor de tipo booleano (`True` o `False`) dependiendo de si la condición que se está evaluando es cierta o falsa.
+Imagina que quieres comparar dos elementos, como ver si un número es mayor que otro, o si dos valores son iguales. Para eso, Python nos da los operadores relacionales. Estos siempre devolverán un resultado de tipo booleano, es decir, o `True` (verdadero) o `False` (falso), dependiendo de si la comparación que estás haciendo se cumple o no.
 
 Aquí tienes los operadores relacionales más comunes:
 
@@ -22,7 +24,7 @@ Aquí tienes los operadores relacionales más comunes:
 
 ## 2. Operadores lógicos
 
-Los operadores lógicos te permiten combinar varias comparaciones o condiciones para crear expresiones más complejas. En Python, los operadores lógicos son:
+Los operadores lógicos permiten combinar varias comparaciones para crear expresiones más complejas. En Python, los operadores lógicos son:
 
 * **and** *(Y lógica)*: devuelve `True` solo si ambas condiciones son verdaderas. 
 * **or** *(O lógica)*: devuelve `True` si al menos una de las condiciones es verdadera. 
