@@ -4,11 +4,13 @@ En esta sesión vamos a aprender más detalles sobre el comando `print()`, explo
 
 ## 1. Más sobre print()
 
-Ya sabes cómo usar `print()` para mostrar mensajes en pantalla, pero ahora vamos a aprender cómo manejar situaciones un poco más complejas, como incluir apóstrofes o comillas dentro del texto. 
+Ya sabes lo básico de `print()`, pero ahora vamos a ver algunos detalles importantes que te serán útiles en situaciones más complejas, como incluir apóstrofes, comillas y combinar diferentes mensajes en una sola línea.
+
+### 1.1 Comillas simples vs comillas dobles
 
 Python te permite usar tanto comillas simples (' ') como comillas dobles (" "), y aunque funcionan de forma similar, hay algunos detalles importantes que debes conocer.
 
-* **Comillas simples vs. comillas dobles:** puedes usar cualquiera de las dos para mostrar texto, pero si dentro de tu texto tienes un apóstrofe, ¡atención! Python podría confundirse si usas comillas simples:
+* **Apóstrofes en el texto:** si el texto contiene un apóstrofe ('), y estás usando comillas simples, Python podría confundirse. En ese caso, usa comillas dobles:
 
 ```py
 print('I'm learning Python')    # ¡Error! Python se confunde con el apóstrofe
@@ -18,30 +20,24 @@ print('I'm learning Python')    # ¡Error! Python se confunde con el apóstrofe
 print("I'm learning Python")    # OK, las comillas dobles nos salvan
 ```
 
-Como ves, cuando hay un apóstrofe, es mejor usar comillas dobles para que Python no se líe.
-
-* **Comillas dobles dentro del texto:** si tu texto incluye comillas dobles, la solución es usar comillas simples alrededor del texto:
+* **Comillas dobles dentro del texto:** si quieres incluir comillas dobles en el texto, usa comillas simples para delimitarlo:
 
 ```py
 print('May dice que "Python es genial"')    # OK
+print("May dice que "Python es genial"")    # Error
 ```
 
-* **Caracteres de escape:** pero, ¿qué pasa si necesitas usar el mismo tipo de comillas dentro y fuera del texto? No te preocupes, puedes usar el carácter de escape (`\`) para decirle a Python que ignore la comilla y la trate como parte del texto:
+* **Caracteres de escape:** si necesitas usar el mismo tipo de comillas tanto dentro como fuera del texto (por ejemplo, comillas dobles dentro de un texto delimitado por comillas dobles), puedes usar el carácter de escape (`\`) para decirle a Python que ignore la comilla y la trate como parte del texto:
 
 ```py
-print("May dice que \"Python es genial\"")  # Comillas dentro del texto, sin dramas
+print("May dice que \"Python es genial\"")  # Comillas dobles dentro del texto y delimitando la cadena, sin dramas
 ```
 
-De esta forma, puedes usar el tipo de comillas que quieras sin generar errores.
+### 1.2 Combinando mensajes en `print()`
 
-Resumiendo, usa comillas dobles si tu texto contiene apóstrofes, y comillas simples si contiene comillas dobles. Y si necesitas el mismo tipo de comillas dentro y fuera, el carácter de escape te sacará de apuros. ¡Así te ahorrarás dolores de cabeza!
+Cuando quieras mostrar más de un elemento en un solo ``print()`, tienes dos formas de hacerlo: usando comas o el operador `+`. Vamos a ver cómo funciona cada una.
 
-**Combinando mensajes en `print()`**
-
-Cuando usamos la función `print()` en Python, tenemos varias formas de combinar textos o mensajes y mostrarlos juntos en la pantalla. Veamos dos maneras principales de hacerlo:
-
-1. **Usando comas**
-La forma más sencilla de combinar varios elementos en un print() es separarlos por comas. Cuando lo haces así, Python automáticamente añade un espacio entre cada elemento. Puedes combinar textos (cadenas de caracteres), números y variables sin ningún problema.
+1. **Usando comas**: es la forma más sencilla de combinar varios elementos en un `print()`. Cuando lo haces así, Python automáticamente añade un espacio entre cada elemento. Puedes combinar textos (cadenas de caracteres), números y variables sin ningún problema.
 
 ```py
 nombre = "May"
@@ -51,8 +47,7 @@ print("Hola,", nombre, ". Tienes", edad, "años.")
 
 Observa que Python ha puesto espacios entre los elementos automáticamente, sin que tengas que preocuparte por eso.
 
-2. **Usando el operador `+`**
-Otra manera de combinar textos en `print()` es usar el operador `+`. Aquí es importante destacar que solo funciona con cadenas de texto, es decir, todos los elementos que quieras combinar deben ser texto (cadenas). Si estás trabajando con números o variables de otro tipo, deberás convertirlos a texto con la función `str()` (pero no te preocupes, esa parte la veremos más adelante).
+2. **Usando el operador `+`**: es otra manera de combinar textos en `print()`. Aquí es importante destacar que solo funciona con cadenas de texto, es decir, todos los elementos que quieras combinar deben ser texto (cadenas). Si estás trabajando con números o variables de otro tipo, deberás convertirlos a texto con la función `str()` (pero no te preocupes, esa parte la veremos más adelante).
 
 ```py
 nombre = "May"
