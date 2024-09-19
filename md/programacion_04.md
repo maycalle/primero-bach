@@ -113,14 +113,14 @@ Estas herramientas te permiten tomar decisiones en tu código y hacer que tu pro
 
 ¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
 
-* 1. Escribe un programa que le pida al usuario su edad y le diga si **es adulto o no**.
-* 2. Escribe un programa que le pida al usuario su contraseña y, si es 1111 o 4444, le diga "Bienvenido/a", y si no le diga "Acceso no permitido".
-* 3. Para pagar un impuesto se deben tener al menos 16 años y cobrar al menos 1000 euros mensuales. Escribe un programa que le pida al usuario su edad y su sueldo mensual y le diga si tiene que pagar el impuesto o no.
-* 4. Imagina que ya has conseguido tu primer gran sueldo anual (¡felicidades!). Ahora, tu misión es calcular cuánto te tocará **pagar en impuestos**. Escribe un programa que le pregunte al usuario cuál es su sueldo anual y le diga cuánto debe pagar en impuestos según los siguientes tramos:
-    * Si ganas **menos de 10.000 euros**, pagarás un **5%** en impuestos.
-    * Si tu sueldo está **entre 10.000 y 20.000 euros**, el impuesto será del **15%**.
-    * Si tu sueldo está **entre 20.000 y 35.000 euros**, pagarás un **20%**.
-    * Si ganas **35.000 euros o más**, tendrás que pagar un **30%** en impuestos.
+* 1. **Edad (adulto o no):** escribe un programa que le pida al usuario su edad y le diga si es adulto o no.
+* 2. **Contraseña:** escribe un programa que le pida al usuario su contraseña y, si es 1111 o 4444, le diga "Bienvenido/a", y si no le diga "Acceso no permitido".
+* 3. **Impuesto basado en edad y sueldo mensual:** para pagar un impuesto se deben tener al menos 16 años y cobrar al menos 1000 euros mensuales. Escribe un programa que le pida al usuario su edad y su sueldo mensual y le diga si tiene que pagar el impuesto o no.
+* 4. **Calculadora de impuestos para futuros millonarios:** imagina que ya has conseguido tu primer gran sueldo anual (¡felicidades!). Ahora, tu misión es calcular cuánto te tocará pagar en impuestos. Escribe un programa que le pregunte al usuario cuál es su sueldo anual y le diga cuánto debe pagar en impuestos según los siguientes tramos:
+    * Si ganas *menos de 10.000 euros*, pagarás un *5%* en impuestos.
+    * Si tu sueldo está *entre 10.000 y 20.000 euros*, el impuesto será del *15%*.
+    * Si tu sueldo está *entre 20.000 y 35.000 euros*, pagarás un *20%*.
+    * Si ganas *35.000 euros o más*, tendrás que pagar un *30%* en impuestos.
   * El programa debe calcular y mostrar cuánto deberás pagar. ¡Vamos a ver cuánto te quedaría para gastar después de impuestos!
 
 
