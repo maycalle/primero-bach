@@ -121,14 +121,14 @@ Estas herramientas te permiten tomar decisiones en tu código y hacer que tu pro
     * Si tu sueldo está *entre 10.000 y 20.000 euros*, el impuesto será del *15%*.
     * Si tu sueldo está *entre 20.000 y 35.000 euros*, pagarás un *20%*.
     * Si ganas *35.000 euros o más*, tendrás que pagar un *30%* en impuestos.
-    El programa debe calcular y mostrar cuánto deberás pagar. ¡Vamos a ver cuánto te quedaría para gastar después de impuestos!
+    * El programa debe calcular y mostrar cuánto deberás pagar. ¡Vamos a ver cuánto te quedaría para gastar después de impuestos!
 * 5. **Calculadora de becas:** imagina que trabajas en una oficina de becas y debes ayudar a decidir quiénes pueden recibir una beca. El sistema funciona así:
     * Para ser elegible, un estudiante debe tener una nota mínima de 5 y no superar los 18 años.
     * Si tiene una nota *mayor o igual a 9*, recibe una beca del *100%*.
     * Si tiene una nota *entre 7 y 9 (sin incluir el 9)*, recibe una beca del *50%*.
     * Si tiene una nota *entre 5 y 7 (sin incluir el 7)*, recibe una beca del *25%*.
     * Si el estudiante tiene *más de 18 años o una nota inferior a 5*, no recibe beca.
-    Escribe un programa que le pida al usuario su edad y su nota media, y le diga qué tipo de beca recibe o si no es elegible para ninguna beca.
+    * Escribe un programa que le pida al usuario su edad y su nota media, y le diga qué tipo de beca recibe o si no es elegible para ninguna beca.
 
 
 
