@@ -109,5 +109,21 @@ Con la ayuda de los operadores relacionales y lógicos puedes tomar decisiones d
 
 Estas herramientas te permiten tomar decisiones en tu código y hacer que tu programa responda de manera diferente dependiendo de las condiciones establecidas. ¡Con esto, ya tienes la base para crear programas mucho más inteligentes y dinámicos!
 
+## 4. Es tu turno
+
+¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
+
+* 1. Escribe un programa que le pida al usuario su edad y le diga si **es adulto o no**.
+* 2. Escribe un programa que le pida al usuario su contraseña y, si es 1111 o 4444, le diga "Bienvenido/a", y si no le diga "Acceso no permitido".
+* 3. Para pagar un impuesto se deben tener al menos 16 años y cobrar al menos 1000 euros mensuales. Escribe un programa que le pida al usuario su edad y su sueldo mensual y le diga si tiene que pagar el impuesto o no.
+* 4. Imagina que ya has conseguido tu primer gran sueldo anual (¡felicidades!). Ahora, tu misión es calcular cuánto te tocará **pagar en impuestos**. Escribe un programa que le pregunte al usuario cuál es su sueldo anual y le diga cuánto debe pagar en impuestos según los siguientes tramos:
+    * Si ganas **menos de 10.000 euros**, pagarás un **5%** en impuestos.
+    * Si tu sueldo está **entre 10.000 y 20.000 euros**, el impuesto será del **15%**.
+    * Si tu sueldo está **entre 20.000 y 35.000 euros**, pagarás un **20%**.
+    * Si ganas **35.000 euros o más**, tendrás que pagar un **30%** en impuestos.
+  * El programa debe calcular y mostrar cuánto deberás pagar. ¡Vamos a ver cuánto te quedaría para gastar después de impuestos!
+
+
+
 
 
