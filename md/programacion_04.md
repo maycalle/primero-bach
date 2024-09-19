@@ -1,6 +1,6 @@
-# Estructuras de control
+# Otros operadores y estructuras de control selectivas
 
-Con las estructuras de control podrás tomar decisiones dentro del código, permitiendo que tus programas sigan diferentes caminos dependiendo de las condiciones que se cumplan. Veremos cómo usar operadores relacionales y lógicos para comparar valores, y exploraremos las estructuras selectivas if, if-else, y if-elif-else para crear programas que reaccionen de manera inteligente a diferentes situaciones.
+Con las **estructuras de control** podrás tomar decisiones dentro del código, permitiendo que tus programas sigan diferentes caminos dependiendo de las condiciones que se cumplan. En esta unidad, aprenderás cómo usar **operadores relacionales y lógicos** para comparar valores, y exploraremos las **estructuras selectivas if, if-else, y if-elif-else** para crear programas que reaccionen de manera inteligente a diferentes situaciones.
 
 ## 1. Operadores relacionales
 
@@ -20,7 +20,7 @@ print(5 == 5)  # True
 print(10 != 5)  # True
 print(3 < 7)  # True
 print(8 >= 8)  # True
-print()
+print( 2 > 10) # False
 ```
 
 ## 2. Operadores lógicos
@@ -40,11 +40,11 @@ print(not 3 > 2)  # False, porque 3 > 2 es True y not invierte el resultado
 
 ## 3. Estructuras selectivas if, if..else, if..elif..else
 
-Python te permite decidir qué hacer en función de las condiciones que establezcas usando las estructuras de control selectivas. Vamos a ver las más importantes.
+Con la ayuda de los operadores relacionales y lógicos puedes tomar decisiones dentro de tu código con las estructuras selectivas. Estas permiten ejecutar bloques de código dependiendo de si las condiciones son verdaderas o falsas.
 
 * **Estructura básica: if**
 
-    La estructura `if` evalúa una condición, y si esta es verdadera, ejecuta el bloque de código que le sigue. Si la condición es falsa, simplemente salta ese bloque. Es importante que las instrucciones dentro de este bloque estén tabuladas (usualmente con 4 espacios o una tabulación), ya que Python usa la indentación para identificar qué código pertenece a la estructura `if`. Además, siempre debes terminar la línea de la condición con dos puntos (:).
+    La estructura `if` evalúa una condición, y si esta es verdadera, ejecuta el bloque de código que le sigue. Si la condición es falsa, simplemente salta ese bloque. Es **muy importante tabular las instrucciones** dentro del bloque `if` (usualmente con 4 espacios o una tabulación), ya que Python usa la indentación para identificar qué código pertenece a la estructura. Además, siempre debes terminar la línea de la condición con dos puntos (:).
 
     Por ejemplo:
 
@@ -56,11 +56,11 @@ Python te permite decidir qué hacer en función de las condiciones que establez
     print ("Fin del programa")
     ```
 
-    En este ejemplo, el mensaje *"¡Es un número positivo!"* solo se imprimirá si la condición `numero > 0` es verdadera. La tabulación indica que esa línea pertenece al bloque del `if`. Si no tabulamos, el código lanzará un error, ya que Python no sabrá qué parte del código debe ejecutarse según la condición.
+    Aquí, si `numero > 0` es verdadero, el número se incrementará y se imprimirá el mensaje. Si no se cumple, el programa simplemente continuará con el resto del código.
 
 * **Distinguiendo entre dos caminos: if .. else**
 
-    La estructura `if-else` te permite decidir entre dos bloques de código: uno que se ejecuta cuando la condición es verdadera y otro que se ejecuta cuando es falsa. Al igual que con el `if`, es fundamental tabular correctamente el bloque de código correspondiente tanto al `if` como al `else`, y no olvides añadir los dos puntos (:) después de cada uno.
+    Cuando quieres manejar dos posibles resultados, puedes usar la estructura `if-else`. Esta te permite ejecutar un bloque de código si la condición es verdadera, y otro bloque si la condición es falsa. Al igual que con el `if`, el bloque asociado al `else` también debe estar tabulado correctamente, y no olvides los dos puntos (:) en ambas líneas.
 
     ```py
     numero = int(input("Escribe un número positivo:"))
@@ -72,7 +72,7 @@ Python te permite decidir qué hacer en función de las condiciones que establez
     print ("Fin del programa")
     ```
 
-    En este ejemplo, si la condición `numero > 0` es verdadera, se ejecutará el bloque de código dentro del `if`. Si no se cumple, se ejecutará el bloque dentro del `else`.
+    Si `numero > 0` es verdadero, se ejecutará el código dentro del `if`. Si no, se ejecutará el bloque dentro del `else`.
 
 * **Varias condiciones a evaluar: if .. elif ..else**
 
@@ -88,7 +88,7 @@ Python te permite decidir qué hacer en función de las condiciones que establez
             print ("El número es demasiado bajo")
         else:
             print ("El número no es positivo")
-    print ("Fin del programa")
+    print ("Fin del programa")    
     ```
 
     … pero, en lugar de anidar estas estructuras, también podemos utilizar la cláusula `if..elif` para especificar más de un bloque de condiciones. Podemos enlazar tantas clásulas `elif` como necesitemos, y también concluir con una cláusula `else` si queremos, para el último camino a distinguir:
@@ -104,6 +104,10 @@ Python te permite decidir qué hacer en función de las condiciones que establez
         print ("El número no es positivo")
     print ("Fin del programa")
     ```
-    
-Con los operadores relacionales y lógicos, combinados con las estructuras de control selectivas, puedes crear programas mucho más flexibles y adaptables. Ya no estarás limitado a que tu código se ejecute siempre de la misma manera; ahora puedes tomar decisiones y hacer que el programa reaccione de manera diferente según la entrada del usuario o los valores en juego.
+
+    Con `if-elif-else`, puedes manejar varias condiciones de manera más clara y eficiente que anidando múltiples estructuras.
+
+Estas herramientas te permiten tomar decisiones en tu código y hacer que tu programa responda de manera diferente dependiendo de las condiciones establecidas. ¡Con esto, ya tienes la base para crear programas mucho más inteligentes y dinámicos!
+
+
 
