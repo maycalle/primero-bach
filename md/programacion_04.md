@@ -130,7 +130,7 @@ Estas herramientas te permiten tomar decisiones en tu código y hacer que tu pro
     * Si el estudiante tiene *más de 18 años o una nota inferior a 5*, no recibe beca.
     * Escribe un programa que le pida al usuario su edad y su nota media, y le diga qué tipo de beca recibe o si no es elegible para ninguna beca.
 
-Si has terminado todos los ejercicios, puedes continuar con más **retos** en la (**web kattis**)[https://open.kattis.com/]
+Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
 
 
