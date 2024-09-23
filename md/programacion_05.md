@@ -6,37 +6,69 @@ Python ofrece dos tipos principales de bucles: **for** y **while**. Cada uno tie
 
 ## 1. Estructura for
 
-En Python, la estructura básica de un bucle `for` es la siguiente:
+El bucle `for` se utiliza para repetir un bloque de código un número determinado de veces. Su estructura básica es la siguiente:
 
 ```py
 for i in range(n):
     # Código que se repetirá
 ``` 
 
-En este caso, `n` es el número de veces que quieres repetir lo que va dentro del bucle. Por ejemplo, si quisiéramos mostrar la palabra "hola" 10 veces, el código sería:
+En este caso:
+* `i` es una variable que se actualiza automáticamente en cada repetición (o iteración) del bucle.
+* `range(n)` genera una secuencia de números que comienza en 0 y llega hasta n-1, lo que significa que el bloque de código se ejecutará n veces.
+
+Por ejemplo, si quisiéramos mostrar la palabra "hola" 10 veces, el código sería:
 
 ```py
 for i in range(10):
     print("hola")   # Imprime "hola" diez veces
 ```
 
-Este enfoque es mucho más eficiente que copiar y pegar la misma línea 10 veces. Si luego decides que necesitas imprimir "hola" 100 veces, solo tendrías que cambiar el 10 por un 100, y listo.
+Este enfoque es mucho más eficiente que copiar y pegar la misma línea 10 veces. Si luego quisieras imprimir "hola" 100 veces, solo tendrías que cambiar 10 por 100 en `range(100)`, y listo.
 
-La variable `i`, es la que controla el número de repeticiones; `i` comienza en 0 y aumenta de uno en uno con cada vuelta del bucle. Si quisiéramos ver cómo cambia el valor de `i` en lugar de imprimir "hola", podríamos hacer lo siguiente:
+Si quisiéramos ver cómo cambia el valor de `i` en lugar de imprimir **"hola"**, podríamos hacer lo siguiente:
 
 ```py
 for i in range(4):
     print(i)    # Imprime 0 1 2 3
 ```
 
-Pero Python no solo puede contar de 1 en 1. Si necesitas más control, puedes decirle que empiece en un número específico, termine en otro, e incluso que aumente una cierta cantidad en cada vuelta o iteración. 
+### 1.1 La función range()
+
+La función `range()` es fundamental en los bucles `for` porque genera la secuencia de números que controla cuántas veces se ejecuta el bucle. Dependiendo de cómo la uses, `range()` puede generar diferentes tipos de secuencias:
+
+* **range(n):** genera una secuencia que va desde 0 hasta n - 1.
+* **range(inicio, fin):** genera una secuencia que empieza en inicio y llega hasta fin - 1.
+* **range(inicio, fin, salto):** genera una secuencia que empieza en inicio, termina en fin - 1, y avanza de acuerdo con el valor de salto (que puede ser positivo o negativo).
+
+
+Por ejemplo, si queremos generar una secuencia de números desde 3 hasta 7, el código sería: 
+
+```py
+for i in range(3, 8):
+    print(i)  # Imprime 3, 4, 5, 6, 7
+```
+
+En este caso, `i` empieza en 3 y termina en 7, porque el bucle se detiene antes de llegar a 8.
+
+Si queremos imprimir todos los números pares comprendidos entre 0 y 8, podemos hacer lo siguiente:
 
 ```py
 for i in range(0, 9, 2):
     print(i)    # Imprime 0 2 4 6 8 
 ```
 
-Este bucle empieza en 0, se detiene antes de llegar a 9, y avanza de 2 en 2.
+Aquí, el bucle empieza en 0, se detiene antes de llegar a 9, y avanza de 2 en 2.
+
+Si quisiéramos contar hacia atrás desde 10 hasta 1, usaríamos un paso negativo:
+
+```py
+for i in range(10, 0, -1):
+    print(i)  # Imprime 10, 9, 8, ..., 1
+```
+
+En este caso, `i` comienza en 10 y va disminuyendo en 1 hasta llegar a 1 (sin incluir el 0).
+
 
 ## 2. Estructura while
 
