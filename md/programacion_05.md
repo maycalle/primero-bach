@@ -140,3 +140,7 @@ Como ves, los bucles son una herramienta muy poderosa para hacer que tu código 
     ```
 4. Crea un programa llamado **invertir_numero.py** que le pida al usuario un número entero y construya otro en otra variable que sea el original dado la vuelta. Por ejemplo, si el número inicial es 2356, debe construir el 6532.
 
+    **Pistas:**
+      * Usa el operador % para obtener el último dígito de un número.
+      * Usa la división entera // para eliminar el último dígito.
+      * Para formar el número invertido, deberás ir multiplicando el resultado anterior por 10 y sumando el último dígito que obtuviste.
