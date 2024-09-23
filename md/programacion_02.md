@@ -88,7 +88,7 @@ Python no solo sirve para hacer arte ASCII o mostrar mensajes; también es una c
     * **Suma:** +
     * **Resta:** -
     * **Multiplicación:** *
-    * **División:** /
+    * **División:** / (división real) y // (división entera)
     * **Exponentes:** ** (por ejemplo, 2 ** 3 es 2 al cubo, o 8)
     * **Módulo (resto de una división):** % (ideal para saber si un número es par o impar)
 
@@ -164,14 +164,16 @@ En Python, una variable es como una "caja" donde puedes guardar un valor, y lueg
 * **Sobre los nombres de las variables**: a la hora de asignar un nombre a una variable, hay que seguir estas reglas:
 
     * **Caracteres permitidos:**
-        * Letras (mayúsculas y minúsculas).
-        * Dígitos.
-        * Subrayado _.
-        * No pueden empezar por un dígito.
+        * Letras (mayúsculas y minúsculas)
+        * Dígitos
+        * Subrayado 
+        * No pueden empezar por un dígito
 
     * **Nombres compuestos:** puedes separar las palabras usando:
-        * Subrayado (_) → estilo más común en Python.
+        * Subrayado → estilo más común en Python.
         * camelCase → primera palabra en minúsculas y las siguientes con mayúscula.
+  
+    * **Diferencia entre mayúsculas y minúsculas:** Python distingue entre mayúsculas y minúsculas. Por ejemplo, las variables `apellido`, `Apellido` y `APELLIDO` se consideran diferentes entre sí.
 
     ```py
     # Ejemplos de nombres válidos
