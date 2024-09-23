@@ -122,12 +122,10 @@ Como ves, los bucles son una herramienta muy poderosa para hacer que tu código 
 ## 4. Es tu turno
 
 1. Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
-   * Si ninguna nota es mayor que 4, la nota final es 0
-   * Si algunas notas son mayores que 4 (pero no todas), la nota final es 2
-   * Si todas las notas son mayores que 4, la nota final será el 30% de la primera más el 20% de la segunda más el 50% de la tercera
-
+      * Si ninguna nota es mayor que 4, la nota final es 0
+      * Si algunas notas son mayores que 4 (pero no todas), la nota final es 2
+      * Si todas las notas son mayores que 4, la nota final será el 30% de la primera más el 20% de la segunda más el 50% de la tercera
 2. Crea un programa llamado **factura.py** que le pida al usuario precios para una factura, hasta que escriba 0. Entonces, el programa debe mostrar el total de la factura con 2 dígitos decimales.
-
 3. Crea un programa llamado **mayor_menor.py** que le pida al usuario que introduzca una secuencia de N números positivos (primero el usuario deberá indicar cuántos números va a introducir). Al final del proceso, el programa deberá mostrar por pantalla el valor del número mayor y el menor introducidos por el usuario. Por ejemplo:
 
     ```py
@@ -140,6 +138,5 @@ Como ves, los bucles son una herramienta muy poderosa para hacer que tu código 
     El mayor es 7
     El menor es 2
     ```
-
 4. Crea un programa llamado **invertir_numero.py** que le pida al usuario un número entero y construya otro en otra variable que sea el original dado la vuelta. Por ejemplo, si el número inicial es 2356, debe construir el 6532.
 
