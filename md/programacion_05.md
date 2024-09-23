@@ -121,12 +121,24 @@ Como ves, los bucles son una herramienta muy poderosa para hacer que tu código 
 
 ## 4. Es tu turno
 
-1. Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
+1. Escribe un programa llamado **impares.py** que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
+2. Escribir un programa llamado **primos.py** que pida al usuario un número entero y muestre por pantalla si es un número primo o no. Recuerda que un número es primo si es mayor que 1 y solo es divisible por 1 y él mismo.  
+3. Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
       * Si ninguna nota es mayor que 4, la nota final es 0
       * Si algunas notas son mayores que 4 (pero no todas), la nota final es 2
       * Si todas las notas son mayores que 4, la nota final será el 30% de la primera más el 20% de la segunda más el 50% de la tercera
-2. Crea un programa llamado **factura.py** que le pida al usuario precios para una factura, hasta que escriba 0. Entonces, el programa debe mostrar el total de la factura con 2 dígitos decimales.
-3. Crea un programa llamado **mayor_menor.py** que le pida al usuario que introduzca una secuencia de N números positivos (primero el usuario deberá indicar cuántos números va a introducir). Al final del proceso, el programa deberá mostrar por pantalla el valor del número mayor y el menor introducidos por el usuario. Por ejemplo:
+4. Crea un programa llamado **factura.py** que le pida al usuario precios para una factura, hasta que escriba 0. Entonces, el programa debe mostrar el total de la factura con 2 dígitos decimales.
+5. Escribe un programa llamado **dibuja_triangulo.py** que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido.
+
+    ```py
+    *
+    **
+    ***
+    ****
+    *****
+    ``` 
+
+6. Crea un programa llamado **mayor_menor.py** que le pida al usuario que introduzca una secuencia de N números positivos (primero el usuario deberá indicar cuántos números va a introducir). Al final del proceso, el programa deberá mostrar por pantalla el valor del número mayor y el menor introducidos por el usuario. Por ejemplo:
 
     ```py
     Dime cuántos números vas a introducir:
