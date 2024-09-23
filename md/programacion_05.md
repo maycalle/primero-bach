@@ -4,7 +4,7 @@ En programación, muchas veces necesitamos realizar una tarea de forma repetida 
 
 Python ofrece dos tipos principales de bucles: **for** y **while**. Cada uno tiene sus propias ventajas y es adecuado para diferentes situaciones. 
 
-## 1. Estructura FOR
+## 1. Estructura for
 
 En Python, la estructura básica de un bucle `for` es la siguiente:
 
@@ -38,13 +38,13 @@ for i in range(0, 9, 2):
 
 Este bucle empieza en 0, se detiene antes de llegar a 9, y avanza de 2 en 2.
 
-## 2. Estructura WHILE
+## 2. Estructura while
 
 Además del bucle `for`, Python ofrece otro tipo de bucle llamado `while`, que también permite repetir una sección de código varias veces, pero con una diferencia importante: en lugar de repetir un número fijo de veces, el bucle `while` se ejecuta mientras se cumple una determinada condición.
 
 La estructura básica de un while es la siguiente:
 
-```py 
+```py
 while condición:
     # Código que se repetirá mientras la condición sea verdadera
 ```
@@ -72,7 +72,7 @@ En este caso:
 
 Por ejemplo, imagina que quieres hacer un bucle que pida al usuario que adivine un número hasta que lo acierte. Usarías un while, porque no sabes cuántas veces el usuario necesitará intentarlo:
 
-```py 
+```py
 numero_secreto = 7
 adivina = int(input("Adivina el número: "))
 
@@ -81,7 +81,6 @@ while adivina != numero_secreto:
     adivina = int(input("Adivina el número: "))
 
 print("¡Felicidades, adivinaste el número!")
-
 ```
 
 Este bucle seguirá pidiendo al usuario que adivine el número hasta que el valor introducido sea igual a `numero_secreto`.
