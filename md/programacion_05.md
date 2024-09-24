@@ -150,3 +150,5 @@ Como ves, los bucles son una herramienta muy poderosa para hacer que tu código 
     El mayor es 7
     El menor es 2
     ```
+    
+Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
