@@ -1,112 +1,61 @@
-# Más sobre cadenas de texto 
+# Listas
 
-## 1. Operaciones básicas
+Una lista es una estructura de datos que permite almacenar elementos de diferentes tipos y pueden modificarse fácilmente (añadiendo o quitando elementos).
 
-Ya hemos visto en apartados anteriores que Python permite manejar cadenas de texto utilizando indistintamente comillas simples o dobles. Podemos crearlas con un texto predefinido en el programa, o pedirlas al usuario a través de la instrucción input:
+## 1. Creación de listas
 
-```py
-texto = "Hola"
-texto2 = 'Buenas' 
-texto3 = input("Dime tu nombre: ")
-```
+Puedes crear una lista de dos maneras:
 
-Además, también hemos visto las siguientes operaciones básicas:
+* **Directamente con corchetes:**
 
-* **Concatenación:** unimos cadenas con el operador `+`
+    ```py 
+    mi_lista = ['A', 'B', 'C']
+    ```
 
-```py
-nombre = "May"
-texto = "Hola, " + nombre  # Hola, May
-```
+* **Usando la función `list()`:**
 
-* **Conversión a cadena:** convertimos cualquier dato a cadena con `str()`
+    ```py 
+    mi_lista = list()
+    ```
 
-```py
-edad = 17
-texto = "Tengo " + str(edad) + " años"
-```
-
-* **Repetir cadenas:** repetimos una cadena usando `*`:
+Las listas pueden contener cualquier tipo de datos, incluso mezclados:
 
 ```py
-texto = "Hola" * 3  # HolaHolaHola
+mi_lista = ['Juan', 25, True]
 ```
 
-A estas operaciones básicas ya conocidas, podemos añadir la siguiente: 
+## 2. Acceder a los elementos
 
-* **Índices y longitud:** podemos acceder a un carácter concreto con corchetes `[]` y conocer la longitud de la cadena con `len()`:
+Para obtener un elemento de una lista, usamos su **índice**, que empieza en 0. Por ejemplo, si tenemos la lista `mi_lista = ['A', 'B', 'C']`, el primer elemento será `mi_lista[0]`, y el segundo `mi_lista[1]`.
 
+Podemos usar índices negativos para acceder a los elementos desde el final. En `mi_lista = ['A', 'B', 'C']`, `mi_lista[-1]` devolverá 'C'.
+
+## 3. Modificar listas
+
+* Para **añadir elementos al final**, usamos `append()`:
+  
 ```py
-texto = "Hola"
-print(texto[0])  # H
-print(len(texto))  # 4
+mi_lista.append('D')
 ```
 
-## 2. Operaciones avanzadas
+* Para **insertar un elemento en una posición específica**, usamos `insert()`:
 
-* **Dividir cadenas:** usamos `split()` para separar una cadena en una lista de palabras, usando un delimitador:
-
-```py
-texto = "Uno,Dos,Tres"
-partes = texto.split(",")  # ["Uno", "Dos", "Tres"]
+```py 
+mi_lista.insert(1, 'X')
 ```
 
-* **Unir listas en cadenas:** Con `join()`, podemos unir elementos de una lista en una cadena, separándolos con un delimitador:
+* Para **eliminar un elemento por su posición**, usamos `del` o `pop()`:
 
-```py
-partes = ["Uno", "Dos", "Tres"]
-texto = ','.join(partes)  # Uno,Dos,Tres
+```py 
+del mi_lista[1] 
+mi_lista.pop(1)
 ```
 
-* **Reemplazar texto:** replace() sustituye una parte de la cadena por otro texto:
+* Para **eliminar un elemento por su valor**, usamos `remove()`:
 
-```py
-texto = "Java es el mejor lenguaje"
-texto2 = texto.replace("Java", "Python")  # Python es el mejor lenguaje
+```py 
+mi_lista.remove('A')
 ```
-
-* **Convertir mayúsculas/minúsculas:** Usamos `lower()` y `upper()` para convertir texto a minúsculas o mayúsculas:
-
-```py
-texto = "Hola, buenas"
-texto_mayus = texto.upper()  # HOLA, BUENAS
-```
-
-* **Buscar en cadenas:** Con `find()`, encontramos la posición de una subcadena, y con `in` verificamos si una palabra está presente:
-
-```py
-texto = "Hola, buenas"
-posicion = texto.find("buenas")  # 6
-if "buenas" in texto:
-    print("El texto contiene 'buenas'")
-```
-
-* **Subcadenas:** Para extraer una parte de la cadena, usamos el formato cadena[inicio:fin]:
-
-```py
-texto = "Hola, buenas tardes"
-subcadena = texto[6:12]  # buenas
-subcadena2 = texto[6:]   # buenas tardes
-```
-
-* **Comparar cadenas:** Usamos operadores de comparación (<, >, ==) para comparar alfabéticamente:
-
-```py
-texto1 = "Hola"
-texto2 = "buenas"
-if texto1 < texto2:
-    print('"Hola" es menor que "buenas"')
-```
-
-* **Eliminar espacios:** `strip()` elimina espacios al inicio y al final de una cadena. También están `lstrip()` y `rstrip()` para limpiar solo a la izquierda o derecha:
-
-```py
-texto = "\tHola   "
-texto_limpio = texto.strip()  # "Hola"
-```
-
-
-
 
 
 
