@@ -1,4 +1,4 @@
-# Listas
+# 6. Listas
 
 Una lista es una estructura de datos que permite almacenar elementos de diferentes tipos y pueden modificarse fácilmente (añadiendo o quitando elementos).
 
