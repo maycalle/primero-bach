@@ -150,10 +150,10 @@ Puedes crear una lista de dos maneras:
     * **Mostrar asignaturas y notas:** finalmente, muestra la lista de asignaturas con sus respectivas notas, utilizando el siguiente formato: `Asignatura: Nota`
 
     **Ejemplo de funcionamiento:**
-    
+           
+    ```
     Asignaturas: ['Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
     
-    ```
     Introduce la nota para Física: 8
     Introduce la nota para Química: 7.5
     Introduce la nota para Matemáticas: 9
