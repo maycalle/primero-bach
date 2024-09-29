@@ -8,7 +8,7 @@ Puedes crear una lista de dos maneras:
 
 * **Directamente con corchetes:**
 
-    ```py 
+    ```py
     # Creamos una lista con tres elementos
     mi_lista = ['A', 'B', 'C']
     print(mi_lista)  # Salida: ['A', 'B', 'C']    
@@ -16,7 +16,7 @@ Puedes crear una lista de dos maneras:
 
 * **Usando la función `list()`:**
 
-    ```py 
+    ```py
     # Creamos una lista vacía usando la función list()
     mi_lista = list()
     print(mi_lista)  # Salida: []
@@ -70,7 +70,7 @@ Puedes crear una lista de dos maneras:
 
 * Para **eliminar un elemento por su posición**, usamos `del` o `pop()`:
 
-    ```py 
+    ```py
     # Eliminamos el elemento en la posición 1 ('B')
     mi_lista = ['A', 'B', 'C', 'D']
     del mi_lista[1]
@@ -84,7 +84,7 @@ Puedes crear una lista de dos maneras:
 
 * Para **eliminar un elemento por su valor**, usamos `remove()`:
 
-    ```py 
+    ```py
     # Eliminamos el primer elemento que tenga el valor 'A'
     mi_lista = ['A', 'B', 'C']
     mi_lista.remove('A')
