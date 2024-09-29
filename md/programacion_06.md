@@ -153,7 +153,7 @@ Puedes crear una lista de dos maneras:
            
     ```
     Asignaturas: ['Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
-    
+
     Introduce la nota para Física: 8
     Introduce la nota para Química: 7.5
     Introduce la nota para Matemáticas: 9
