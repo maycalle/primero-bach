@@ -132,7 +132,35 @@ Donde:
     print(mi_lista)  # Salida: ['B', 'C']
     ```
 
-## 4. Otras funciones interesantes sobre listas
+## 4. Copiar listas
+
+Existen dos formas de copiar listas:
+
+* **Copia por referencia (lista1 = lista2):** se asocia a `lista1` la misma lista que `lista2`. Ambas variables apuntan a la misma dirección de memoria, por lo que cualquier cambio en una afectará a la otra. 
+  
+```py
+lista1 = [1, 2, 3]
+lista2 = lista1  # Copia por referencia
+lista2.append(4)
+print(lista1)  # Salida: [1, 2, 3, 4]
+print(lista2)  # Salida: [1, 2, 3, 4]
+```
+
+Tanto lista1 como lista2 apuntan a la misma lista, por lo que los cambios en lista2 también se reflejan en lista1.
+
+* **Copia por valor (lista1 = list(lista2)):** esto crea una nueva lista independiente con el mismo contenido que `lista2`, pero en una dirección de memoria diferente. Las dos listas son independientes, por lo que los cambios en una no afectan a la otra.
+
+```py
+lista1 = [1, 2, 3]
+lista2 = list(lista1)  # Copia por valor
+lista2.append(4)
+print(lista1)  # Salida: [1, 2, 3]
+print(lista2)  # Salida: [1, 2, 3, 4]
+```
+
+Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no modifican a lista1.
+
+## 5. Otras funciones interesantes sobre listas
 
 * El método `sort()` ordena los elementos de la lista de menor a mayor. Si quieres que sea en orden inverso, puedes usar el argumento `reverse=True`.
 
@@ -171,7 +199,7 @@ Donde:
     print(sum(lista))  # Salida: 10
     ```
 
-## 5. Es tu turno
+## 6. Es tu turno
 
 * 1. **Asignaturas**: escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
     * **Crea una lista** que contenga las asignaturas de un curso (por ejemplo: Física, Química, Matemáticas, Historia y Lengua). Puedes ordenarla de acuerdo a tu nivel de interés (de más a menos interesante para ti). A continuación, muestra la lista por pantalla.
