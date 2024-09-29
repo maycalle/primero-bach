@@ -122,13 +122,21 @@ Puedes crear una lista de dos maneras:
 
 ## 5. Es tu turno
 
-* 1. Escribe un programa llamado **asignaturas.py** que almacene las asignaturas de un curso (por ejemplo Física, Informática, Química, Matemáticas, Historia y Lengua) en una lista y la muestre por pantalla.
+* 1. Escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
+    * **Crea una lista** que contenga las asignaturas de un curso (por ejemplo: Física, Química, Matemáticas, Historia y Lengua). Puedes ordenarla de acuerdo a tu nivel de interés (de más a menos interesante para ti). A continuación, muestra la lista por pantalla.
+    * **Añadir una asignatura:** el programa debe pedir al usuario que introduzca el nombre de una nueva asignatura y la posición en la que quiere insertarla dentro de la lista. Una vez insertada, el programa debe mostrar la lista actualizada con la nueva asignatura en la posición elegida.
+    * **Eliminar una asignatura:** El programa debe pedir al usuario que elimine una asignatura de la lista por su nombre. Después de eliminarla, muestra la lista actualizada sin esa asignatura.
 
-* 2. Crea un programa que permita almacenar las notas de un grupo de estudiantes en una lista y luego calcule el promedio de las notas.
-
+* 2. Crea un programa llamado **notas.py** que haga lo siguiente:
+  * Pregunte al usuario cuántas notas desea introducir.
+  * Recoja cada una de las notas y las almacene en una lista.
+  * Calcule el promedio de las notas almacenadas.
+  * Muestre todas las notas introducidas y el promedio calculado con 2 cifras decimales.
 
 * Escribe un programa que pregunte al usuario un número y una lista de números, y luego verifique si el número está en la lista.
+
 * Escribe un programa que elimine los elementos duplicados de una lista.
+
 * Ejercicio 5: Ordenar lista
 Crea un programa que pida al usuario una lista de números y luego los ordene de menor a mayor.
 
