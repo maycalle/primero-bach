@@ -201,7 +201,17 @@ Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no
 
 ## 6. Es tu turno
 
-* 1. **Asignaturas**: escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
+* 1. Escribe un programa llamado **loterias.py** que pregunte al usuario los números ganadores de la lotería primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
+
+* 2. Escribe un programa llamado **sentido_inverso.py** que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso separados por comas.
+
+* 3. Escribe un programa llamado **precios.py** que almacene en una lista 10 precios diferentes y muestre por pantalla el menor y el mayor de los precios.
+
+* 3. Escribe un programa llamado **abecedario.py** que almacene el abecedario en una lista, elimine de la lista las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
+
+* 4. Escribe un programa llamado **vocales.py** que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+
+* 5. Escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
     * **Crea una lista** que contenga las asignaturas de un curso (por ejemplo: Física, Química, Matemáticas, Historia y Lengua). Puedes ordenarla de acuerdo a tu nivel de interés (de más a menos interesante para ti). A continuación, muestra la lista por pantalla.
     * **Añadir una asignatura:** el programa debe pedir al usuario que introduzca el nombre de una nueva asignatura y la posición en la que quiere insertarla dentro de la lista. Una vez insertada, el programa debe mostrar la lista actualizada con la nueva asignatura en la posición elegida.
     * **Eliminar una asignatura:** El programa debe pedir al usuario que elimine una asignatura de la lista por su nombre. Después de eliminarla, muestra la lista actualizada sin esa asignatura.
@@ -222,7 +232,7 @@ Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no
     ['Programación', 'Física', 'Química', 'Matemáticas', 'Lengua']
     ```
 
-* 2. Escribe un programa llamado **notas_asignaturas.py** que realice las siguientes acciones:
+* 6. Escribe un programa llamado **notas_asignaturas.py** que realice las siguientes acciones:
     * **Crear una lista de asignaturas:** crea una lista con varias asignaturas (como en el ejercicio anterior). Muestra esta lista de asignaturas por pantalla.
     * **Solicitar las notas:** pide al usuario que introduzca una nota para cada asignatura en el mismo orden en el que aparecen en la lista de asignaturas. Las notas deben guardarse en una nueva lista de notas, asegurando que las posiciones de las notas coincidan con las asignaturas correspondientes.
     * **Calcular el promedio:** calcula el promedio de todas las notas introducidas y muéstralo con 2 cifras decimales por pantalla.
@@ -248,6 +258,9 @@ Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no
 
     El promedio de las notas es: 7.50
     ```
+
+* 7. Escribe un programa llamado **palindromo.py** que pida al usuario una palabra y muestre por pantalla si es un palíndromo. Un **palíndromo** es una palabra que se lee igual de izquierda a derecha que de derecha a izquierda. Es decir, si la palabra se invierte, sigue siendo la misma. Por ejemplo: radar, oso, etc
+
 
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
