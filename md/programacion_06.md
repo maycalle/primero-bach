@@ -61,7 +61,7 @@ Puedes crear una lista de dos maneras:
     print(mi_lista)  # Salida: ['A', 'B', 'C', 'D']
     ```
 
-* Para **insertar un elemento en una posición específica**, usamos `insert()`:
+* Para **insertar un elemento en una posición específica**, usamos `insert()`. Se debe indicar el índice donde se desea insertar el elemento y luego el valor.
 
     ```py
     # Insertamos el elemento 'X' en la posición 1
@@ -70,7 +70,7 @@ Puedes crear una lista de dos maneras:
     print(mi_lista)  # Salida: ['A', 'X', 'B', 'C']    
     ```
 
-* Para **eliminar un elemento por su posición**, usamos `del` o `pop()`:
+* Para **eliminar un elemento por su posición**, usamos `del` o `pop()`. Por defecto, `pop()` elimina el último elemento si no se especifica índice:
 
     ```py
     # Eliminamos el elemento en la posición 1 ('B')
@@ -92,6 +92,58 @@ Puedes crear una lista de dos maneras:
     mi_lista.remove('A')
     print(mi_lista)  # Salida: ['B', 'C']
     ```
+
+## 4. Otras funciones interesantes sobre listas
+
+* El método `sort()` ordena los elementos de la lista de menor a mayor. Si quieres que sea en orden inverso, puedes usar el argumento `reverse=True`.
+
+    ```py
+    mi_lista = [3, 1, 2]
+    mi_lista.sort()
+    print(mi_lista)  # Salida: [1, 2, 3]
+
+    mi_lista.sort(reverse=True)
+    print(mi_lista)  # Salida: [3, 2, 1]
+    ```
+
+* La función `len()` devuelve la cantidad de elementos en la lista.
+
+    ```py
+    mi_lista = [1, 2, 3, 4]
+    print(len(mi_lista))  # Salida: 4
+    ```
+
+* El método `count()` cuenta cuántas veces aparece un valor en la lista.
+
+    ```py
+    mi_lista = [1, 2, 2, 3, 2]
+    print(mi_lista.count(2))  # Salida: 3
+    ```
+
+## 5. Es tu turno
+
+* 1. Escribe un programa llamado **asignaturas.py** que almacene las asignaturas de un curso (por ejemplo Física, Informática, Química, Matemáticas, Historia y Lengua) en una lista y la muestre por pantalla.
+
+* 2. Crea un programa que permita almacenar las notas de un grupo de estudiantes en una lista y luego calcule el promedio de las notas.
+
+
+* Escribe un programa que pregunte al usuario un número y una lista de números, y luego verifique si el número está en la lista.
+* Escribe un programa que elimine los elementos duplicados de una lista.
+* Ejercicio 5: Ordenar lista
+Crea un programa que pida al usuario una lista de números y luego los ordene de menor a mayor.
+
+Ejercicio 6: Invertir lista
+Escribe un programa que pida una lista de palabras al usuario y la muestre en orden inverso.
+Pistas:
+Usa la función reverse() para invertir la lista.
+
+Ejercicio 7: Contar apariciones
+Escribe un programa que pida una lista de números y un número específico, luego cuente cuántas veces aparece ese número en la lista.
+Pistas:
+Usa el método count() para contar las apariciones.
+
+Ejercicio 8: Sumar listas
+Crea un programa que pida dos listas de números de igual tamaño y genere una nueva lista con la suma de los números en la misma posición de ambas listas.
 
 
 
