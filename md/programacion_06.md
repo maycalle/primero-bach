@@ -122,16 +122,35 @@ Puedes crear una lista de dos maneras:
 
 ## 5. Es tu turno
 
-* 1. Escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
+* 1. **Asignaturas**: escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
     * **Crea una lista** que contenga las asignaturas de un curso (por ejemplo: Física, Química, Matemáticas, Historia y Lengua). Puedes ordenarla de acuerdo a tu nivel de interés (de más a menos interesante para ti). A continuación, muestra la lista por pantalla.
     * **Añadir una asignatura:** el programa debe pedir al usuario que introduzca el nombre de una nueva asignatura y la posición en la que quiere insertarla dentro de la lista. Una vez insertada, el programa debe mostrar la lista actualizada con la nueva asignatura en la posición elegida.
     * **Eliminar una asignatura:** El programa debe pedir al usuario que elimine una asignatura de la lista por su nombre. Después de eliminarla, muestra la lista actualizada sin esa asignatura.
 
-* 2. Crea un programa llamado **notas.py** que haga lo siguiente:
-  * Pregunte al usuario cuántas notas desea introducir.
-  * Recoja cada una de las notas y las almacene en una lista.
-  * Calcule el promedio de las notas almacenadas.
-  * Muestre todas las notas introducidas y el promedio calculado con 2 cifras decimales.
+    **Ejemplo de funcionamiento:** 
+
+    ```
+    Asignaturas ordenadas de más a menos interesantes:
+    ['Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
+
+    Introduce una nueva asignatura: Programación
+    ¿En qué posición quieres añadirla (1-5)? 1
+    Lista de asignaturas actualizada:
+    ['Programación', 'Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
+
+    ¿Qué asignatura deseas eliminar?: Historia
+    Lista de asignaturas tras la eliminación:
+    ['Programación', 'Física', 'Química', 'Matemáticas', 'Lengua']
+    ```
+
+* 2. Escribe un programa llamado **notas_asignaturas.py** que realice las siguientes acciones:
+  * **Crear una lista de asignaturas:** crea una lista con varias asignaturas (como en el ejercicio anterior). Muestra esta lista de asignaturas por pantalla.
+  * **Solicitar las notas:** pide al usuario que introduzca una nota para cada asignatura en el mismo orden en el que aparecen en la lista de asignaturas. Las notas deben guardarse en una nueva lista de notas, asegurando que las posiciones de las notas coincidan con las asignaturas correspondientes.
+  * **Calcular el promedio:** calcula el promedio de todas las notas introducidas y muéstralo con 2 cifras decimales por pantalla.
+  * **Mostrar asignaturas y notas:** finalmente, muestra la lista de asignaturas con sus respectivas notas, utilizando el siguiente formato: `Asignatura: Nota`
+
+
+
 
 * Escribe un programa que pregunte al usuario un número y una lista de números, y luego verifique si el número está en la lista.
 
