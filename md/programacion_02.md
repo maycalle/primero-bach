@@ -1,4 +1,4 @@
-# Imprime, calcula y pregunta
+# 2. Imprime, calcula y pregunta
 
 En esta sesión vamos a aprender más detalles sobre el comando `print()`, exploraremos el arte ASCII, trabajaremos con operadores matemáticos y, lo más importante, ¡aprenderemos a interactuar con el usuario con `input()`! 
 

@@ -1,4 +1,4 @@
-# Estructuras repetitivas (Bucles)
+# 5. Estructuras repetitivas (Bucles)
 
 En programación, muchas veces necesitamos realizar una tarea de forma repetida sin tener que escribir manualmente el mismo código una y otra vez. Aquí es donde entran en juego las **estructuras repetitivas**, también conocidas como **bucles**. Los **bucles** nos permiten ejecutar un bloque de código varias veces de forma automática, lo que no solo ahorra tiempo y líneas de código, sino que también hace que nuestros programas sean más flexibles y eficientes.
 

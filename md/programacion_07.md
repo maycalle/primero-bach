@@ -1,4 +1,4 @@
-# Más sobre cadenas de texto 
+# 7. Más sobre cadenas de texto 
 
 ## 1. Operaciones básicas
 
@@ -105,7 +105,9 @@ texto = "\tHola   "
 texto_limpio = texto.strip()  # "Hola"
 ```
 
+## 3. Es tu turno
 
+Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
 
 

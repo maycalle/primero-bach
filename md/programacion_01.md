@@ -1,4 +1,4 @@
-# Primeros pasos con Python
+# 1. Primeros pasos con Python
 
 ¡Bienvenidos al emocionante mundo de Python! Un lenguaje de programación que no solo es fácil de aprender, sino que también es súper versátil. ¿Listos para empezar a programar? 
 

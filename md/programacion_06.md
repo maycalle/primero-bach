@@ -170,6 +170,6 @@ Puedes crear una lista de dos maneras:
     El promedio de las notas es: 7.50
     ```
 
-
+Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
 
