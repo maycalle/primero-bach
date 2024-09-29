@@ -50,6 +50,45 @@ Puedes crear una lista de dos maneras:
     print(mi_lista[-2])  # Salida: 'B' (penúltimo elemento)
     ```
 
+### 2.1 Recorrer una lista 
+
+La forma más sencilla de recorrer una lista es usar un bucle `for..in`. Este bucle permite iterar por cada elemento de la lista y realizar acciones con ellos.
+
+```py
+mi_lista = [10, 20, 30, 40, 50]
+for elemento in mi_lista:
+    print(elemento) # Salida: 10 20 30 40 50 (cada número en una línea diferente)
+```
+
+### 2.2 Sublistas
+
+Podemos obtener una sublista de una lista dada de la siguiente forma:
+
+`sublista = mi_lista[inicio:fin:salto]`
+
+Donde: 
+* **inicio:** es el índice desde donde se empieza a extraer (incluido).
+* **fin:** es el índice hasta donde se extrae (no incluido).
+* **salto:** indica el salto entre los elementos. El valor por defecto es 1.
+
+**Ejemplos**
+
+* **Sublista básica:** extraer los elementos desde el índice 1 al 4
+
+    ```py
+    lista = [10, 20, 30, 40, 50, 60]
+    sublista = lista[1:4]  # Extrae desde el índice 1 hasta el 3
+    print(sublista)  # Salida: [20, 30, 40]
+    ```
+
+* **Sublista con saltos:** extraer elementos en saltos de 2
+
+    ```py
+    lista = [1, 2, 3, 4, 5, 6]
+    sublista = lista[0:6:2]  # Extrae desde el índice 0 hasta el 5, saltando de 2 en 2
+    print(sublista)  # Salida: [1, 3, 5]
+    ```
+
 ## 3. Modificar listas
 
 * Para **añadir elementos al final**, usamos `append()`:
@@ -118,6 +157,18 @@ Puedes crear una lista de dos maneras:
     ```py
     mi_lista = [1, 2, 2, 3, 2]
     print(mi_lista.count(2))  # Salida: 3
+    ```
+
+* Los métodos `min()`, `max()`, y `sum()` son útiles para trabajar con listas numéricas:
+    * **min(lista):** devuelve el valor mínimo de la lista.
+    * **max(lista):** devuelve el valor máximo de la lista.
+    * **sum(lista):** Suma todos los elementos de la lista.
+
+    ```py
+    lista = [3, 1, 4, 2]
+    print(min(lista))  # Salida: 1
+    print(max(lista))  # Salida: 4
+    print(sum(lista))  # Salida: 10
     ```
 
 ## 5. Es tu turno
