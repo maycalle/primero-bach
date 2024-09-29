@@ -2,6 +2,8 @@
 
 Una lista es una estructura de datos que permite almacenar elementos de diferentes tipos y pueden modificarse fácilmente (añadiendo o quitando elementos).
 
+En este apartado, aprenderemos cómo crear listas, acceder a sus elementos y realizar operaciones comunes, como añadir, modificar y eliminar valores.
+
 ## 1. Creación de listas
 
 Puedes crear una lista de dos maneras:
