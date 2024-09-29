@@ -144,33 +144,32 @@ Puedes crear una lista de dos maneras:
     ```
 
 * 2. Escribe un programa llamado **notas_asignaturas.py** que realice las siguientes acciones:
-  * **Crear una lista de asignaturas:** crea una lista con varias asignaturas (como en el ejercicio anterior). Muestra esta lista de asignaturas por pantalla.
-  * **Solicitar las notas:** pide al usuario que introduzca una nota para cada asignatura en el mismo orden en el que aparecen en la lista de asignaturas. Las notas deben guardarse en una nueva lista de notas, asegurando que las posiciones de las notas coincidan con las asignaturas correspondientes.
-  * **Calcular el promedio:** calcula el promedio de todas las notas introducidas y muéstralo con 2 cifras decimales por pantalla.
-  * **Mostrar asignaturas y notas:** finalmente, muestra la lista de asignaturas con sus respectivas notas, utilizando el siguiente formato: `Asignatura: Nota`
+    * **Crear una lista de asignaturas:** crea una lista con varias asignaturas (como en el ejercicio anterior). Muestra esta lista de asignaturas por pantalla.
+    * **Solicitar las notas:** pide al usuario que introduzca una nota para cada asignatura en el mismo orden en el que aparecen en la lista de asignaturas. Las notas deben guardarse en una nueva lista de notas, asegurando que las posiciones de las notas coincidan con las asignaturas correspondientes.
+    * **Calcular el promedio:** calcula el promedio de todas las notas introducidas y muéstralo con 2 cifras decimales por pantalla.
+    * **Mostrar asignaturas y notas:** finalmente, muestra la lista de asignaturas con sus respectivas notas, utilizando el siguiente formato: `Asignatura: Nota`
 
+    **Ejemplo de funcionamiento:**
+    
+    Asignaturas: ['Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
+    
+    ```
+    Introduce la nota para Física: 8
+    Introduce la nota para Química: 7.5
+    Introduce la nota para Matemáticas: 9
+    Introduce la nota para Historia: 6
+    Introduce la nota para Lengua: 7
 
+    Asignaturas y notas:
+    Física: 8.0
+    Química: 7.5
+    Matemáticas: 9.0
+    Historia: 6.0
+    Lengua: 7.0
 
+    El promedio de las notas es: 7.50
+    ```
 
-* Escribe un programa que pregunte al usuario un número y una lista de números, y luego verifique si el número está en la lista.
-
-* Escribe un programa que elimine los elementos duplicados de una lista.
-
-* Ejercicio 5: Ordenar lista
-Crea un programa que pida al usuario una lista de números y luego los ordene de menor a mayor.
-
-Ejercicio 6: Invertir lista
-Escribe un programa que pida una lista de palabras al usuario y la muestre en orden inverso.
-Pistas:
-Usa la función reverse() para invertir la lista.
-
-Ejercicio 7: Contar apariciones
-Escribe un programa que pida una lista de números y un número específico, luego cuente cuántas veces aparece ese número en la lista.
-Pistas:
-Usa el método count() para contar las apariciones.
-
-Ejercicio 8: Sumar listas
-Crea un programa que pida dos listas de números de igual tamaño y genere una nueva lista con la suma de los números en la misma posición de ambas listas.
 
 
 
