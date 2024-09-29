@@ -138,25 +138,25 @@ Existen dos formas de copiar listas:
 
 * **Copia por referencia (lista1 = lista2):** se asocia a `lista1` la misma lista que `lista2`. Ambas variables apuntan a la misma dirección de memoria, por lo que cualquier cambio en una afectará a la otra. 
   
-```py
-lista1 = [1, 2, 3]
-lista2 = lista1  # Copia por referencia
-lista2.append(4)
-print(lista1)  # Salida: [1, 2, 3, 4]
-print(lista2)  # Salida: [1, 2, 3, 4]
-```
+    ```py
+    lista1 = [1, 2, 3]
+    lista2 = lista1  # Copia por referencia
+    lista2.append(4)
+    print(lista1)  # Salida: [1, 2, 3, 4]
+    print(lista2)  # Salida: [1, 2, 3, 4]
+    ```
 
 Tanto lista1 como lista2 apuntan a la misma lista, por lo que los cambios en lista2 también se reflejan en lista1.
 
 * **Copia por valor (lista1 = list(lista2)):** esto crea una nueva lista independiente con el mismo contenido que `lista2`, pero en una dirección de memoria diferente. Las dos listas son independientes, por lo que los cambios en una no afectan a la otra.
 
-```py
-lista1 = [1, 2, 3]
-lista2 = list(lista1)  # Copia por valor
-lista2.append(4)
-print(lista1)  # Salida: [1, 2, 3]
-print(lista2)  # Salida: [1, 2, 3, 4]
-```
+    ```py
+    lista1 = [1, 2, 3]
+    lista2 = list(lista1)  # Copia por valor
+    lista2.append(4)
+    print(lista1)  # Salida: [1, 2, 3]
+    print(lista2)  # Salida: [1, 2, 3, 4]
+    ```
 
 Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no modifican a lista1.
 
