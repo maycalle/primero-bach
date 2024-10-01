@@ -109,6 +109,5 @@ texto_limpio = texto.strip()  # "Hola"
 
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
-
-
+* 1. Escribe un programa llamado **palindromo.py** que pida al usuario una palabra y muestre por pantalla si es un palíndromo. Un **palíndromo** es una palabra que se lee igual de izquierda a derecha que de derecha a izquierda. Es decir, si la palabra se invierte, sigue siendo la misma. Por ejemplo: radar, oso, etc
 

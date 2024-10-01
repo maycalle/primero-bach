@@ -199,6 +199,14 @@ Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no
     print(sum(lista))  # Salida: 10
     ```
 
+* El método `reverse()` invierte los elementos de la lista, modificando directamente la lista sin crear una nueva. A diferencia de `sort(reverse=True)`, `reverse()` no ordena los elementos, solo cambia su orden.
+
+```py
+mi_lista = [1, 2, 3, 4]
+mi_lista.reverse()
+print(mi_lista)  # Salida: [4, 3, 2, 1]
+```
+
 ## 6. Es tu turno
 
 * 1. Escribe un programa llamado **loterias.py** que pregunte al usuario los números ganadores de la lotería primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
@@ -258,9 +266,6 @@ Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no
 
     El promedio de las notas es: 7.50
     ```
-
-* 7. Escribe un programa llamado **palindromo.py** que pida al usuario una palabra y muestre por pantalla si es un palíndromo. Un **palíndromo** es una palabra que se lee igual de izquierda a derecha que de derecha a izquierda. Es decir, si la palabra se invierte, sigue siendo la misma. Por ejemplo: radar, oso, etc
-
 
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
