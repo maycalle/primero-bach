@@ -107,7 +107,60 @@ texto_limpio = texto.strip()  # "Hola"
 
 ## 3. Es tu turno
 
+* 1. Escribe un programa llamado **caracteres.py** que:
+    * Pida al usuario que introduzca una palabra.
+    * Muestre el primer y el último carácter de la palabra.
+    * Muestre también la longitud de la palabra.
+
+* 2. Escribe un programa llamado **dividir_cadena.py** que:
+    * Pida al usuario que introduzca una frase con varias palabras separadas por comas.
+    * Divida la frase en una lista de palabras y muestre la lista por pantalla.
+
+    ```py
+    Introduce una frase separada por comas: manzana,pera,plátano
+    ['manzana', 'pera', 'plátano']
+    ``` 
+* 3. Escribe un programa llamado **unir_palabras.py** que:
+    * Tenga una lista predefinida con 5 palabras.
+    * Una las palabras de la lista en una cadena, separadas por guiones, y muestre la cadena resultante.
+
+    ```py
+    Lista de palabras: ['gato', 'perro', 'pájaro', 'ratón', 'pez']
+    Cadena resultante: gato-perro-pájaro-ratón-pez
+    ```
+* 4. Escribe un programa llamado **reemplazar.py** que:
+   * Pida al usuario una frase con las palabras "bueno" y "malo"
+   * Reemplace todas las ocurrencias de la palabra "malo" por "bueno" y muestre el resultado.
+
+* 5. Escribe un programa llamado **mayus_minus.py** que:
+    * Pida al usuario una frase.
+    * Muestre la frase convertida completamente en mayúsculas y en minúsculas.
+
+* 6. Escribe un programa llamado **buscar_palabra.py** que:
+   * Pida al usuario una frase.
+   * Pida al usuario una palabra para buscar en la frase.
+   * Muestra si la palabra está presente en la frase, y si es así, la posición donde comienza.
+
+    ```py
+    Introduce una frase: Me gusta programar en Python
+    Introduce una palabra para buscar: Python
+    La palabra 'Python' está en la frase en la posición 23
+    ```
+* 7. Escribe un programa llamado **extraer_subcadena.py** que:
+   * Pida al usuario que introduzca una frase.
+   * Pida dos posiciones (inicio y fin) para extraer una subcadena.
+   * Muestra la subcadena resultante.
+
+    ```py
+    Introduce una frase: Estoy aprendiendo Python
+    Introduce la posición inicial: 6
+    Introduce la posición final: 16
+    La subcadena es: aprendiendo
+    ```
+* 8. Escribe un programa llamado **comparar_cadenas.py** que:
+   * Pida al usuario que introduzca dos palabras.
+   * Compare las palabras alfabéticamente y diga cuál es mayor, menor o si son iguales.
+
+* 9. Escribe un programa llamado **palindromo.py** que pida al usuario una palabra y muestre por pantalla si es un palíndromo. Un **palíndromo** es una palabra que se lee igual de izquierda a derecha que de derecha a izquierda. Es decir, si la palabra se invierte, sigue siendo la misma. Por ejemplo: radar, oso, etc
+
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
-
-* 1. Escribe un programa llamado **palindromo.py** que pida al usuario una palabra y muestre por pantalla si es un palíndromo. Un **palíndromo** es una palabra que se lee igual de izquierda a derecha que de derecha a izquierda. Es decir, si la palabra se invierte, sigue siendo la misma. Por ejemplo: radar, oso, etc
-
