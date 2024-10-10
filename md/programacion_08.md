@@ -2,11 +2,11 @@
 
 Las funciones son uno de los pilares de la programación. Nos permiten escribir código más eficiente y organizado, dividiendo grandes problemas en partes más pequeñas y manejables. 
 
-En este apartado aprenderemos cómo definir funciones, pasarles parámetros y hacer que devuelvan valores que podemos usar más adelante.
+En este apartado aprenderemos cómo **definir funciones**, **pasarles parámetros** y hacer que **devuelvan valores** que podemos usar más adelante.
 
 ## 1. ¿Qué es una Función?
 
-Una **función** es un bloque de código reutilizable que realiza una tarea específica. Nos permite organizar mejor el código, evitando repetir instrucciones y facilitando su comprensión.
+Una **función** es un bloque de código reutilizable que realiza una tarea específica. Permite organizar el código de manera más clara, evitando la repetición de instrucciones y facilitando su comprensión y mantenimiento.
 
 **Ventajas de usar funciones**
 
@@ -44,7 +44,7 @@ saludar()  # Esto imprimirá "¡Hola, bienvenido!"
 
 ## 3. Funciones con parámetros
 
-Las funciones pueden recibir parámetros que les permiten realizar tareas más complejas.
+Las funciones pueden recibir parámetros que les permiten realizar tareas más complejas con diferentes datos.
 
 ```py
 def sumar(a, b):
@@ -60,16 +60,16 @@ print(sumar(3, 5))  # Esto imprimirá 8
 
 En este caso, a y b son los **parámetros** de la función, y 3 y 5 son los **argumentos** que pasamos al llamarla.
 
-> Nota: Es importante distinguir entre parámetros y argumentos. Los
+> **Nota:** Es importante distinguir entre parámetros y argumentos. Los
 > *parámetros* son las variables que se declaran en la definición de la
 > función, mientras que los *argumentos* son los valores que se pasan a la
 > función cuando es llamada.
 
 ### 3.1 Pasar un número indeterminado de argumentos
 
-Es posible pasar un número variable de argumentos a un parámetro. Esto es muy útil cuando no sabes cuántos argumentos se pasarán a la función y quieres que el código sea flexible para manejarlos.
+Es posible pasar un número variable de argumentos a una función, lo que es útil cuando no se sabe cuántos argumentos se recibirán.
 
-Para lograrlo, debes anteponer un asterisco (*) al nombre del parámetro. Esto indica que la función puede recibir un número variable de argumentos. Los argumentos se almacenan en una tupla que se asocia al parámetro.
+Para hacer esto, se antepone un asterisco (*) al nombre del parámetro. Los argumentos se almacenan en una tupla.
 
 ```py
 def menu(*platos):
@@ -122,7 +122,7 @@ resultado = multiplicar(4, 6)
 print(resultado)  # Esto imprimirá 24
 ```
 
-Puedes guardar el resultado obtenido en una variable y usarla en cualquier otra parte del programa. 
+Puedes guardar el resultado en una variable y usarlo en cualquier otra parte del programa. 
 
 **Contraejemplo: función que no devuelve valor**
 
@@ -164,4 +164,28 @@ prueba()  # Imprime 10
 ```
 
 ## 6. Es tu turno
+
+1. Escribir una función a la que se le pase una cadena <nombre> y muestre por pantalla el saludo ¡hola <nombre>!
+   
+2. Escribir una función que reciba una muestra de números en una lista y devuelva su media.
+
+```py
+media([4, 5, 6, 7, 8])  # Esto devolverá 6.0
+
+```
+3. Escribir una función que reciba un número entero positivo y devuelva su factorial.
+
+Pista: El factorial de un número n se calcula multiplicando todos los números enteros desde 1 hasta n. Por ejemplo, el factorial de 5 es 5 * 4 * 3 * 2 * 1 = 120.
+
+```py
+factorial(5)  # Esto devolverá 120
+```
+   
+4. Crea una función que tome un número entero y retorne **True** si es par, y **False** si es impar.
+
+```py
+es_par(4)  # Esto devolverá True
+es_par(7)  # Esto devolverá False
+```
+
 
