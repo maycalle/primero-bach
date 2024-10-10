@@ -106,7 +106,7 @@ saludar("Lucía")    # Imprime: ¡Hola, Lucía!
 
 ### 4. Funciones que devuelven valores
 
-Las funciones pueden devolver valores usando la palabra clave `return`. Esto es útil cuando necesitamos procesar el valor devuelto en otro punto del programa.
+Las funciones pueden devolver valores usando la palabra clave `return`. Esto es útil cuando necesitamos procesar el valor devuelto en otro punto del programa. Sin `return`, la función solo ejecuta su tarea y no podrías reutilizar el resultado que obtiene.
 
 Por ejemplo, la siguiente función realiza la multiplicación de dos números:
 
@@ -123,6 +123,18 @@ print(resultado)  # Esto imprimirá 24
 ```
 
 Puedes guardar el resultado obtenido en una variable y usarla en cualquier otra parte del programa. 
+
+**Contraejemplo: función que no devuelve valor**
+
+```py
+def multiplicar(a, b):
+    print(a * b)  # Esto solo imprimirá el valor pero no lo devolverá
+
+resultado = multiplicar(4, 6)  # El resultado no puede almacenarse ni usarse
+print(resultado)  # Esto imprimirá "None", porque no se ha usado `return`
+```
+
+
 
 ## 5. Ámbito de las variables
 
