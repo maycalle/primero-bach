@@ -60,7 +60,10 @@ print(sumar(3, 5))  # Esto imprimirá 8
 
 En este caso, a y b son los **parámetros** de la función, y 3 y 5 son los **argumentos** que pasamos al llamarla.
 
-> Nota: Es importante distinguir entre parámetros y argumentos. Los *parámetros* son las variables que se declaran en la definición de la función, mientras que los *argumentos* son los valores que se pasan a la función cuando es llamada.
+> Nota: Es importante distinguir entre parámetros y argumentos. Los
+> *parámetros* son las variables que se declaran en la definición de la
+> función, mientras que los *argumentos* son los valores que se pasan a la
+> función cuando es llamada.
 
 ### 3.1 Parámetros por defecto
 
@@ -78,7 +81,7 @@ saludar()           # Imprime: ¡Hola, invitado!
 saludar("Lucía")    # Imprime: ¡Hola, Lucía!
 ```
 
-<p style="background-color:#FFFF00">Reto: Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.</p>
+<p style="background-color:FFFFE0"><strong>Reto:</strong> Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.</p>
 
 ### 4. Funciones que devuelven valores
 
