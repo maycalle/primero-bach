@@ -78,7 +78,7 @@ saludar()           # Imprime: ¡Hola, invitado!
 saludar("Lucía")    # Imprime: ¡Hola, Lucía!
 ```
 
-Reto: Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.
+<p style="background-color:#FFFF00">Reto: Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.</p>
 
 ### 4. Funciones que devuelven valores
 
