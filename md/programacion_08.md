@@ -65,6 +65,27 @@ En este caso, a y b son los **parámetros** de la función, y 3 y 5 son los **ar
 > función, mientras que los *argumentos* son los valores que se pasan a la
 > función cuando es llamada.
 
+### 3.1 Pasar un número indeterminado de argumentos
+
+Es posible pasar un número variable de argumentos a un parámetro. Esto es muy útil cuando no sabes cuántos argumentos se pasarán a la función y quieres que el código sea flexible para manejarlos.
+
+Para lograrlo, debes anteponer un asterisco (*) al nombre del parámetro. Esto indica que la función puede recibir un número variable de argumentos. Los argumentos se almacenan en una tupla que se asocia al parámetro.
+
+```py
+def menu(*platos):
+    print('Hoy tenemos: ', end='')
+    for plato in platos:
+        print(plato, end=', ')
+    return
+```
+
+Al llamar a la función con varios argumentos: 
+
+```py
+menu('pasta', 'pizza', 'ensalada') 
+# Se imprimirá: "Hoy tenemos: pasta, pizza, ensalada" 
+```
+
 ### 3.1 Parámetros por defecto
 
 Puedes asignar valores por defecto a los parámetros. Si no se pasa un valor al llamarla, tomará el valor por defecto.
@@ -81,7 +102,7 @@ saludar()           # Imprime: ¡Hola, invitado!
 saludar("Lucía")    # Imprime: ¡Hola, Lucía!
 ```
 
-<p style="background-color:FFFFE0"><strong>Reto:</strong> Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.</p>
+<p style="background-color:FFFFEO"><strong>Reto:</strong> Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.</p>
 
 ### 4. Funciones que devuelven valores
 
@@ -134,4 +155,3 @@ prueba()  # Imprime 10
 
 ## 6. Es tu turno
 
- Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.
