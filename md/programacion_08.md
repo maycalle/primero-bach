@@ -102,7 +102,7 @@ saludar()           # Imprime: ¡Hola, invitado!
 saludar("Lucía")    # Imprime: ¡Hola, Lucía!
 ```
 
-<p style="background-color:FFFFEO"><strong>Reto:</strong> Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.</p>
+**Reto:** Define una función que reciba un número y lo multiplique por 5. Si no se pasa ningún argumento, que el número sea 10 por defecto.
 
 ### 4. Funciones que devuelven valores
 
@@ -133,8 +133,6 @@ def multiplicar(a, b):
 resultado = multiplicar(4, 6)  # El resultado no puede almacenarse ni usarse
 print(resultado)  # Esto imprimirá "None", porque no se ha usado `return`
 ```
-
-
 
 ## 5. Ámbito de las variables
 
