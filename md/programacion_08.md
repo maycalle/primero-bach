@@ -169,33 +169,32 @@ prueba()  # Imprime 10
    
 2. Escribir una función que reciba una muestra de números en una lista y devuelva su media.
 
-```py
-media([4, 5, 6, 7, 8])  # Esto devolverá 6.0
-
-```
+    ```py
+    media([4, 5, 6, 7, 8])  # Esto devolverá 6.0
+    ```
 3. Escribir una función que reciba un número entero positivo y devuelva su factorial.
 
-Pista: El factorial de un número n se calcula multiplicando todos los números enteros desde 1 hasta n. Por ejemplo, el factorial de 5 es 5 * 4 * 3 * 2 * 1 = 120.
+    Pista: El factorial de un número n se calcula multiplicando todos los números enteros desde 1 hasta n. Por ejemplo, el factorial de 5 es 5 * 4 * 3 * 2 * 1 = 120.
 
-```py
-factorial(5)  # Esto devolverá 120
-```
+    ```py
+    factorial(5)  # Esto devolverá 120
+    ```
    
 4. Crea una función que tome un número entero y retorne **True** si es par, y **False** si es impar.
 
-```py
-es_par(4)  # Esto devolverá True
-es_par(7)  # Esto devolverá False
-```
+    ```py
+    es_par(4)  # Esto devolverá True
+    es_par(7)  # Esto devolverá False
+    ```
 
 5. **Conversión entre decimal y binario**.
 * Escribe una función que convierta un número decimal en su equivalente binario.
 * Escribe otra función que convierta un número binario en su equivalente decimal.
 
-Pista: Para convertir un número decimal a binario, puedes dividir el número entre 2 repetidamente y registrar los restos. Para la conversión inversa (binario a decimal), cada dígito binario representa una potencia de 2 (de derecha a izquierda, el primer dígito es 2^0, el segundo es 2^1, y así sucesivamente).
+    Pista: Para convertir un número decimal a binario, puedes dividir el número entre 2 repetidamente y registrar los restos. Para la conversión inversa (binario a decimal), cada dígito binario representa una potencia de 2 (de derecha a izquierda, el primer dígito es 2^0, el segundo es 2^1, y así sucesivamente).
 
-```py
-decimal_a_binario(10)  # Esto devolverá '1010'
-binario_a_decimal('1010')  # Esto devolverá 10
-```
+    ```py
+    decimal_a_binario(10)  # Esto devolverá '1010'
+    binario_a_decimal('1010')  # Esto devolverá 10
+    ```
 
