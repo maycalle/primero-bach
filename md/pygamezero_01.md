@@ -6,8 +6,7 @@
 
 **Pygame Zero** es una versión más accesible y simplificada de **Pygame**, que está diseñada para que puedas empezar a hacer juegos 2D sin complicaciones. Lo mejor de todo es que usa Python, así que si ya conoces este lenguaje, te sentirás como en casa. No necesitas preocuparte por los detalles técnicos complicados, como configurar la ventana del juego o crear un bucle principal (que es el "corazón" que mantiene el juego funcionando). Pygame Zero se encarga de eso por ti, para que tú puedas concentrarte en lo más divertido: dibujar en pantalla, mover personajes y hacer que tu juego sea interactivo.
 
-
-## 2. ¿Qué tipo de juegos puedes crear?
+**¿Qué tipo de juegos puedes crear?**
 
 Con Pygame Zero, puedes hacer un montón de juegos diferentes. Aquí tienes algunas ideas:
 * **Juego de plataformas tipo Super Mario:** un personaje que salta, recoge monedas y esquiva enemigos.
@@ -35,20 +34,14 @@ pip install pgzero
 ### 3.1 Dibujar una forma básica la pantalla
 
 Vamos a empezar con algo sencillo: **dibujar un círculo en la pantalla** de nuestro juego. Para hacerlo, necesitas familiarizarte con dos elementos clave: la **función `draw()`** y el **objeto `screen`**.
+    
+* La `función draw()` es la encargada de dibujar todo lo que aparece en la pantalla. Todo lo que ves en un juego (personajes, fondos, objetos, etc) se dibuja a través de esta función. 
+    
+    > **Importante:** Pygame Zero llama automáticamente a `draw()` cada vez que necesita actualizar la pantalla, tú solo debes preocuparte por qué dibujar y cómo hacerlo.
 
-**La función draw**
-
-La `función draw()` es la encargada de dibujar todo lo que aparece en la pantalla. Todo lo que ves en un juego (personajes, fondos, objetos, etc) se dibuja a través de esta función. 
-
-> **Importante:** Pygame Zero llama automáticamente a `draw()` cada vez que necesita actualizar la pantalla, tú solo debes preocuparte por qué dibujar y cómo hacerlo.
-
-**El objeto screen**
-
-El `objeto screen` es como el *"lienzo"* donde dibujas todo lo que aparecerá en tu juego. Cada vez que quieras mostrar algo, como personajes, fondos, objetos o incluso texto, lo harás a través de este objeto y sus funciones asociadas (¡tiene muchas!). 
-
-De momento, vamos a centrarnos en las siguientes: 
-* **Limpiar la pantalla:** `screen.clear()` borra todo lo que había dibujado antes. Esto es útil para que no se "ensucie" la pantalla cuando los objetos se mueven.
-* **Dibujar un círculo:** `screen.draw.circle((x, y), radio, color)` dibuja un círculo en la posición (x, y), con un tamaño (radio) y un color que tú elijas.
+* El objeto `screen` es como el *"lienzo"* donde dibujas todo lo que aparecerá en tu juego. Cada vez que quieras mostrar algo, como personajes, fondos, objetos o incluso texto, lo harás a través de este objeto y sus funciones asociadas (¡tiene muchas!). De momento, vamos a centrarnos en las siguientes: 
+      * **Limpiar la pantalla:** `screen.clear()` borra todo lo que había dibujado antes. Esto es útil para que no se "ensucie" la pantalla cuando los objetos se mueven.
+      * **Dibujar un círculo:** `screen.draw.circle((x, y), radio, color)` dibuja un círculo en la posición (x, y), con un tamaño (radio) y un color que tú elijas.
 
 **Ejemplo básico: Dibujar un círculo**
 
@@ -86,7 +79,7 @@ Una vez que has dibujado un círculo, puedes experimentar con otras formas y tex
 * **Dibujar un rectángulo relleno:** `screen.draw.filled_rect(Rect((x, y), (ancho, alto)), color)` funciona igual que la función anterior, pero en este caso el rectángulo se dibuja relleno del color indicado.    
 * **Escribir texto:** con `screen.draw.text('Texto que quieras', (x, y))` puedes escribir texto en la pantalla, lo cual es genial para mostrar puntuaciones o mensajes al jugador. Además, puedes personalizar aún más el texto utilizando argumentos opcionales como *fontsize* (tamaño del texto), *color* (color del texto) o *shadow* (sombreado del texto). Por ejemplo: *screen.draw.text('Puntuación: 100', (10, 10), color='yellow', fontsize=40)*
 
-Prueba el siguiente ejemplo: 
+Prueba el siguiente ejemplo, observa el resultado y dónde se colocan las formas: 
 
 ```py
 import pgzrun
@@ -115,12 +108,6 @@ def draw():
 
 pgzrun.go()
 ```
-
-Obtendrás un resultado similar al siguiente: 
-
-<div align="center">
-    <img src="../img/formas_basicas_pgzero.PNG" width="60%">
-</div>
 
 ### 3.3 Mostrar una imagen
 
