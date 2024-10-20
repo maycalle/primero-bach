@@ -148,5 +148,40 @@ pgzrun.go()
 > * Dibuja una línea roja y un círculo amarillo.
 > * Carga una imagen en una posición específica
 
+### 3.4 Agregando movimiento
 
+Ahora que ya sabes dibujar, vamos a darle vida a nuestro juego. Para ello, necesitamos la **función** `update()`, que se ejecuta constantemente durante el juego. Es en esta función donde colocamos la lógica que controla el comportamiento del juego, como mover personajes, detectar colisiones, o cambiar el estado del juego.
+
+**Ejemplo: moviendo el círculo**
+
+Vamos a modificar el ejemplo anterior para que el círculo se mueva hacia la derecha.
+
+```py
+# Importar la librería
+import pgzrun
+
+# Definir el tamaño de la ventana del juego
+WIDTH = 800
+HEIGHT = 600
+
+# Definir la posición inicial del círculo
+circle_x = 400
+circle_y = 300
+
+def draw():
+    screen.clear()  # Limpiar la pantalla
+    screen.draw.circle((circle_x, circle_y), 30, 'white')  # Dibujar el círculo en la nueva posición
+
+def update():
+    global circle_x
+    circle_x += 2  # Mover el círculo 2 píxeles hacia la derecha en cada actualización
+
+pgzrun.go()  # Iniciar el juego
+```
+¡Nuestro círculo ya se está moviendo por la pantalla! Te explico algunos detalles: 
+
+* **Variables circle_x y circle_y**: estas variables definen la posición del círculo. Iniciamos el círculo en el centro de la pantalla.
+* **Función draw()**: sigue dibujando el círculo, pero ahora en las coordenadas controladas por circle_x y circle_y, que cambiarán con el tiempo.
+* **Función update()**: aquí es donde hacemos que el círculo se mueva. Cada vez que update() se ejecuta, aumentamos la variable circle_x en 2 píxeles, lo que mueve el círculo hacia la derecha.
+* **global circle_x**: es necesario para poder modificar la variable circle_x dentro de la función update().
 
