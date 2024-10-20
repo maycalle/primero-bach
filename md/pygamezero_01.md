@@ -220,4 +220,9 @@ def update():
 pgzrun.go()  # Iniciar el juego
 ```
 
-> **Ejercicio 2.** Haz que el mapache también se mueva hacia arriba y hacia abajo controlando los límites superior e inferior de la pantalla.
+> **Ejercicio 2. Desafíos extra** 
+> * Haz que el mapache también se mueva hacia arriba y hacia abajo controlando los límites superior e inferior de la pantalla.
+> * Añade un texto que se desplace hacia la izquierda. Este texto se moverá hacia la izquierda de la pantalla, y cuando salga del borde izquierdo, reaparecerá por el borde derecho, creando un efecto de desplazamiento continuo similar al del mapache.
+> * Ajusta la velocidad del texto cambiando el valor `texto_x -= 3` a `texto_x -= 5` para que el texto se mueva más rápido. 
+> * Añade otro texto que se mueva en la dirección opuesta, de izquierda a derecha.
+> * Haz que tanto el texto como el mapache cambien de dirección cuando lleguen a los bordes de la pantalla, en lugar de reaparecer en el lado opuesto.
