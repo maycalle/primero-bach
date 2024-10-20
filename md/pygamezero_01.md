@@ -188,3 +188,36 @@ pgzrun.go()  # Iniciar el juego
 * **global circle_x** es necesario para poder modificar la variable **circle_x** dentro de la función **update()**.
 
 Pygame Zero llama automáticamente a la función `draw()` cada vez que necesita redibujar la pantalla. Esto sucede muchas veces por segundo, de manera que el círculo (o cualquier objeto) siempre está actualizado visualmente en la pantalla. También llama constantemente a la función `update()` para manejar las actualizaciones de la lógica del juego. 
+
+**Ejemplo: mapache en movimiento**
+
+En este ejemplo, vamos a darle vida a un mapache haciéndolo moverse de un lado a otro por la pantalla. El objetivo es que la imagen del mapache se desplace hacia la derecha y, cuando llegue al borde derecho de la pantalla, vuelva a aparecer desde el borde izquierdo, generando un efecto continuo.
+
+```py
+import pgzrun
+
+# Definir el tamaño de la ventana del juego
+WIDTH = 800
+HEIGHT = 600
+
+# Definir la posición inicial de la imagen del mapache
+mapache_x = 100
+mapache_y = 300
+
+# Cargar la imagen del mapache (asegúrate de tenerla en la carpeta 'images')
+def draw():
+    screen.clear()  # Limpiar la pantalla
+    screen.blit('mapache', (mapache_x, mapache_y))  # Dibujar la imagen del mapache en la nueva posición
+
+def update():
+    global mapache_x
+    mapache_x += 2  # Mover la imagen del mapache 2 píxeles hacia la derecha en cada actualización
+
+    # Si el mapache sale de la pantalla, volver a la izquierda
+    if mapache_x > WIDTH:
+        mapache_x = -100  # Hacer que reaparezca desde el lado izquierdo
+
+pgzrun.go()  # Iniciar el juego
+```
+
+> **Ejercicio 2.** Haz que el mapache también se mueva hacia arriba y hacia abajo controlando los límites superior e inferior de la pantalla.
