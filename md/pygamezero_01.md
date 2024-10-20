@@ -180,8 +180,11 @@ pgzrun.go()  # Iniciar el juego
 ```
 ¡Nuestro círculo ya se está moviendo por la pantalla! Te explico algunos detalles: 
 
-* **Variables circle_x y circle_y**: estas variables definen la posición del círculo. Iniciamos el círculo en el centro de la pantalla.
-* **Función draw()**: sigue dibujando el círculo, pero ahora en las coordenadas controladas por circle_x y circle_y, que cambiarán con el tiempo.
-* **Función update()**: aquí es donde hacemos que el círculo se mueva. Cada vez que update() se ejecuta, aumentamos la variable circle_x en 2 píxeles, lo que mueve el círculo hacia la derecha.
-* **global circle_x**: es necesario para poder modificar la variable circle_x dentro de la función update().
+* Las variables, `circle_x` y `circle_y`, representan las **coordenadas iniciales** del círculo. Al principio, el círculo se colocará en la posición (400, 300), que es el centro de la pantalla, ya que la pantalla mide 800 píxeles de ancho y 600 de alto.
+  * **circle_x** es la coordenada horizontal (cuán lejos está el círculo del borde izquierdo).
+  * **circle_y** es la coordenada vertical (cuán lejos está el círculo del borde superior).
+* La **función** `draw()` sigue dibujando el círculo, pero ahora en las coordenadas controladas por **circle_x** y **circle_y**, que cambiarán con el tiempo.
+* En la **función** `update()` es donde hacemos que el círculo se mueva. Cada vez que **update()** se ejecuta, aumentamos la variable circle_x en 2 píxeles, lo que mueve el círculo hacia la derecha.
+* **global circle_x** es necesario para poder modificar la variable **circle_x** dentro de la función **update()**.
 
+Pygame Zero llama automáticamente a la función `draw()` cada vez que necesita redibujar la pantalla. Esto sucede muchas veces por segundo, de manera que el círculo (o cualquier objeto) siempre está actualizado visualmente en la pantalla. También llama constantemente a la función `update()` para manejar las actualizaciones de la lógica del juego. 
