@@ -88,7 +88,7 @@ Una vez que has dibujado un círculo, puedes experimentar con otras formas y tex
 
 Prueba el siguiente ejemplo: 
 
-```py 
+```py
 import pgzrun
 
 # Definir el tamaño de la ventana del juego
@@ -116,11 +116,11 @@ def draw():
 pgzrun.go()
 ```
 
+Obtendrás un resultado similar al siguiente: 
+
 <div align="center">
     <img src="../img/formas_basicas_pgzero.PNG" width="60%">
 </div>
-
-
 
 ### 3.3 Mostrar una imagen
 
@@ -132,7 +132,7 @@ Para mostrar una imagen, primero debes guardarla en la carpeta especial llamada 
 2. **Mostrar la imagen:** 
    * Si ya tienes una imagen (como un personaje o un fondo) guardada, usa `screen.blit('nombre_imagen', (x, y))` para mostrarla en la posición que quieras en tu juego.
 
-Descarga **[esta imagen](https://github.com/maycalle/primero-bach/blob/653e12eb1fded264cac25d9d62361eac70d3d6f8/img/mapache_genial.png)** y prueba este ejemplo: 
+Descarga [esta imagen](https://github.com/maycalle/primero-bach/blob/653e12eb1fded264cac25d9d62361eac70d3d6f8/img/mapache_genial.png) y prueba este ejemplo: 
 
 ```py
 import pgzrun
@@ -146,7 +146,7 @@ def draw():
     screen.fill('lightblue')  # Fondo color azul claro
 
     # Mostrar la imagen divertida
-    screen.blit('mapache_genial.png', (300, 200))
+    screen.blit('mapache_genial.png', (220, 200))
 
     # Texto para acompañar la imagen
     screen.draw.text("¡Mira esta imagen divertida!", (200, 100), color='black', fontsize=40)
