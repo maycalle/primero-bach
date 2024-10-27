@@ -154,17 +154,17 @@ pgzrun.go() # Inicia el juego
 ¡Nuestro objeto se dirige a su destino a paso firme y constante! Te explico algunos detalles: 
 
 * **Variables de posición inicial y destino:**
-  * `player_x` y `player_y` definen la posición inicial del personaje.
-  * `target_x` y `target_y` son las coordenadas del destino al que el personaje se dirigirá cuando el jugador haga clic.
+    * `player_x` y `player_y` definen la posición inicial del personaje.
+    * `target_x` y `target_y` son las coordenadas del destino al que el personaje se dirigirá cuando el jugador haga clic.
 * **Evento de ratón:**
-  * Cada vez que el jugador hace clic, `on_mouse_down(pos)` actualiza `target_x` y `target_y` a la posición del clic. Esto establece el destino y activa el movimiento del personaje hacia ese punto.
+    * Cada vez que el jugador hace clic, `on_mouse_down(pos)` actualiza `target_x` y `target_y` a la posición del clic. Esto establece el destino y activa el movimiento del personaje hacia ese punto.
 * **Cálculo de la distancia y dirección usando el teorema de Pitágoras**
-  * Para que el personaje se desplace correctamente, necesitamos calcular la distancia y dirección hacia el destino aplicando el teorema de Pitágoras.
+    * Para que el personaje se desplace correctamente, necesitamos calcular la distancia y dirección hacia el destino aplicando el teorema de Pitágoras.
 * **Desplazamiento gradual hacia el destino:**
-  * Si la distancia entre el personaje y el destino es mayor que su velocidad (*speed*), significa que el personaje aún no ha llegado y debe seguir avanzando hacia ese punto.
-  * Para moverlo correctamente en cada eje (x e y):
-    * Dividimos *dx* y *dy* (las diferencias en x e y) por la distancia total. Esto nos indica la dirección exacta en la que debe moverse el personaje.
-    * Multiplicamos esta dirección por la velocidad (*speed*), lo que permite que el personaje avance en pequeños pasos hacia el destino.  
+    * Si la distancia entre el personaje y el destino es mayor que su velocidad (*speed*), significa que el personaje aún no ha llegado y debe seguir avanzando hacia ese punto.
+    * Para moverlo correctamente en cada eje (x e y):
+        * Dividimos *dx* y *dy* (las diferencias en x e y) por la distancia total. Esto nos indica la dirección exacta en la que debe moverse el personaje.
+        * Multiplicamos esta dirección por la velocidad (*speed*), lo que permite que el personaje avance en pequeños pasos hacia el destino.  
 
 > **Ejercicio 3.** 
 > * Cambia la velocidad del personaje para ver cómo afecta al movimiento. Prueba diferentes valores de speed y observa los cambios.
@@ -182,7 +182,6 @@ Para gestionar los disparos en el juego, utilizamos una **lista** llamada `dispa
 * **Añadir disparos:** cada vez que el jugador hace clic, se crea un nuevo disparo en la posición del personaje y se añade a la lista.
 * **Mover disparos:** en cada actualización (*update*), todos los disparos se mueven hacia arriba en la pantalla, simulando un disparo.
 * **Eliminar disparos:** si un disparo llega a la parte superior de la pantalla, se elimina de la lista para liberar memoria y mantener el juego ordenado.
-
 
 ```py
 import pgzrun
