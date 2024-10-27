@@ -1,10 +1,12 @@
 # 1. Primeros pasos con Pygame Zero
 
-¡Bienvenidos al fascinante mundo de **Pygame Zero**! Si te gusta la idea de crear videojuegos 2D y ya sabes un poquito de Python, estás en el lugar correcto. Pygame Zero es una herramienta que te permitirá dar vida a tus ideas de videojuegos de forma muy sencilla y divertida. 
+¡Bienvenidos a **Pygame Zero**! Si te gusta la idea de crear videojuegos 2D y ya sabes un poquito de Python, estás en el lugar correcto. Pygame Zero es una herramienta que te permitirá dar vida a tus ideas de videojuegos de forma muy sencilla y divertida. 
 
 ## 1. ¿Qué es Pygame Zero?
 
-**Pygame Zero** es una versión más accesible y simplificada de **Pygame**, que está diseñada para que puedas empezar a hacer juegos 2D sin complicaciones. Lo mejor de todo es que usa Python, así que si ya conoces este lenguaje, te sentirás como en casa. No necesitas preocuparte por los detalles técnicos complicados, como configurar la ventana del juego o crear un bucle principal (que es el "corazón" que mantiene el juego funcionando). Pygame Zero se encarga de eso por ti, para que tú puedas concentrarte en lo más divertido: dibujar en pantalla, mover personajes y hacer que tu juego sea interactivo.
+**Pygame Zero** es una versión simplificada de otra biblioteca más completa para crear juegos 2D, llamada **Pygame**. Está diseñada para que puedas empezar a programar videojuegos fácilmente y sin complicaciones. Al estar basada en Python, ¡te resultará muy familiar!
+
+Una de las **ventajas de Pygame Zero** es que se ocupa automáticamente de aspectos técnicos, como configurar la ventana del juego o crear un bucle principal (el "motor" que mantiene el juego en marcha). Así, puedes concentrarte en lo más divertido: diseñar personajes, dibujar escenarios y añadir interacción en pantalla.
 
 **¿Qué tipo de juegos puedes crear?**
 
@@ -31,93 +33,91 @@ pip install pgzero
 
 ## 3. Estructura básica de un juego 
 
-### 3.1 Dibujar una forma básica la pantalla
+### 3.1 Dibujar un círculo la pantalla
 
-Vamos a empezar con algo sencillo: **dibujar un círculo en la pantalla** de nuestro juego. Para hacerlo, necesitas familiarizarte con dos elementos clave: la **función `draw()`** y el **objeto `screen`**.
+Vamos a empezar con algo sencillo: **dibujar un círculo en la pantalla** de nuestro juego. Para ello, necesitas familiarizarte con dos elementos clave: la función `draw()` y el objeto `screen`.
     
-* La `función draw()` es la encargada de dibujar todo lo que aparece en la pantalla. Todo lo que ves en un juego (personajes, fondos, objetos, etc) se dibuja a través de esta función. 
-    
-    > **Importante:** Pygame Zero llama automáticamente a `draw()` cada vez que necesita actualizar la pantalla, tú solo debes preocuparte por qué dibujar y cómo hacerlo.
+* `draw()` es la función que dibuja todo lo que aparece en la pantalla (personajes, fondos, objetos, etc). No tienes que llamarla, Pygame Zero lo hace automáticamente cada vez que necesita actualizar el dibujo. 
 
-* El objeto `screen` es como el *"lienzo"* donde dibujas todo lo que aparecerá en tu juego. Cada vez que quieras mostrar algo, como personajes, fondos, objetos o incluso texto, lo harás a través de este objeto y sus funciones asociadas (¡tiene muchas!). De momento, vamos a centrarnos en las siguientes: 
-      * **Limpiar la pantalla:** `screen.clear()` borra todo lo que había dibujado antes. Esto es útil para que no se "ensucie" la pantalla cuando los objetos se mueven.
-      * **Dibujar un círculo:** `screen.draw.circle((x, y), radio, color)` dibuja un círculo en la posición (x, y), con un tamaño (radio) y un color que tú elijas.
+* `screen` es como un *"lienzo"* donde dibujas todo. Cada vez que quieras mostrar algo, lo harás a través de este objeto y sus funciones asociadas (¡tiene muchas!). 
 
-**Ejemplo básico: Dibujar un círculo**
-
-Aquí tienes el código para dibujar un círculo en el centro de la pantalla:
+Para dibujar un círculo, usamos la función `screen.draw.circle()`, que acepta las coordenadas (x, y), el tamaño (radio) y el color del círculo. Aquí tienes un ejemplo:      
 
 ```py
-# Importar la librería
+# Importa la librería
 import pgzrun
 
-# Definir el tamaño de la ventana del juego
+# Define el tamaño de la ventana del juego
 WIDTH = 800
 HEIGHT = 600
 
 def draw():
-    screen.clear()  # Limpiar la pantalla
-    screen.draw.circle((400, 300), 30, 'white')  # Dibujar un círculo blanco
+    screen.clear()  # Limpia la pantalla
+    screen.draw.circle((400, 300), 30, 'white')  # Dibuja un círculo blanco
 
-pgzrun.go()  # Iniciar el juego
+pgzrun.go()  # Inicia el juego
 ```
 
-* Lo primero que hay que hacer es **importar la librería de Pygame Zero**, de lo contrario no podremos usar sus funciones. 
-* A continuación, hay que **definir el tamaño de la ventana** del juego: con **WIDTH** y **HEIGHT**, establecemos que la ventana tendrá 800 píxeles de ancho y 600 de alto.
-* Luego, se define la **función draw()**, que es la que dibuja todo lo que aparece en la pantalla. Primero limpia la pantalla con `screen.clear()` y luego dibuja un círculo blanco en el centro con `screen.draw.circle()`. En este caso, el círculo se dibuja en las coordenadas (400, 300), que están en el centro de la pantalla, con un radio de 30 píxeles, y el color es blanco.
-* Finalmente, la función **pgzrun.go()** inicia el ciclo del juego. Esta función le dice a Pygame Zero que comience a ejecutar y mostrar el juego en la ventana. Sin esta línea, el juego no comenzaría, ya que es la que activa todo el proceso de dibujar y actualizar la pantalla.
+> **Ejercicio 1.**
+> * Cambia el color del círculo y observa el resultado.
+> * Modifica las coordenadas (x, y) para mover el círculo a otra posición en la pantalla.
+> * Prueba con diferentes radios para ver cómo afecta el tamaño.
 
 ### 3.2 Dibujar otras formas y texto
 
-Una vez que has dibujado un círculo, puedes experimentar con otras formas y texto. 
+Una vez que domines los círculos, puedes experimentar con otras formas y texto. Aquí tienes algunos comandos adicionales que puedes probar:
 
-* **Colorear la pantalla de un color sólido:** `screen.fill(color)` rellena la pantalla con un color sólido (por ejemplo, *'blue'*).
-* **Dibujar un círculo:** `screen.draw.circle((x, y), radio, color)` dibuja un círculo en la posición (x, y), con un tamaño (radio) y un color que tú elijas.
-* **Dibujar un círculo con un color de relleno**: `screen.draw.filled_circle((x,y), radio, color)` funciona igual que la función anterior, pero en este caso muestra el círculo relleno del color indicado.
-* **Dibujar una línea:** `screen.draw.line((x1, y1), (x2, y2), color)` te permite dibujar una línea desde el punto inicial (x1, y1) hasta el punto final (x2, y2) con el color que elijas.
-* **Dibujar un rectángulo:** `screen.draw.rect(Rect((x, y), (ancho, alto)), color)` dibuja un rectángulo con las dimensiones especificadas por (ancho, alto) en la posición (x, y).
-* **Dibujar un rectángulo relleno:** `screen.draw.filled_rect(Rect((x, y), (ancho, alto)), color)` funciona igual que la función anterior, pero en este caso el rectángulo se dibuja relleno del color indicado.    
-* **Escribir texto:** con `screen.draw.text('Texto que quieras', (x, y))` puedes escribir texto en la pantalla, lo cual es genial para mostrar puntuaciones o mensajes al jugador. Además, puedes personalizar aún más el texto utilizando argumentos opcionales como *fontsize* (tamaño del texto), *color* (color del texto) o *shadow* (sombreado del texto). Por ejemplo: *screen.draw.text('Puntuación: 100', (10, 10), color='yellow', fontsize=40)*
+* `screen.fill(color)`: llena la pantalla con un color sólido.
+* `screen.draw.filled_circle((x, y), radio, color)`: dibuja un círculo relleno.
+* `screen.draw.line((x1, y1), (x2, y2), color)`: dibuja una línea entre dos puntos.
+* `screen.draw.rect(Rect((x, y), (ancho, alto)), color)`: dibuja un rectángulo con las dimensiones especificadas por (ancho, alto) en la posición (x, y).
+* `screen.draw.text("Texto", (x, y), color='white', fontsize=40)`: escribe texto en la pantalla con el formato que le indiques: *fontsize* (tamaño del texto), *color* (color del texto) o *shadow* (sombreado del texto).
 
 Prueba el siguiente ejemplo, observa el resultado y dónde se colocan las formas: 
 
 ```py
+# Importa la librería
 import pgzrun
 
-# Definir el tamaño de la ventana del juego
+# Define el tamaño de la ventana del juego
 WIDTH = 800
 HEIGHT = 600
 
 def draw():
-    screen.clear()  # Limpiar la pantalla
-    screen.fill('skyblue')  # Fondo azul cielo
+    screen.clear()  # Limpia la pantalla
+    screen.fill('skyblue')  # Pinta el fondo de azul cielo
 
-    # Dibujar un rectángulo
+    # Dibuja un rectángulo
     screen.draw.filled_rect(Rect((150, 200), (500, 50)), 'green')
 
-    # Dibujar un círculo
+    # Dibuja un círculo
     screen.draw.filled_circle((400, 300), 50, 'orange')
 
-    # Dibujar líneas de un extremo al otro
+    # Dibuja líneas de un extremo al otro
     screen.draw.line((0, 0), (WIDTH, HEIGHT), 'red')
     screen.draw.line((0, HEIGHT), (WIDTH, 0), 'purple')
 
-    # Dibujar texto en la pantalla
+    # Dibuja texto en la pantalla
     screen.draw.text('¡Bienvenidos a Pygame Zero!', (150, 100), color='white', fontsize=50)
     screen.draw.text('Experimenta dibujando formas', (200, 450), color='yellow', fontsize=30)
 
 pgzrun.go()
 ```
 
+> **Ejercicio 2.**
+> * Cambia los colores y posiciones de cada forma.
+> * Dibuja dos rectángulos y cambia su tamaño.
+> * Dibuja una línea roja y un círculo amarillo.
+> * Dibuja un texto en la parte superior.
+> * Añade texto en diferentes ubicaciones de la pantalla. 
+
 ### 3.3 Mostrar una imagen
 
-Para mostrar una imagen, primero debes guardarla en la carpeta especial llamada **images**. Esta carpeta debe estar en el mismo directorio que tu archivo de código.
+Para mostrar una imagen, guárdala primero en una carpeta especial llamada **images**, ubicada en el mismo directorio que tu archivo de código.
 
-1. **Crear la carpeta `images`:**
-    * Crea la carpeta en el mismo directorio que tu archivo .py. Asegúrate de que el nombre sea exactamente ese, ya que Pygame Zero busca las imágenes solo en esa carpeta.
-    * Guarda la imagen en esa carpeta. El nombre del archivo debe estar en minúsculas y sin espacios. Si el nombre tiene varias palabras, usa guiones bajos, por ejemplo, mi_imagen.png.
-2. **Mostrar la imagen:** 
-   * Si ya tienes una imagen (como un personaje o un fondo) guardada, usa `screen.blit('nombre_imagen', (x, y))` para mostrarla en la posición que quieras en tu juego.
+* El nombre del archivo debe estar en minúsculas y sin espacios. Si tiene varias palabras, usa guiones bajos (por ejemplo, mi_imagen.png).
+
+* Para mostrar la imagen en pantalla, usa: `screen.blit('nombre_imagen', (x, y))`.
 
 Descarga [esta imagen](https://raw.githubusercontent.com/maycalle/primero-bach/653e12eb1fded264cac25d9d62361eac70d3d6f8/img/mapache_genial.png) y prueba este ejemplo:
 
@@ -141,53 +141,49 @@ def draw():
 pgzrun.go()
 ```
 
-> **Ejercicio 1.** Pon a prueba tus conocimientos y haz lo siguiente: 
+> **Ejercicio 3.**  
 > * Limpia la pantalla.
 > * Rellena la pantalla con un color de fondo.
-> * Dibuja un texto en la parte superior.
-> * Dibuja una línea roja y un círculo amarillo.
 > * Carga una imagen en una posición específica
 
 ### 3.4 Agregando movimiento
 
-Ahora que ya sabes dibujar, vamos a darle vida a nuestro juego. Para ello, necesitamos la **función** `update()`, que se ejecuta constantemente durante el juego. Es en esta función donde colocamos la lógica que controla el comportamiento del juego, como mover personajes, detectar colisiones, o cambiar el estado del juego.
+Ahora que ya sabes dibujar y mostrar imágenes, vamos a incorporar el movimiento. Para ello, utilizaremos la función `update()`, que se ejecuta constantemente. Aquí colocaremos la lógica que controla el comportamiento del juego, como mover personajes, detectar colisiones, o cambiar el estado del juego.
 
 **Ejemplo: moviendo el círculo**
 
-Vamos a modificar el ejemplo anterior para que el círculo se mueva hacia la derecha.
+Vamos a modificar el código para que el círculo se mueva hacia la derecha.
 
 ```py
-# Importar la librería
+# Importa la librería
 import pgzrun
 
-# Definir el tamaño de la ventana del juego
+# Define el tamaño de la ventana del juego
 WIDTH = 800
 HEIGHT = 600
 
-# Definir la posición inicial del círculo
+# Define la posición inicial del círculo
 circle_x = 400
 circle_y = 300
 
 def draw():
-    screen.clear()  # Limpiar la pantalla
-    screen.draw.circle((circle_x, circle_y), 30, 'white')  # Dibujar el círculo en la nueva posición
+    screen.clear()  # Limpia la pantalla
+    screen.draw.circle((circle_x, circle_y), 30, 'white')  # Dibuja el círculo 
 
 def update():
     global circle_x
-    circle_x += 2  # Mover el círculo 2 píxeles hacia la derecha en cada actualización
+    circle_x += 2  # Mueve el círculo 2 píxeles hacia la derecha en cada actualización
 
-pgzrun.go()  # Iniciar el juego
+pgzrun.go()  # Inicia el juego
 ```
+
 ¡Nuestro círculo ya se está moviendo por la pantalla! Te explico algunos detalles: 
 
-* Las variables, `circle_x` y `circle_y`, representan las **coordenadas iniciales** del círculo. Al principio, el círculo se colocará en la posición (400, 300), que es el centro de la pantalla, ya que la pantalla mide 800 píxeles de ancho y 600 de alto.
-  * **circle_x** es la coordenada horizontal (cuán lejos está el círculo del borde izquierdo).
-  * **circle_y** es la coordenada vertical (cuán lejos está el círculo del borde superior).
-* La **función** `draw()` sigue dibujando el círculo, pero ahora en las coordenadas controladas por **circle_x** y **circle_y**, que cambiarán con el tiempo.
-* En la **función** `update()` es donde hacemos que el círculo se mueva. Cada vez que **update()** se ejecuta, aumentamos la variable circle_x en 2 píxeles, lo que mueve el círculo hacia la derecha.
-* **global circle_x** es necesario para poder modificar la variable **circle_x** dentro de la función **update()**.
-
-Pygame Zero llama automáticamente a la función `draw()` cada vez que necesita redibujar la pantalla. Esto sucede muchas veces por segundo, de manera que el círculo (o cualquier objeto) siempre está actualizado visualmente en la pantalla. También llama constantemente a la función `update()` para manejar las actualizaciones de la lógica del juego. 
+* Las variables `circle_x` y `circle_y` definen las coordenadas iniciales del círculo, colocándolo en el centro de la pantalla.
+* La función `draw()` dibuja el círculo en las coordenadas actuales de `circle_x` y `circle_y`, que se actualizan constantemente.
+* La función `update()` incrementa `circle_x` en 2 píxeles cada vez que se ejecuta, moviendo el círculo hacia la derecha.
+* Usamos `global circle_x` en `update()` para modificar `circle_x` dentro de la función.
+* Pygame Zero llama automáticamente a `draw()` y `update()` muchas veces por segundo para mantener el círculo actualizado en pantalla.
 
 **Ejemplo: mapache en movimiento**
 
@@ -196,31 +192,30 @@ En este ejemplo, vamos a darle vida a un mapache haciéndolo moverse de un lado 
 ```py
 import pgzrun
 
-# Definir el tamaño de la ventana del juego
+# Define el tamaño de la ventana del juego
 WIDTH = 800
 HEIGHT = 600
 
-# Definir la posición inicial de la imagen del mapache
+# Define la posición inicial de la imagen
 mapache_x = 100
 mapache_y = 300
 
-# Cargar la imagen del mapache (asegúrate de tenerla en la carpeta 'images')
 def draw():
-    screen.clear()  # Limpiar la pantalla
-    screen.blit('mapache', (mapache_x, mapache_y))  # Dibujar la imagen del mapache en la nueva posición
+    screen.clear()  # Limpia la pantalla
+    screen.blit('mapache', (mapache_x, mapache_y))  # Dibuja la imagen 
 
 def update():
     global mapache_x
-    mapache_x += 2  # Mover la imagen del mapache 2 píxeles hacia la derecha en cada actualización
+    mapache_x += 2  # Mueve la imagen 2 píxeles hacia la derecha en cada actualización
 
-    # Si el mapache sale de la pantalla, volver a la izquierda
+    # Si el mapache sale de la pantalla, vuelve hacia a la izquierda
     if mapache_x > WIDTH:
-        mapache_x = -100  # Hacer que reaparezca desde el lado izquierdo
+        mapache_x = -100  # Hace que reaparezca desde el lado izquierdo
 
 pgzrun.go()  # Iniciar el juego
 ```
 
-> **Ejercicio 2. Desafíos extra** 
+> **Ejercicio 3.** 
 > * Haz que el mapache también se mueva hacia arriba y hacia abajo controlando los límites superior e inferior de la pantalla.
 > * Añade un texto que se desplace hacia la izquierda. Este texto se moverá hacia la izquierda de la pantalla, y cuando salga del borde izquierdo, reaparecerá por el borde derecho, creando un efecto de desplazamiento continuo similar al del mapache.
 > * Ajusta la velocidad del texto cambiando el valor `texto_x -= 3` a `texto_x -= 5` para que el texto se mueva más rápido. 
