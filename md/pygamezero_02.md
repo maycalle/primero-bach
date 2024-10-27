@@ -2,7 +2,7 @@
 
 En esta unidad, aprenderás a dar control al jugador sobre lo que sucede en el juego. Esto es fundamental para que el jugador pueda interactuar con el juego, como mover un personaje o hacer que reaccione al pulsar teclas específicas o al hacer clic con el ratón. Los eventos de teclado y ratón son esenciales en casi cualquier tipo de juego.
 
-## 1. Introducción a los eventos
+## 2.1. Introducción a los eventos
 
 En Pygame Zero, los **eventos** son acciones que realiza el jugador, como pulsar una tecla o hacer clic con el ratón. Podemos detectar estos eventos y programar acciones que respondan a ellos, lo que hace que el juego sea interactivo.
 
@@ -10,7 +10,7 @@ Existen principalmente dos tipos de eventos en Pygame Zero:
 * **Eventos de teclado:** permiten que el jugador controle el juego usando teclas específicas.
 * **Eventos de ratón:** permiten realizar acciones al hacer clic en ciertas partes de la pantalla.
 
-## 2. Controlando objetos con el teclado
+## 2.2 Controlando objetos con el teclado
 
 Para detectar eventos de teclado, usamos el **módulo keyboard** de Pygame Zero. Este módulo permite comprobar si el jugador ha presionado una tecla específica y programar respuestas a esas acciones. 
 
@@ -53,7 +53,7 @@ pgzrun.go() # Inicia el juego
 > * Modifica el valor de desplazamiento (+= 5 o -= 5) para que se mueva más rápido o más lento.
 > * Prueba a mover la figura usando otras teclas, como W, A, S, D.
 
-## 3. Controlando objetos con el ratón
+## 2.3 Controlando objetos con el ratón
 
 Los **eventos de ratón** permiten al jugador interactuar con objetos haciendo clic en ellos o moviendo el ratón en la pantalla. Esto es útil para juegos en los que el jugador necesita seleccionar objetos o moverlos de acuerdo con la posición del ratón.
 
@@ -63,7 +63,7 @@ Pygame Zero usa la función especial `on_mouse_down(pos)` para detectar un clic.
 
 En el siguiente ejemplo se muestra cómo hacer que el personaje se traslade a la posición donde el jugador hace clic.
 
-```py 
+```py
 import pgzrun
 
 WIDTH = 800
@@ -108,7 +108,7 @@ Para lograrlo:
 
 En el ejemplo siguiente se muestra este efecto: 
 
-```py 
+```py
 import pgzrun
 import math
 
@@ -172,4 +172,65 @@ pgzrun.go() # Inicia el juego
 > * Añade un segundo objetivo en pantalla y haz que el personaje cambie automáticamente de dirección al llegar a un objetivo.
 
 ## 4. Control avanzado: combinando teclado y ratón
+
+Podemos combinar los controles de teclado y ratón para hacer el juego aún más dinámico. Por ejemplo, el jugador podría moverse usando el teclado, pero disparar con el ratón en un juego de disparos.
+
+**Ejemplo básico: Personaje que se mueve con las teclas y dispara con el ratón**
+
+Para gestionar los disparos en el juego, utilizamos una **lista** llamada `disparos`. Cada vez que el jugador hace clic, se añade un nuevo disparo a esta lista. Cada disparo tiene sus propias coordenadas en *x* e *y*, lo que permite que se muevan independientemente unos de otros.
+
+* **Añadir disparos:** cada vez que el jugador hace clic, se crea un nuevo disparo en la posición del personaje y se añade a la lista.
+* **Mover disparos:** en cada actualización (*update*), todos los disparos se mueven hacia arriba en la pantalla, simulando un disparo.
+* **Eliminar disparos:** si un disparo llega a la parte superior de la pantalla, se elimina de la lista para liberar memoria y mantener el juego ordenado.
+
+
+```py
+import pgzrun
+
+WIDTH = 800
+HEIGHT = 600
+
+# Posición inicial del personaje
+player_x = 400
+player_y = 300
+
+# Lista para almacenar los disparos
+disparos = []
+
+def draw():
+    screen.clear()
+    screen.fill('lightblue')  # Fondo color azul claro
+    # Dibujar el personaje como un círculo azul
+    screen.draw.circle((player_x, player_y), 30, 'blue')
+    # Dibujar cada disparo como un círculo rojo pequeño
+    for disparo in disparos:
+        screen.draw.circle(disparo, 5, 'red')
+
+def update():
+    global player_x, player_y
+    # Mover el personaje con las flechas del teclado
+    if keyboard.left:
+        player_x -= 5
+    if keyboard.right:
+        player_x += 5
+    if keyboard.up:
+        player_y -= 5
+    if keyboard.down:
+        player_y += 5
+
+    # Mover los disparos hacia arriba
+    for disparo in disparos:
+        disparo[1] -= 10
+
+    # Eliminar los disparos que salen de la pantalla
+    for disparo in disparos:
+        if disparo[1] <= 0:
+            disparos.remove(disparo)
+
+def on_mouse_down(pos):
+    # Añadir un nuevo disparo en la posición del personaje
+    disparos.append([player_x, player_y])
+
+pgzrun.go() # Inicia el juego
+```
 

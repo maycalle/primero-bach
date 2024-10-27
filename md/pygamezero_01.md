@@ -2,7 +2,7 @@
 
 ¡Bienvenidos a **Pygame Zero**! Si te gusta la idea de crear videojuegos 2D y ya sabes un poquito de Python, estás en el lugar correcto. Pygame Zero es una herramienta que te permitirá dar vida a tus ideas de videojuegos de forma muy sencilla y divertida. 
 
-## 1. ¿Qué es Pygame Zero?
+## 1.1 ¿Qué es Pygame Zero?
 
 **Pygame Zero** es una versión simplificada de otra biblioteca más completa para crear juegos 2D, llamada **Pygame**. Está diseñada para que puedas empezar a programar videojuegos fácilmente y sin complicaciones. Al estar basada en Python, ¡te resultará muy familiar!
 
@@ -17,7 +17,7 @@ Con Pygame Zero, puedes hacer un montón de juegos diferentes. Aquí tienes algu
 * **Puzzles** al estilo Tetris o juegos de combinar piezas.
 * **Aventuras gráficas:** juegos donde puedes interactuar con objetos y personajes usando el ratón, como en clásicos de los 90.
 
-## 2. ¿Cómo empezar?
+## 1.2 ¿Cómo empezar?
 
 Lo primero que necesitas es **instalar Pygame Zero**. Es muy fácil:
 1. Abre la consola  (haz clic en el **menú de Inicio** y escribe **cmd**)
@@ -31,9 +31,9 @@ pip install pgzero
 
 > **NOTA:** El comando PIP permite instalar herramientas adicionales en Python. En este caso, para obtener Pygame Zero, pero lo puedes usar para instalar otras muchas herramientas (es como una *"tienda de aplicaciones"* para Python). 
 
-## 3. Estructura básica de un juego 
+## 1.3 Estructura básica de un juego 
 
-### 3.1 Dibujar un círculo la pantalla
+### 1.3.1 Dibujar un círculo la pantalla
 
 Vamos a empezar con algo sencillo: **dibujar un círculo en la pantalla** de nuestro juego. Para ello, necesitas familiarizarte con dos elementos clave: la función `draw()` y el objeto `screen`.
     
@@ -63,7 +63,7 @@ pgzrun.go()  # Inicia el juego
 > * Modifica las coordenadas (x, y) para mover el círculo a otra posición en la pantalla.
 > * Prueba con diferentes radios para ver cómo afecta el tamaño.
 
-### 3.2 Dibujar otras formas y texto
+### 1.3.2 Dibujar otras formas y texto
 
 Una vez que domines los círculos, puedes experimentar con otras formas y texto. Aquí tienes algunos comandos adicionales que puedes probar:
 
@@ -111,7 +111,7 @@ pgzrun.go() # Inicia el juego
 > * Dibuja un texto en la parte superior.
 > * Añade texto en diferentes ubicaciones de la pantalla. 
 
-### 3.3 Mostrar una imagen
+### 1.3.3 Mostrar una imagen
 
 Para mostrar una imagen, guárdala primero en una carpeta especial llamada **images**, ubicada en el mismo directorio que tu archivo de código.
 
@@ -146,7 +146,7 @@ pgzrun.go() # Inicia el juego
 > * Rellena la pantalla con un color de fondo.
 > * Carga una imagen en una posición específica
 
-### 3.4 Agregando movimiento
+### 1.3.4 Agregando movimiento
 
 Ahora que ya sabes dibujar y mostrar imágenes, vamos a incorporar el movimiento. Para ello, utilizaremos la función `update()`, que se ejecuta constantemente. Aquí colocaremos la lógica que controla el comportamiento del juego, como mover personajes, detectar colisiones, o cambiar el estado del juego.
 
@@ -215,7 +215,7 @@ def update():
 pgzrun.go()  # Iniciar el juego
 ```
 
-> **Ejercicio 3.** 
+> **Ejercicio 4.** 
 > * Haz que el mapache también se mueva hacia arriba y hacia abajo controlando los límites superior e inferior de la pantalla.
 > * Añade un texto que se desplace hacia la izquierda. Este texto se moverá hacia la izquierda de la pantalla, y cuando salga del borde izquierdo, reaparecerá por el borde derecho, creando un efecto de desplazamiento continuo similar al del mapache.
 > * Ajusta la velocidad del texto cambiando el valor `texto_x -= 3` a `texto_x -= 5` para que el texto se mueva más rápido. 
