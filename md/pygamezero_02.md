@@ -175,7 +175,7 @@ pgzrun.go() # Inicia el juego
 
 Podemos combinar los controles de teclado y ratón para hacer el juego aún más dinámico. Por ejemplo, el jugador podría moverse usando el teclado, pero disparar con el ratón en un juego de disparos.
 
-**Ejemplo básico: Personaje que se mueve con las teclas y dispara con el ratón**
+**Ejemplo básico: personaje que se mueve con las teclas y dispara en una única dirección con el ratón**
 
 Para gestionar los disparos en el juego, utilizamos una **lista** llamada `disparos`. Cada vez que el jugador hace clic, se añade un nuevo disparo a esta lista. Cada disparo tiene sus propias coordenadas en *x* e *y*, lo que permite que se muevan independientemente unos de otros.
 
@@ -233,3 +233,79 @@ def on_mouse_down(pos):
 pgzrun.go() # Inicia el juego
 ```
 
+**Ejemplo avanzado: personaje que se mueve con las teclas y dispara en una varias direcciones con el ratón**
+
+En este ejemplo, el personaje se mueve con las teclas de flecha y dispara en la dirección del ratón cuando el jugador hace clic. Este tipo de control es común en juegos de disparos, donde el jugador puede moverse en una dirección y disparar en otra.
+
+Para gestionar los disparos, utilizamos listas para almacenar las propiedades de cada disparo, como su posición y dirección. Esto nos permite tener múltiples disparos en pantalla, cada uno avanzando en línea recta hacia donde el jugador hizo clic.
+
+```py
+import pgzrun
+import math
+
+WIDTH = 800
+HEIGHT = 600
+
+# Posición inicial del personaje
+player_x = 400
+player_y = 300
+
+# Listas para almacenar las propiedades de cada disparo
+disparos_x = []  # Posiciones x de los disparos
+disparos_y = []  # Posiciones y de los disparos
+disparos_dx = []  # Dirección x de los disparos
+disparos_dy = []  # Dirección y de los disparos
+disparos_speed = 5  # Velocidad constante para todos los disparos
+
+def draw():
+    screen.clear()
+    screen.fill('lightblue')  # Fondo color azul claro
+    # Dibujar el personaje como un círculo azul
+    screen.draw.circle((player_x, player_y), 30, 'blue')
+    # Dibujar cada disparo como un círculo rojo pequeño
+    for i in range(len(disparos_x)):
+        screen.draw.circle((disparos_x[i], disparos_y[i]), 5, 'red')
+
+def update():
+    global player_x, player_y
+    # Mover el personaje con las flechas del teclado
+    if keyboard.left:
+        player_x -= 5
+    if keyboard.right:
+        player_x += 5
+    if keyboard.up:
+        player_y -= 5
+    if keyboard.down:
+        player_y += 5
+
+    # Mover cada disparo en su dirección
+    for i in range(len(disparos_x)):
+        disparos_x[i] += disparos_dx[i] * disparos_speed
+        disparos_y[i] += disparos_dy[i] * disparos_speed
+
+    # Eliminar los disparos que salen de la pantalla
+    for i in range(len(disparos_x)):
+        if disparos_x[i] < 0 or disparos_x[i] > WIDTH or disparos_y[i] < 0 or disparos_y[i] > HEIGHT:
+            # Eliminar disparo fuera de pantalla de todas las listas usando remove()
+            disparos_x.remove(disparos_x[i])
+            disparos_y.remove(disparos_y[i])
+            disparos_dx.remove(disparos_dx[i])
+            disparos_dy.remove(disparos_dy[i])
+
+def on_mouse_down(pos):
+    # Calcular la dirección del disparo hacia el punto donde se hizo clic
+    dx = pos[0] - player_x
+    dy = pos[1] - player_y
+    distance = math.sqrt(dx**2 + dy**2)
+    # Ajustar la dirección para que el disparo siga una línea recta hacia el clic
+    dx = dx/distance
+    dy = dy/distance
+
+    # Añadir el nuevo disparo a cada lista
+    disparos_x.append(player_x)
+    disparos_y.append(player_y)
+    disparos_dx.append(dx)
+    disparos_dy.append(dy)
+
+pgzrun.go()  # Inicia el juego
+```
