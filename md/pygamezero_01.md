@@ -101,7 +101,7 @@ def draw():
     screen.draw.text('¡Bienvenidos a Pygame Zero!', (150, 100), color='white', fontsize=50)
     screen.draw.text('Experimenta dibujando formas', (200, 450), color='yellow', fontsize=30)
 
-pgzrun.go()
+pgzrun.go() # Inicia el juego
 ```
 
 > **Ejercicio 2.**
@@ -138,7 +138,7 @@ def draw():
     # Texto para acompañar la imagen
     screen.draw.text("¡Mira esta imagen divertida!", (200, 100), color='black', fontsize=40)
 
-pgzrun.go()
+pgzrun.go() # Inicia el juego
 ```
 
 > **Ejercicio 3.**  
