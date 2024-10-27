@@ -309,3 +309,7 @@ def on_mouse_down(pos):
 
 pgzrun.go()  # Inicia el juego
 ```
+
+> **Ejercicio 4.**
+> * Haz que el color de cada disparo cambie en función de la dirección del clic. Por ejemplo, si el clic está a la derecha del personaje, el disparo es azul, si está a la izquierda es rojo, y si está arriba o abajo es verde.
+> * Modifica el código para que solo haya un máximo de 5 disparos en pantalla a la vez. Si ya hay 5 disparos, el personaje no podrá disparar hasta que uno de ellos desaparezca de la pantalla.
