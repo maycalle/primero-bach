@@ -121,8 +121,6 @@ Para mostrar una imagen, guárdala primero en una carpeta especial llamada **ima
 
 Descarga [esta imagen](https://raw.githubusercontent.com/maycalle/primero-bach/653e12eb1fded264cac25d9d62361eac70d3d6f8/img/mapache_genial.png) y prueba este ejemplo:
 
-[Esta imagen](https://github.com/maycalle/primero-bach/blob/7979b22dbf0925100fe6afaa102de2a1bfe5482b/img/mapache_genial.png)
-
 ```py
 import pgzrun
 
