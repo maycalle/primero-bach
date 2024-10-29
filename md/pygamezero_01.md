@@ -121,6 +121,8 @@ Para mostrar una imagen, guárdala primero en una carpeta especial llamada **ima
 
 Descarga [esta imagen](https://raw.githubusercontent.com/maycalle/primero-bach/653e12eb1fded264cac25d9d62361eac70d3d6f8/img/mapache_genial.png) y prueba este ejemplo:
 
+[Esta imagen](https://github.com/maycalle/primero-bach/blob/7979b22dbf0925100fe6afaa102de2a1bfe5482b/img/mapache_genial.png)
+
 ```py
 import pgzrun
 
@@ -222,7 +224,7 @@ pgzrun.go()  # Iniciar el juego
 > * Añade otro texto que se mueva en la dirección opuesta, de izquierda a derecha.
 > * Haz que tanto el texto como el mapache cambien de dirección cuando lleguen a los bordes de la pantalla, en lugar de reaparecer en el lado opuesto.
 
-**IMPORTANTE:** Si quieres que la ventana de *Pygame Zero* se abra centrada en la pantalla para evitar problemas de visualización parcial, puedes añadir las siguientes líneas al inicio de tu código, antes de importar la biblioteca `pgzrun`:
+**IMPORTANTE:** Si quieres que la ventana de *Pygame Zero* se abra centrada en la pantalla y evitar así problemas de visualización, puedes añadir las siguientes líneas al inicio de tu código, antes de importar la biblioteca `pgzrun`:
 
 ```py
 import os
