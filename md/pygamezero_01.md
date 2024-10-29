@@ -221,3 +221,12 @@ pgzrun.go()  # Iniciar el juego
 > * Ajusta la velocidad del texto cambiando el valor `texto_x -= 3` a `texto_x -= 5` para que el texto se mueva más rápido. 
 > * Añade otro texto que se mueva en la dirección opuesta, de izquierda a derecha.
 > * Haz que tanto el texto como el mapache cambien de dirección cuando lleguen a los bordes de la pantalla, en lugar de reaparecer en el lado opuesto.
+
+**IMPORTANTE:** Si quieres que la ventana de *Pygame Zero* se abra centrada en la pantalla para evitar problemas de visualización parcial, puedes añadir las siguientes líneas al inicio de tu código, antes de importar la biblioteca `pgzrun`:
+
+```py
+import os
+os.environ['SDL_VIDEO_CENTERED'] = '1'
+```
+
+Esta configuración hace que la ventana del juego se coloque automáticamente en el centro de la pantalla cada vez que ejecutes tu programa, garantizando que todos los elementos dibujados sean visibles.
