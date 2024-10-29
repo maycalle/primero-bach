@@ -71,7 +71,7 @@ Una vez que domines los círculos, puedes experimentar con otras formas y texto.
 * `screen.draw.filled_circle((x, y), radio, color)`: dibuja un círculo relleno.
 * `screen.draw.line((x1, y1), (x2, y2), color)`: dibuja una línea entre dos puntos.
 * `screen.draw.rect(Rect((x, y), (ancho, alto)), color)`: dibuja un rectángulo con las dimensiones especificadas por (ancho, alto) en la posición (x, y).
-* `screen.draw.text("Texto", (x, y), color='white', fontsize=40)`: escribe texto en la pantalla con el formato que le indiques: *fontsize* (tamaño del texto), *color* (color del texto) o *shadow* (sombreado del texto).
+* `screen.draw.text("Texto", (x, y), color='white', fontsize=40)`: escribe texto en la pantalla con el formato que le indiques: *fontsize* (tamaño del texto), *color* (color del texto), *shadow* (coordenada de desplazamiento del sombreado) y *scolor* para especificar el color de la sombra.
 
 Prueba el siguiente ejemplo, observa el resultado y dónde se colocan las formas: 
 
@@ -98,7 +98,7 @@ def draw():
     screen.draw.line((0, HEIGHT), (WIDTH, 0), 'purple')
 
     # Dibuja texto en la pantalla
-    screen.draw.text('¡Bienvenidos a Pygame Zero!', (150, 100), color='white', fontsize=50)
+    screen.draw.text('¡Bienvenidos a Pygame Zero!', (150, 100), color='white', fontsize=50, shadow=(2,2), scolor="#202020")
     screen.draw.text('Experimenta dibujando formas', (200, 450), color='yellow', fontsize=30)
 
 pgzrun.go() # Inicia el juego
