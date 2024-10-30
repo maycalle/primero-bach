@@ -96,6 +96,7 @@ Vamos a ver cómo hacer que el personaje se desplace hacia el punto donde el jug
 Para lograrlo:
 1. Calcula la dirección hacia el punto objetivo, hallando la diferencia en x (*dx*) y en y (*dy*) entre el personaje y el punto de destino.
 2. Usa el **teorema de Pitágoras** para calcular la distancia entre el personaje y el destino. Según el teorema de Pitágoras, la distancia (*d*) entre los puntos se calcula con la fórmula:
+
     $$
     d = \sqrt{(dx)^2 + (dy)^2}
     $$
