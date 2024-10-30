@@ -39,7 +39,7 @@ Antes de empezar a ver la estructura básica de una aplicación de *Pygame Zero*
 * **Eje X (horizontal):** aumenta de izquierda a derecha. Cuanto mayor sea el valor de x, más a la derecha estará el punto en la pantalla.
 * **Eje Y (vertical):** aumenta de arriba hacia abajo, al contrario de los sistemas de coordenadas en matemáticas. Cuanto mayor sea el valor de y, más abajo estará el punto en la pantalla.
 * **Tamaño de la ventana:** se define con `WIDTH` y `HEIGHT`. Por ejemplo, en una ventana de 800x600, el punto (800, 600) estaría en la esquina inferior derecha.
-* **Centro de la pantalla:** se puede calcular con (WIDTH // 2, HEIGHT // 2).
+* **Centro de la pantalla:** se puede calcular con (`WIDTH` // 2, `HEIGHT` // 2).
 
 Cualquier elemento en *Pygame Zero* (como texto, formas o imágenes) se posiciona según este sistema. Por ejemplo, (100, 50) colocaría un elemento a 100 píxeles de la izquierda y a 50 píxeles de la parte superior.
 
