@@ -29,11 +29,23 @@ pip install pgzero
 
 ¡Y listo! Ya tienes Pygame Zero instalado.
 
-> **NOTA:** El comando PIP permite instalar herramientas adicionales en Python. En este caso, para obtener Pygame Zero, pero lo puedes usar para instalar otras muchas herramientas (es como una *"tienda de aplicaciones"* para Python). 
+> **NOTA:** El comando PIP permite instalar herramientas adicionales en Python. En este caso, para obtener Pygame Zero, pero lo puedes usar para instalar otras muchas herramientas (es como una *"tienda de aplicaciones"* para Python).
 
-## 1.3 Estructura básica de un juego 
+## 1.3 Sistema de coordenadas en PyGame Zero
 
-### 1.3.1 Dibujar un círculo la pantalla
+Antes de empezar a ver la estructura básica de una aplicación de *Pygame Zero*, conviene entender cómo funciona su sistema de coordenadas, ya que es esencial para posicionar y mover elementos en la pantalla.
+
+* **Origen:** el punto (0, 0) está en la esquina superior izquierda de la pantalla.
+* **Eje X (horizontal):** aumenta de izquierda a derecha. Cuanto mayor sea el valor de x, más a la derecha estará el punto en la pantalla.
+* **Eje Y (vertical):** aumenta de arriba hacia abajo, al contrario de los sistemas de coordenadas en matemáticas. Cuanto mayor sea el valor de y, más abajo estará el punto en la pantalla.
+* **Tamaño de la ventana:** se define con `WIDTH` y `HEIGHT`. Por ejemplo, en una ventana de 800x600, el punto (800, 600) estaría en la esquina inferior derecha.
+* **Centro de la pantalla:** se puede calcular con (WIDTH // 2, HEIGHT // 2).
+
+Cualquier elemento en *Pygame Zero* (como texto, formas o imágenes) se posiciona según este sistema. Por ejemplo, (100, 50) colocaría un elemento a 100 píxeles de la izquierda y a 50 píxeles de la parte superior.
+
+## 1.4 Estructura básica de un juego 
+
+### 1.4.1 Dibujar un círculo la pantalla
 
 Vamos a empezar con algo sencillo: **dibujar un círculo en la pantalla** de nuestro juego. Para ello, necesitas familiarizarte con dos elementos clave: la función `draw()` y el objeto `screen`.
     
@@ -63,7 +75,7 @@ pgzrun.go()  # Inicia el juego
 > * Modifica las coordenadas (x, y) para mover el círculo a otra posición en la pantalla.
 > * Prueba con diferentes radios para ver cómo afecta el tamaño.
 
-### 1.3.2 Dibujar otras formas y texto
+### 1.4.2 Dibujar otras formas y texto
 
 Una vez que domines los círculos, puedes experimentar con otras formas y texto. Aquí tienes algunos comandos adicionales que puedes probar:
 
@@ -111,7 +123,7 @@ pgzrun.go() # Inicia el juego
 > * Dibuja un texto en la parte superior.
 > * Añade texto en diferentes ubicaciones de la pantalla. 
 
-### 1.3.3 Mostrar una imagen
+### 1.4.3 Mostrar una imagen
 
 Para mostrar una imagen, guárdala primero en una carpeta especial llamada **images**, ubicada en el mismo directorio que tu archivo de código.
 
@@ -146,7 +158,7 @@ pgzrun.go() # Inicia el juego
 > * Rellena la pantalla con un color de fondo.
 > * Carga una imagen en una posición específica
 
-### 1.3.4 Agregando movimiento
+### 1.4.4 Agregando movimiento
 
 Ahora que ya sabes dibujar y mostrar imágenes, vamos a incorporar el movimiento. Para ello, utilizaremos la función `update()`, que se ejecuta constantemente. Aquí colocaremos la lógica que controla el comportamiento del juego, como mover personajes, detectar colisiones, o cambiar el estado del juego.
 
