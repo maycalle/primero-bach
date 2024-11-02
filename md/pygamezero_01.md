@@ -191,15 +191,16 @@ pgzrun.go()  # Inicia el juego
 
 ¡Nuestro círculo ya se está moviendo por la pantalla! Te explico algunos detalles: 
 
-* Las variables `circle_x` y `circle_y` definen las coordenadas iniciales del círculo, colocándolo en el centro de la pantalla.
-* La función `draw()` dibuja el círculo en las coordenadas actuales de `circle_x` y `circle_y`, que se actualizan constantemente.
-* La función `update()` incrementa `circle_x` en 2 píxeles cada vez que se ejecuta, moviendo el círculo hacia la derecha.
-* Usamos `global circle_x` en `update()` para modificar `circle_x` dentro de la función.
-* Pygame Zero llama automáticamente a `draw()` y `update()` muchas veces por segundo para mantener el círculo actualizado en pantalla.
+* **Coordenadas iniciales:** las variables `circle_x` y `circle_y` definen las coordenadas iniciales del círculo, colocándolo en el centro de la pantalla.
+* **Función `draw()`:** dibuja el círculo en la posición definida en las coordenadas `circle_x` y `circle_y`. 
+* **Función `update()`:** incrementa `circle_x` en 2 píxeles cada vez que se ejecuta, moviendo el círculo hacia la derecha.
+* **Uso de global:** utilizamos `global circle_x` en `update()` para modificar `circle_x` dentro de la función.
+
+Pygame Zero llama automáticamente a `draw()` y `update()` muchas veces por segundo para mantener el círculo actualizado en pantalla.
 
 **Ejemplo: mapache en movimiento**
 
-En este ejemplo, vamos a darle vida a un mapache haciéndolo moverse de un lado a otro por la pantalla. El objetivo es que la imagen del mapache se desplace hacia la derecha y, cuando llegue al borde derecho de la pantalla, vuelva a aparecer desde el borde izquierdo, generando un efecto continuo.
+Ahora que tenemos un círculo en movimiento, vamos a darle vida a una imagen de una mapache para que se desplace de lado a lado en la pantalla. En este ejemplo, la imagen se moverá hacia la derecha, y cuando llegue al borde derecho, reaparecerá por el borde izquierdo, creando un efecto de desplazamiento continuo.
 
 ```py
 import pgzrun
@@ -214,7 +215,7 @@ mapache_y = 300
 
 def draw():
     screen.clear()  # Limpia la pantalla
-    screen.blit('mapache', (mapache_x, mapache_y))  # Dibuja la imagen 
+    screen.blit('mapache_genial', (mapache_x, mapache_y))  # Dibuja la imagen 
 
 def update():
     global mapache_x
@@ -227,12 +228,67 @@ def update():
 pgzrun.go()  # Iniciar el juego
 ```
 
+En este código, hemos logrado que el mapache salga de la pantalla por la derecha y aparezca por la izquierda. Pero, ¿qué pasa si queremos que se mueva de arriba hacia abajo y cambie de dirección al alcanzar el borde creando un efecto de "rebote"?
+
+**Ejemplo: movimiento vertical con control de bordes**
+
+En este ejemplo, animaremos una imagen de un mapache para que suba y baje dentro de los límites de la pantalla. Cuando alcance el borde superior o inferior, cambiará de dirección automáticamente.
+
+Agregaremos una variable `velocidad_y` para representar la dirección y velocidad vertical. Cuando el mapache llegue al borde superior o inferior, invertiremos el valor de `velocidad_y`, logrando que rebote.
+
+```py
+# Importa las librerías necesarias
+import pgzrun
+import os
+
+# Centra la ventana del juego en la pantalla
+os.environ['SDL_VIDEO_CENTERED'] = '1'
+
+# Define el tamaño de la ventana del juego
+WIDTH = 800
+HEIGHT = 600
+
+# Carga la imagen y calcula su tamaño
+mapache_image = images.load('mapache_genial.png')
+mapache_ancho = mapache_image.get_width()
+mapache_alto = mapache_image.get_height()
+
+# Define la posición inicial de la imagen
+mapache_x = 0
+mapache_y = 0
+mapache_velocidad_y = 2  # Velocidad de movimiento vertical
+
+def draw():
+    screen.clear()  # Limpia la pantalla
+    screen.blit('mapache_genial.png', (mapache_x, mapache_y))  # Dibuja la imagen 
+
+def update():
+    global mapache_y, mapache_velocidad_y
+
+    # Mueve la imagen en el eje Y 
+    mapache_y += mapache_velocidad_y
+
+    # Si el mapache alcanza los límites superior o inferior, invierte su dirección
+    if mapache_y <= 0 or mapache_y >= HEIGHT - mapache_alto:  # Ajuste según el tamaño de la imagen
+        mapache_velocidad_y = -mapache_velocidad_y  # Cambia la dirección vertical
+
+pgzrun.go()  # Iniciar el juego
+```
+
+* **Cargar la imagen:** la imagen del mapache se carga con `images.load('mapache_genial.png')`, y luego usamos `get_width()` y `get_height()` para obtener sus dimensiones (mapache_ancho y mapache_alto). Esto es fundamental para controlar los bordes: al restar el alto de la imagen del límite inferior (HEIGHT - mapache_alto), evitamos que el mapache se salga de la pantalla.
+
+* **Posición inicial y velocidad:** *mapache_x* y *mapache_y* representan la posición inicial de la imagen. *mapache_velocidad_y* controla la velocidad y dirección del movimiento vertical. Un valor positivo hace que el mapache se mueva hacia abajo, mientras que un valor negativo lo hace subir.
+
+* **Función `update()`:** Aquí es donde ocurre el movimiento:
+    * **Movimiento vertical:** *mapache_y* se incrementa o decrementa según *mapache_velocidad_y*.
+    * **Control de bordes:** comprobamos si *mapache_y* ha alcanzado el límite superior (mapache_y <= 0) o el límite inferior (mapache_y >= HEIGHT - mapache_alto). Si ha alcanzado uno de estos límites, invertimos *mapache_velocidad_y*, haciendo que el mapache rebote.
+
+
 > **Ejercicio 4.** 
-> * Haz que el mapache también se mueva hacia arriba y hacia abajo controlando los límites superior e inferior de la pantalla.
-> * Añade un texto que se desplace hacia la izquierda. Este texto se moverá hacia la izquierda de la pantalla, y cuando salga del borde izquierdo, reaparecerá por el borde derecho, creando un efecto de desplazamiento continuo similar al del mapache.
-> * Ajusta la velocidad del texto cambiando el valor `texto_x -= 3` a `texto_x -= 5` para que el texto se mueva más rápido. 
-> * Añade otro texto que se mueva en la dirección opuesta, de izquierda a derecha.
-> * Haz que tanto el texto como el mapache cambien de dirección cuando lleguen a los bordes de la pantalla, en lugar de reaparecer en el lado opuesto.
+> * Modifica el código para que el mapache también se mueva hacia los lados, rebotando en los bordes izquierdo y derecho de la pantalla.
+> * Añade un texto en pantalla que se mueva de derecha a izquierda. Cuando el texto alcance el borde izquierdo, haz que reaparezca en el borde derecho para crear un efecto de desplazamiento continuo.
+> * Ajusta la velocidad del texto cambiando su velocidad y observa cómo afecta al movimiento.
+> * Añade otro texto que se mueva de izquierda a derecha, pero que cambie de dirección al llegar a los bordes en lugar de reaparecer.
 
 **IMPORTANTE:** Si quieres que la ventana de *Pygame Zero* se abra centrada en la pantalla y evitar así problemas de visualización, puedes añadir las siguientes líneas al inicio de tu código, antes de importar la biblioteca `pgzrun`:
 
