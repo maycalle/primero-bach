@@ -131,7 +131,7 @@ Para mostrar una imagen, guárdala primero en una carpeta especial llamada **ima
 
 * Para mostrar la imagen en pantalla, usa: `screen.blit('nombre_imagen', (x, y))`.
 
-Descarga [esta imagen](https://raw.githubusercontent.com/maycalle/primero-bach/653e12eb1fded264cac25d9d62361eac70d3d6f8/img/mapache_genial.png) y prueba este ejemplo:
+Descarga [esta imagen](img/mapache_genial.png) y prueba este ejemplo:
 
 ```py
 import pgzrun
