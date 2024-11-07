@@ -114,7 +114,7 @@ Para lograrlo:
 2. Usa el **teorema de Pitágoras** para calcular la distancia entre el personaje y el destino. Según el teorema de Pitágoras, la distancia (*d*) entre los puntos se calcula con la fórmula:
 
 <div align="center">
-    <img src="/primero-bach/img/pitagoras.png" width="40%">
+    <img src="/primero-bach/img/pitagoras.png" width="20%">
 </div>   
 
    Esta distancia nos ayuda a ajustar el movimiento en cada eje (*x* e *y*) de forma proporcional, logrando que el personaje se desplace en línea recta y a una velocidad constante.
