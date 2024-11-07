@@ -98,9 +98,9 @@ pgzrun.go() # Inicia el juego
 
 > **Ejercicio 2.**  
 > * Modifica el código del ejemplo para que el personaje cambie entre dos colores cada vez que hagas clic en la pantalla. Puedes seguir los siguientes pasos:
->   * Define una variable `color` al inicio del código (por ejemplo, color = 'green').
->   * En la función `on_mouse_down(pos)`, cambia el valor de `color` (por ejemplo, de 'green' a 'red' y viceversa).
->   * Usa la variable `color` en `draw()` para que el círculo se dibuje con el color actual.
+>       * Define una variable `color` al inicio del código (por ejemplo, color = 'green').
+>       * En la función `on_mouse_down(pos)`, cambia el valor de `color` (por ejemplo, de 'green' a 'red' y viceversa).
+>       * Usa la variable `color` en `draw()` para que el círculo se dibuje con el color actual.
 > 
 > **Ejercicio 3.** 
 > * Modifica el código del ejemplo para que el tamaño del personaje aumente cada vez que el jugador hace clic en la pantalla. Puedes establecer un tamaño máximo para que no crezca indefinidamente (*if tamaño > 60: tamaño = 30*)
@@ -114,7 +114,7 @@ Para lograrlo:
 2. Usa el **teorema de Pitágoras** para calcular la distancia entre el personaje y el destino. Según el teorema de Pitágoras, la distancia (*d*) entre los puntos se calcula con la fórmula:
 
 <div align="center">
-    <img src="/primero-bach/img/pitagoras.png" width="60%">
+    <img src="/primero-bach/img/pitagoras.png" width="40%">
 </div>   
 
    Esta distancia nos ayuda a ajustar el movimiento en cada eje (*x* e *y*) de forma proporcional, logrando que el personaje se desplace en línea recta y a una velocidad constante.
