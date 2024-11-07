@@ -14,42 +14,47 @@ Existen principalmente dos tipos de eventos en Pygame Zero:
 
 Para detectar eventos de teclado, usamos el **módulo keyboard** de Pygame Zero. Este módulo permite comprobar si el jugador ha presionado una tecla específica y programar respuestas a esas acciones. 
 
-En el siguiente ejemplo se muestra cómo mover un objeto en pantalla usando las teclas de flecha:
+**Ejemplo 1. Mover un objeto en pantalla usando las teclas de flecha**
 
 ```py
+# Importar librerías necesarias
 import pgzrun
+import os
 
-# Dimensiones de la ventana del juego
-WIDTH = 800
-HEIGHT = 600
+# Centrar la ventana en el monitor
+os.environ['SDL_VIDEO_CENTERED'] = '1'
+
+# Dimensiones de la pantalla
+ANCHO = 800
+ALTO = 600
 
 # Posición inicial del personaje
-player_x = 400
-player_y = 300
+jugador_x = 400
+jugador_y = 300
 
 def draw():
     screen.clear()
     screen.fill('lightblue')  # Fondo color azul claro
-    screen.draw.circle((player_x, player_y), 30, 'blue')  # Dibuja un círculo que representa al personaje
+    screen.draw.circle((jugador_x, jugador_y), 30, 'blue')  # Dibuja un círculo que representa al personaje
 
 def update():
-    global player_x, player_y
+    global jugador_x, jugador_y
     
     # Controles de movimiento usando las teclas de flecha
     if keyboard.left:
-        player_x -= 5
+        jugador_x -= 5
     if keyboard.right:
-        player_x += 5
+        jugador_x += 5
     if keyboard.up:
-        player_y -= 5
+        jugador_y -= 5
     if keyboard.down:
-        player_y += 5
+        jugador_y += 5
 
 pgzrun.go() # Inicia el juego
 ```
 
 > **Ejercicio 1.** 
-> * Dibuja una figura y haz que se mueva por la pantalla usando las teclas de flecha. 
+> * Crea una figura o imagen y haz que se mueva por la pantalla usando las teclas de flecha. 
 > * Modifica el valor de desplazamiento (+= 5 o -= 5) para que se mueva más rápido o más lento.
 > * Prueba a mover la figura usando otras teclas, como W, A, S, D.
 
@@ -59,37 +64,48 @@ Los **eventos de ratón** permiten al jugador interactuar con objetos haciendo c
 
 Pygame Zero usa la función especial `on_mouse_down(pos)` para detectar un clic. La variable `pos` nos da la posición exacta donde ocurrió el clic.
 
-**Ejemplo 1. Cambiar la posición del personaje con el ratón**
+**Ejemplo 2. Cambiar la posición del personaje a otra con el ratón**
 
 En el siguiente ejemplo se muestra cómo hacer que el personaje se traslade a la posición donde el jugador hace clic.
 
 ```py
+# Importar librerías necesarias
 import pgzrun
+import os
 
-WIDTH = 800
-HEIGHT = 600
+# Centrar la ventana en el monitor
+os.environ['SDL_VIDEO_CENTERED'] = '1'
 
-player_x = 400
-player_y = 300
+# Dimensiones de la pantalla
+ANCHO = 800
+ALTO = 600
+
+# Posición inicial del personaje
+jugador_x = 400
+jugador_y = 300
 
 def draw():
     screen.clear()
     screen.fill('lightblue')  # Fondo color azul claro
-    screen.draw.circle((player_x, player_y), 30, 'green')
+    screen.draw.circle((jugador_x, jugador_y), 30, 'blue')
 
 def on_mouse_down(pos):
-    global player_x, player_y
-    player_x, player_y = pos  # Mueve el personaje a la posición del clic
+    global jugador_x, jugador_y
+    jugador_x, jugador_y = pos  # Mueve el personaje a la posición del clic
 
 pgzrun.go() # Inicia el juego
 ```
 
-> **Ejercicio 2.** 
-> Usa el ratón para controlar un objeto en pantalla.
-> Haz que el objeto cambie de color cuando el jugador hace clic.
-> Agrega un segundo personaje que se mueva hacia donde el jugador hace clic, pero de manera más lenta.
+> **Ejercicio 2.**  
+> * Modifica el código del ejemplo para que el personaje cambie entre dos colores cada vez que hagas clic en la pantalla. Puedes seguir los siguientes pasos:
+>   * Define una variable `color` al inicio del código (por ejemplo, color = 'green').
+>   * En la función `on_mouse_down(pos)`, cambia el valor de `color` (por ejemplo, de 'green' a 'red' y viceversa).
+>   * Usa la variable `color` en `draw()` para que el círculo se dibuje con el color actual.
+> 
+> **Ejercicio 3.** 
+> * Modifica el código del ejemplo para que el tamaño del personaje aumente cada vez que el jugador hace clic en la pantalla. Puedes establecer un tamaño máximo para que no crezca indefinidamente (*if tamaño > 60: tamaño = 30*)
 
-**Ejemplo 2. Desplazarse hacia un punto con movimiento gradual**
+**Ejemplo 3. Desplazarse hacia un punto con movimiento gradual**
 
 Vamos a ver cómo hacer que el personaje se desplace hacia el punto donde el jugador hace clic, pero de forma gradual, como si estuviera *"caminando"* o *"dirigiéndose"* hacia allí. 
 
@@ -110,44 +126,50 @@ Para lograrlo:
 En el ejemplo siguiente se muestra este efecto: 
 
 ```py
+# Importar librerías necesarias
 import pgzrun
+import os
 import math
 
-WIDTH = 800
-HEIGHT = 600
+# Centrar la ventana en el monitor
+os.environ['SDL_VIDEO_CENTERED'] = '1'
+
+# Dimensiones de la pantalla
+ANCHO = 800
+ALTO = 600
 
 # Posición inicial del personaje
-player_x = 400
-player_y = 300
+jugador_x = 400
+jugador_y = 300
 
 # Variables de destino
-target_x = player_x
-target_y = player_y
+destino_x = jugador_x
+destino_y = jugador_y
 
 # Velocidad de movimiento del personaje
-speed = 3
+velocidad = 3
 
 def draw():
     screen.clear()
     screen.fill('lightblue')  # Fondo color azul claro
-    screen.draw.circle((player_x, player_y), 30, 'blue')  # Dibuja el personaje
+    screen.draw.circle((jugador_x, jugador_y), 30, 'blue')  # Dibuja el personaje
 
 def update():
-    global player_x, player_y
+    global jugador_x, jugador_y
     
     # Calcula la distancia hacia el punto objetivo
-    dx = target_x - player_x
-    dy = target_y - player_y
-    distance = math.sqrt(dx**2 + dy**2)
+    dx = destino_x - jugador_x
+    dy = destino_y - jugador_y
+    distancia = math.sqrt(dx**2 + dy**2)
 
     # Si el personaje no está en el destino, se mueve en esa dirección
-    if distance > speed:  # Para que no se pase del destino
-        player_x += speed * (dx / distance)
-        player_y += speed * (dy / distance)
+    if distancia > velocidad:  # Para que no se pase del destino
+        jugador_x += velocidad * (dx / distancia)
+        jugador_y += velocidad * (dy / distancia)
 
 def on_mouse_down(pos):
-    global target_x, target_y
-    target_x, target_y = pos  # Actualiza el destino a la posición del clic
+    global destino_x, destino_y
+    destino_x, destino_y = pos  # Actualiza el destino a la posición del clic
 
 pgzrun.go() # Inicia el juego
 ```
@@ -155,28 +177,28 @@ pgzrun.go() # Inicia el juego
 ¡Nuestro objeto se dirige a su destino a paso firme y constante! Te explico algunos detalles: 
 
 * **Variables de posición inicial y destino:**
-    * `player_x` y `player_y` definen la posición inicial del personaje.
-    * `target_x` y `target_y` son las coordenadas del destino al que el personaje se dirigirá cuando el jugador haga clic.
+    * `jugador_x` y `jugador_y` definen la posición inicial del personaje.
+    * `destino_x` y `destino_y` son las coordenadas del destino al que el personaje se dirigirá cuando el jugador haga clic.
 * **Evento de ratón:**
-    * Cada vez que el jugador hace clic, `on_mouse_down(pos)` actualiza `target_x` y `target_y` a la posición del clic. Esto establece el destino y activa el movimiento del personaje hacia ese punto.
+    * Cada vez que el jugador hace clic, `on_mouse_down(pos)` actualiza `destino_x` y `destino_y` a la posición del clic. Esto establece el destino y activa el movimiento del personaje hacia ese punto.
 * **Cálculo de la distancia y dirección usando el teorema de Pitágoras**
     * Para que el personaje se desplace correctamente, necesitamos calcular la distancia y dirección hacia el destino aplicando el teorema de Pitágoras.
 * **Desplazamiento gradual hacia el destino:**
-    * Si la distancia entre el personaje y el destino es mayor que su velocidad (*speed*), significa que el personaje aún no ha llegado y debe seguir avanzando hacia ese punto.
+    * Si la distancia entre el personaje y el destino es mayor que su velocidad, significa que el personaje aún no ha llegado y debe seguir avanzando hacia ese punto.
     * Para moverlo correctamente en cada eje (x e y):
         * Dividimos *dx* y *dy* (las diferencias en x e y) por la distancia total. Esto nos indica la dirección exacta en la que debe moverse el personaje.
-        * Multiplicamos esta dirección por la velocidad (*speed*), lo que permite que el personaje avance en pequeños pasos hacia el destino.  
+        * Multiplicamos esta dirección por la velocidad, lo que permite que el personaje avance en pequeños pasos hacia el destino.  
 
-> **Ejercicio 3.** 
+> **Ejercicio 4.** 
 > * Cambia la velocidad del personaje para ver cómo afecta al movimiento. Prueba diferentes valores de speed y observa los cambios.
-> * Agrega una condición para que el personaje cambie de color o muestre una animación mientras se mueve hacia el destino.
-> * Añade un segundo objetivo en pantalla y haz que el personaje cambie automáticamente de dirección al llegar a un objetivo.
+> * Agrega un segundo personaje que también se mueva hacia donde el jugador hace clic, pero de manera más lenta. 
+
 
 ## 4. Control avanzado: combinando teclado y ratón
 
 Podemos combinar los controles de teclado y ratón para hacer el juego aún más dinámico. Por ejemplo, el jugador podría moverse usando el teclado, pero disparar con el ratón en un juego de disparos.
 
-**Ejemplo básico: personaje que se mueve con las teclas y dispara en una única dirección con el ratón**
+**Ejemplo 4. Mover personaje con las teclas y disparar en una única dirección con el ratón**
 
 Para gestionar los disparos en el juego, utilizamos una **lista** llamada `disparos`. Cada vez que el jugador hace clic, se añade un nuevo disparo a esta lista. Cada disparo tiene sus propias coordenadas en *x* e *y*, lo que permite que se muevan independientemente unos de otros.
 
@@ -185,14 +207,21 @@ Para gestionar los disparos en el juego, utilizamos una **lista** llamada `dispa
 * **Eliminar disparos:** si un disparo llega a la parte superior de la pantalla, se elimina de la lista para liberar memoria y mantener el juego ordenado.
 
 ```py
+# Importar librerías necesarias
 import pgzrun
+import os
+import math
 
-WIDTH = 800
-HEIGHT = 600
+# Centrar la ventana en el monitor
+os.environ['SDL_VIDEO_CENTERED'] = '1'
+
+# Dimensiones de la pantalla
+ANCHO = 800
+ALTO = 600
 
 # Posición inicial del personaje
-player_x = 400
-player_y = 300
+jugador_x = 400
+jugador_y = 300
 
 # Lista para almacenar los disparos
 disparos = []
@@ -201,22 +230,22 @@ def draw():
     screen.clear()
     screen.fill('lightblue')  # Fondo color azul claro
     # Dibujar el personaje como un círculo azul
-    screen.draw.circle((player_x, player_y), 30, 'blue')
+    screen.draw.circle((jugador_x, jugador_y), 30, 'blue')
     # Dibujar cada disparo como un círculo rojo pequeño
     for disparo in disparos:
         screen.draw.circle(disparo, 5, 'red')
 
 def update():
-    global player_x, player_y
+    global jugador_x, jugador_y
     # Mover el personaje con las flechas del teclado
     if keyboard.left:
-        player_x -= 5
+        jugador_x -= 5
     if keyboard.right:
-        player_x += 5
+        jugador_x += 5
     if keyboard.up:
-        player_y -= 5
+        jugador_y -= 5
     if keyboard.down:
-        player_y += 5
+        jugador_y += 5
 
     # Mover los disparos hacia arriba
     for disparo in disparos:
@@ -229,88 +258,114 @@ def update():
 
 def on_mouse_down(pos):
     # Añadir un nuevo disparo en la posición del personaje
-    disparos.append([player_x, player_y])
+    disparos.append([jugador_x, jugador_y])
 
 pgzrun.go() # Inicia el juego
 ```
 
-**Ejemplo avanzado: personaje que se mueve con las teclas y dispara en una varias direcciones con el ratón**
+**Ejemplo 5. Mover personaje con las teclas y disparar en una varias direcciones con el ratón**
 
 En este ejemplo, el personaje se mueve con las teclas de flecha y dispara en la dirección del ratón cuando el jugador hace clic. Este tipo de control es común en juegos de disparos, donde el jugador puede moverse en una dirección y disparar en otra.
 
 Para gestionar los disparos, utilizamos listas para almacenar las propiedades de cada disparo, como su posición y dirección. Esto nos permite tener múltiples disparos en pantalla, cada uno avanzando en línea recta hacia donde el jugador hizo clic.
 
 ```py
+# Importar librerías necesarias
 import pgzrun
 import math
+import os
 
-WIDTH = 800
-HEIGHT = 600
+# Centrar la ventana en el monitor
+os.environ['SDL_VIDEO_CENTERED'] = '1'
+
+# Dimensiones de la pantalla
+ANCHO = 800
+ALTO = 600
 
 # Posición inicial del personaje
-player_x = 400
-player_y = 300
+jugador_x = 400
+jugador_y = 300
 
 # Listas para almacenar las propiedades de cada disparo
 disparos_x = []  # Posiciones x de los disparos
 disparos_y = []  # Posiciones y de los disparos
 disparos_dx = []  # Dirección x de los disparos
 disparos_dy = []  # Dirección y de los disparos
-disparos_speed = 5  # Velocidad constante para todos los disparos
+disparos_velocidad = 5  # Velocidad constante para todos los disparos
 
 def draw():
     screen.clear()
     screen.fill('lightblue')  # Fondo color azul claro
     # Dibujar el personaje como un círculo azul
-    screen.draw.circle((player_x, player_y), 30, 'blue')
+    screen.draw.circle((jugador_x, jugador_y), 30, 'blue')
     # Dibujar cada disparo como un círculo rojo pequeño
     for i in range(len(disparos_x)):
         screen.draw.circle((disparos_x[i], disparos_y[i]), 5, 'red')
 
 def update():
-    global player_x, player_y
+    global jugador_x, jugador_y, disparos_x, disparos_y, disparos_dx, disparos_dy
+
     # Mover el personaje con las flechas del teclado
     if keyboard.left:
-        player_x -= 5
+        jugador_x -= 5
     if keyboard.right:
-        player_x += 5
+        jugador_x += 5
     if keyboard.up:
-        player_y -= 5
+        jugador_y -= 5
     if keyboard.down:
-        player_y += 5
+        jugador_y += 5
 
     # Mover cada disparo en su dirección
     for i in range(len(disparos_x)):
-        disparos_x[i] += disparos_dx[i] * disparos_speed
-        disparos_y[i] += disparos_dy[i] * disparos_speed
+        disparos_x[i] += disparos_dx[i] * disparos_velocidad
+        disparos_y[i] += disparos_dy[i] * disparos_velocidad
 
-    # Eliminar los disparos que salen de la pantalla
+    # Crear listas temporales para almacenar solo los disparos dentro de la pantalla
+    nuevos_disparos_x = []
+    nuevos_disparos_y = []
+    nuevos_disparos_dx = []
+    nuevos_disparos_dy = []
+
     for i in range(len(disparos_x)):
-        if disparos_x[i] < 0 or disparos_x[i] > WIDTH or disparos_y[i] < 0 or disparos_y[i] > HEIGHT:
-            # Eliminar disparo fuera de pantalla de todas las listas usando remove()
-            disparos_x.remove(disparos_x[i])
-            disparos_y.remove(disparos_y[i])
-            disparos_dx.remove(disparos_dx[i])
-            disparos_dy.remove(disparos_dy[i])
+        if 0 <= disparos_x[i] <= ANCHO and 0 <= disparos_y[i] <= ALTO:
+            # Añadir solo los disparos dentro de la pantalla a las listas temporales
+            nuevos_disparos_x.append(disparos_x[i])
+            nuevos_disparos_y.append(disparos_y[i])
+            nuevos_disparos_dx.append(disparos_dx[i])
+            nuevos_disparos_dy.append(disparos_dy[i])
+
+    # Actualizar las listas de disparos
+    disparos_x = nuevos_disparos_x
+    disparos_y = nuevos_disparos_y
+    disparos_dx = nuevos_disparos_dx
+    disparos_dy = nuevos_disparos_dy
 
 def on_mouse_down(pos):
     # Calcular la dirección del disparo hacia el punto donde se hizo clic
-    dx = pos[0] - player_x
-    dy = pos[1] - player_y
-    distance = math.sqrt(dx**2 + dy**2)
+    dx = pos[0] - jugador_x
+    dy = pos[1] - jugador_y
+    distancia = math.sqrt(dx**2 + dy**2)
+    
     # Ajustar la dirección para que el disparo siga una línea recta hacia el clic
-    dx = dx/distance
-    dy = dy/distance
+    dx = dx / distancia
+    dy = dy / distancia
 
     # Añadir el nuevo disparo a cada lista
-    disparos_x.append(player_x)
-    disparos_y.append(player_y)
+    disparos_x.append(jugador_x)
+    disparos_y.append(jugador_y)
     disparos_dx.append(dx)
     disparos_dy.append(dy)
 
 pgzrun.go()  # Inicia el juego
 ```
 
-> **Ejercicio 4.**
-> * Haz que el color de cada disparo cambie en función de la dirección del clic. Por ejemplo, si el clic está a la derecha del personaje, el disparo es azul, si está a la izquierda es rojo, y si está arriba o abajo es verde.
-> * Modifica el código para que solo haya un máximo de 5 disparos en pantalla a la vez. Si ya hay 5 disparos, el personaje no podrá disparar hasta que uno de ellos desaparezca de la pantalla.
+> **Ejercicio 5.** Modifica el código para que el color de cada disparo cambie en función de la dirección del clic. 
+>   * Si el clic está a la derecha del personaje, el disparo debe ser azul.
+>   * Si el clic está a la izquierda del personaje, el disparo debe ser rojo.
+> 
+> **PISTAS:**
+>   * Añade una lista `disparos_color` para almacenar el color de cada disparo.
+>   * En la función `on_mouse_down`, determina el color del disparo según la posición del clic en relación con la posición del personaje.
+>   * Usa `screen.draw.circle` en la función draw para dibujar cada disparo con su color correspondiente.
+> 
+> **Ejercicio 6.** Haz que solo pueda haber un máximo de 5 disparos en pantalla a la vez. Si ya hay 5 disparos, el personaje no podrá disparar hasta que uno de ellos desaparezca de la pantalla.
