@@ -9,7 +9,7 @@ En esta unidad, aprenderás a incorporar elementos avanzados que harán tu juego
  
 Construiremos estos elementos sobre el ejemplo del dinosaurio que recoge brócoli, paso a paso. ¡Comencemos!
 
-Puedes (descargar aquí las imágenes y sonidos)[] utilizados en los ejemplos.
+Puedes [descargar aquí las imágenes y sonidos](/recursos/recursos_unidad3.zip) utilizados en los ejemplos.
 
 ## 4.1 Dibujar un fondo en el juego
 
