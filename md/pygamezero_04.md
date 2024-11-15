@@ -21,7 +21,7 @@ Para dibujar un fondo en Pygame Zero:
 2. Asegúrate de que la imagen sea compatible con el tamaño de tu ventana de juego (800x600 en este ejemplo).
 3. Usa `screen.blit("nombre_de_imagen", (0, 0))` en la función `draw()` para colocar el fondo en la pantalla.
 
-**Ejemplo: Agregar el fondo al juego**
+**Ejemplo: agregar el fondo al juego**
 
 ```py
 
@@ -71,7 +71,7 @@ def update():
 
 A veces queremos que ciertos elementos se activen solo durante unos segundos o que se muevan de forma automática después de un intervalo de tiempo. En Pygame Zero, podemos programar estos eventos con `clock.schedule_unique()`.
 
-**Ejemplo: Mostrar un mensaje temporal al recoger el brócoli**
+**Ejemplo: mostrar un mensaje temporal al recoger el brócoli**
 
 Queremos que aparezca un mensaje diciendo *"¡Brócoli recogido!"* cada vez que el dinosaurio se coma un brócoli, y que este mensaje desaparezca después de 2 segundos.
 
@@ -152,7 +152,6 @@ def mover_brocoli():
 
 ```
 
-
 > **Ejercicio 3.** Cambia los tiempos y observa la diferencia
 
 
@@ -168,7 +167,7 @@ Para mejorar la estructura del juego, implementaremos diferentes estados que con
 
 Usaremos una variable `estado_juego` para almacenar el estado actual. Esto nos permitirá cambiar entre los diferentes estados y controlar qué se muestra en cada pantalla.
 
-```py 
+```py
 
 # Estado del juego: "inicio", "jugando", "fin"
 estado_juego = "inicio"
