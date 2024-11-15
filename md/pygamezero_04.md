@@ -65,7 +65,7 @@ def update():
 
 ```
 
-> **Ejercicio 2.** Cambia el sonido por uno diferente o añade otros para diferentes situaciones (por ejemplo, que alcanze el borde de la pantalla o cuando llegue a 10 puntos). Puedes visitar (Pixabay Sounds)[https://pixabay.com/es/sound-effects/] para buscar más sonidos. Recuerda que el archivo de audio solo puede ser **.wav** o **.ogg**. Puedes utilizar Audacity para covertir .mp3 a .wav o buscar por Internet algún conversor de audio online.
+> **Ejercicio 2.** Cambia el sonido por uno diferente o añade otros para diferentes situaciones (por ejemplo, que alcanze el borde de la pantalla o cuando llegue a 10 puntos). Puedes visitar [Pixabay Sounds](https://pixabay.com/es/sound-effects/) para buscar más sonidos. Recuerda que el archivo de audio solo puede ser **.wav** o **.ogg**. Puedes utilizar Audacity para covertir .mp3 a .wav o buscar por Internet algún conversor de audio online.
 
 ## 4.3 Programar eventos temporales con clock.schedule_unique()
 
@@ -75,7 +75,7 @@ A veces queremos que ciertos elementos se activen solo durante unos segundos o q
 
 Queremos que aparezca un mensaje diciendo *"¡Brócoli recogido!"* cada vez que el dinosaurio se coma un brócoli, y que este mensaje desaparezca después de 2 segundos.
 
-```py 
+```py
 
 # Variable para mensaje temporal
 mensaje = ""
