@@ -15,6 +15,7 @@ Veamos un ejemplo donde un dinosaurio recoge un brocoli al acercarse a él e inc
 import pgzrun
 import math
 import random
+import pygame
 
 # Dimensiones de la pantalla
 ANCHO = 800
