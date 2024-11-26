@@ -1,14 +1,43 @@
 # 5. Mecanicas de juego: saltos y enemigos
 
+En esta unidad aprenderemos a implementar mecánicas básicas de juego relacionadas con saltos, plataformas, y enemigos. 
+
 ## 5.1 Mecánica de saltos
+
+El salto es una de las mecánicas más comunes en los videojuegos. Para implementarlo necesitamos considerar:
+
+* Un sistema de gravedad que tire del personaje hacia abajo.
+* Una fuerza inicial que impulse al personaje hacia arriba.
+* Condiciones que determinen cuándo el personaje puede aterrizar.
 
 ### 5.1.1 Crear un personaje que pueda saltar
 
-En este apartado, haremos que un personaje pueda saltar usando la tecla de salto. La mecánica básica requiere tres componentes principales:
+En este apartado, haremos que un personaje salte y aterrice correctamente. El objetivo es que cuando el jugador presione la tecla de salto (la que queramos), una fuerza inicial lo impulse hacia arriba. A continuación, la gravedad simulará la fuerza que tira del personaje hacia abajo, haciéndolo regresar al suelo y detenerse cuando aterrice.
 
-* Un sistema de gravedad que tire del personaje hacia abajo.
-* Una fuerza inicial que haga que el personaje salte hacia arriba.
-* Condiciones para aterrizar en plataformas.
+Para implementar esta mecánica, definiremos las siguientes variables:
+
+* **GRAVEDAD:**
+    * Representa la fuerza que tira del personaje hacia abajo.
+    * Este valor se suma a la velocidad vertical (`velocidad_y`) del personaje en cada fotograma si está en el aire.
+* **FUERZA_SALTO:**
+    * Define la intensidad con la que el personaje es impulsado hacia arriba al saltar.
+* **en_el_suelo:**
+    * Variable booleana que indica si el personaje está en contacto con el suelo.
+    * Si es `True`, el personaje está listo para saltar.
+
+Y realizaremos los siguientes cambios en la lógica del juego en la `función update()`: 
+
+* **Gravedad:**
+    * Si el personaje no está en el suelo (`en_el_suelo == False`), se le aplica la gravedad aumentando su velocidad vertical (`velocidad_y`).
+* **Movimiento vertical:**
+    * El valor de `velocidad_y` se suma a la posición vertical del personaje (`jugador_y`), haciendo que suba o baje según corresponda.
+ * **Colisión con el suelo:**
+    * Si `jugador_y` alcanza el nivel del suelo (`HEIGHT - 80`), el personaje se detiene y su posición se ajusta para alinearse con el suelo.
+* **Reinicio de variables:**
+    * Al aterrizar, se establece `en_el_suelo = True` para indicar que el personaje puede volver a saltar.
+    * La velocidad vertical (`velocidad_y`) se reinicia a 0.
+
+A continuación, se indica el código que implementa el salto:
 
 ```py
 import pgzrun
@@ -30,6 +59,7 @@ en_el_suelo = True
 def draw():
     screen.clear()
     screen.fill('lightblue')
+    # El suelo es un rectángulo que ocupa todo el ancho de la pantalla y está ubicado 50 píxeles por encima del borde inferior.
     screen.draw.filled_rect(Rect((0, HEIGHT - 50), (WIDTH, 50)), 'green')  # Suelo
     screen.draw.circle((jugador_x, jugador_y), 30, 'blue')  # Personaje
 
@@ -57,6 +87,8 @@ def on_key_down(key):
 
 pgzrun.go()
 ```
+
+> **Ejercicio 1.** Modifica el código para que el personaje salte más alto al presionar la tecla Shift (`keys.LSHIFT`) en lugar de la barra espaciadora.
 
 ### 5.1.2 Controlar la altura del salto con la duración del botón presionado
 
