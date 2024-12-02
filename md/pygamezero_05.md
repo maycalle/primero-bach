@@ -176,7 +176,78 @@ pgzrun.go()
 
 ### 5.1.3 Implementar un límite de plataformas
 
-Añadiremos plataformas al juego y haremos que el personaje solo pueda aterrizar en ellas. Esto requiere detectar colisiones con múltiples plataformas.
+¡Es hora de subir el nivel! Vamos a añadir plataformas al juego y haremos que nuestro personaje pueda aterrizar en ellas. Esto significa que el personaje tendrá que "atinar" bien sus saltos para caer sobre estas superficies, ¡como en los clásicos juegos de plataformas!
+
+Lo que haremos:
+* Crear plataformas que actúen como puntos de apoyo.
+* Detectar colisiones entre el personaje y las plataformas.
+* Ajustar la posición del personaje para que pueda aterrizar de forma precisa sobre ellas.
+
+#### 5.1.3.1 Crear las plataformas
+
+Las plataformas son rectángulos (Rect) que definimos con una posición y un tamaño. Estas estructuras incluyen propiedades útiles, como `.top`, que nos ayudarán acceder fácilmente a distintas partes del rectángulo sin necesidad de cálculos adicionales.
+
+En el código, las hemos guardado en una lista llamada plataformas para que sea más fácil trabajar con todas ellas.
+
+```py
+plataformas = [
+    Rect((200, 400), (200, 20)),  # Plataforma 1
+    Rect((500, 300), (150, 20)),  # Plataforma 2
+    Rect((300, 200), (100, 20))   # Plataforma 3
+]
+```
+
+Para dibujarlas en la pantalla, usamos un bucle dentro de la función `draw()`:
+
+```py
+for plataforma in plataformas:
+    screen.draw.filled_rect(plataforma, 'brown')  # Dibujar plataformas
+```
+
+Ahora que ya tenemos las plataformas listas, el siguiente paso es detectar si el personaje aterriza correctamente sobre ellas.
+
+#### 5.1.3.2 Detectar colisiones
+
+Para que el personaje pueda aterrizar en una plataforma, necesitamos comprobar si su borde inferior (el círculo azul) está tocando alguna de las plataformas. Esto lo logramos en la función `update()` con este fragmento:
+/
+```py
+for plataforma in plataformas:
+    if plataforma.collidepoint(jugador_x, jugador_y + 30) and velocidad_y > 0:
+        jugador_y = plataforma.top - 30  # Ajustar para que se apoye en la parte superior
+        en_el_suelo = True
+        velocidad_y = 0
+```
+
+**¿Qué hace este código?**
+
+El código anterior se encargar de recorrer todas las plataformas y comprobar si el jugador colisiona con alguna de ellas durante la caída del salto. 
+
+Para ello, usamos la función `collidepoint`, que comprueba si el punto `(jugador_x, jugador_y + 30)` está dentro del área de la plataforma actual. Esto asegura que el personaje solo detecta una colisión si está tocando la parte superior de la plataforma.
+* El cálculo `jugador_y + 30`, representa el borde inferior de nuestro personaje (recuerda que nuestro personaje es un círculo de 30 pixeles de radio). 
+* Con la condición `velocidad_y > 0` comprobamos que el personaje esté cayendo (es decir, que su velocidad vertical sea positiva). Sin esta condición, el personaje podría detectar una colisión incluso cuando está saltando hacia arriba, lo cual no tendría sentido.
+
+Si hay una colisión, la posición vertical del personaje (`jugador_y`) se ajusta para que coincida con la parte superior de la plataforma (plataforma.top). La operación `plataforma.top - 30` asegura que el borde inferior del círculo del personaje quede justo en la parte superior de la plataforma.
+
+A continuación, marcamos que el personaje está sobre una superficie (`en_el_suelo = True`), lo que le permitirá saltar de nuevo, y cambiamos la velocidad vertical en 0, para detener el movimiento hacia abajo del personaje tras aterrizar.
+
+#### 5.1.3.3 Mantener la lógica del salto
+
+El salto sigue funcionando igual que antes. Si el personaje está "en el suelo" (ahora, incluyendo las plataformas), podrá saltar al presionar la tecla ESPACIO.
+
+```py
+if key == keys.SPACE and en_el_suelo:
+    velocidad_y = -FUERZA_SALTO
+    en_el_suelo = False
+```
+
+Si el personaje no está tocando el suelo ni ninguna plataforma, seguirá cayendo debido a la gravedad. Esto se asegura con:
+
+```py
+if not en_el_suelo:
+    velocidad_y += GRAVEDAD
+```
+
+El código completo se detalla a continuación:
 
 ```py
 import pgzrun
@@ -242,6 +313,8 @@ def on_key_down(key):
 
 pgzrun.go()
 ```
+
+
 
 ## 5.2 Introducción al comportamiento de enemigos
 
