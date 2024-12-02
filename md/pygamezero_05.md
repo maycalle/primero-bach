@@ -92,7 +92,7 @@ pgzrun.go()
 
 ### 5.1.2 Controlar la altura del salto con la duración del botón presionado
 
-En este apartado, añadiremos una mecánica que permita controlar la altura del salto dependiendo de cuánto tiempo se mantenga presionada la tecla de salto. Esto hará que el salto sea más dinámico y realista.
+¡Vamos a mejorar la mecánica del salto! Añadiremos una mecánica que permita controlar la altura del salto según el tiempo que se mantenga presionada la tecla. Este ajuste hará que el salto sea más dinámico y realista.
 
 * **Salto bajo:** si el jugador presiona brevemente la tecla de salto.
 * **Salto alto:** si el jugador la mantiene presionada más tiempo, hasta una altura máxima.
@@ -109,7 +109,7 @@ Para lograrlo, necesitamos introducir los siguientes cambios:
     * Cuando el jugador presiona la tecla de salto (*on_key_down*), el personaje inicia el salto con la fuerza máxima.
     * Cuando el jugador suelta la tecla (*on_key_up*), la velocidad hacia arriba se detiene, reduciendo la altura del salto.
 * **Lógica de gravedad sin cambios**:
-  * La gravedad continúa actuando sobre el personaje si no está en el suelo, simulando una caída natural.
+    * La gravedad continúa actuando sobre el personaje si no está en el suelo, simulando una caída natural.
 
 A continuación, se muestra el código actualizado:
 
@@ -168,9 +168,10 @@ def on_key_up(key):
 pgzrun.go()
 ```
 
-> **Ejercicio 2.** Modifica el código en on_key_down para que el jugador pueda realizar diferentes tipos de salto dependiendo de la tecla que presione. Por ejemplo:
+> **Ejercicio 2.** Modifica el código en *on_key_down* para que el jugador pueda realizar diferentes tipos de salto dependiendo de la tecla que presione. Por ejemplo:
 > * **Salto bajo:** Si presiona la tecla W.
 > * **Salto alto:** Si presiona la tecla SPACE.
+> 
 > **Pista:** puedes añadir una nueva fuerza de salto, llamada FUERZA_SALTO_BAJO, con un valor más pequeño que FUERZA_SALTO_MAX, y usar una condición `if` en `on_key_down` para verificar qué tecla se presiona.
 
 ### 5.1.3 Implementar un límite de plataformas
