@@ -209,7 +209,7 @@ Ahora que ya tenemos las plataformas listas, el siguiente paso es detectar si el
 #### 5.1.3.2 Detectar colisiones
 
 Para que el personaje pueda aterrizar en una plataforma, necesitamos comprobar si su borde inferior (el círculo azul) está tocando el borde superior de alguna de las plataformas. Esto lo logramos en la función `update()` con este fragmento:
-/
+
 ```py
 for plataforma in plataformas:
     if plataforma.collidepoint(jugador_x, jugador_y + 30) and velocidad_y > 0:
@@ -246,8 +246,7 @@ La gravedad continúa funcionando para simular una caída natural cuando el pers
 if not en_el_suelo:
     velocidad_y += GRAVEDAD
 ```
-
-Prueba el código completo:
+#### 5.1.3.4 Código  completo
 
 ```py
 import pgzrun
@@ -314,7 +313,7 @@ def on_key_down(key):
 pgzrun.go()
 ```
 
-
+> **Ejercicio 3:** Modifica el código para añadir al menos dos plataformas nuevas. Usa diferentes posiciones y tamaños. Prueba a crea alguna plataforma en una posición elevada (por ejemplo, y = 100), que sea difícil de alcanzar en un salto normal, y ajusta la posición inicial del jugador (jugador_x, jugador_y) para que pueda intentar alcanzarla. 
 
 ## 5.2 Introducción al comportamiento de enemigos
 
