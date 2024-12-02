@@ -358,7 +358,7 @@ def update():
 
 > **Ejercicio 5:** Modifica el código para añadir varios enemigos al juego. Personaliza la velocidad y dirección inicial de cada enemigo.
 > 
-> **Ejercicio 6 (opcional):** Modifica el código para detectar la colisión del personaje con el enemigo. Para hacerlo usa la fórmula de ladistancia entre dos puntos para verificar si el círculo del enemigo y el círculo del personaje se tocan. Por último, añade una variable vidas, que vaya dosminuyendo su valor con cada colisión.
+> **Ejercicio 6 (opcional):** Modifica el código para detectar la colisión del personaje con el enemigo. Para hacerlo usa la fórmula de ladistancia entre dos puntos para verificar si el círculo del enemigo y el círculo del personaje se tocan. Por último, añade una variable vidas, que vaya dosminuyendo su valor con cada colisión. Al perder todas las vidas, muestra un mensaje de "Game Over".
 
 
 
