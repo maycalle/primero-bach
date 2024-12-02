@@ -92,7 +92,26 @@ pgzrun.go()
 
 ### 5.1.2 Controlar la altura del salto con la duración del botón presionado
 
-Para controlar la altura del salto, podemos ajustar la lógica para que la fuerza inicial del salto dependa de cuánto tiempo el jugador mantenga presionada la tecla.
+En este apartado, añadiremos una mecánica que permita controlar la altura del salto dependiendo de cuánto tiempo se mantenga presionada la tecla de salto. Esto hará que el salto sea más dinámico y realista.
+
+* **Salto bajo:** si el jugador presiona brevemente la tecla de salto.
+* **Salto alto:** si el jugador la mantiene presionada más tiempo, hasta una altura máxima.
+
+Para lograrlo, necesitamos introducir los siguientes cambios:
+
+* **Nueva variable `salto_duracion`**:
+    * Acumula el tiempo durante el cual el botón de salto está presionado.
+    * Se reinicia a 0 cuando el personaje aterriza.
+* **Fuerza de salto variable:**
+    * Se modifica `FUERZA_SALTO` a `FUERZA_SALTO_MAX` para definir una fuerza máxima.
+    * La fuerza inicial depende de la duración del botón presionado.
+* **Ajustes en on_key_down y on_key_up**:
+    * Cuando el jugador presiona la tecla de salto (*on_key_down*), el personaje inicia el salto con la fuerza máxima.
+    * Cuando el jugador suelta la tecla (*on_key_up*), la velocidad hacia arriba se detiene, reduciendo la altura del salto.
+* **Lógica de gravedad sin cambios**:
+  * La gravedad continúa actuando sobre el personaje si no está en el suelo, simulando una caída natural.
+
+A continuación, se muestra el código actualizado:
 
 ```py
 import pgzrun
@@ -148,6 +167,11 @@ def on_key_up(key):
 
 pgzrun.go()
 ```
+
+> **Ejercicio 2.** Modifica el código en on_key_down para que el jugador pueda realizar diferentes tipos de salto dependiendo de la tecla que presione. Por ejemplo:
+> * **Salto bajo:** Si presiona la tecla W.
+> * **Salto alto:** Si presiona la tecla SPACE.
+> **Pista:** puedes añadir una nueva fuerza de salto, llamada FUERZA_SALTO_BAJO, con un valor más pequeño que FUERZA_SALTO_MAX, y usar una condición `if` en `on_key_down` para verificar qué tecla se presiona.
 
 ### 5.1.3 Implementar un límite de plataformas
 
