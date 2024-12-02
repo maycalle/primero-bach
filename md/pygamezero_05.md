@@ -324,14 +324,17 @@ pgzrun.go()
 > **Ejercicio 4 (opcional):** Modifica el código para que durante el salto, si el jugador presiona las flechas izquierda o derecha, el personaje también se mueva horizontalmente. Puedes hacerlo sumando o restando un valor fijo a jugador_x mientras el personaje está en el aire.
 > 
 
-
 ## 5.2 Introducción al comportamiento de enemigos
+
+En esta sección, aprenderemos a añadir enemigos al juego y a programar su movimiento. Los enemigos añadirán un elemento de desafío, ya que el jugador tendrá que evitarlos mientras avanza por el nivel. 
 
 ### 5.2.1 Movimiento básico de enemigos en línea recta
 
-Haremos que un enemigo se mueva horizontalmente en línea recta.
+El primer paso es programar un enemigo que se mueva horizontalmente en línea recta, cambiando de dirección al llegar a los bordes de la pantalla.
 
 ```py
+
+# Posición y velocidad del enemigo
 enemigo_x = 100
 enemigo_y = 500
 enemigo_velocidad = 3
@@ -339,15 +342,24 @@ enemigo_velocidad = 3
 def draw():
     screen.clear()
     screen.fill('lightblue')
+    # Dibujar el enemigo
     screen.draw.filled_circle((enemigo_x, enemigo_y), 20, 'red')
 
 def update():
     global enemigo_x
+
+    # Movimiento horizontal
     enemigo_x += enemigo_velocidad
 
     # Cambiar dirección al llegar a los bordes
     if enemigo_x > WIDTH or enemigo_x < 0:
         enemigo_velocidad *= -1
-
 ```
+
+> **Ejercicio 5:** Modifica el código para añadir varios enemigos al juego. Personaliza la velocidad y dirección inicial de cada enemigo.
+> 
+> **Ejercicio 6 (opcional):** Modifica el código para detectar la colisión del personaje con el enemigo. Para hacerlo usa la fórmula de ladistancia entre dos puntos para verificar si el círculo del enemigo y el círculo del personaje se tocan. Por último, añade una variable vidas, que vaya dosminuyendo su valor con cada colisión.
+
+
+
 
