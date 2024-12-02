@@ -191,9 +191,9 @@ En el código, las plataformas están organizadas en una lista para trabajar con
 
 ```py
 plataformas = [
-    Rect((200, 400), (200, 20)),  # Plataforma 1
-    Rect((500, 300), (150, 20)),  # Plataforma 2
-    Rect((300, 200), (100, 20))   # Plataforma 3
+    Rect((200, 500), (200, 20)),  # Plataforma baja
+    Rect((400, 400), (150, 20)),  # Plataforma media
+    Rect((600, 300), (100, 20))   # Plataforma alta
 ]
 ```
 
@@ -267,9 +267,9 @@ en_el_suelo = False
 
 # Plataformas
 plataformas = [
-    Rect((200, 400), (200, 20)),
-    Rect((500, 300), (150, 20)),
-    Rect((300, 200), (100, 20))
+    Rect((200, 500), (200, 20)),  # Plataforma baja
+    Rect((400, 400), (150, 20)),  # Plataforma media
+    Rect((600, 300), (100, 20))   # Plataforma alta
 ]
 
 def draw():
@@ -281,7 +281,13 @@ def draw():
         screen.draw.filled_rect(plataforma, 'brown')  # Dibujar plataformas
 
 def update():
-    global jugador_y, velocidad_y, en_el_suelo
+    global jugador_x, jugador_y, velocidad_y, en_el_suelo
+
+    # Movimiento horizontal
+    if keyboard.left:
+        jugador_x -= 5
+    if keyboard.right:
+        jugador_x += 5
 
     # Aplicar gravedad si el personaje no está en el suelo
     if not en_el_suelo:
@@ -314,6 +320,10 @@ pgzrun.go()
 ```
 
 > **Ejercicio 3:** Modifica el código para añadir al menos dos plataformas nuevas. Usa diferentes posiciones y tamaños. Prueba a crea alguna plataforma en una posición elevada (por ejemplo, y = 100), que sea difícil de alcanzar en un salto normal, y ajusta la posición inicial del jugador (jugador_x, jugador_y) para que pueda intentar alcanzarla. 
+>
+> **Ejercicio 4 (opcional):** Modifica el código para que durante el salto, si el jugador presiona las flechas izquierda o derecha, el personaje también se mueva horizontalmente. Puedes hacerlo sumando o restando un valor fijo a jugador_x mientras el personaje está en el aire.
+> 
+
 
 ## 5.2 Introducción al comportamiento de enemigos
 
