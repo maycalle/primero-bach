@@ -1,6 +1,6 @@
 # 1. Introducción a la Inteligencia Artificial
 
-En esta unidad exploraremos qué es la **Inteligencia Artificial (*IA*)** y cómo se utiliza en aplicaciones cotidianas como asistentes virtuales, recomendaciones y reconocimiento de imágenes. Aprenderemos conceptos clave como el **Aprendizaje Automático (*Machine Learning*)** y las **Redes Neuronales**.
+En esta unidad exploraremos qué es la **Inteligencia Artificial (*IA*)** y cómo se utiliza en aplicaciones cotidianas. Aprenderemos conceptos clave como el **Aprendizaje Automático (*Machine Learning*)** y las **Redes Neuronales**.
 
 A través de actividades prácticas:
 * Entrenaremos modelos básicos con *Teachable Machine*.
@@ -26,13 +26,24 @@ También se utiliza en videojuegos, donde los personajes controlados por la máq
 
 ## 1.2 ¿Cómo funciona la IA?
 
-La IA funciona a través de algoritmos y datos. El sistema sigue estos pasos generales:
+La inteligencia artificial necesita datos para aprender (*datos de entrenamiento*), y estos datos deben pasar por un proceso que los transforme en conocimiento útil. Este proceso se puede resumir en cuatro pasos:
 
-1. **Entrenamiento:** se proporcionan grandes conjuntos de datos al sistema. Por ejemplo, para reconocer gatos, le mostramos miles de imágenes etiquetadas como "gato" o "no gato".
-2. **Identificación de patrones:** la IA analiza las características comunes en los datos (como la forma de las orejas de un gato o su color).
-3. **Predicción o decisión:** cuando se le muestra una nueva imagen, la IA compara las características aprendidas con la nueva entrada y decide si es un gato.
+1. **Recoger y preparar los datos:** se toman los datos de diferentes fuentes y se organizan para que sean comprensibles por la máquina. Por ejemplo, transformar fotos o textos en números que el sistema pueda analizar.
+2. **Almacenar los datos como conocimiento:** una vez procesados, los datos se guardan de forma que puedan ser consultados cuando sea necesario. Esto permite a la máquina "recordar" la información.
+3. **Analizar e interpretar:** el sistema analiza los datos almacenados para encontrar patrones o entender relaciones. Por ejemplo, aprender que una pelota es redonda observando muchas imágenes de pelotas.
+4. **Generar nuevo conocimiento:** la IA utiliza lo aprendido para hacer deducciones o predicciones. A este proceso se le llama *inferencia*, y es lo que hace que un programa sea realmente *inteligente*. Por ejemplo, predecir que mañana lloverá basándose en datos meteorológicos.
 
-El modelo será tan bueno como los datos que reciba. Datos incompletos o incorrectos pueden llevar a errores en los resultados obtenidos.
+#### 1.2.1 El modelo y la importancia de los datos de entrenamiento
+
+El resultado del aprendizaje de la IA se llama **modelo**. Un modelo es el sistema entrenado que utiliza los datos procesados para tomar decisiones o hacer predicciones.
+
+El modelo será tan bueno como los datos que reciba. Si los datos son incompletos, incorrectos o están sesgados, el modelo puede cometer errores importantes. 
+
+Por ejemplo:
+* Un modelo entrenado con imágenes poco claras no podrá identificar correctamente objetos en fotos nuevas.
+* Un modelo que use datos con prejuicios podría tomar decisiones injustas, como discriminar en la selección de candidatos para un trabajo.
+
+Por eso, al trabajar con IA, es fundamental utilizar datos de calidad, variados y bien preparados para que el modelo sea confiable y efectivo.
 
 ## 1.3 Tipos de IA
 
