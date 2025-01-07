@@ -59,6 +59,45 @@ En cambio, en el aprendizaje automático, el enfoque es distinto: en lugar de de
     <img src="img/saa.png" width="80%">
 </div>
 
+**Tipos de aprendizaje automático**
+
+En el aprendizaje automático, existen diferentes maneras en las que un sistema puede aprender. Se pueden clasificar en cuatro tipos principales:
+
+* **Aprendizaje supervisado:** en este tipo de aprendizaje, el sistema recibe información sobre si está realizando bien o mal su tarea. Es decir, se le proporcionan datos junto con sus respuestas correctas para que aprenda a identificar patrones. Este es el método más común en la actualidad y se usa, por ejemplo, en aplicaciones de reconocimiento de imágenes o en asistentes virtuales que aprenden a responder preguntas.
+
+* **Aprendizaje no supervisado:** a diferencia del anterior, aquí el sistema no recibe respuestas correctas previamente, sino que debe encontrar patrones por sí mismo en los datos. Un buen ejemplo de esto son los algoritmos que predicen los gustos de un usuario basándose en la música que escucha o las páginas web que visita, recomendándole contenido similar.
+
+* **Aprendizaje semi-supervisado:** este método combina las estrategias anteriores. Al principio, el sistema recibe algunas respuestas correctas (aprendizaje supervisado) para orientarse, pero luego empieza a trabajar de manera más autónoma (aprendizaje no supervisado). También puede ocurrir al revés: el sistema primero agrupa datos similares sin ayuda y, posteriormente, una persona etiqueta esas categorías para mejorar su precisión. Un ejemplo sería un sistema que clasifica fotos en grupos y, después, un humano nombra cada grupo (por ejemplo, "perros", "gatos" y "paisajes").
+
+* **Aprendizaje por refuerzo:** en este caso, el sistema aprende mediante prueba y error. Cada vez que toma una decisión, recibe una recompensa si lo ha hecho bien o un castigo si se ha equivocado. Con el tiempo, mejora su estrategia para obtener mejores resultados. Este tipo de aprendizaje se usa mucho en videojuegos o en inteligencia artificial para robots, donde el sistema debe aprender a moverse o tomar decisiones basándose en la experiencia acumulada.
+
+### 1.2.3 Deep learning
+
+
+Introducción al Deep Learning y las Redes Neuronales
+El aprendizaje profundo (deep learning) es una técnica avanzada de aprendizaje automático (machine learning) que permite a los ordenadores aprender de manera más parecida a como lo hace el cerebro humano. Para lograr esto, se utilizan redes neuronales artificiales, un tipo de modelo matemático inspirado en el funcionamiento de las neuronas en nuestro cerebro.
+
+¿Cómo funcionan las redes neuronales?
+Las redes neuronales artificiales están formadas por capas de nodos (neuronas artificiales) que procesan la información:
+
+Capa de entrada: Recibe los datos (por ejemplo, una imagen o un sonido).
+Capas ocultas: Analizan la información y detectan patrones.
+Capa de salida: Genera el resultado final (por ejemplo, identificar si una imagen muestra un perro o un gato).
+Cuantas más capas tiene una red neuronal, más profundo es su análisis, lo que permite que el sistema aprenda de manera más precisa.
+
+El aprendizaje profundo, o deep learning, es una rama del aprendizaje automático que permite a los sistemas analizar datos de manera más profunda y detallada para generar resultados más precisos. Para entenderlo mejor, veamos dos ejemplos:
+
+**Ejemplo 1: Diagnóstico Médico**
+Imaginemos que queremos desarrollar un sistema de autodiagnóstico de enfermedades. En un modelo básico de aprendizaje automático (machine learning), primero recopilamos datos importantes de miles de pacientes, como edad, peso y presión sanguínea. Luego, junto con esos datos, proporcionamos el diagnóstico final que recibió cada paciente (por ejemplo, resfriado o meningitis). Con esta información, el sistema aprende a relacionar los datos de entrada con posibles diagnósticos.
+
+Pero, ¿qué pasaría si en lugar de introducir manualmente los datos relevantes, el sistema pudiera analizar directamente un informe médico en formato PDF y extraer por sí mismo la información clave para emitir un diagnóstico? En este caso, el modelo haría un análisis más profundo de los datos de entrada sin necesidad de una fase previa de selección manual. Este tipo de modelo pertenece al aprendizaje profundo (deep learning), ya que es capaz de procesar la información de manera más avanzada.
+
+**Ejemplo 2: Clasificación de Tomates**
+Supongamos que queremos crear un sistema para identificar distintos tipos de tomates. En un modelo de machine learning, haríamos una tabla con características como el color, el tamaño, la forma y la textura de cada tomate, junto con su categoría (por ejemplo, tomate canario o tomate pera). Luego, entrenaríamos al sistema para que, cuando introduzcamos las características de un nuevo tomate, pueda clasificarlo correctamente.
+
+Sin embargo, con deep learning, en lugar de introducir manualmente estas características, el sistema podría simplemente analizar una imagen del tomate y extraer automáticamente sus características (como forma, tamaño y color) para clasificarlo. Incluso podría detectar detalles que nosotros no habíamos considerado en nuestra tabla.
+
+La técnica más habitualmente empleada dentro de la rama del deep learning son las redes neuronales profundas, entendiendo como profundas el hecho de que estén compuestas por varias capas, lo que les permitirá jerarquizar las características principales de los datos de entrada.
 
 ## 1.3 Tipos de IA
 
