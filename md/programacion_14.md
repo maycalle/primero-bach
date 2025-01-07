@@ -1,13 +1,13 @@
 # 1. Introducción a la Inteligencia Artificial
 
-En esta unidad exploraremos qué es la **Inteligencia Artificial (*IA*)** y cómo se utiliza en aplicaciones cotidianas. Aprenderemos conceptos clave como el **Aprendizaje Automático (*Machine Learning*)** y las **Redes Neuronales**.
+En esta unidad exploraremos qué es la **Inteligencia Artificial (*IA*)** y cómo se utiliza en aplicaciones cotidianas. Aprenderemos conceptos clave como **Machine Learning** y **Deep Learning**, entre otros.
 
 A través de actividades prácticas:
 * Entrenaremos modelos básicos con *Teachable Machine*.
 * Los integraremos en programas de Python para clasificar imágenes.
 * Reflexionaremos sobre las posibilidades, limitaciones y riesgos éticos de la IA.
   
-Al finalizar, comprenderás cómo funcionan estas tecnologías y habrás creado tu primer modelo de IA aplicando tus propias ideas.
+Al finalizar, comprenderás cómo funcionan estas tecnologías y habrás creado tu primer modelo de IA.
 
 ## 1.1 ¿Qué es la IA?
 
@@ -29,7 +29,7 @@ También se utiliza en videojuegos, donde los personajes controlados por la máq
 La inteligencia artificial necesita datos para aprender (*datos de entrenamiento*), y estos datos deben pasar por un proceso que los transforme en conocimiento útil. Este proceso se puede resumir en cuatro pasos:
 
 1. **Recoger y preparar los datos:** se toman los datos de diferentes fuentes y se organizan para que sean comprensibles por la máquina. Por ejemplo, transformar fotos o textos en números que el sistema pueda analizar.
-2. **Almacenar los datos como conocimiento:** una vez procesados, los datos se guardan de forma que puedan ser consultados cuando sea necesario. Esto permite a la máquina "recordar" la información.
+2. **Almacenar los datos como conocimiento:** una vez procesados, los datos se guardan de forma que puedan ser consultados cuando sea necesario. Esto permite a la máquina *recordar* la información.
 3. **Analizar e interpretar:** el sistema analiza los datos almacenados para encontrar patrones o entender relaciones. Por ejemplo, aprender que una pelota es redonda observando muchas imágenes de pelotas.
 4. **Generar nuevo conocimiento:** la IA utiliza lo aprendido para hacer deducciones o predicciones. A este proceso se le llama *inferencia*, y es lo que hace que un programa sea realmente *inteligente*. Por ejemplo, predecir que mañana lloverá basándose en datos meteorológicos.
 
@@ -44,6 +44,21 @@ Por ejemplo:
 * Un modelo que use datos con prejuicios podría tomar decisiones injustas, como discriminar en la selección de candidatos para un trabajo.
 
 Por eso, al trabajar con IA, es fundamental utilizar datos de calidad, variados y bien preparados para que el modelo sea confiable y efectivo.
+
+#### 1.2.2 Machine learning
+
+El **aprendizaje automático**, también llamado **machine learning**, es una parte muy importante de la inteligencia artificial. De hecho, muchas veces se confunden ambos términos porque están muy relacionados. 
+
+Básicamente, el aprendizaje automático es la capacidad que tienen algunos programas o sistemas para mejorar su funcionamiento con el tiempo, sin necesidad de que una persona los programe constantemente. Esto se logra porque el sistema analiza datos que va acumulando o recibe indicaciones externas sobre si está haciendo bien o mal su tarea. Así, puede adaptarse y volverse más eficiente en la resolución de problemas.
+
+Para entender el aprendizaje automático, primero hay que diferenciarlo de la programación tradicional. En un programa convencional, el programador escribe un conjunto de reglas claras (como condiciones, bucles o instrucciones) para que, a partir de unos datos de entrada, se obtenga un resultado específico.
+
+En cambio, en el aprendizaje automático, el enfoque es distinto: en lugar de definir reglas manualmente, se le proporciona al sistema datos de entrada junto con los resultados que deberían obtenerse. A partir de esta información, el sistema aprende por sí mismo a identificar patrones y deducir las reglas necesarias para predecir nuevos resultados cuando reciba datos diferentes en el futuro.
+
+<div align="center">
+    <img src="img/saa.png" width="80%">
+</div>
+
 
 ## 1.3 Tipos de IA
 
