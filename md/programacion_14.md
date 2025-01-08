@@ -27,7 +27,8 @@ La IA está cada vez más presente en nuestra vida diaria, aunque a veces no lo 
 * Coches autónomos como Tesla → Sistemas de IA analizan el tráfico, peatones y señales de tráfico para conducir sin intervención humana.
 * IA en los videojuegos → Los enemigos en un shooter reaccionan a tus movimientos, los NPC (personajes no jugadores) en juegos de rol actúan de forma más realista.
 
-> 🔍 EJERCICIO RÁPIDO:
+> 🔍 EJERCICIO RÁPIDO
+> 
 > ¿Cuánta IA has usado hoy? Haz una lista de todas las veces que has interactuado con sistemas de IA desde que te has despertado. A continuación, compara tu lista con la de tu compañero/a:
 > * ¿Quién usó más IA?
 > * ¿En qué áreas de la vida se usa más IA? (entretenimiento, comunicación, transporte, etc.)
@@ -68,7 +69,9 @@ La inteligencia artificial está revolucionando múltiples sectores, con grandes
     - **Privacidad:** muchas IA recopilan datos personales sin que los propietarios sean plenamente conscientes de eso. Por ejemplo, algoritmos que rastrean lo que compras en internet o casos como los de  China, donde se usan sistemas de reconocimiento facial para monitorear a la población en tiempo real.
     - **Impacto en el empleo especializado:** a diferencia de la automatización industrial, la IA está empezando a reemplazar trabajos creativos e intelectuales. Por ejemplo, algunos medios de comunicación han reemplazado periodistas por IA para redactar noticias básicas. También, estudios de doblaje han comenzado a usar IA para replicar voces en lugar de contratar actores de voz.
 
-> 🔍 EJERCICIO EN GRUPO: Forma un equipo de 3 o 4 personas y os convertiréis en detectives de IA. Vuestra misión es investigar cómo se está usando la IA en un campo específico y presentar vuestros hallazgos a la clase.
+> 🔍 EJERCICIO EN GRUPO
+> 
+> Forma un equipo de 3 o 4 personas y os convertiréis en detectives de IA. Vuestra misión es investigar cómo se está usando la IA en un campo específico y presentar vuestros hallazgos a la clase.
 > 
 > Fase 1: Elegid un campo donde se use IA. Cada equipo elegirá un área donde la IA tenga un papel importante. Aquí tenéis algunas opciones: 
 > * Salud y Medicina → Diagnóstico de enfermedades, cirugías con IA, análisis de imágenes médicas
