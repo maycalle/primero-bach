@@ -1,118 +1,103 @@
 # 1. Introducción a la Inteligencia Artificial
 
-En esta unidad exploraremos qué es la **Inteligencia Artificial (*IA*)** y cómo se utiliza en aplicaciones cotidianas. Aprenderemos conceptos clave como **Machine Learning** y **Deep Learning**, entre otros.
+La **Inteligencia Artificial (IA)** ya forma parte de nuestro día a día, pero ¿cómo funciona realmente? En este bloque, exploraremos sus fundamentos y aprenderemos sobre **Machine Learning** y **Deep Learning**, las tecnologías que permiten a las máquinas "aprender" a partir de datos.
 
-A través de actividades prácticas:
-* Entrenaremos modelos básicos con *Teachable Machine*.
-* Los integraremos en programas de Python para clasificar imágenes.
-* Reflexionaremos sobre las posibilidades, limitaciones y riesgos éticos de la IA.
-  
-Al finalizar, comprenderás cómo funcionan estas tecnologías y habrás creado tu primer modelo de IA.
+¿Cómo lo haremos? A través de actividades prácticas:
+* Entrenaremos modelos básicos con Teachable Machine.
+* Integraremos IA en Python para clasificar imágenes.
+* Reflexionaremos sobre sus oportunidades, limitaciones y dilemas éticos.
+
+Al final, no solo entenderás cómo funciona la IA, sino que habrás creado tu propio modelo de inteligencia artificial. ¡Vamos allá!
 
 ## 1.1 ¿Qué es la IA?
 
-La **inteligencia artificial (IA)** es una rama de la informática que permite a las máquinas realizar tareas que normalmente requieren inteligencia humana, como aprender, razonar, resolver problemas o tomar decisiones. En pocas palabras, es como enseñar a las máquinas a *pensar y aprender por sí mismas*, pero siempre dentro de las tareas específicas para las que han sido entrenadas.
+La **Inteligencia Artificial (IA)** es la capacidad de las máquinas para realizar tareas que normalmente requieren inteligencia humana, como aprender, razonar, resolver problemas o tomar decisiones.
 
-**¿Dónde encontramos la IA?**
+>📌 DATO CURIOSO: El término *Inteligencia Artificial* fue acuñado en 1956 por John McCarthy, un científico que soñaba con crear máquinas que "pensaran" por sí mismas.
 
-La IA está cada vez más presente en nuestra vida diaria, aunque a veces no lo notemos. Aquí tienes algunos ejemplos prácticos:
+## 1.2 ¿Dónde encontramos la IA en nuestra vida diaria?
 
-* **Reconocimiento facial:** tu móvil desbloquea la pantalla al detectar tu rostro.
-* **Asistentes virtuales:** Siri o Alexa responden preguntas y realizan tareas con tu voz.
-* **Sistemas de recomendaciones:** Netflix, Spotify o YouTube analizan lo que te gusta para sugerirte contenido.
-* **Conducción autónoma:** los coches como los de Tesla utilizan IA para detectar señales de tráfico, peatones y otros vehículos.
+La IA está cada vez más presente en nuestra vida diaria, aunque a veces no lo notemos. Aquí tienes algunos ejemplos:
 
-También se utiliza en videojuegos, donde los personajes controlados por la máquina reaccionan a tus movimientos, haciendo el juego más dinámico y en redes sociales, priorizando publicaciones basándose en lo que más interactúas.
+🔹 Tu móvil desbloqueándose con tu cara → Reconocimiento facial.<br>
+🔹 Netflix recomendándote series que te gustan → Algoritmos de recomendación.<br>
+🔹 Siri, Alexa o Google Assistant respondiendo preguntas → Procesamiento de lenguaje natural.<br>
+🔹 Google Maps calculando la ruta más rápida → Análisis de datos en tiempo real.<br>
+🔹 Filtros de redes sociales detectando tu rostro y aplicando efectos → Visión por computadora.<br>
+🔹 Coches autónomos como Tesla → Sistemas de IA analizan el tráfico, peatones y señales de tráfico para conducir sin intervención humana.<br>
+🔹 IA en los videojuegos → Los enemigos en un shooter reaccionan a tus movimientos, los NPC (personajes no juagadores) en juegos de rol actúan de forma más realista.<br>
+
+> 🔍 EJERCICIO RÁPIDO:
+> ¿Cuánta IA has usado hoy? Haz una lista de todas las veces que has interactuado con sistemas de IA desde que te has despertado. A continuación, compara tu lista con la de tu compañero/a:
+> * ¿Quién usó más IA?
+> * ¿En qué áreas de la vida se usa más IA? (entretenimiento, comunicación, transporte, etc.)
+> * ¿Hubo alguna IA que tu compañero/a anotó y que tú no habías notado?
 
 ## 1.2 ¿Cómo funciona la IA?
 
-La inteligencia artificial necesita datos para aprender (*datos de entrenamiento*), y estos datos deben pasar por un proceso que los transforme en conocimiento útil. Este proceso se puede resumir en cuatro pasos:
+Para que una máquina "aprenda", necesita datos. La IA analiza grandes volúmenes de información y encuentra patrones para tomar decisiones.
 
-1. **Recoger y preparar los datos:** se toman los datos de diferentes fuentes y se organizan para que sean comprensibles por la máquina. Por ejemplo, transformar fotos o textos en números que el sistema pueda analizar.
-2. **Almacenar los datos como conocimiento:** una vez procesados, los datos se guardan de forma que puedan ser consultados cuando sea necesario. Esto permite a la máquina *recordar* la información.
-3. **Analizar e interpretar:** el sistema analiza los datos almacenados para encontrar patrones o entender relaciones. Por ejemplo, aprender que una pelota es redonda observando muchas imágenes de pelotas.
-4. **Generar nuevo conocimiento:** la IA utiliza lo aprendido para hacer deducciones o predicciones. A este proceso se le llama *inferencia*, y es lo que hace que un programa sea realmente *inteligente*. Por ejemplo, predecir que mañana lloverá basándose en datos meteorológicos.
+> 📌 Ejemplo: Un sistema de IA que reconoce gatos en fotos necesita ver miles de imágenes de gatos para aprender a identificarlos.
 
-#### 1.2.1 El modelo y la importancia de los datos de entrenamiento
+La IA aprende siguiendo estos cuatro pasos:
 
-El resultado del aprendizaje de la IA se llama **modelo**. Un modelo es el sistema entrenado que utiliza los datos procesados para tomar decisiones o hacer predicciones.
-
-El modelo será tan bueno como los datos que reciba. Si los datos son incompletos, incorrectos o están sesgados, el modelo puede cometer errores importantes. 
-
-Por ejemplo:
-* Un modelo entrenado con imágenes poco claras no podrá identificar correctamente objetos en fotos nuevas.
-* Un modelo que use datos con prejuicios podría tomar decisiones injustas, como discriminar en la selección de candidatos para un trabajo.
-
-Por eso, al trabajar con IA, es fundamental utilizar datos de calidad, variados y bien preparados para que el modelo sea confiable y efectivo.
-
-#### 1.2.2 Machine learning
-
-El **aprendizaje automático**, también llamado **machine learning**, es una parte muy importante de la inteligencia artificial. De hecho, muchas veces se confunden ambos términos porque están muy relacionados. 
-
-Básicamente, el aprendizaje automático es la capacidad que tienen algunos programas o sistemas para mejorar su funcionamiento con el tiempo, sin necesidad de que una persona los programe constantemente. Esto se logra porque el sistema analiza datos que va acumulando o recibe indicaciones externas sobre si está haciendo bien o mal su tarea. Así, puede adaptarse y volverse más eficiente en la resolución de problemas.
-
-Para entender el aprendizaje automático, primero hay que diferenciarlo de la programación tradicional. En un programa convencional, el programador escribe un conjunto de reglas claras (como condiciones, bucles o instrucciones) para que, a partir de unos datos de entrada, se obtenga un resultado específico.
-
-En cambio, en el aprendizaje automático, el enfoque es distinto: en lugar de definir reglas manualmente, se le proporciona al sistema datos de entrada junto con los resultados que deberían obtenerse. A partir de esta información, el sistema aprende por sí mismo a identificar patrones y deducir las reglas necesarias para predecir nuevos resultados cuando reciba datos diferentes en el futuro.
-
-<div align="center">
-    <img src="img/saa.png" width="80%">
-</div>
-
-**Tipos de aprendizaje automático**
-
-En el aprendizaje automático, existen diferentes maneras en las que un sistema puede aprender. Se pueden clasificar en cuatro tipos principales:
-
-* **Aprendizaje supervisado:** en este tipo de aprendizaje, el sistema recibe información sobre si está realizando bien o mal su tarea. Es decir, se le proporcionan datos junto con sus respuestas correctas para que aprenda a identificar patrones. Este es el método más común en la actualidad y se usa, por ejemplo, en aplicaciones de reconocimiento de imágenes o en asistentes virtuales que aprenden a responder preguntas.
-
-* **Aprendizaje no supervisado:** a diferencia del anterior, aquí el sistema no recibe respuestas correctas previamente, sino que debe encontrar patrones por sí mismo en los datos. Un buen ejemplo de esto son los algoritmos que predicen los gustos de un usuario basándose en la música que escucha o las páginas web que visita, recomendándole contenido similar.
-
-* **Aprendizaje semi-supervisado:** este método combina las estrategias anteriores. Al principio, el sistema recibe algunas respuestas correctas (aprendizaje supervisado) para orientarse, pero luego empieza a trabajar de manera más autónoma (aprendizaje no supervisado). También puede ocurrir al revés: el sistema primero agrupa datos similares sin ayuda y, posteriormente, una persona etiqueta esas categorías para mejorar su precisión. Un ejemplo sería un sistema que clasifica fotos en grupos y, después, un humano nombra cada grupo (por ejemplo, "perros", "gatos" y "paisajes").
-
-* **Aprendizaje por refuerzo:** en este caso, el sistema aprende mediante prueba y error. Cada vez que toma una decisión, recibe una recompensa si lo ha hecho bien o un castigo si se ha equivocado. Con el tiempo, mejora su estrategia para obtener mejores resultados. Este tipo de aprendizaje se usa mucho en videojuegos o en inteligencia artificial para robots, donde el sistema debe aprender a moverse o tomar decisiones basándose en la experiencia acumulada.
-
-### 1.2.3 Deep learning
-
-
-Introducción al Deep Learning y las Redes Neuronales
-El aprendizaje profundo (deep learning) es una técnica avanzada de aprendizaje automático (machine learning) que permite a los ordenadores aprender de manera más parecida a como lo hace el cerebro humano. Para lograr esto, se utilizan redes neuronales artificiales, un tipo de modelo matemático inspirado en el funcionamiento de las neuronas en nuestro cerebro.
-
-¿Cómo funcionan las redes neuronales?
-Las redes neuronales artificiales están formadas por capas de nodos (neuronas artificiales) que procesan la información:
-
-Capa de entrada: Recibe los datos (por ejemplo, una imagen o un sonido).
-Capas ocultas: Analizan la información y detectan patrones.
-Capa de salida: Genera el resultado final (por ejemplo, identificar si una imagen muestra un perro o un gato).
-Cuantas más capas tiene una red neuronal, más profundo es su análisis, lo que permite que el sistema aprenda de manera más precisa.
-
-El aprendizaje profundo, o deep learning, es una rama del aprendizaje automático que permite a los sistemas analizar datos de manera más profunda y detallada para generar resultados más precisos. Para entenderlo mejor, veamos dos ejemplos:
-
-**Ejemplo 1: Diagnóstico Médico**
-Imaginemos que queremos desarrollar un sistema de autodiagnóstico de enfermedades. En un modelo básico de aprendizaje automático (machine learning), primero recopilamos datos importantes de miles de pacientes, como edad, peso y presión sanguínea. Luego, junto con esos datos, proporcionamos el diagnóstico final que recibió cada paciente (por ejemplo, resfriado o meningitis). Con esta información, el sistema aprende a relacionar los datos de entrada con posibles diagnósticos.
-
-Pero, ¿qué pasaría si en lugar de introducir manualmente los datos relevantes, el sistema pudiera analizar directamente un informe médico en formato PDF y extraer por sí mismo la información clave para emitir un diagnóstico? En este caso, el modelo haría un análisis más profundo de los datos de entrada sin necesidad de una fase previa de selección manual. Este tipo de modelo pertenece al aprendizaje profundo (deep learning), ya que es capaz de procesar la información de manera más avanzada.
-
-**Ejemplo 2: Clasificación de Tomates**
-Supongamos que queremos crear un sistema para identificar distintos tipos de tomates. En un modelo de machine learning, haríamos una tabla con características como el color, el tamaño, la forma y la textura de cada tomate, junto con su categoría (por ejemplo, tomate canario o tomate pera). Luego, entrenaríamos al sistema para que, cuando introduzcamos las características de un nuevo tomate, pueda clasificarlo correctamente.
-
-Sin embargo, con deep learning, en lugar de introducir manualmente estas características, el sistema podría simplemente analizar una imagen del tomate y extraer automáticamente sus características (como forma, tamaño y color) para clasificarlo. Incluso podría detectar detalles que nosotros no habíamos considerado en nuestra tabla.
-
-La técnica más habitualmente empleada dentro de la rama del deep learning son las redes neuronales profundas, entendiendo como profundas el hecho de que estén compuestas por varias capas, lo que les permitirá jerarquizar las características principales de los datos de entrada.
+1. **Recoger datos:** se recopilan datos de distintas fuentes. Por ejemplo, fotos de gatos y perros para entrenar un sistema de clasificación de animales.
+2. **Procesar y almacenar información:** se organizan los datos en un formato que la máquina pueda entender. Por ejemplo: convertir imágenes en valores numéricos que representen colores y formas.
+3. **Aprender patrones:** el sistema analiza los datos almacenados para encontrar patrones o entender relaciones. Por ejemplo, detectar que los gatos suelen tener orejas puntiagudas y ojos grandes.
+4. **Generar predicciones:** la IA utiliza lo aprendido para hacer deducciones o predicciones. A este proceso se le llama *inferencia*, y es lo que hace que un programa sea realmente *inteligente*. Por ejemplo: *"Esta imagen tiene orejas puntiagudas y ojos grandes, es un gato."*
 
 ## 1.3 Tipos de IA
 
-Entre las clasificaciones de inteligencia artificial que podemos encontrar, una de las más habituales es la que distingue entre inteligencia artificial fuerte y débil.
+No todas las IA son iguales. Se pueden clasificar en dos grandes tipos:
 
-* Un sistema de **inteligencia artificial fuerte** es aquel capaz de reproducir todas las capacidades humanas, sin centrarse en una única tarea. También se le conoce como AGI (inteligencia artificial general). Son sistemas capaces de aprender conceptos o técnicas nuevas por sí mismos, y por iniciativa propia. En la actualidad no existe (aún) ningun sistema real de IA fuerte, pero podemos encontrar algunos ejemplos ilustrativos de lo que supone en algunas películas o series de ciencia ficción. Por ejemplo, el asistente *Jarvis* de *IronMan*, o el robot *Sony* de la película *Yo robot*. Actualmente, este futuro se ve más cercano gracias a herramientas muy versátiles, como ChatGPT.
-* En cambio, un sistema de **inteligencia artificial débil** es aquel que se especializa en una tarea en concreto, y aprende y mejora sobre esa tarea. En este sector sí podemos encontrar varios ejemplos en la vida real: sistemas que aprenden a reconocer caras, o a jugar al juego de la serpiente, o a detectar tumores en radiografías u otras imágenes...
+* **Inteligencia artificial fuerte (general)**: es aquella capaz de reproducir todas las capacidades humanas, sin centrarse en una única tarea. También se le conoce como AGI (inteligencia artificial general). Son sistemas capaces de aprender conceptos o técnicas nuevas por sí mismos, y por iniciativa propia. En la actualidad no existe (aún) ningun sistema real de IA fuerte, pero podemos encontrar algunos ejemplos ilustrativos de lo que supone en algunas películas o series de ciencia ficción. Por ejemplo, el asistente *Jarvis* (IronMan), o el robot *Sony* (Yo, robot). Actualmente, este futuro se ve más cercano gracias a herramientas como ChatGPT.
+* **Inteligencia artificial débil (específica)**: es aquella que se especializa en una tarea en concreto, y aprende y mejora sobre esa tarea. En este sector sí podemos encontrar varios ejemplos en la vida real: sistemas que aprenden a reconocer caras, o a jugar al juego de la serpiente, o a detectar tumores en radiografías u otras imágenes.
 
-## 1.4 Limitaciones y Riesgos
+## 1.4 Riesgos y beneficios de la IA
 
-Aunque la IA es poderosa, tiene limitaciones importantes:
+La Inteligencia Artificial está revolucionando múltiples sectores, con grandes ventajas pero también riesgos importantes. Veamos algunos ejemplos concretos.
 
-* **Dependencia de datos:** si los datos están sesgados o son insuficientes, la IA puede cometer errores. Por ejemplo, un sistema de contratación podría discriminar si se entrena con datos sesgados.
-* **Falta de creatividad y empatía:** la IA solo resuelve problemas para los que fue entrenada. No puede improvisar como un humano. Un asistente virtual no entiende chistes ni sarcasmos.
-* **Riesgos éticos:** 
-    * Privacidad: muchas IA recopilan datos personales.
-    * Pérdida de empleos: automatización en sectores como la manufactura o atención al cliente.
+* **Beneficios**
+  - **Medicina y diagnóstico**: un sistema de IA desarrollado por *Google Health* y *DeepMind* logró detectar cáncer de mama con mayor precisión que los radiólogos. Un estudio publicado en Nature en 2020 mostró que la IA redujo los falsos positivos y falsos negativos en mamografías.
+  - **Accesibilidad y traducción automática:** *Google Translate* y *Whisper AI* de OpenAI han mejorado la accesibilidad para personas con discapacidad auditiva al generar subtítulos en tiempo real con gran precisión. También, las IA pueden describir imágenes para personas con discapacidad visual.
+  - **Creatividad y arte:** herramientas como *DALL·E* de OpenAI y *Runway ML* permiten a los diseñadores crear imágenes, animaciones y efectos especiales con IA. DALL·E puede generar imágenes a partir de texto, mientras que Runway ML ha sido utilizada en producciones de Hollywood.
+ 
+* **Riesgos éticos y sociales**
+    * **Desinformación y noticias falsas:** con IA generativa es cada vez más difícil diferenciar lo real de lo falso. Se han creado deepfakes de políticos diciendo cosas que nunca dijeron, manipulando la opinión pública en elecciones.
+    * **Sesgo y discriminación:** si los datos están sesgados, la IA tomará decisiones injustas. En EE.UU., un sistema de IA para predecir reincidencia criminal recomendaba penas más largas para personas de raza negra debido a datos históricos sesgados.
+    * **Privacidad:** muchas IA recopilan datos personales sin que los propietarios sean plenamente conscientes de eso. Por ejemplo, algoritmos que rastrean lo que compras en internet o casos como los de  China, donde se usan sistemas de reconocimiento facial para monitorear a la población en tiempo real.
+    * **Impacto en el empleo especializado:** a diferencia de la automatización industrial, la IA está empezando a reemplazar trabajos creativos e intelectuales. Por ejemplo, algunos medios de comunicación han reemplazado periodistas por IA para redactar noticias básicas. También, estudios de doblaje han comenzado a usar IA para replicar voces en lugar de contratar actores de voz.
 
+> 🔍 EJERCICIO EN GRUPO: Forma un equipo de 3 o 4 personas y os convertiréis en detectives de IA. Vuestra misión es investigar cómo se está usando la IA en un campo específico y presentar vuestros hallazgos a la clase.
+> 
+> Fase 1: Elegid un campo donde se use IA. Cada equipo elegirá un área donde la IA tenga un papel importante. Aquí tenéis algunas opciones: 
+> * Salud y Medicina → Diagnóstico de enfermedades, cirugías con IA, análisis de imágenes médicas
+> * Transporte y conducción autónoma → Coches como Tesla, control del tráfico, predicción de rutas.
+> * Videojuegos → NPCs inteligentes, personalización de experiencia, generación de mundos.
+> * Entretenimiento y redes sociales → Recomendaciones de Netflix/Spotify, algoritmos de TikTok e Instagram.
+> * Educación → IA en clases virtuales, herramientas como ChatGPT para estudiar.
+> * Finanzas y comercio → IA en bancos, predicciones de la bolsa, atención al cliente con chatbots.
+> 
+> Fase 2: Investigad y responded a estas preguntas
+> * ¿Qué problema soluciona la IA en este campo? 
+> * ¿Cómo funciona? (explicación básica sin tecnicismos, pero clara).
+> * Ejemplos reales: empresas, aplicaciones o proyectos que ya estén usando esta tecnología.
+> * Beneficios y riesgos: ¿cuáles son las ventajas y los posibles problemas que puede causar?
+> 
+> ⚠️ Consejo: Buscad información en artículos, vídeos o páginas web oficiales.
+> 
+> Fase 3: Preparad vuestra presentación
+> * Tendréis 5 minutos para presentar lo que habéis investigado. Podéis elegir el formato que más os guste (presentación, poster o infografía, role-play o simulación sobre cómo funciona la IA en ese campo, mini-video explicativo, etc)
+>
+> Fase 4: Reflexión final y debate. Después de todas las presentaciones, haremos una discusión en clase:
+> * ¿Cuál fue el uso de la IA más sorprendente?
+> * ¿Hay algún sector donde la IA pueda ser un problema más que una solución?
+> * ¿Cómo os imagináis la IA en estos campos dentro de 10 años?
+
+
+## RESUMEN
+
+✅ La IA permite a las máquinas aprender y tomar decisiones basadas en datos.<br>
+✅ Existen diferentes tipos de IA: débil (especializada en una tarea) y fuerte (aún teórica).<br>
+✅ La IA ya está presente en nuestra vida diaria, desde asistentes virtuales hasta videojuegos y coches autónomos.<br>
+✅ Aunque tiene ventajas, también presenta riesgos como el sesgo, la privacidad y la automatización del trabajo.
