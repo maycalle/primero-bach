@@ -55,7 +55,7 @@ No todas las IA son iguales. Se pueden clasificar en dos grandes tipos:
 
 ## 1.4 Riesgos y beneficios de la IA
 
-La Inteligencia Artificial está revolucionando múltiples sectores, con grandes ventajas pero también riesgos importantes. Veamos algunos ejemplos concretos.
+La inteligencia artificial está revolucionando múltiples sectores, con grandes ventajas pero también riesgos importantes. Veamos algunos ejemplos concretos.
 
 * **Beneficios**
   - **Medicina y diagnóstico**: un sistema de IA desarrollado por *Google Health* y *DeepMind* logró detectar cáncer de mama con mayor precisión que los radiólogos. Un estudio publicado en Nature en 2020 mostró que la IA redujo los falsos positivos y falsos negativos en mamografías.
