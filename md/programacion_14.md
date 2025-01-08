@@ -19,13 +19,13 @@ La **Inteligencia Artificial (IA)** es la capacidad de las máquinas para realiz
 
 La IA está cada vez más presente en nuestra vida diaria, aunque a veces no lo notemos. Aquí tienes algunos ejemplos:
 
-🔹 Tu móvil desbloqueándose con tu cara → Reconocimiento facial.<br>
-🔹 Netflix recomendándote series que te gustan → Algoritmos de recomendación.<br>
-🔹 Siri, Alexa o Google Assistant respondiendo preguntas → Procesamiento de lenguaje natural.<br>
-🔹 Google Maps calculando la ruta más rápida → Análisis de datos en tiempo real.<br>
-🔹 Filtros de redes sociales detectando tu rostro y aplicando efectos → Visión por computadora.<br>
-🔹 Coches autónomos como Tesla → Sistemas de IA analizan el tráfico, peatones y señales de tráfico para conducir sin intervención humana.<br>
-🔹 IA en los videojuegos → Los enemigos en un shooter reaccionan a tus movimientos, los NPC (personajes no juagadores) en juegos de rol actúan de forma más realista.<br>
+* Tu móvil desbloqueándose con tu cara → Reconocimiento facial.
+* Netflix recomendándote series que te gustan → Algoritmos de recomendación.
+* Siri, Alexa o Google Assistant respondiendo preguntas → Procesamiento de lenguaje natural.
+* Google Maps calculando la ruta más rápida → Análisis de datos en tiempo real.
+* Filtros de redes sociales detectando tu rostro y aplicando efectos → Visión por computadora.
+* Coches autónomos como Tesla → Sistemas de IA analizan el tráfico, peatones y señales de tráfico para conducir sin intervención humana.
+* IA en los videojuegos → Los enemigos en un shooter reaccionan a tus movimientos, los NPC (personajes no juagadores) en juegos de rol actúan de forma más realista.
 
 > 🔍 EJERCICIO RÁPIDO:
 > ¿Cuánta IA has usado hoy? Haz una lista de todas las veces que has interactuado con sistemas de IA desde que te has despertado. A continuación, compara tu lista con la de tu compañero/a:
