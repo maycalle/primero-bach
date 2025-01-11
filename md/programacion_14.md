@@ -27,7 +27,7 @@ La IA está cada vez más presente en nuestra vida diaria, aunque a veces no lo 
 * Coches autónomos como Tesla → Sistemas de IA analizan el tráfico, peatones y señales de tráfico para conducir sin intervención humana.
 * IA en los videojuegos → Los enemigos en un shooter reaccionan a tus movimientos, los NPC (personajes no jugadores) en juegos de rol actúan de forma más realista.
 
-> 🔍 EJERCICIO RÁPIDO
+> 🔍 **EJERCICIO RÁPIDO**
 > 
 > ¿Cuánta IA has usado hoy? Haz una lista de todas las veces que has interactuado con sistemas de IA desde que te has despertado. A continuación, compara tu lista con la de tu compañero/a:
 > * ¿Quién usó más IA?
@@ -69,11 +69,11 @@ La inteligencia artificial está revolucionando múltiples sectores, con grandes
     - **Privacidad:** muchas IA recopilan datos personales sin que los propietarios sean plenamente conscientes de eso. Por ejemplo, algoritmos que rastrean lo que compras en internet o casos como los de  China, donde se usan sistemas de reconocimiento facial para monitorear a la población en tiempo real.
     - **Impacto en el empleo especializado:** a diferencia de la automatización industrial, la IA está empezando a reemplazar trabajos creativos e intelectuales. Por ejemplo, algunos medios de comunicación han reemplazado periodistas por IA para redactar noticias básicas. También, estudios de doblaje han comenzado a usar IA para replicar voces en lugar de contratar actores de voz.
 
-> 🔍 EJERCICIO EN GRUPO
+> 🔍 **EJERCICIO EN GRUPO**
 > 
 > Forma un equipo de 3 o 4 personas y os convertiréis en detectives de IA. Vuestra misión es investigar cómo se está usando la IA en un campo específico y presentar vuestros hallazgos a la clase.
 > 
-> Fase 1: Elegid un campo donde se use IA. Cada equipo elegirá un área donde la IA tenga un papel importante. Aquí tenéis algunas opciones: 
+> **Fase 1:** Elegid un campo donde se use IA. Cada equipo elegirá un área donde la IA tenga un papel importante. Aquí tenéis algunas opciones: 
 > * Salud y Medicina → Diagnóstico de enfermedades, cirugías con IA, análisis de imágenes médicas
 > * Transporte y conducción autónoma → Coches como Tesla, control del tráfico, predicción de rutas.
 > * Videojuegos → NPCs inteligentes, personalización de experiencia, generación de mundos.
@@ -81,18 +81,18 @@ La inteligencia artificial está revolucionando múltiples sectores, con grandes
 > * Educación → IA en clases virtuales, herramientas como ChatGPT para estudiar.
 > * Finanzas y comercio → IA en bancos, predicciones de la bolsa, atención al cliente con chatbots.
 > 
-> Fase 2: Investigad y responded a estas preguntas
+> **Fase 2:** Investigad y responded a estas preguntas
 > * ¿Qué problema soluciona la IA en este campo? 
 > * ¿Cómo funciona? (explicación básica sin tecnicismos, pero clara).
 > * Ejemplos reales: empresas, aplicaciones o proyectos que ya estén usando esta tecnología.
 > * Beneficios y riesgos: ¿cuáles son las ventajas y los posibles problemas que puede causar?
 > 
-> ⚠️ Consejo: Buscad información en artículos, vídeos o páginas web oficiales.
+> ⚠️ *Consejo: Buscad información en artículos, vídeos o páginas web oficiales.*
 > 
-> Fase 3: Preparad vuestra presentación
+> **Fase 3:** Preparad vuestra presentación
 > * Tendréis 5 minutos para presentar lo que habéis investigado. Podéis elegir el formato que más os guste (presentación, poster o infografía, role-play o simulación sobre cómo funciona la IA en ese campo, mini-video explicativo, etc)
 >
-> Fase 4: Reflexión final y debate. Después de todas las presentaciones, haremos una discusión en clase:
+> **Fase 4:** Reflexión final y debate. Después de todas las presentaciones, haremos una discusión en clase:
 > * ¿Cuál fue el uso de la IA más sorprendente?
 > * ¿Hay algún sector donde la IA pueda ser un problema más que una solución?
 > * ¿Cómo os imagináis la IA en estos campos dentro de 10 años?
