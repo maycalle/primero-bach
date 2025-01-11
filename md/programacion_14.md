@@ -1,13 +1,14 @@
 # 1. Introducción a la Inteligencia Artificial
 
-La **Inteligencia Artificial (IA)** ya forma parte de nuestro día a día, pero ¿cómo funciona realmente? En este bloque, exploraremos sus fundamentos y aprenderemos sobre **Machine Learning** y **Deep Learning**, las tecnologías que permiten a las máquinas "aprender" a partir de datos.
+La **inteligencia artificial** es una de las tecnologías más influyentes del siglo XXI, con aplicaciones en múltiples sectores y un impacto creciente en nuestra vida cotidiana. En esta unidad, nos adentraremos en el concepto de IA, sus principios fundamentales, sus aplicaciones más relevantes y los retos éticos que plantea.
 
-¿Cómo lo haremos? A través de actividades prácticas:
-* Entrenaremos modelos básicos con Teachable Machine.
-* Integraremos IA en Python para clasificar imágenes.
-* Reflexionaremos sobre sus oportunidades, limitaciones y dilemas éticos.
+Durante el desarrollo de la unidad, abordaremos:
+* La definición y evolución de la inteligencia artificial.
+* Las distintas aplicaciones de la IA en la vida diaria y en diversos campos profesionales.
+* Los fundamentos del aprendizaje automático y su funcionamiento.
+* Los riesgos y beneficios asociados a su uso.
 
-Al final, no solo entenderás cómo funciona la IA, sino que habrás creado tu propio modelo de inteligencia artificial. ¡Vamos allá!
+A través de ejemplos concretos y ejercicios prácticos, desarrollaremos una visión crítica sobre la inteligencia artificial, comprendiendo tanto su potencial como sus desafíos.
 
 ## 1.1 ¿Qué es la IA?
 
@@ -42,17 +43,17 @@ Para que una máquina "aprenda", necesita datos. La IA analiza grandes volúmene
 
 La IA aprende siguiendo estos cuatro pasos:
 
-1. **Recoger datos:** se recopilan datos de distintas fuentes. Por ejemplo, fotos de gatos y perros para entrenar un sistema de clasificación de animales.
-2. **Procesar y almacenar información:** se organizan los datos en un formato que la máquina pueda entender. Por ejemplo: convertir imágenes en valores numéricos que representen colores y formas.
-3. **Aprender patrones:** el sistema analiza los datos almacenados para encontrar patrones o entender relaciones. Por ejemplo, detectar que los gatos suelen tener orejas puntiagudas y ojos grandes.
-4. **Generar predicciones:** la IA utiliza lo aprendido para hacer deducciones o predicciones. A este proceso se le llama *inferencia*, y es lo que hace que un programa sea realmente *inteligente*. Por ejemplo: *"Esta imagen tiene orejas puntiagudas y ojos grandes, es un gato."*
+1. **Recoger datos:** se recopilan datos de distintas fuentes. Por ejemplo, imágenes de gatos y perros para entrenar un sistema de clasificación de animales.
+2. **Procesar y almacenar información:** se organizan los datos en un formato que la máquina pueda entender, como valores numéricos que representan colores y formas. 
+3. **Aprender patrones:** la IA analiza los datos y detecta características recurrentes, como las orejas puntiagudas y ojos grandes de los gatos.
+4. **Generar predicciones:** a partir de lo aprendido, la IA realiza inferencias. Por ejemplo: *"Esta imagen tiene orejas puntiagudas y ojos grandes, probablemente sea un gato."*
 
 ## 1.3 Tipos de IA
 
-No todas las IA son iguales. Se pueden clasificar en dos grandes tipos:
+No todas las IA son iguales. Se pueden clasificar en dos grandes categorías:
 
-* **Inteligencia artificial fuerte (general)**: es aquella capaz de reproducir todas las capacidades humanas, sin centrarse en una única tarea. También se le conoce como AGI (inteligencia artificial general). Son sistemas capaces de aprender conceptos o técnicas nuevas por sí mismos, y por iniciativa propia. En la actualidad no existe (aún) ningun sistema real de IA fuerte, pero podemos encontrar algunos ejemplos ilustrativos de lo que supone en algunas películas o series de ciencia ficción. Por ejemplo, el asistente *Jarvis* (IronMan), o el robot *Sony* (Yo, robot). Actualmente, este futuro se ve más cercano gracias a herramientas como ChatGPT.
-* **Inteligencia artificial débil (específica)**: es aquella que se especializa en una tarea en concreto, y aprende y mejora sobre esa tarea. En este sector sí podemos encontrar varios ejemplos en la vida real: sistemas que aprenden a reconocer caras, o a jugar al juego de la serpiente, o a detectar tumores en radiografías u otras imágenes.
+* **Inteligencia artificial fuerte (general)**: se trata de una IA capaz de replicar la inteligencia humana en múltiples tareas y aprender conceptos nuevos sin intervención externa. Podemos encontrar algunos ejemplos ilustrativos de lo que supone en algunas películas o series de ciencia ficción. Por ejemplo, el asistente *Jarvis* (IronMan), o el robot *Sony* (Yo, robot). En la actualidad, no existe, pero herramientas como ChatGPT y robots avanzados nos acercan a esta posibilidad.
+* **Inteligencia artificial débil (específica)**: diseñada para realizar una tarea concreta, como el reconocimiento de voz, la detección de fraudes o la conducción autónoma. Estas IA ya están ampliamente implementadas en la vida real.
 
 ## 1.4 Riesgos y beneficios de la IA
 

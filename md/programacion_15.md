@@ -3,12 +3,13 @@
 La **Inteligencia Artificial** ha evolucionado de forma increíble en los últimos años, y dos de sus ramas más importantes son **Machine Learning (ML)** y **Deep Learning (DL)**. Ambas permiten a las máquinas aprender a partir de datos, pero con enfoques distintos.
 
 En esta unidad exploraremos:
-* Qué es el Machine Learning y en qué se diferencia de la programación tradicional.
-* Tipos de Machine Learning: supervisado, no supervisado y por refuerzo.
-* Qué es el Deep Learning y en qué se diferencia del Machine Learning
-* Entrenamiento de un modelo básico de Machine Learning con datos reales.
+* Qué es el machine learning y en qué se diferencia de la programación tradicional.
+* Tipos de machine learning: supervisado, no supervisado y por refuerzo.
+* Qué es el deep learning y en qué se diferencia del machine learning
+* Entrenaremos modelos básicos con Teachable Machine.
+* Integraremos IA en Python para clasificar imágenes.
 
-Al final, comprenderás cómo se entrenan los modelos de Machine Learning y habrás desarrollado tu propio modelo con Python. ¡Vamos allá!
+Al final, comprenderás cómo hacer que una máquina aprenda y habrás desarrollado tu propio modelo con Python. ¡Vamos allá!
 
 ## 2.1  ¿Qué es el Machine Learning?
 
@@ -140,7 +141,39 @@ Para entrenar un modelo de Machine Learning, seguimos estos pasos:
 5. Optimizar y mejorar:
       * Ejemplo: ajustar parámetros para mejorar la precisión.
 
-🎯 **Ejercicio práctico:** entrena un modelo básico con Teachable Machine o con Python usando la librería scikit-learn.
+
+## 2.3 Ejercicio práctico: Entrenar un modelo en Teachable Machine y usarlo en Python
+
+Entrena un modelo básico con Teachable Machine o con Python usando la librería scikit-learn.
+
+**Paso 1. Entrenar un modelo en Teachable Machine**
+
+1. Accede a *Teachable Machine*
+2. Elige *Imagen* y crea dos clases:
+      * "Pulgar Arriba"
+      * "Pulgar Abajo"
+3. Sube varias imágenes para cada clase y entrena el modelo.
+4. Descarga el modelo en formato *TensorFlow.js*
+
+**Paso 2. Usar el modelo en Python**
+
+```py
+import tensorflow as tf
+import numpy as np
+from tensorflow.keras.models import load_model
+from PIL import Image
+
+# Cargar el modelo entrenado
+model = load_model("model.h5")
+
+# Cargar una imagen nueva
+imagen = Image.open("pulgar_arriba.jpg").resize((224, 224))
+datos = np.array(imagen) / 255.0
+prediccion = model.predict(np.expand_dims(datos, axis=0))
+
+# Interpretar resultados
+print("Predicción:", "Pulgar Arriba" if prediccion[0][0] > 0.5 else "Pulgar Abajo")
+```
 
 ## RESUMEN
 
