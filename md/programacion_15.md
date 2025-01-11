@@ -18,7 +18,7 @@ Se trata de una técnica que permite a los ordenadores aprender patrones a parti
 
 Gracias a esta tecnología, los sistemas pueden mejorar su rendimiento a lo largo del tiempo, volviéndose más precisos conforme reciben más información.
 
-📌 **DATO CURIOSO:** el primer programa de Machine Learning fue creado en 1959 por Arthur Samuel, quien desarrolló un sistema que aprendía a jugar al ajedrez mejorando con la práctica. Su algoritmo se volvió tan bueno que llegó a vencer a jugadores humanos experimentados.
+> 📌 **DATO CURIOSO:** el primer programa de Machine Learning fue creado en 1959 por Arthur Samuel, quien desarrolló un sistema que aprendía a jugar al ajedrez mejorando con la práctica. Su algoritmo se volvió tan bueno que llegó a vencer a jugadores humanos experimentados.
 
 **¿Cómo se diferencia de la programación tradicional?**
 
@@ -92,7 +92,8 @@ Cuantas más capas tiene una red neuronal, más profundo es su análisis, lo que
 
 * **Clasificación de tomates:** en Machine Learning, introduciríamos características como color y tamaño de los tomates. Con Deep Learning, bastaría con una imagen del tomate y el sistema identificaría automáticamente los detalles para clasificarlo.
 
-📌 **DATO CURIOSO:** Google Photos usa redes neuronales para reconocer rostros y objetos en tus fotos, permitiéndote buscar imágenes escribiendo palabras clave como "playa" o "perro" sin necesidad de etiquetarlas manualmente.
+> 📌 **DATO CURIOSO:** Google Photos usa redes neuronales para reconocer rostros y objetos en tus fotos, permitiéndote buscar imágenes escribiendo palabras clave como "playa" o "perro" sin necesidad de etiquetarlas manualmente.
+
 
 ### 2.2.1 Diferencias entre ML y DL
 
