@@ -17,7 +17,7 @@ Al final, comprenderás cómo hacer que una máquina aprenda y habrás desarroll
 La programación tradicional se basa en escribir reglas explícitas para resolver problemas. En cambio, **Machine Learning** permite a una máquina **aprender patrones a partir de datos**, sin necesidad de ser programada de forma explícita.
 
 <div align="center">
-    <img src="../img/saa.png" width="80%">
+    <img src="/primero-bach/img/saa.png" width="80%">
 </div>
 
 Por ejemplo, si queremos que un programa distinga entre perros y gatos, con programación tradicional deberíamos escribir una lista de reglas (como "los perros tienen hocicos más largos"), lo cual puede ser complicado y poco preciso. Con Machine Learning, simplemente le mostramos muchas imágenes de perros y gatos con sus etiquetas correspondientes, y el modelo aprende a diferenciarlos por sí mismo.
@@ -56,7 +56,7 @@ La clave del *Deep Learning* es su capacidad para procesar grandes volúmenes de
 Por ejemplo, en *Machine Learning* tradicional, si queremos que un modelo reconozca caras en fotos, primero debemos seleccionar características clave como el contorno de los ojos o la forma de la nariz. En cambio, un modelo de *Deep Learning* puede aprender esas características por sí solo, gracias a sus múltiples capas de neuronas artificiales.
 
 <div align="center">
-    <img src="../img/ml_vs_dl.png" width="70%">
+    <img src="/primero-bach/img/ml_vs_dl.png" width="70%">
 </div>
 
 ### 2.2.1 ¿Cómo funciona una red neuronal?
@@ -77,7 +77,7 @@ Con esta plataforma, podremos crear modelos que clasifiquen imágenes, sonidos o
 código.
 
 <div align="center">
-    <img src="../img/teachable_machine1.png" width="80%">
+    <img src="/primero-bach/img/teachable_machine1.png" width="80%">
 </div>
 
 
