@@ -67,6 +67,10 @@ Cada neurona recibe datos, los procesa y los transmite a las siguientes neuronas
 
 Este proceso de ajuste se llama **retropropagación** y permite que la red neuronal aprenda patrones complejos sin intervención manual.
 
+Si os gusta este tema y queréis profundizar más en él, os recomiendo que sigáis el [canal DotCSV](https://www.youtube.com/@DotCSV). 
+
+Aquí tenéis uno de sus vídeos en los que explica qué es una neurona. En este [enlace](https://www.youtube.com/playlist?list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ) podéis acceder a una serie de vídeos más avanzados sobre el funcionamiento de las redes neuronales. 
+
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MRIv2IwFTPg?si=W-jc6Py5se-nXoQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
