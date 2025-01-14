@@ -57,16 +57,16 @@ En cambio, en el aprendizaje automático, el enfoque es distinto: en lugar de de
 El aprendizaje automático se divide en tres grandes categorías:
 
 * **Aprendizaje supervisado**
-  * El sistema aprende a partir de ejemplos etiquetados. Se le proporcionan datos de entrada junto con la respuesta correcta (etiqueta).
-  * *Ejemplos:* modelos que aprenden a clasificar correos electrónicos como spam o no spam, aplicaciones de reconocimiento de imágenes o asistentes virtuales que aprenden a responder preguntas.
+    * El sistema aprende a partir de ejemplos etiquetados. Se le proporcionan datos de entrada junto con la respuesta correcta (etiqueta).
+    * *Ejemplos:* modelos que aprenden a clasificar correos electrónicos como spam o no spam, aplicaciones de reconocimiento de imágenes o asistentes virtuales que aprenden a responder preguntas.
 
 * **Aprendizaje no supervisado**
-  * El sistema no tiene etiquetas, sino que debe encontrar patrones en los datos por sí mismo.
-  * *Ejemplos:* algoritmos que predicen los gustos de un usuario basándose en la música que escucha o las páginas web que visita, recomendándole contenido similar.
+    * El sistema no tiene etiquetas, sino que debe encontrar patrones en los datos por sí mismo.
+    * *Ejemplos:* algoritmos que predicen los gustos de un usuario basándose en la música que escucha o las páginas web que visita, recomendándole contenido similar.
 
 * **Aprendizaje por refuerzo**
-  * El sistema aprende mediante ensayo y error, recibiendo recompensas por buenas decisiones. Con el tiempo, mejora su estrategia para obtener mejores resultados. 
-  * *Ejemplos:* se usa mucho en videojuegos o en inteligencia artificial para robots, donde el sistema debe aprender a moverse o tomar decisiones basándose en la experiencia acumulada.
+    * El sistema aprende mediante ensayo y error, recibiendo recompensas por buenas decisiones. Con el tiempo, mejora su estrategia para obtener mejores resultados. 
+    * *Ejemplos:* se usa mucho en videojuegos o en inteligencia artificial para robots, donde el sistema debe aprender a moverse o tomar decisiones basándose en la experiencia acumulada.
   
 > 🔍 **Ejercicio:** Observa los siguientes ejemplos y clasifícalos según su tipo de Machine Learning:
 > * Un sistema de IA que detecta fraudes bancarios.
