@@ -67,6 +67,8 @@ Cada neurona recibe datos, los procesa y los transmite a las siguientes neuronas
 
 Este proceso de ajuste se llama **retropropagación** y permite que la red neuronal aprenda patrones complejos sin intervención manual.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MRIv2IwFTPg?si=W-jc6Py5se-nXoQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 > 📌 **DATO CURIOSO:** Google Photos usa redes neuronales para reconocer rostros y objetos en tus fotos, permitiéndote buscar imágenes escribiendo palabras clave como "playa" o "perro" sin necesidad de etiquetarlas manualmente.
 
 ## 2.3 Entrenamiento de modelos con Teachable Machine
