@@ -67,13 +67,15 @@ Cada neurona recibe datos, los procesa y los transmite a las siguientes neuronas
 
 Este proceso de ajuste se llama **retropropagación** y permite que la red neuronal aprenda patrones complejos sin intervención manual.
 
-Si os gusta este tema y queréis profundizar más en él, os recomiendo que sigáis el [canal DotCSV](https://www.youtube.com/@DotCSV). 
+Si te interesa este tema y quieres profundizar más, te recomiendo el [canal DotCSV](https://www.youtube.com/@DotCSV) donde encontrarás contenido especializado sobre inteligencia artificial y redes neuronales.
 
-Aquí tenéis uno de sus vídeos en los que explica qué es una neurona. En este [enlace](https://www.youtube.com/playlist?list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ) podéis acceder a una serie de vídeos más avanzados sobre el funcionamiento de las redes neuronales. 
+Aquí tienes un vídeo en el que explica qué es una neurona artificial. 
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MRIv2IwFTPg?si=W-jc6Py5se-nXoQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+Además, en este [enlace](https://www.youtube.com/playlist?list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ) puedes acceder a una serie de vídeos más avanzados sobre el funcionamiento de las redes neuronales.
 
 > 📌 **DATO CURIOSO:** Google Photos usa redes neuronales para reconocer rostros y objetos en tus fotos, permitiéndote buscar imágenes escribiendo palabras clave como "playa" o "perro" sin necesidad de etiquetarlas manualmente.
 
