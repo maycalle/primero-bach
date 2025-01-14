@@ -103,12 +103,9 @@ print("Predicción:", "Pulgar Arriba" if prediccion[0][0] > 0.5 else "Pulgar Aba
 
 ## RESUMEN
 
-✅ El Machine Learning permite a las máquinas aprender patrones a partir de datos.
-✅ Existen tres tipos principales: supervisado, no supervisado y por refuerzo.
-✅ Se usa en numerosos sectores: salud, finanzas, entretenimiento, redes sociales, etc.
+✅ El Machine Learning permite a las máquinas aprender patrones a partir de datos.<br>
+✅ Existen tres tipos principales: supervisado, no supervisado y por refuerzo.<br>
+✅ Se usa en numerosos sectores: salud, finanzas, entretenimiento, redes sociales, etc.<br>
 ✅ Requiere datos limpios, entrenamiento y evaluación continua.
-✅ Presenta riesgos como sesgos, privacidad y automatización del empleo.
 
-Poner las diferencias entre el entrenamiento de nachine learning y deep learning
-poner ejercicio guiado de teachable machine
-y el código python para cladificar imagan
+
