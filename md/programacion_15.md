@@ -55,7 +55,11 @@ La clave del *Deep Learning* es su capacidad para procesar grandes volúmenes de
 
 Por ejemplo, en *Machine Learning* tradicional, si queremos que un modelo reconozca caras en fotos, primero debemos seleccionar características clave como el contorno de los ojos o la forma de la nariz. En cambio, un modelo de *Deep Learning* puede aprender esas características por sí solo, gracias a sus múltiples capas de neuronas artificiales.
 
-**¿Cómo funciona una red neuronal?**
+<div align="center">
+    <img src="../img/ml_vs_dl.png" width="70%">
+</div>
+
+### 2.2.1 ¿Cómo funciona una red neuronal?
 
 Una **red neuronal artificial** es un modelo matemático inspirado en el cerebro humano. Está formada por neuronas artificiales, organizadas en capas: una *capa de entrada*, varias *capas ocultas* y una *capa de salida*. 
 
