@@ -67,10 +67,15 @@ Este proceso de ajuste se llama **retropropagación** y permite que la red neuro
 
 ## 2.3 Entrenamiento de modelos con Teachable Machine
 
-Para comprender mejor estos conceptos, utilizaremos **Teachable Machine**, una herramienta de Google que permite entrenar modelos de Machine Learning de manera sencilla. 
+Para comprender mejor estos conceptos, utilizaremos [**Teachable Machine**](https://teachablemachine.withgoogle.com/), una herramienta de Google que permite entrenar modelos de Machine Learning de manera sencilla. 
 
 Con esta plataforma, podremos crear modelos que clasifiquen imágenes, sonidos o posturas sin necesidad de escribir
 código.
+
+<div align="center">
+    <img src="../img/teachable_machine1.png" width="80%">
+</div>
+
 
 **Paso 1. Entrenar un modelo en Teachable Machine**
 
