@@ -49,9 +49,7 @@ El aprendizaje automático se divide en tres grandes categorías:
 
 ## 2.2 ¿Qué es el Deep Learning y en qué se diferencia de Machine Learning?
 
-El **Deep Learning** es una subcategoría dentro del Machine Learning que se basa en **redes neuronales artificiales** inspiradas en el cerebro humano. 
-
-La clave del *Deep Learning* es su capacidad para procesar grandes volúmenes de datos y extraer características complejas sin necesidad de intervención manual.
+El **Deep Learning** es una subcategoría dentro del Machine Learning que se basa en **redes neuronales artificiales** inspiradas en el cerebro humano. La clave del *Deep Learning* es su capacidad para procesar grandes volúmenes de datos y extraer características complejas sin necesidad de intervención manual.
 
 Por ejemplo, en *Machine Learning* tradicional, si queremos que un modelo reconozca caras en fotos, primero debemos seleccionar características clave como el contorno de los ojos o la forma de la nariz. En cambio, un modelo de *Deep Learning* puede aprender esas características por sí solo, gracias a sus múltiples capas de neuronas artificiales.
 
@@ -83,22 +81,65 @@ Además, en este [enlace](https://www.youtube.com/playlist?list=PL-Ogd76BhmcB9Oj
 
 Para comprender mejor estos conceptos, utilizaremos [**Teachable Machine**](https://teachablemachine.withgoogle.com/), una herramienta de Google que permite entrenar modelos de Machine Learning de manera sencilla. 
 
-Con esta plataforma, podremos crear modelos que clasifiquen imágenes, sonidos o posturas sin necesidad de escribir
-código.
-
 <div align="center">
     <img src="/primero-bach/img/teachable_machine1.png" width="80%">
 </div>
 
+Con esta plataforma, podremos crear modelos que clasifiquen imágenes, sonidos o posturas sin necesidad de escribir. 
 
-**Paso 1. Entrenar un modelo en Teachable Machine**
+En este caso, vamos a entrenar un modelo para que clasifique imágenes que muestren un pulgar arriba o un pulgar abajo. El modelo aprenderá a diferenciar estas imágenes a partir de ejemplos que le proporcionemos.
 
-1. Accede a *Teachable Machine*
-2. Elige *Imagen* y crea dos clases:
-      * "Pulgar Arriba"
-      * "Pulgar Abajo"
-3. Sube varias imágenes para cada clase y entrena el modelo.
-4. Descarga el modelo en formato *TensorFlow.js*
+**Paso 1. Acceso a Teachable Machine**
+
+   * Accede a *Teachable Machine* > *Primeros pasos*
+   * Selecciona un *Proyecto de imagen* > *Modelo de imagen estándar*
+
+<div align="center">
+    <img src="/primero-bach/img/teachable_machine2.png" width="80%">
+</div>
+
+**Paso 2. Creación de las clases**
+
+   * Por defecto, aparecen creadas dos clases. Renómbralas como "PulgarArriba" y "PulgarAbajo" (es recomendable no dejar espacios en blanco en los nombres de las clases)
+
+**Paso 3. Recoger imágnes**
+
+  * Para entrenar el modelo, necesitamos proporcionar ejemplos de cada clase. Hay dos formas de añadir imágenes:
+
+      * 📸 Capturar imágenes con la webcam
+      * 📁 Subir imágenes desde el ordenador
+
+  * Consejos para recoger buenas muestras
+    ✅ Toma al menos 50 imágenes por cada clase.<br>
+    ✅ Varía el ángulo y la distancia para mejorar la precisión del modelo.<br>
+    ✅ Usa buena iluminación y un fondo claro.<br>
+
+**Paso 4. Entrenamiento del modelo**
+
+Una vez tengamos las imágenes, vamos a entrenar el modelo. En "Avanzado", encontrarás algunos parámetros que puedes ajustar para mejorar la precisión del modelo.
+
+* 🔹 **Épocas (epochs)**
+👉 Número de veces que el modelo revisará todas las imágenes para aprender.
+**Valores recomendados:**
+10-20 épocas si tienes muchas imágenes.
+30-50 épocas si tienes pocas imágenes.
+
+* 🔹 **Tamaño del Lote (batch size)**
+👉 Cantidad de imágenes que el modelo analizará al mismo tiempo en cada iteración.
+Valores recomendados:
+16 o 32 imágenes por lote para equilibrio entre velocidad y precisión.
+
+* 🔹 **Tasa de Aprendizaje (learning rate)**
+👉 Velocidad con la que el modelo ajusta su aprendizaje en cada iteración.
+Valores recomendados:
+0.001 o 0.0001 (valores altos pueden hacer que el modelo aprenda rápido pero mal, valores bajos pueden hacer que aprenda lento pero mejor).
+
+Para empezar, usa:
+* Épocas: 30
+* Tamaño del lote: 16
+* Tasa de aprendizaje: 0.001
+
+Luego, puedes probar valores diferentes y ver cómo afecta la precisión.
 
 **Paso 2. Usar el modelo en Python**
 
