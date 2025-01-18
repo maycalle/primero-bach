@@ -118,14 +118,14 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
 
 Una vez tengamos las imágenes, vamos a entrenar el modelo. En "Avanzado", encontrarás algunos parámetros que puedes ajustar para mejorar la precisión del modelo.
 
-* 🔹 **Épocas (epochs)**
-👉 Número de veces que el modelo revisará todas las imágenes para aprender. **Valores recomendados:** 10-20 épocas si tienes muchas imágenes o 30-50 épocas si tienes pocas imágenes.
+* 🔹 **Épocas (epochs)**: número de veces que el modelo revisará todas las imágenes para aprender. 
+    * **Valores recomendados:** 10-20 épocas si tienes muchas imágenes o 30-50 épocas si tienes pocas imágenes.
 
-* 🔹 **Tamaño del Lote (batch size)**
-👉 Cantidad de imágenes que el modelo analizará al mismo tiempo en cada iteración.**Valores recomendados:** * 16 o 32 imágenes por lote para equilibrio entre velocidad y precisión.
+* 🔹 **Tamaño del Lote (batch size)**: cantidad de imágenes que el modelo analizará al mismo tiempo en cada iteración.
+    * **Valores recomendados:** * 16 o 32 imágenes por lote para equilibrio entre velocidad y precisión.
 
-* 🔹 **Tasa de Aprendizaje (learning rate)**
-👉 Velocidad con la que el modelo ajusta su aprendizaje en cada iteración. **Valores recomendados:** 0.001 o 0.0001 (valores altos pueden hacer que el modelo aprenda rápido pero mal, valores bajos pueden hacer que aprenda lento pero mejor).
+* 🔹 **Tasa de Aprendizaje (learning rate)**: velocidad con la que el modelo ajusta su aprendizaje en cada iteración. 
+    * **Valores recomendados:** 0.001 o 0.0001 (valores altos pueden hacer que el modelo aprenda rápido pero mal, valores bajos pueden hacer que aprenda lento pero mejor).
 
 Para empezar, usa:
 * **Épocas:** 30
