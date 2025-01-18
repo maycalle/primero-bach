@@ -123,7 +123,7 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
 Una vez tengamos las imágenes, vamos a entrenar el modelo. En "Avanzado", encontrarás algunos parámetros que puedes ajustar para mejorar la precisión del modelo.
 
 <div align="center">
-    <img src="/primero-bach/img/teachable_machine4.png" width="80%">
+    <img src="/primero-bach/img/teachable_machine4.png" width="60%">
 </div>
 
 🔹 **Épocas (epochs)**: número de veces que el modelo revisará todas las imágenes para aprender. *Valores recomendados:* 
@@ -146,7 +146,7 @@ Para empezar, usa:
 Prueba el modelo proporcionando una imagen diferente, por ejemplo, con el pulgar de otro compañero/a y en diferentes posiciones y observa el resultado. Si ves que el modelo no es muy preciso, prueba con imágenes diferentes o cambia los valores de entrenamiento (épocas, lotes, ...) 
  
 <div align="center">
-    <img src="/primero-bach/img/teachable_machine5.png" width="80%">
+    <img src="/primero-bach/img/teachable_machine5.png" width="60%">
 </div>
 
 **Paso 6. Usar el modelo en Python**
