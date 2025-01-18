@@ -151,21 +151,26 @@ Prueba el modelo proporcionando una imagen diferente, por ejemplo, con el pulgar
 
 **Paso 6. Usar el modelo en Python**
 
-Una vez que has entrenado tu modelo en *Teachable Machine*, el siguiente paso es integrarlo en un programa que pueda utilizarlo para realizar predicciones. 
+Una vez que has entrenado tu modelo en *Teachable Machine*, el siguiente paso es integrarlo en un programa que pueda utilizarlo para realizar predicciones. Este proceso consiste en cargar el modelo, preparar los datos de entrada (imágenes) y usar el modelo para clasificar esas imágenes.
 
-En este apartado aprenderemos cómo cargar el modelo en Python y usarlo para clasificar nuevas imágenes. Utilizaremos algunas bibliotecas populares como **TensorFlow**, **NumPy** y **PIL** para manejar el modelo y procesar las imágenes.
+En este apartado aprenderemos cómo hacerlo paso a paso con Python, utilizando las siguientes librerías:
+* TensorFlow: para cargar y ejecutar el modelo.
+* NumPy: para manejar y procesar los datos de las imágenes.
+* Pillow (PIL): para abrir y redimensionar las imágenes.
 
-Al final, tendrás un script funcional que podrá identificar si una imagen corresponde, por ejemplo, a un "Pulgar Arriba" o "Pulgar Abajo", basándose en lo que el modelo aprendió durante el entrenamiento. ¡Vamos a ponerlo en práctica!
+Al final, tendrás un script funcional que clasifique imágenes según lo aprendido por el modelo.
 
-**Librerías necesarias y su propósito**
+**Preparación del entorno**
 
-* **TensorFlow:** es una biblioteca de código abierto para machine learning y deep learning. Nos permite cargar y ejecutar el modelo entrenado en Teachable Machine. La usaremos para cargar el modelo .h5 generado por *Teachable Machine* y realizar predicciones.
-* **NumPy:** es una biblioteca para trabajar con matrices y arrays, fundamentales en machine learning. La usaremos para transformar la imagen en datos numéricos que el modelo pueda procesar. 
-* **PIL (Python Imaging Library):** es una biblioteca para procesar imágenes.
-La usaeremos para cargar, redimensionar y preparar la imagen antes de pasarla al modelo.
+Antes de comenzar, instala las bibliotecas anteriores en tu entorno de Python ejecutando los siguientes comandos en tu terminal o consola:
 
+```
+pip install tensorflow
+pip install numpy
+pip install pillow
+```
 
-
+**Código Python**
 
 ```py
 import tensorflow as tf
@@ -185,7 +190,7 @@ prediccion = model.predict(np.expand_dims(datos, axis=0))
 print("Predicción:", "Pulgar Arriba" if prediccion[0][0] > 0.5 else "Pulgar Abajo")
 ```
 
-Explicación detallada del código:
+**Explicación detallada del código:**
 
 1. **Importación de librerías**
 * import tensorflow as tf: importa TensorFlow para cargar y ejecutar el modelo.
