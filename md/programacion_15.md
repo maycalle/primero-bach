@@ -143,15 +143,13 @@ Para empezar, usa:
 
 **Paso 5. Prueba del modelo**
 
-Prueba el modelo con el pulgar de otro compañero/a y en diferentes posiciones y observa el resultado. Si ves que el modelo no es muy preciso, prueba con imágenes diferentes o cambia los valores de entrenamiento (épocas, lotes, ...) 
+Prueba el modelo proporcionando una imagen diferente, por ejemplo, con el pulgar de otro compañero/a y en diferentes posiciones y observa el resultado. Si ves que el modelo no es muy preciso, prueba con imágenes diferentes o cambia los valores de entrenamiento (épocas, lotes, ...) 
  
-Luego, puedes probar valores diferentes y ver cómo afecta la precisión.
-
 <div align="center">
     <img src="/primero-bach/img/teachable_machine5.png" width="80%">
 </div>
 
-**Paso 2. Usar el modelo en Python**
+**Paso 6. Usar el modelo en Python**
 
 ```py
 import tensorflow as tf
