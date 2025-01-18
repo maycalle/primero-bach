@@ -141,6 +141,10 @@ Para empezar, usa:
 * **Tamaño del lote:** 16
 * **Tasa de aprendizaje:** 0.001
 
+**Paso 5. Prueba del modelo**
+
+Prueba el modelo con el pulgar de otro compañero/a y en diferentes posiciones y observa el resultado. Si ves que el modelo no es muy preciso, prueba con imágenes diferentes o cambia los valores de entrenamiento (épocas, lotes, ...) 
+ 
 Luego, puedes probar valores diferentes y ver cómo afecta la precisión.
 
 <div align="center">
