@@ -109,6 +109,10 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
       * 📸 Capturar imágenes con la webcam
       * 📁 Subir imágenes desde el ordenador
 
+<div align="center">
+    <img src="/primero-bach/img/teachable_machine3.png" width="80%">
+</div>
+
   * Consejos para recoger buenas muestras:<br>
     ✅ Toma al menos 50 imágenes por cada clase.<br>
     ✅ Varía el ángulo y la distancia para mejorar la precisión del modelo.<br>
