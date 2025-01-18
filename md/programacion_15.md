@@ -109,7 +109,7 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
       * 📸 Capturar imágenes con la webcam
       * 📁 Subir imágenes desde el ordenador
 
-  * Consejos para recoger buenas muestras
+  * Consejos para recoger buenas muestras:<br>
     ✅ Toma al menos 50 imágenes por cada clase.<br>
     ✅ Varía el ángulo y la distancia para mejorar la precisión del modelo.<br>
     ✅ Usa buena iluminación y un fondo claro.<br>
