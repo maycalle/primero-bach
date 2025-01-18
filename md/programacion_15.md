@@ -123,7 +123,7 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
 Una vez tengamos las imágenes, vamos a entrenar el modelo. En "Avanzado", encontrarás algunos parámetros que puedes ajustar para mejorar la precisión del modelo.
 
 <div align="center">
-    <img src="/primero-bach/img/teachable_machine4.png" width="60%">
+    <img src="/primero-bach/img/teachable_machine4.png" width="40%">
 </div>
 
 🔹 **Épocas (epochs)**: número de veces que el modelo revisará todas las imágenes para aprender. *Valores recomendados:* 
@@ -146,10 +146,26 @@ Para empezar, usa:
 Prueba el modelo proporcionando una imagen diferente, por ejemplo, con el pulgar de otro compañero/a y en diferentes posiciones y observa el resultado. Si ves que el modelo no es muy preciso, prueba con imágenes diferentes o cambia los valores de entrenamiento (épocas, lotes, ...) 
  
 <div align="center">
-    <img src="/primero-bach/img/teachable_machine5.png" width="60%">
+    <img src="/primero-bach/img/teachable_machine5.png" width="40%">
 </div>
 
 **Paso 6. Usar el modelo en Python**
+
+Una vez que has entrenado tu modelo en *Teachable Machine*, el siguiente paso es integrarlo en un programa que pueda utilizarlo para realizar predicciones. 
+
+En este apartado aprenderemos cómo cargar el modelo en Python y usarlo para clasificar nuevas imágenes. Utilizaremos algunas bibliotecas populares como **TensorFlow**, **NumPy** y **PIL** para manejar el modelo y procesar las imágenes.
+
+Al final, tendrás un script funcional que podrá identificar si una imagen corresponde, por ejemplo, a un "Pulgar Arriba" o "Pulgar Abajo", basándose en lo que el modelo aprendió durante el entrenamiento. ¡Vamos a ponerlo en práctica!
+
+**Librerías necesarias y su propósito**
+
+* **TensorFlow:** es una biblioteca de código abierto para machine learning y deep learning. Nos permite cargar y ejecutar el modelo entrenado en Teachable Machine. La usaremos para cargar el modelo .h5 generado por *Teachable Machine* y realizar predicciones.
+* **NumPy:** es una biblioteca para trabajar con matrices y arrays, fundamentales en machine learning. La usaremos para transformar la imagen en datos numéricos que el modelo pueda procesar. 
+* **PIL (Python Imaging Library):** es una biblioteca para procesar imágenes.
+La usaeremos para cargar, redimensionar y preparar la imagen antes de pasarla al modelo.
+
+
+
 
 ```py
 import tensorflow as tf
@@ -168,6 +184,39 @@ prediccion = model.predict(np.expand_dims(datos, axis=0))
 # Interpretar resultados
 print("Predicción:", "Pulgar Arriba" if prediccion[0][0] > 0.5 else "Pulgar Abajo")
 ```
+
+Explicación detallada del código:
+
+1. **Importación de librerías**
+* import tensorflow as tf: importa TensorFlow para cargar y ejecutar el modelo.
+* import numpy as np: importa NumPy para manejar arrays y matrices de datos.
+* from tensorflow.keras.models import load_model: carga la función *load_model* de TensorFlow para abrir el archivo del modelo entrenado.
+* from PIL import Image: importa la clase *Image* de PIL para cargar y procesar imágenes.
+
+2. **Cargar el modelo**
+* *load_model("model.h5")*: carga el archivo del modelo que descargaste desde Teachable Machine. Este archivo contiene toda la información necesaria sobre cómo el modelo procesa y clasifica datos.
+* **Nota importante:** asegúrate de que el archivo model.h5 está en la misma carpeta que este script o especifica la ruta completa al archivo.
+
+3. **Cargar y redimensionar la imagen**
+* *Image.open("imagen_prueba.jpg"):* abre una imagen desde un archivo (en este caso, imagen_prueba.jpg). ¡Ojo¡ Cambia el nombre según el archivo de imagen que desees probar.
+* *.resize((224, 224)):* redimensiona la imagen a 224x224 píxeles, que es el tamaño esperado por el modelo generado por Teachable Machine. Esto es necesario porque el modelo solo acepta imágenes de un tamaño específico.
+
+4. **Convertir la imagen a datos numéricos**
+* *np.array(imagen):* convierte la imagen en un array de NumPy, que representa los valores de los píxeles (por ejemplo, valores RGB de 0 a 255).
+* */ 255.0:* escala los valores de los píxeles a un rango entre 0 y 1. Esto es importante porque los modelos de Teachable Machine esperan que los datos de entrada estén normalizados.
+
+5. **Hacer una predicción**
+* *np.expand_dims(datos, axis=0):* añade una dimensión adicional al array para que el modelo lo interprete como un lote de imágenes (aunque solo tengamos una imagen).
+TensorFlow espera que las entradas tengan una forma como (número_de_imágenes, alto, ancho, canales), donde número_de_imágenes es 1 en este caso.
+* *model.predict(...):* realiza una predicción con el modelo cargado usando la imagen preparada. Devuelve un array con las probabilidades para cada clase.
+Por ejemplo, como tu modelo tiene dos clases (PulgarArriba y PulgarAbajo), un posible resultado del modelo sería algo como [0.9, 0.1], lo que significa que la probabilidad de que sea PulgarArriba es del 90% y la de PulgarAbajo es del 10%.
+
+6. **Interpretar y mostrar el resultado**
+* *prediccion[0][0]:* accede al valor de probabilidad de la primera clase (Pulgar Arriba).
+* *if prediccion[0][0] > 0.5:* si la probabilidad de la primera clase es mayor al 50%, asumimos que la imagen pertenece a esta clase (Pulgar Arriba).
+* *else "Pulgar Abajo":* si no, asumimos que pertenece a la otra clase.
+* *print:* muestra el resultado en texto, indicando la clase predicha.
+
 
 ## RESUMEN
 
