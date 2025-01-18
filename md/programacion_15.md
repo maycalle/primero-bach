@@ -122,6 +122,10 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
 
 Una vez tengamos las imágenes, vamos a entrenar el modelo. En "Avanzado", encontrarás algunos parámetros que puedes ajustar para mejorar la precisión del modelo.
 
+<div align="center">
+    <img src="/primero-bach/img/teachable_machine4.png" width="80%">
+</div>
+
 🔹 **Épocas (epochs)**: número de veces que el modelo revisará todas las imágenes para aprender. *Valores recomendados:* 
   * 10-20 épocas si tienes muchas imágenes 
   * 30-50 épocas si tienes pocas imágenes.
@@ -138,6 +142,10 @@ Para empezar, usa:
 * **Tasa de aprendizaje:** 0.001
 
 Luego, puedes probar valores diferentes y ver cómo afecta la precisión.
+
+<div align="center">
+    <img src="/primero-bach/img/teachable_machine5.png" width="80%">
+</div>
 
 **Paso 2. Usar el modelo en Python**
 
