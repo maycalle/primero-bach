@@ -172,14 +172,14 @@ Este tipo de análisis se utiliza en redes sociales, reseñas de productos y otr
 
 En este apartado, aprenderemos cómo usar la **librería TextBlob** para analizar el sentimiento de una frase escrita por el usuario.
 
-**Breve descripción del programa**
+### 2.4.1 Breve descripción del programa
 
 El programa que implementaremos pedirá al usuario que introduzca una frase. Luego, con la ayuda de **TextBlob**, calculará dos valores importantes:
 
 * **Polaridad:** determina si el texto es positivo (valores cercanos a 1), negativo (valores cercanos a -1) o neutral (0).
 * **Subjetividad:** indica si el texto es objetivo (valores cercanos a 0) o subjetivo (valores cercanos a 1).
 
-**Código del programa**
+### 2.4.2 Código del programa
 
 ```py
 from textblob import TextBlob
@@ -191,7 +191,7 @@ print("Polaridad:", resultado.polarity)
 print("Subjetividad:", resultado.subjectivity)
 ```
 
-**Explicación detallada del código**
+### 2.4.3 Explicación detallada del código
 
 1. **Importación de la librería TextBlob**
     * *from textblob import TextBlob*
