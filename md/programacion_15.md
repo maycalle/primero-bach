@@ -84,6 +84,10 @@ Por ejemplo:
 
 Una **red neuronal artificial** es un modelo matemático inspirado en el cerebro humano. Está formada por neuronas artificiales, organizadas en capas: una *capa de entrada*, varias *capas ocultas* y una *capa de salida*. 
 
+<div align="center">
+    <img src="/primero-bach/img/red_neuronal.png" width="70%">
+</div>
+
 Cada neurona recibe datos, los procesa y los transmite a las siguientes neuronas a través de conexiones ponderadas. A medida que el modelo se entrena con datos, ajusta los pesos de estas conexiones para mejorar sus predicciones. 
 
 Este proceso de ajuste se llama **retropropagación** y permite que la red neuronal aprenda patrones complejos sin intervención manual.
