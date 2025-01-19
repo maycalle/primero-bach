@@ -8,9 +8,8 @@ En esta unidad exploraremos:
 * Tipos de *machine learning*: supervisado, no supervisado y por refuerzo.
 * Qué es el *deep learning* y en qué se diferencia del *machine learning*.
 * Entrenaremos modelos básicos con *Teachable Machine*.
-* Integraremos IA en Python para clasificar imágenes.
 
-Al final, comprenderás cómo hacer que una máquina aprenda y habrás desarrollado tu propio modelo con Python. ¡Vamos allá!
+Al final, comprenderás cómo hacer que una máquina aprenda y habrás experimentado con modelos de clasificación. ¡Vamos allá!
 
 ## 2.1  ¿Qué es el Machine Learning?
 
@@ -20,7 +19,9 @@ La programación tradicional se basa en escribir reglas explícitas para resolve
     <img src="/primero-bach/img/saa.png" width="80%">
 </div>
 
-Por ejemplo, si queremos que un programa distinga entre perros y gatos, con programación tradicional deberíamos escribir una lista de reglas (como "los perros tienen hocicos más largos"), lo cual puede ser complicado y poco preciso. Con Machine Learning, simplemente le mostramos muchas imágenes de perros y gatos con sus etiquetas correspondientes, y el modelo aprende a diferenciarlos por sí mismo.
+Por ejemplo: 
+* Si queremos que un programa distinga entre perros y gatos, con programación tradicional deberíamos escribir una lista de reglas (como "los perros tienen hocicos más largos"), lo cual puede ser complicado y poco preciso. 
+* Con *Machine Learning*, simplemente le mostramos muchas imágenes de perros y gatos con sus etiquetas correspondientes, y el modelo aprende a diferenciarlos por sí mismo.
 
 Gracias a esta tecnología, los sistemas pueden mejorar su rendimiento a lo largo del tiempo, volviéndose más precisos conforme reciben más información.
 
@@ -49,13 +50,35 @@ El aprendizaje automático se divide en tres grandes categorías:
 
 ## 2.2 ¿Qué es el Deep Learning y en qué se diferencia de Machine Learning?
 
-El **Deep Learning** es una subcategoría dentro del Machine Learning que se basa en **redes neuronales artificiales** inspiradas en el cerebro humano. La clave del *Deep Learning* es su capacidad para procesar grandes volúmenes de datos y extraer características complejas sin necesidad de intervención manual.
+El **Deep Learning** es una subcategoría dentro del Machine Learning que se basa en **redes neuronales artificiales** inspiradas en el cerebro humano. 
 
-Por ejemplo, en *Machine Learning* tradicional, si queremos que un modelo reconozca caras en fotos, primero debemos seleccionar características clave como el contorno de los ojos o la forma de la nariz. En cambio, un modelo de *Deep Learning* puede aprender esas características por sí solo, gracias a sus múltiples capas de neuronas artificiales.
+**Diferencias clave**
+
+<table>
+    <tr>
+        <th>Machine Learning</th>
+        <th>Deep Learning</th>
+    </tr>
+    <tr>
+        <td>Necesita itnervención humana para identificar patrones</td>
+        <td>Aprende patrones por sí mismo a través de redes neuronales</td>
+    </tr>
+    <tr>
+        <td>Funciona bien con volúmenes pequeños o medianos de datos</td>
+        <td>Necesita grandes cantidades de datos</td>
+    </tr>
+</table>
+
+Como vemos, la clave del *Deep Learning* es su capacidad para procesar grandes volúmenes de datos y extraer características complejas sin necesidad de intervención manual.
+
+Por ejemplo:
+* En *Machine Learning* tradicional, para reconocer caras en fotos, primero seleccionamos características como el contorno de ojos o la forma de la nariz. 
+* Un modelo de *Deep Learning* puede aprender esas características por sí solo, gracias a sus múltiples capas de neuronas artificiales.
 
 <div align="center">
     <img src="/primero-bach/img/ml_vs_dl.png" width="70%">
 </div>
+
 
 ### 2.2.1 ¿Cómo funciona una red neuronal?
 
@@ -87,7 +110,7 @@ Para comprender mejor estos conceptos, utilizaremos [**Teachable Machine**](http
 
 Con esta plataforma, podremos crear modelos que clasifiquen imágenes, sonidos o posturas sin necesidad de escribir. 
 
-En este caso, vamos a entrenar un modelo para que clasifique imágenes que muestren un pulgar arriba o un pulgar abajo. El modelo aprenderá a diferenciar estas imágenes a partir de ejemplos que le proporcionemos.
+En este caso, vamos a entrenar un **modelo para que clasifique imágenes que muestren un pulgar arriba o un pulgar abajo**. El modelo aprenderá a diferenciar estas imágenes a partir de ejemplos que le proporcionemos.
 
 **Paso 1. Acceso a Teachable Machine**
 
@@ -109,10 +132,6 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
       * 📸 Capturar imágenes con la webcam
       * 📁 Subir imágenes desde el ordenador
 
-<div align="center">
-    <img src="/primero-bach/img/teachable_machine3.png" width="40%">
-</div>
-
   * Consejos para recoger buenas muestras:<br>
     ✅ Toma al menos 50 imágenes por cada clase.<br>
     ✅ Varía el ángulo y la distancia para mejorar la precisión del modelo.<br>
@@ -121,10 +140,6 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
 **Paso 4. Entrenamiento del modelo**
 
 Una vez tengamos las imágenes, vamos a entrenar el modelo. En "Avanzado", encontrarás algunos parámetros que puedes ajustar para mejorar la precisión del modelo.
-
-<div align="center">
-    <img src="/primero-bach/img/teachable_machine4.png" width="40%" height="40%">
-</div>
 
 🔹 **Épocas (epochs)**: número de veces que el modelo revisará todas las imágenes para aprender. *Valores recomendados:* 
   * 10-20 épocas si tienes muchas imágenes 
@@ -149,78 +164,6 @@ Prueba el modelo proporcionando una imagen diferente, por ejemplo, con el pulgar
     <img src="/primero-bach/img/teachable_machine5.png" width="40%" height="60%">
 </div>
 
-**Paso 6. Usar el modelo en Python**
-
-Una vez que has entrenado tu modelo en *Teachable Machine*, el siguiente paso es integrarlo en un programa que pueda utilizarlo para realizar predicciones. Este proceso consiste en cargar el modelo, preparar los datos de entrada (imágenes) y usar el modelo para clasificar esas imágenes.
-
-En este apartado aprenderemos cómo hacerlo paso a paso con Python, utilizando las siguientes librerías:
-* TensorFlow: para cargar y ejecutar el modelo.
-* NumPy: para manejar y procesar los datos de las imágenes.
-* Pillow (PIL): para abrir y redimensionar las imágenes.
-
-Al final, tendrás un script funcional que clasifique imágenes según lo aprendido por el modelo.
-
-**Preparación del entorno**
-
-Antes de comenzar, instala las bibliotecas anteriores en tu entorno de Python ejecutando los siguientes comandos en tu terminal o consola:
-
-```
-pip install tensorflow
-pip install numpy
-pip install pillow
-```
-
-**Código Python**
-
-```py
-import tensorflow as tf
-import numpy as np
-from tensorflow.keras.models import load_model
-from PIL import Image
-
-# Cargar el modelo entrenado
-model = load_model("model.h5")
-
-# Cargar una imagen nueva
-imagen = Image.open("pulgar_arriba.jpg").resize((224, 224))
-datos = np.array(imagen) / 255.0
-prediccion = model.predict(np.expand_dims(datos, axis=0))
-
-# Interpretar resultados
-print("Predicción:", "Pulgar Arriba" if prediccion[0][0] > 0.5 else "Pulgar Abajo")
-```
-
-**Explicación detallada del código:**
-
-1. **Importación de librerías**
-* import tensorflow as tf: importa TensorFlow para cargar y ejecutar el modelo.
-* import numpy as np: importa NumPy para manejar arrays y matrices de datos.
-* from tensorflow.keras.models import load_model: carga la función *load_model* de TensorFlow para abrir el archivo del modelo entrenado.
-* from PIL import Image: importa la clase *Image* de PIL para cargar y procesar imágenes.
-
-2. **Cargar el modelo**
-* *load_model("model.h5")*: carga el archivo del modelo que descargaste desde Teachable Machine. Este archivo contiene toda la información necesaria sobre cómo el modelo procesa y clasifica datos.
-* **Nota importante:** asegúrate de que el archivo model.h5 está en la misma carpeta que este script o especifica la ruta completa al archivo.
-
-3. **Cargar y redimensionar la imagen**
-* *Image.open("imagen_prueba.jpg"):* abre una imagen desde un archivo (en este caso, imagen_prueba.jpg). ¡Ojo¡ Cambia el nombre según el archivo de imagen que desees probar.
-* *.resize((224, 224)):* redimensiona la imagen a 224x224 píxeles, que es el tamaño esperado por el modelo generado por Teachable Machine. Esto es necesario porque el modelo solo acepta imágenes de un tamaño específico.
-
-4. **Convertir la imagen a datos numéricos**
-* *np.array(imagen):* convierte la imagen en un array de NumPy, que representa los valores de los píxeles (por ejemplo, valores RGB de 0 a 255).
-* */ 255.0:* escala los valores de los píxeles a un rango entre 0 y 1. Esto es importante porque los modelos de Teachable Machine esperan que los datos de entrada estén normalizados.
-
-5. **Hacer una predicción**
-* *np.expand_dims(datos, axis=0):* añade una dimensión adicional al array para que el modelo lo interprete como un lote de imágenes (aunque solo tengamos una imagen).
-TensorFlow espera que las entradas tengan una forma como (número_de_imágenes, alto, ancho, canales), donde número_de_imágenes es 1 en este caso.
-* *model.predict(...):* realiza una predicción con el modelo cargado usando la imagen preparada. Devuelve un array con las probabilidades para cada clase.
-Por ejemplo, como tu modelo tiene dos clases (PulgarArriba y PulgarAbajo), un posible resultado del modelo sería algo como [0.9, 0.1], lo que significa que la probabilidad de que sea PulgarArriba es del 90% y la de PulgarAbajo es del 10%.
-
-6. **Interpretar y mostrar el resultado**
-* *prediccion[0][0]:* accede al valor de probabilidad de la primera clase (Pulgar Arriba).
-* *if prediccion[0][0] > 0.5:* si la probabilidad de la primera clase es mayor al 50%, asumimos que la imagen pertenece a esta clase (Pulgar Arriba).
-* *else "Pulgar Abajo":* si no, asumimos que pertenece a la otra clase.
-* *print:* muestra el resultado en texto, indicando la clase predicha.
 
 
 ## RESUMEN
