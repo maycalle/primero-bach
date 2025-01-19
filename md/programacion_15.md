@@ -164,13 +164,57 @@ Prueba el modelo proporcionando una imagen diferente, por ejemplo, con el pulgar
     <img src="/primero-bach/img/teachable_machine5.png" width="40%" height="60%">
 </div>
 
+## 2.4 Análisis de Sentimientos con Python
 
+El análisis de sentimientos es una aplicación popular del*Machine Learning* que permite determinar el tono de un texto, como si es positivo, negativo o neutral. 
+
+Este tipo de análisis se utiliza en redes sociales, reseñas de productos y otros contextos donde es útil entender las emociones detrás de las palabras.
+
+En este apartado, aprenderemos cómo usar la **librería TextBlob** para analizar el sentimiento de una frase escrita por el usuario.
+
+**Breve descripción del programa**
+
+El programa que implementaremos pedirá al usuario que introduzca una frase. Luego, con la ayuda de **TextBlob**, calculará dos valores importantes:
+
+* **Polaridad:** determina si el texto es positivo (valores cercanos a 1), negativo (valores cercanos a -1) o neutral (0).
+* **Subjetividad:** indica si el texto es objetivo (valores cercanos a 0) o subjetivo (valores cercanos a 1).
+
+**Código del programa**
+
+```py
+from textblob import TextBlob
+
+frase = input("Escribe una frase:\n")
+
+resultado = TextBlob(frase)
+print("Polaridad:", resultado.polarity)
+print("Subjetividad:", resultado.subjectivity)
+```
+
+**Explicación detallada del código**
+
+1. **Importación de la librería TextBlob**
+    * *from textblob import TextBlob*
+    * TextBlob es una librería de Python que facilita el procesamiento de texto, como el análisis de sentimientos o la corrección gramatical. Asegúrate de instalarla antes de ejecutar el código con: ***pip install textblob***
+2. **Solicitar una frase al usuario**
+    * *frase = input("Escribe una frase:\n")*
+3. **Crear un objeto TextBlob**
+    * *resultado = TextBlob(frase)*
+    * La función TextBlob analiza automáticamente el texto introducido.
+4. **Obtener la polaridad y la subjetividad**
+    * *resultado.polarity*: devuelve un valor entre -1 (muy negativo) y 1 (muy positivo).
+    * *resultado.subjectivity*: devuelve un valor entre 0 (muy objetivo) y 1 (muy subjetivo).
+
+> 🔍 **Ejercicio:** 
+> 1. Escribe varias frases de ejemplo y analiza los resultados.
+> 2. Reflexiona sobre las aplicaciones del análisis de sentimientos, como:
+> * ¿Cómo se podrían usar estos datos en redes sociales?
+> * ¿Qué tan precisos son los resultados en frases irónicas o ambiguas?
 
 ## RESUMEN
 
 ✅ El Machine Learning permite a las máquinas aprender patrones a partir de datos.<br>
 ✅ Existen tres tipos principales: supervisado, no supervisado y por refuerzo.<br>
-✅ Se usa en numerosos sectores: salud, finanzas, entretenimiento, redes sociales, etc.<br>
 ✅ Requiere datos limpios, entrenamiento y evaluación continua.
 
 
