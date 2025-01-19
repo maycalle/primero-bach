@@ -95,7 +95,7 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
    * Selecciona un *Proyecto de imagen* > *Modelo de imagen estándar*
 
 <div align="center">
-    <img src="/primero-bach/img/teachable_machine2.png" width="80%">
+    <img src="/primero-bach/img/teachable_machine2.png" width="70%">
 </div>
 
 **Paso 2. Creación de las clases**
@@ -110,7 +110,7 @@ En este caso, vamos a entrenar un modelo para que clasifique imágenes que muest
       * 📁 Subir imágenes desde el ordenador
 
 <div align="center">
-    <img src="/primero-bach/img/teachable_machine3.png" width="80%">
+    <img src="/primero-bach/img/teachable_machine3.png" width="40%">
 </div>
 
   * Consejos para recoger buenas muestras:<br>
