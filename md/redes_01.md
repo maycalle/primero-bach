@@ -128,5 +128,5 @@ A diferencia de OSI, TCP/IP tiene solo 4 capas que agrupan varias funciones:
 - Capa de transporte → divide los datos en paquetes y verifica que lleguen correctamente (TCP es clave aquí).
 - Capa de aplicación → es donde los programas interactúan con la red (navegadores, correos, WhatsApp).
 
-#### 1.3.4.3 Diferencias clave entre OSI y TCP/IP
+Los modelos OSI y TCP/IP han permitido que diferentes dispositivos y tecnologías se comuniquen sin problemas. Gracias a ellos, hoy podemos navegar por Internet, enviar correos, ver videos en streaming y chatear desde cualquier lugar del mundo
 
