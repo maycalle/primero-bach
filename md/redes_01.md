@@ -98,7 +98,7 @@ El modelo OSI es una estructura teórica que divide la comunicación en 7 capas,
 **Las 7 capas del modelo OSI**
 
 <div align="center">
-    <img src="/primero-bach/img/modelo_osi.png" width="50%">
+    <img src="/primero-bach/img/modelo_osi2.png" width="50%">
 </div>
 
 Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga de una parte del proceso:
