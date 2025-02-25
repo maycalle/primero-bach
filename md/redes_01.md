@@ -44,7 +44,7 @@ Estos mainframes ocupaban salas enteras, generaban mucho calor y requerían pers
 
 Uno de los primeros mainframes de la historia fue el **Harvard Mark I (1944)**, una enorme máquina electromecánica diseñada para realizar cálculos matemáticos complejos de manera automática. Sin embargo, su uso no era nada sencillo.
 
-Si quieres saber más sobre la Harvard Mark I, puedes consultar el siguiente (vídeo)[https://www.youtube.com/watch?v=VE3eAKytjUc]
+Si quieres saber más sobre la Harvard Mark I, puedes consultar el siguiente [vídeo](https://www.youtube.com/watch?v=VE3eAKytjUc)
 
 <div align="center">
     <figure>
@@ -71,8 +71,6 @@ Imaginemos a un programador de los años 40 intentando ejecutar su programa en e
 
 📌 **Dato curioso:** El Mark I tardaba seis segundos en multiplicar dos números y su sistema de relés electromecánicos lo hacía muy ruidoso. ¡Parecía una sala de máquinas de un barco en plena marcha!
 
-
-
 Pronto, los científicos se dieron cuenta de que conectar varios ordenadores permitiría compartir información de forma más rápida y sin necesidad de transportar datos físicamente. En la década de 1950, algunas universidades comenzaron a experimentar con conexiones entre computadoras mediante cables, aunque eran muy lentas y limitadas.
 
 Los mainframes marcaron el inicio de la informática moderna y sentaron las bases de lo que, años después, daría origen a las redes de ordenadores e Internet.
@@ -82,9 +80,11 @@ Los mainframes marcaron el inicio de la informática moderna y sentaron las base
 En los años 60, en plena Guerra Fría, el Departamento de Defensa de EE.UU. buscaba una forma de comunicar computadoras a distancia sin que la información se perdiera en caso de un ataque enemigo. Así nació ARPANET, la primera red de computadoras.
 
 **Momentos clave de ARPANET:**
-- **1969** → Se envió el primer mensaje entre dos computadoras conectadas a ARPANET. Querían escribir "LOGIN", pero solo llegó "LO" antes de que el sistema fallara. 😅
-- **1971** → Se envió el primer correo electrónico entre computadoras.
-- **1983** → Se implementó el protocolo TCP/IP, lo que permitió la expansión de las redes y la creación de Internet.
+- **1969** → Se envió el primer mensaje entre dos computadoras conectadas a ARPANET. 
+- **1971** → Se envió el primer correo electrónico entre ordenadores.
+- **1973** → ARPANET se hace internacional, conectando por primera vez ordenadores en Noruega y Reino Unido. Este fue un gran paso hacia la globalización de Internet.
+- **1983** → Se implementa el protocolo TCP/IP, permitiendo la interconexión de redes y la expansión de lo que luego sería Internet.
+- **1990** → ARPANET se apaga oficialmente, después de haber servido como el cimiento de la actual Internet. Su tecnología y estructura dieron paso a la red que hoy conecta al mundo.
 
 📌 Dato curioso: En 1969, ARPANET envió su primer mensaje, pero… ¡falló en el segundo carácter! Querían escribir "LOGIN", pero solo llegó "LO" antes de que el sistema colapsara. 😅
 
@@ -103,7 +103,7 @@ Mientras OSI sentaba las bases teóricas, el modelo TCP/IP se convirtió en el e
 - **Años 90:** la World Wide Web (WWW) hace que Internet sea accesible para todos, no solo para científicos y militares.
 - **2000 en adelante:** con la llegada de la banda ancha, el WiFi y los dispositivos móviles, las redes evolucionaron a lo que conocemos hoy.
 
-📌 Dato curioso: El primer sitio web de la historia fue creado en 1991 por Tim Berners-Lee. ¡Y todavía está en línea! Puedes verlo aquí 👉 http://info.cern.ch
+📌 Dato curioso: El primer sitio web de la historia fue creado en 1991 por Tim Berners-Lee. ¡Y todavía está en línea! Puedes verlo 👉 [aquí](http://info.cern.ch)
 
 
 ### 1.3.5 Resumen de la evolución de las redes
