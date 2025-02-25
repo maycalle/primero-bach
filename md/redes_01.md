@@ -9,6 +9,11 @@ Una **red informática** es un conjunto de dispositivos conectados entre sí que
 📌 *Ejemplo sencillo:*
 Imagina que en tu casa tienes varios dispositivos conectados al WiFi. Todos ellos pueden navegar por Internet y, en algunos casos, compartir archivos o impresoras. ¡Eso ya es una red!
 
+<div align="center">
+    <img src="/primero-bach/img/redes-informaticas.jpg" width="40%">
+</div>
+
+
 ### 1.1.1 ¿Para qué sirven las redes?
 Las redes informáticas tienen muchísimos usos, pero algunos de los más importantes son:
 - Compartir información (como documentos en la nube).
@@ -39,9 +44,39 @@ Las redes informáticas no surgieron de la nada, sino que fueron evolucionando a
 
 Antes de que existieran las redes de ordenadores, los sistemas informáticos eran máquinas gigantescas (mainframes) que solo podían usarse de manera individual. Si alguien quería compartir información, tenía que hacerlo físicamente, llevando tarjetas perforadas, disquetes o impresiones en papel.
 
-Pero los científicos se dieron cuenta de que, si lograban conectar varios ordenadores, podrían compartir información más rápido y sin necesidad de transportar datos físicamente.
+Estos mainframes ocupaban salas enteras, generaban mucho calor y requerían personal especializado para operarlos. Debido a su elevado coste y mantenimiento, solo unas pocas universidades, empresas y gobiernos tenían acceso a ellos.
+
+#### El Harvard Mark I: el inicio de la computación automatizada
+
+Uno de los primeros mainframes de la historia fue el **Harvard Mark I (1944)**, una enorme máquina electromecánica diseñada para realizar cálculos matemáticos complejos de manera automática. Sin embargo, su uso no era nada sencillo.
+
+<div align="center">
+    <img src="/primero-bach/img/mark_1.jpg" width="40%">
+</div>
+
+**¿Cómo trabajaba un programador en el Mark I?**
+
+Imaginemos a un programador de los años 40 intentando ejecutar su programa en el Harvard Mark I:
+
+- 1️⃣ Escribir el código: no existía un teclado ni pantalla como hoy en día. En su lugar, el programador tenía que escribir las instrucciones a mano y convertirlas en una serie de comandos específicos para la máquina.
+
+- 2️⃣ Perforar tarjetas de papel: una vez listo el programa, era necesario perforar cada una de las instrucciones en tarjetas de papel. Cada perforación representaba una instrucción o un dato. Si te equivocabas, había que repetir todo el proceso con una nueva tarjeta.
+
+- 3️⃣ Ir a la mesa de control: cualquiera no podía usar el Mark I. Había que esperar el turno y entregar las tarjetas perforadas a un operador, que se encargaba de introducirlas en la máquina.
+
+- 4️⃣ Ejecutar el programa: el operador colocaba las tarjetas en un lector especial y ponía en marcha el Mark I desde una mesa de control llena de interruptores, luces y diales. La máquina empezaba a trabajar, moviendo engranajes y relés electromagnéticos con un sonido rítmico característico.
+
+- 5️⃣ Esperar el resultado: como no existían pantallas, el Mark I imprimía los resultados en una máquina de escribir eléctrica o generaba nuevas tarjetas perforadas que luego debían interpretarse manualmente.
+
+- 6️⃣ Corregir errores (si los había): si algo salía mal, había que revisar todas las tarjetas perforadas y corregirlas una por una. No existía un "botón de borrar", y el proceso podía tardar horas o incluso días en completarse.
+
+📌 Dato curioso: El Mark I tardaba seis segundos en multiplicar dos números y su sistema de relés electromecánicos lo hacía muy ruidoso. ¡Parecía una sala de máquinas de un barco en plena marcha!
+
+Los científicos se dieron cuenta de que, si lograban conectar varios ordenadores, podrían compartir información más rápido y sin necesidad de transportar datos físicamente.
 
 📌 Dato curioso: En la década de 1950, algunas universidades empezaron a experimentar con la idea de conectar computadoras mediante cables, pero estas conexiones eran limitadas y muy lentas.
+
+Los mainframes marcaron el inicio de la informática moderna y sentaron las bases para lo que, años después, se convertiría en las redes de ordenadores e Internet.
 
 ### 1.3.2 ARPANET: la red que cambió todo
 
