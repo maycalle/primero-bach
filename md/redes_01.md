@@ -44,6 +44,8 @@ Estos mainframes ocupaban salas enteras, generaban mucho calor y requerían pers
 
 Uno de los primeros mainframes de la historia fue el **Harvard Mark I (1944)**, una enorme máquina electromecánica diseñada para realizar cálculos matemáticos complejos de manera automática. Sin embargo, su uso no era nada sencillo.
 
+Si quieres saber más sobre la Harvard Mark I, puedes consultar el siguiente vídeo: https://www.youtube.com/watch?v=VE3eAKytjUc
+
 <div align="center">
     <figure>
         <img src="/primero-bach/img/mark1_2.jpg" width="50%">
@@ -68,6 +70,8 @@ Imaginemos a un programador de los años 40 intentando ejecutar su programa en e
 - **Corregir errores:** si algo salía mal, había que revisar todas las tarjetas perforadas y corregirlas una por una. No existía un "botón de borrar", y el proceso podía tardar horas o incluso días en completarse.
 
 📌 **Dato curioso:** El Mark I tardaba seis segundos en multiplicar dos números y su sistema de relés electromecánicos lo hacía muy ruidoso. ¡Parecía una sala de máquinas de un barco en plena marcha!
+
+
 
 Pronto, los científicos se dieron cuenta de que conectar varios ordenadores permitiría compartir información de forma más rápida y sin necesidad de transportar datos físicamente. En la década de 1950, algunas universidades comenzaron a experimentar con conexiones entre computadoras mediante cables, aunque eran muy lentas y limitadas.
 
