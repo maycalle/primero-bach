@@ -9,11 +9,6 @@ Una **red informática** es un conjunto de dispositivos conectados entre sí que
 📌 *Ejemplo sencillo:*
 Imagina que en tu casa tienes varios dispositivos conectados al WiFi. Todos ellos pueden navegar por Internet y, en algunos casos, compartir archivos o impresoras. ¡Eso ya es una red!
 
-<div align="center">
-    <img src="/primero-bach/img/redes-informaticas.jpg" width="40%">
-</div>
-
-
 ### 1.1.1 ¿Para qué sirven las redes?
 Las redes informáticas tienen muchísimos usos, pero algunos de los más importantes son:
 - Compartir información (como documentos en la nube).
@@ -51,7 +46,10 @@ Estos mainframes ocupaban salas enteras, generaban mucho calor y requerían pers
 Uno de los primeros mainframes de la historia fue el **Harvard Mark I (1944)**, una enorme máquina electromecánica diseñada para realizar cálculos matemáticos complejos de manera automática. Sin embargo, su uso no era nada sencillo.
 
 <div align="center">
-    <img src="/primero-bach/img/mark_1.jpg" width="40%">
+    <figure>
+        <img src="/primero-bach/img/mark1_2.jpg" width="50%">
+        <figcaption><i>El Harvard Mark I (1944) fue un ordenador electromecánico creado por IBM y la Universidad de Harvard. Ubicado Massachusetts, usaba tarjetas perforadas y relés para automatizar cálculos matemáticos complejos.</i><figcaption>
+    </figure>
 </div>
 
 **¿Cómo trabajaba un programador en el Mark I?**
