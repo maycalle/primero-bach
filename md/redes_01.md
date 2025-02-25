@@ -6,8 +6,7 @@ Las redes informáticas son parte fundamental de nuestra vida diaria. Gracias a 
 
 Una **red informática** es un conjunto de dispositivos conectados entre sí que permiten enviar y recibir datos. Estos dispositivos pueden ser ordenadores, teléfonos, impresoras, servidores o incluso tu smartwatch.
 
-📌 *Ejemplo sencillo:*
-Imagina que en tu casa tienes varios dispositivos conectados al WiFi. Todos ellos pueden navegar por Internet y, en algunos casos, compartir archivos o impresoras. ¡Eso ya es una red!
+📌 Imagina que en tu casa tienes varios dispositivos conectados al WiFi. Todos ellos pueden navegar por Internet y, en algunos casos, compartir archivos o impresoras. ¡Eso ya es una red!
 
 ### 1.1.1 ¿Para qué sirven las redes?
 Las redes informáticas tienen muchísimos usos, pero algunos de los más importantes son:
@@ -56,25 +55,23 @@ Uno de los primeros mainframes de la historia fue el **Harvard Mark I (1944)**, 
 
 Imaginemos a un programador de los años 40 intentando ejecutar su programa en el Harvard Mark I:
 
-- 1️⃣ Escribir el código: no existía un teclado ni pantalla como hoy en día. En su lugar, el programador tenía que escribir las instrucciones a mano y convertirlas en una serie de comandos específicos para la máquina.
+- **Escribir el código:** no existía un teclado ni pantalla como hoy en día. En su lugar, el programador tenía que escribir las instrucciones a mano y convertirlas en una serie de comandos específicos para la máquina.
 
-- 2️⃣ Perforar tarjetas de papel: una vez listo el programa, era necesario perforar cada una de las instrucciones en tarjetas de papel. Cada perforación representaba una instrucción o un dato. Si te equivocabas, había que repetir todo el proceso con una nueva tarjeta.
+- **Perforar tarjetas de papel:** una vez listo el programa, era necesario perforar cada una de las instrucciones en tarjetas de papel. Cada perforación representaba una instrucción o un dato. Si te equivocabas, había que repetir todo el proceso con una nueva tarjeta.
 
-- 3️⃣ Ir a la mesa de control: cualquiera no podía usar el Mark I. Había que esperar el turno y entregar las tarjetas perforadas a un operador, que se encargaba de introducirlas en la máquina.
+- **Ir a la mesa de control:** cualquiera no podía usar el Mark I. Había que esperar el turno y entregar las tarjetas perforadas a un operador, que se encargaba de introducirlas en la máquina.
 
-- 4️⃣ Ejecutar el programa: el operador colocaba las tarjetas en un lector especial y ponía en marcha el Mark I desde una mesa de control llena de interruptores, luces y diales. La máquina empezaba a trabajar, moviendo engranajes y relés electromagnéticos con un sonido rítmico característico.
+- **Ejecutar el programa:** el operador colocaba las tarjetas en un lector especial y ponía en marcha el Mark I desde una mesa de control llena de interruptores, luces y diales. La máquina empezaba a trabajar, moviendo engranajes y relés electromagnéticos con un sonido rítmico característico.
 
-- 5️⃣ Esperar el resultado: como no existían pantallas, el Mark I imprimía los resultados en una máquina de escribir eléctrica o generaba nuevas tarjetas perforadas que luego debían interpretarse manualmente.
+- **Esperar el resultado:** como no existían pantallas, el Mark I imprimía los resultados en una máquina de escribir eléctrica o generaba nuevas tarjetas perforadas que luego debían interpretarse manualmente.
 
-- 6️⃣ Corregir errores (si los había): si algo salía mal, había que revisar todas las tarjetas perforadas y corregirlas una por una. No existía un "botón de borrar", y el proceso podía tardar horas o incluso días en completarse.
+- **Corregir errores:** si algo salía mal, había que revisar todas las tarjetas perforadas y corregirlas una por una. No existía un "botón de borrar", y el proceso podía tardar horas o incluso días en completarse.
 
-📌 Dato curioso: El Mark I tardaba seis segundos en multiplicar dos números y su sistema de relés electromecánicos lo hacía muy ruidoso. ¡Parecía una sala de máquinas de un barco en plena marcha!
+📌 **Dato curioso:** El Mark I tardaba seis segundos en multiplicar dos números y su sistema de relés electromecánicos lo hacía muy ruidoso. ¡Parecía una sala de máquinas de un barco en plena marcha!
 
-Los científicos se dieron cuenta de que, si lograban conectar varios ordenadores, podrían compartir información más rápido y sin necesidad de transportar datos físicamente.
+Pronto, los científicos se dieron cuenta de que conectar varios ordenadores permitiría compartir información de forma más rápida y sin necesidad de transportar datos físicamente. En la década de 1950, algunas universidades comenzaron a experimentar con conexiones entre computadoras mediante cables, aunque eran muy lentas y limitadas.
 
-📌 Dato curioso: En la década de 1950, algunas universidades empezaron a experimentar con la idea de conectar computadoras mediante cables, pero estas conexiones eran limitadas y muy lentas.
-
-Los mainframes marcaron el inicio de la informática moderna y sentaron las bases para lo que, años después, se convertiría en las redes de ordenadores e Internet.
+Los mainframes marcaron el inicio de la informática moderna y sentaron las bases de lo que, años después, daría origen a las redes de ordenadores e Internet.
 
 ### 1.3.2 ARPANET: la red que cambió todo
 
