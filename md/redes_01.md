@@ -44,7 +44,7 @@ Estos mainframes ocupaban salas enteras, generaban mucho calor y requerían pers
 
 Uno de los primeros mainframes de la historia fue el **Harvard Mark I (1944)**, una enorme máquina electromecánica diseñada para realizar cálculos matemáticos complejos de manera automática. Sin embargo, su uso no era nada sencillo.
 
-Si quieres saber más sobre la Harvard Mark I, puedes consultar el siguiente vídeo: https://www.youtube.com/watch?v=VE3eAKytjUc
+Si quieres saber más sobre la Harvard Mark I, puedes consultar el siguiente (vídeo)[https://www.youtube.com/watch?v=VE3eAKytjUc]
 
 <div align="center">
     <figure>
