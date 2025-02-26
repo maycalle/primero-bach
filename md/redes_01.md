@@ -48,7 +48,7 @@ Si quieres saber más sobre la Harvard Mark I, puedes consultar el siguiente [v�
 
 <div align="center">
     <figure>
-        <img src="/primero-bach/img/mark1_2.jpg" width="50%">
+        <img src="/primero-bach/img/mark1_2.jpg" width="60%">
         <figcaption><i>El Harvard Mark I (1944) fue un ordenador electromecánico creado por IBM y la Universidad de Harvard. Ubicado Massachusetts, usaba tarjetas perforadas y relés para automatizar cálculos matemáticos complejos.</i><figcaption>
     </figure>
 </div>
@@ -121,7 +121,7 @@ El modelo OSI es una estructura teórica que divide la comunicación en 7 capas,
 **Las 7 capas del modelo OSI**
 
 <div align="center">
-    <img src="/primero-bach/img/capas_osi.png" width="70%">
+    <img src="/primero-bach/img/capas_osi.png" width="50%">
 </div>
 
 Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga de una parte del proceso:
