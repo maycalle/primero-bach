@@ -124,37 +124,20 @@ El modelo OSI es una estructura teórica que divide la comunicación en 7 capas,
     <img src="/primero-bach/img/capas_osi.png" width="50%">
 </div>
 
-Cada vez que envías un mensaje o navegas por Internet, la información pasa por 7 capas que aseguran que llegue correctamente a su destino. Vamos a verlo de manera clara y rápida:
+Cada vez que envías un mensaje o navegas por la web, los datos atraviesan 7 capas que garantizan que lleguen correctamente a su destino. Veámoslo de manera sencilla:
 
 - **Capa Física → El camino de los datos**
-Define por dónde viaja la información. Puede ser a través de cables de par trenzado, fibra óptica o señales WiFi. Los datos se convierten en señales eléctricas, ópticas o inalámbricas para viajar por la red.
-
-Ejemplo: Es como la carretera por donde circulan los datos.
-
+Define por dónde viaja la información: cables de par trenzado, fibra óptica o señales WiFi. Aquí, los datos se transforman en señales eléctricas, ópticas o inalámbricas para moverse por la red, como si circularan por una autopista.
 - **Capa de Enlace de Datos → Organiza los paquetes**
-Se encarga de dividir la información en paquetes pequeños y dirigirlos dentro de una red local. También asigna una dirección física (MAC) a cada dispositivo.
-
-Ejemplo: Es como un transportista que agrupa paquetes y los prepara para su envío dentro de una ciudad.
-
-- **Capa de Red → Encuentra el mejor camino**
-Decide la mejor ruta para enviar los datos entre redes diferentes. Usa direcciones IP y añade un "encabezado de red" a los datos, formando un paquete de red.
-
-Ejemplo: Es como un GPS que elige la mejor ruta para llegar al destino.
-
+Divide la información en paquetes pequeños y los dirige dentro de una red local. También asigna una dirección física (MAC) a cada dispositivo, funcionando como un transportista que agrupa y gestiona los envíos dentro de una ciudad.
+- **Capa de Red → Encuentra la mejor ruta**
+Decide el mejor camino para que los datos viajen entre diferentes redes. Utiliza direcciones IP y agrega un "encabezado de red" a los paquetes, como un GPS que selecciona la ruta más eficiente hasta el destino.
 - **Capa de Transporte → Divide y asegura los datos**
-Garantiza que los datos lleguen completos y sin errores. Divide la información en segmentos pequeños y numerados para que el destino los reensamble correctamente.
-
-Ejemplo: Como si enviaras un libro en varios sobres numerados, para que al recibirlos los ordenen correctamente.
-
-- **Capa de Sesión → Administra la comunicación**
-Abre, mantiene y cierra la conexión entre dos dispositivos para que puedan comunicarse sin interrupciones.
-
-Ejemplo: Es como una llamada telefónica: se inicia, se mantiene activa y se cierra cuando termina la conversación.
-
+Se asegura de que la información llegue completa y sin errores. Para ello, fragmenta los datos en segmentos numerados, de modo que el receptor pueda ordenarlos correctamente, como si enviáramos un libro en sobres numerados para reconstruirlo al recibirlos.
+- **Capa de Sesión → Gestiona la comunicación**
+Establece, mantiene y cierra la conexión entre dispositivos, asegurando que la comunicación no se interrumpa. Es como una llamada telefónica: se inicia, se mantiene y se finaliza cuando termina la conversación.
 - **Capa de Presentación → Traduce y protege los datos**
-Convierte los datos a un formato que el destinatario pueda entender (texto, imágenes, vídeos). También cifra la información para mayor seguridad.
-
-Ejemplo: Como un traductor que convierte un mensaje de un idioma a otro para que sea comprensible.
+Convierte la información a un formato comprensible para el receptor (texto, imágenes, vídeos) y también la cifra para mayor seguridad. Funciona como un traductor que adapta un mensaje para que el destinatario lo entienda sin problemas.
 
 Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga de una parte del proceso:
 
