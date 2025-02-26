@@ -126,13 +126,13 @@ El modelo OSI es una estructura teórica que divide la comunicación en 7 capas,
 
 Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga de una parte del proceso:
 
-- Capa física → transmite los datos en forma de señales eléctricas, ópticas o inalámbricas (cables, WiFi).
-- Capa de enlace de datos → organiza los datos en pequeños paquetes y los dirige dentro de una red local.
-- Capa de red → encuentra la mejor ruta para que los datos lleguen a su destino (aquí entra la dirección IP).
-- Capa de transporte → se asegura de que los datos lleguen completos y sin errores.
-- Capa de sesión → administra la comunicación entre los dispositivos.
-- Capa de presentación → codifica y traduce los datos para que sean legibles (por ejemplo, convierte imágenes o videos).
-- Capa de aplicación → es la que interactúa con el usuario (WhatsApp, navegador web, correo electrónico).
+- **Capa física** → transmite los datos en forma de señales eléctricas, ópticas o inalámbricas (cables, WiFi).
+- **Capa de enlace de datos** → organiza los datos en pequeños paquetes y los dirige dentro de una red local.
+- **Capa de red** → encuentra la mejor ruta para que los datos lleguen a su destino (aquí entra la dirección IP).
+- **Capa de transporte** → se asegura de que los datos lleguen completos y sin errores.
+- **Capa de sesión** → administra la comunicación entre los dispositivos.
+- **Capa de presentación** → codifica y traduce los datos para que sean legibles (por ejemplo, convierte imágenes o videos).
+- **Capa de aplicación** → es la que interactúa con el usuario (WhatsApp, navegador web, correo electrónico).
 
 Si enviamos un mensaje por WhatsApp, este baja desde la Capa 7 (Aplicación) hasta la Capa 1 (Física), viaja por la red y luego sube por las capas hasta llegar al destinatario.
 
@@ -146,10 +146,10 @@ TCP/IP define cómo viaja la información en Internet y es el conjunto de protoc
 **Las 4 capas del modelo TCP/IP**
 A diferencia de OSI, TCP/IP tiene solo 4 capas que agrupan varias funciones:
 
-- Capa de enlace → controla el hardware y la transmisión de datos por cables o WiFi.
-- Capa de Internet → se encarga de encontrar la mejor ruta para los datos usando direcciones IP.
-- Capa de transporte → divide los datos en paquetes y verifica que lleguen correctamente (TCP es clave aquí).
-- Capa de aplicación → es donde los programas interactúan con la red (navegadores, correos, WhatsApp).
+- **Capa de enlace** → controla el hardware y la transmisión de datos por cables o WiFi.
+- **Capa de Internet** → se encarga de encontrar la mejor ruta para los datos usando direcciones IP.
+- **Capa de transporte** → divide los datos en paquetes y verifica que lleguen correctamente (TCP es clave aquí).
+- **Capa de aplicación** → es donde los programas interactúan con la red (navegadores, correos, WhatsApp).
 
 Los modelos OSI y TCP/IP han permitido que diferentes dispositivos y tecnologías se comuniquen sin problemas. Gracias a ellos, hoy podemos navegar por Internet, enviar correos, ver videos en streaming y chatear desde cualquier lugar del mundo
 
