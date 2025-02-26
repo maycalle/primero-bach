@@ -124,15 +124,47 @@ El modelo OSI es una estructura teórica que divide la comunicación en 7 capas,
     <img src="/primero-bach/img/capas_osi.png" width="50%">
 </div>
 
+Cada vez que envías un mensaje o navegas por Internet, la información pasa por 7 capas que aseguran que llegue correctamente a su destino. Vamos a verlo de manera clara y rápida:
+
+- **Capa Física → El camino de los datos**
+Define por dónde viaja la información. Puede ser a través de cables de par trenzado, fibra óptica o señales WiFi. Los datos se convierten en señales eléctricas, ópticas o inalámbricas para viajar por la red.
+
+Ejemplo: Es como la carretera por donde circulan los datos.
+
+- **Capa de Enlace de Datos → Organiza los paquetes**
+Se encarga de dividir la información en paquetes pequeños y dirigirlos dentro de una red local. También asigna una dirección física (MAC) a cada dispositivo.
+
+Ejemplo: Es como un transportista que agrupa paquetes y los prepara para su envío dentro de una ciudad.
+
+- **Capa de Red → Encuentra el mejor camino**
+Decide la mejor ruta para enviar los datos entre redes diferentes. Usa direcciones IP y añade un "encabezado de red" a los datos, formando un paquete de red.
+
+Ejemplo: Es como un GPS que elige la mejor ruta para llegar al destino.
+
+- **Capa de Transporte → Divide y asegura los datos**
+Garantiza que los datos lleguen completos y sin errores. Divide la información en segmentos pequeños y numerados para que el destino los reensamble correctamente.
+
+Ejemplo: Como si enviaras un libro en varios sobres numerados, para que al recibirlos los ordenen correctamente.
+
+- **Capa de Sesión → Administra la comunicación**
+Abre, mantiene y cierra la conexión entre dos dispositivos para que puedan comunicarse sin interrupciones.
+
+Ejemplo: Es como una llamada telefónica: se inicia, se mantiene activa y se cierra cuando termina la conversación.
+
+- **Capa de Presentación → Traduce y protege los datos**
+Convierte los datos a un formato que el destinatario pueda entender (texto, imágenes, vídeos). También cifra la información para mayor seguridad.
+
+Ejemplo: Como un traductor que convierte un mensaje de un idioma a otro para que sea comprensible.
+
 Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga de una parte del proceso:
 
-- **Capa física** → transmite los datos en forma de señales eléctricas, ópticas o inalámbricas (cables, WiFi).
-- **Capa de enlace de datos** → organiza los datos en pequeños paquetes y los dirige dentro de una red local.
-- **Capa de red** → encuentra la mejor ruta para que los datos lleguen a su destino (aquí entra la dirección IP).
-- **Capa de transporte** → se asegura de que los datos lleguen completos y sin errores.
-- **Capa de sesión** → administra la comunicación entre los dispositivos.
-- **Capa de presentación** → codifica y traduce los datos para que sean legibles (por ejemplo, convierte imágenes o videos).
-- **Capa de aplicación** → es la que interactúa con el usuario (WhatsApp, navegador web, correo electrónico).
+Capa física → transmite los datos en forma de señales eléctricas, ópticas o inalámbricas (cables, WiFi).
+Capa de enlace de datos → organiza los datos en pequeños paquetes y los dirige dentro de una red local.
+Capa de red → encuentra la mejor ruta para que los datos lleguen a su destino (aquí entra la dirección IP).
+Capa de transporte → se asegura de que los datos lleguen completos y sin errores.
+Capa de sesión → administra la comunicación entre los dispositivos.
+Capa de presentación → codifica y traduce los datos para que sean legibles (por ejemplo, convierte imágenes o videos).
+Capa de aplicación → es la que interactúa con el usuario (WhatsApp, navegador web, correo electrónico).
 
 Si enviamos un mensaje por WhatsApp, este baja desde la Capa 7 (Aplicación) hasta la Capa 1 (Física), viaja por la red y luego sube por las capas hasta llegar al destinatario.
 
