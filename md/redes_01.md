@@ -115,10 +115,10 @@ Los dos modelos más importantes son:
 
 En 1984, la Organización Internacional para la Estandarización (ISO) creó el modelo OSI (Open Systems Interconnection), con el objetivo de establecer un estándar universal para el diseño de redes.
 
-**¿Para qué sirve?**
+#### ¿Para qué sirve?
 El modelo OSI es una estructura teórica que divide la comunicación en 7 capas, cada una con una función específica. No es un protocolo en sí, sino una referencia que ayuda a entender cómo deben comunicarse las redes.
 
-**Las 7 capas del modelo OSI**
+#### Las 7 capas del modelo OSI
 
 <div align="center">
     <img src="/primero-bach/img/capas_osi.png" width="50%">
@@ -127,17 +127,17 @@ El modelo OSI es una estructura teórica que divide la comunicación en 7 capas,
 Cada vez que envías un mensaje o navegas por la web, los datos atraviesan 7 capas que garantizan que lleguen correctamente a su destino. Veámoslo de manera sencilla:
 
 - **Capa Física → El camino de los datos**
-Define por dónde viaja la información: cables de par trenzado, fibra óptica o señales WiFi. Aquí, los datos se transforman en señales eléctricas, ópticas o inalámbricas para moverse por la red, como si circularan por una autopista.
+    - Define por dónde viaja la información: cables de par trenzado, fibra óptica o señales WiFi. Aquí, los datos se transforman en señales eléctricas, ópticas o inalámbricas para moverse por la red, como si circularan por una autopista.
 - **Capa de Enlace de Datos → Organiza los paquetes**
-Divide la información en paquetes pequeños y los dirige dentro de una red local. También asigna una dirección física (MAC) a cada dispositivo, funcionando como un transportista que agrupa y gestiona los envíos dentro de una ciudad.
+    - Divide la información en paquetes pequeños y los dirige dentro de una red local. También asigna una dirección física (MAC) a cada dispositivo, funcionando como un transportista que agrupa y gestiona los envíos dentro de una ciudad.
 - **Capa de Red → Encuentra la mejor ruta**
-Decide el mejor camino para que los datos viajen entre diferentes redes. Utiliza direcciones IP y agrega un "encabezado de red" a los paquetes, como un GPS que selecciona la ruta más eficiente hasta el destino.
+    - Decide el mejor camino para que los datos viajen entre diferentes redes. Utiliza direcciones IP y agrega un "encabezado de red" a los paquetes, como un GPS que selecciona la ruta más eficiente hasta el destino.
 - **Capa de Transporte → Divide y asegura los datos**
-Se asegura de que la información llegue completa y sin errores. Para ello, fragmenta los datos en segmentos numerados, de modo que el receptor pueda ordenarlos correctamente, como si enviáramos un libro en sobres numerados para reconstruirlo al recibirlos.
+    - Se asegura de que la información llegue completa y sin errores. Para ello, fragmenta los datos en segmentos numerados, de modo que el receptor pueda ordenarlos correctamente, como si enviáramos un libro en sobres numerados para reconstruirlo al recibirlos.
 - **Capa de Sesión → Gestiona la comunicación**
-Establece, mantiene y cierra la conexión entre dispositivos, asegurando que la comunicación no se interrumpa. Es como una llamada telefónica: se inicia, se mantiene y se finaliza cuando termina la conversación.
+    - Establece, mantiene y cierra la conexión entre dispositivos, asegurando que la comunicación no se interrumpa. Es como una llamada telefónica: se inicia, se mantiene y se finaliza cuando termina la conversación.
 - **Capa de Presentación → Traduce y protege los datos**
-Convierte la información a un formato comprensible para el receptor (texto, imágenes, vídeos) y también la cifra para mayor seguridad. Funciona como un traductor que adapta un mensaje para que el destinatario lo entienda sin problemas.
+    - Convierte la información a un formato comprensible para el receptor (texto, imágenes, vídeos) y también la cifra para mayor seguridad. Funciona como un traductor que adapta un mensaje para que el destinatario lo entienda sin problemas.
 
 Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga de una parte del proceso:
 
