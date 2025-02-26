@@ -168,6 +168,12 @@ A diferencia de OSI, TCP/IP tiene solo 4 capas que agrupan varias funciones:
 
 Los modelos OSI y TCP/IP han permitido que diferentes dispositivos y tecnologías se comuniquen sin problemas. Gracias a ellos, hoy podemos navegar por Internet, enviar correos, ver videos en streaming y chatear desde cualquier lugar del mundo
 
+#### 1.3.5.3 Diferencias entre el modelo OSI y el modelo TCP/IP
+
+Hemos visto que ambos modelos ayudan a entender cómo viajan los datos en una red, pero tienen diferencias importantes.
+
+
+
 # Resumen de la evolución de las redes
 
 - **1950-1960:** ordenadores aislados, sin conexión entre sí.
