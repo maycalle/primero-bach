@@ -115,10 +115,10 @@ Los dos modelos más importantes son:
 
 En 1984, la Organización Internacional para la Estandarización (ISO) creó el modelo OSI (Open Systems Interconnection), con el objetivo de establecer un estándar universal para el diseño de redes.
 
-#### ¿Para qué sirve?
+##### ¿Para qué sirve?
 El modelo OSI es una estructura teórica que divide la comunicación en 7 capas, cada una con una función específica. No es un protocolo en sí, sino una referencia que ayuda a entender cómo deben comunicarse las redes.
 
-#### Las 7 capas del modelo OSI
+##### Las 7 capas del modelo OSI
 
 <div align="center">
     <img src="/primero-bach/img/capas_osi.png" width="50%">
@@ -141,24 +141,24 @@ Cada vez que envías un mensaje o navegas por la web, los datos atraviesan 7 cap
 
 Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga de una parte del proceso:
 
-Capa física → transmite los datos en forma de señales eléctricas, ópticas o inalámbricas (cables, WiFi).
-Capa de enlace de datos → organiza los datos en pequeños paquetes y los dirige dentro de una red local.
-Capa de red → encuentra la mejor ruta para que los datos lleguen a su destino (aquí entra la dirección IP).
-Capa de transporte → se asegura de que los datos lleguen completos y sin errores.
-Capa de sesión → administra la comunicación entre los dispositivos.
-Capa de presentación → codifica y traduce los datos para que sean legibles (por ejemplo, convierte imágenes o videos).
-Capa de aplicación → es la que interactúa con el usuario (WhatsApp, navegador web, correo electrónico).
+- Capa física → transmite los datos en forma de señales eléctricas, ópticas o inalámbricas (cables, WiFi).
+- Capa de enlace de datos → organiza los datos en pequeños paquetes y los dirige dentro de una red local.
+- Capa de red → encuentra la mejor ruta para que los datos lleguen a su destino (aquí entra la dirección IP).
+- Capa de transporte → se asegura de que los datos lleguen completos y sin errores.
+- Capa de sesión → administra la comunicación entre los dispositivos.
+- Capa de presentación → codifica y traduce los datos para que sean legibles (por ejemplo, convierte imágenes o videos).
+- Capa de aplicación → es la que interactúa con el usuario (WhatsApp, navegador web, correo electrónico).
 
-Si enviamos un mensaje por WhatsApp, este baja desde la Capa 7 (Aplicación) hasta la Capa 1 (Física), viaja por la red y luego sube por las capas hasta llegar al destinatario.
+El mensaje de WhatsApp del emisor baja desde la Capa 7 (Aplicación) hasta la Capa 1 (Física), viaja por la red y luego sube por las capas hasta llegar a la capa 7 (Aplicación) del destinatario.
 
 #### 1.3.5.2 El modelo TCP/IP: la base de Internet
 
 Aunque OSI es un buen modelo teórico, el modelo que realmente usamos es TCP/IP. Se desarrolló en los años 70 y fue adoptado en 1983 como el estándar de Internet.
 
-**¿Para qué sirve?**
+##### ¿Para qué sirve?
 TCP/IP define cómo viaja la información en Internet y es el conjunto de protocolos en el que se basa toda la red global.
 
-**Las 4 capas del modelo TCP/IP**
+##### Las 4 capas del modelo TCP/IP
 A diferencia de OSI, TCP/IP tiene solo 4 capas que agrupan varias funciones:
 
 - **Capa de enlace** → controla el hardware y la transmisión de datos por cables o WiFi.
