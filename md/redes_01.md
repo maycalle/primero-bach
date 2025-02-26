@@ -105,24 +105,13 @@ Mientras OSI sentaba las bases teóricas, el modelo TCP/IP se convirtió en el e
 
 📌 Dato curioso: El primer sitio web de la historia fue creado en 1991 por Tim Berners-Lee. ¡Y todavía está en línea! Puedes verlo 👉 [aquí](http://info.cern.ch)
 
-
-### 1.3.5 Resumen de la evolución de las redes
-
-- 1950-1960: ordenadores aislados, sin conexión entre sí.
-- 1969: Nace ARPANET, la primera red de ordenadores.
-- Años 70: aparece el correo electrónico y las primeras conexiones remotas.
-- Años 80: crece el uso de redes en empresas, surge el modelo OSI y se adopta TCP/IP.
-- Años 90-2000: Internet se vuelve global con la World Wide Web.
-- Hoy: conexiones inalámbricas, redes inteligentes y tecnología en la nube.
-- Futuro: redes más rápidas, seguras y con inteligencia artificial.
-
-### 1.3.4 Modelos de referencia
+### 1.3.5 Modelos de referencia
 
 Como hemos visto, cuando las redes comenzaron a expandirse en los años 80, surgió un problema: cada empresa creaba su propia tecnología, lo que hacía difícil conectar sistemas diferentes. Para solucionar esta incompatibilidad, se desarrollaron modelos de referencia, que ayudan a organizar la comunicación entre dispositivos sin importar qué tecnología utilicen.
 
 Los dos modelos más importantes son:
 
-#### 1.3.4.1 El modelo OSI: un mapa teórico de la comunicación en red
+#### 1.3.5.1 El modelo OSI: un mapa teórico de la comunicación en red
 
 En 1984, la Organización Internacional para la Estandarización (ISO) creó el modelo OSI (Open Systems Interconnection), con el objetivo de establecer un estándar universal para el diseño de redes.
 
@@ -147,7 +136,7 @@ Imagina que envías un mensaje por WhatsApp. Cada capa del modelo OSI se encarga
 
 Si enviamos un mensaje por WhatsApp, este baja desde la Capa 7 (Aplicación) hasta la Capa 1 (Física), viaja por la red y luego sube por las capas hasta llegar al destinatario.
 
-#### 1.3.4.2 El modelo TCP/IP: la base de Internet
+#### 1.3.5.2 El modelo TCP/IP: la base de Internet
 
 Aunque OSI es un buen modelo teórico, el modelo que realmente usamos es TCP/IP. Se desarrolló en los años 70 y fue adoptado en 1983 como el estándar de Internet.
 
@@ -164,3 +153,12 @@ A diferencia de OSI, TCP/IP tiene solo 4 capas que agrupan varias funciones:
 
 Los modelos OSI y TCP/IP han permitido que diferentes dispositivos y tecnologías se comuniquen sin problemas. Gracias a ellos, hoy podemos navegar por Internet, enviar correos, ver videos en streaming y chatear desde cualquier lugar del mundo
 
+# Resumen de la evolución de las redes
+
+- **1950-1960:** ordenadores aislados, sin conexión entre sí.
+- **1969:** nace ARPANET, la primera red de ordenadores.
+- **Años 70:** aparece el correo electrónico y las primeras conexiones remotas.
+- **Años 80:** crece el uso de redes en empresas, surge el modelo OSI y se adopta TCP/IP.
+- **Años 90-2000:** Internet se vuelve global con la World Wide Web.
+- **Hoy:** conexiones inalámbricas, redes inteligentes y tecnología en la nube.
+- **Futuro:** redes más rápidas, seguras y con inteligencia artificial.
