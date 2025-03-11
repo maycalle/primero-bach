@@ -121,7 +121,7 @@ El modelo OSI es una estructura teórica que divide la comunicación que se real
 ##### Las 7 capas del modelo OSI
 
 <div align="center">
-    <img src="/primero-bach/img/capas_osi.png" width="50%">
+    <img src="/primero-bach/img/capas_osi.png" width="40%">
 </div>
 
 Cada vez que envías un mensaje o navegas por la web, los datos atraviesan 7 capas que garantizan que lleguen correctamente a su destino. A medida que los datos pasan de una capa a otra inferior, se encapsulan y se les añade información adicional. En cada capa, las unidades de datos con las que se trabaja, reciben nombres diferentes. Veámoslo de manera sencilla:
