@@ -160,7 +160,7 @@ table, td, th
 /* TABLA */ 
 
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
@@ -199,13 +199,13 @@ th:first-child, td:first-child {
     font-weight: bold;
 }
 
-th:first-child {
+/*th:first-child {
     border-top-left-radius: 10px;
 }
 
 th:last-child {
     border-top-right-radius: 10px;
-}
+}*/
 
 tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
