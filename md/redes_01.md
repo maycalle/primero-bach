@@ -172,7 +172,45 @@ Los modelos OSI y TCP/IP han permitido que diferentes dispositivos y tecnología
 
 Hemos visto que ambos modelos ayudan a entender cómo viajan los datos en una red, pero tienen diferencias importantes.
 
+<table>
+    <tr>
+        <th>Característica</th>
+        <th>Modelo OSI</th>
+        <th>Modelo TCP/IP</th>
+    </tr>
+    <tr>
+        <th>Origen</th>
+        <td>Creado por la ISO en 1984 como un estándar teórico para la comunicación en redes</td>
+        <td>Desarrollado en los años 70 por el Departamento de Defensa de EE.UU. para ARPANET e implementado en Internet en 1983.</td>
+    </tr>
+    <tr>
+        <th>Capas</th>
+        <td>7 capas (Física, Enlace de datos, Red, Transporte, Sesión, Presentación, Aplicación).</td>
+        <td>4 capas (Enlace, Internet, Transporte, Aplicación).</td>
+    </tr>
+    <tr>
+        <th>Uso</th>
+        <td>Modelo conceptual para entender la comunicación en redes, pero no se usa directamente en Internet.	</td>
+        <td>Modelo práctico en el que se basa toda la comunicación en Internet.</td>
+    </tr>
+    <tr>
+        <th>Protocolos</th>
+        <td>No define protocolos específicos, solo describe funciones.</td>
+        <td>Usa protocolos reales como TCP, IP, HTTP, FTP, UDP, etc.</td>
+    </tr>
+    <tr>
+        <th>Flexibilidad</th>
+        <td>Más detallado y estructurado, pero menos flexible en la práctica.</td>
+        <td>Más simple y flexible, adaptado a la realidad de las redes.</td>
+    </tr>
+    <tr>
+        <th>Compatibilidad</th>
+        <td>Diseñado para cualquier tipo de red, pero no se adoptó completamente.</td>
+        <td>Es el estándar global y funciona en todas las redes modernas.</td>
+    </tr>
+</table>
 
+El modelo OSI es una referencia teórica que organiza la comunicación en 7 capas, mientras que el modelo TCP/IP es un modelo práctico y simplificado que permite la comunicación real en Internet. Aunque OSI ayuda a comprender mejor cómo funcionan las redes, en la práctica, Internet y la mayoría de las redes actuales se basan en TCP/IP.
 
 
 ## 1.4 El futuro de las redes informáticas
