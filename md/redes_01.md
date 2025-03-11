@@ -113,10 +113,10 @@ Los dos modelos más importantes son:
 
 #### 1.3.5.1 El modelo OSI: un mapa teórico de la comunicación en red
 
-En 1984, la Organización Internacional para la Estandarización (ISO) creó el modelo OSI (Open Systems Interconnection), con el objetivo de establecer un estándar universal para el diseño de redes.
+En 1984, la Organización Internacional para la Estandarización (ISO) creó el modelo OSI *(Open Systems Interconnection)*, con el objetivo de establecer un estándar universal para el diseño de redes.
 
 ##### ¿Para qué sirve?
-El modelo OSI es una estructura teórica que divide la comunicación en 7 capas, cada una con una función específica. No es un protocolo en sí, sino una referencia que ayuda a entender cómo deben comunicarse las redes.
+El modelo OSI es una estructura teórica que divide la comunicación que se realiza entre dos equipos en 7 capas, cada una con una función específica. No es un protocolo en sí, sino una referencia que ayuda a entender cómo deben comunicarse las redes.
 
 ##### Las 7 capas del modelo OSI
 
@@ -124,7 +124,7 @@ El modelo OSI es una estructura teórica que divide la comunicación en 7 capas,
     <img src="/primero-bach/img/capas_osi.png" width="50%">
 </div>
 
-Cada vez que envías un mensaje o navegas por la web, los datos atraviesan 7 capas que garantizan que lleguen correctamente a su destino. Veámoslo de manera sencilla:
+Cada vez que envías un mensaje o navegas por la web, los datos atraviesan 7 capas que garantizan que lleguen correctamente a su destino. A medida que los datos pasan de una capa a otra inferior, se encapsulan y se les añade información adicional. En cada capa, las unidades de datos con las que se trabaja, reciben nombres diferentes. Veámoslo de manera sencilla:
 
 - **Capa Física → El camino de los datos**
     - Define por dónde viaja la información: cables de par trenzado, fibra óptica o señales WiFi. Aquí, los datos se transforman en señales eléctricas, ópticas o inalámbricas para moverse por la red, como si circularan por una autopista.
@@ -156,12 +156,12 @@ El mensaje de WhatsApp del emisor baja desde la Capa 7 (Aplicación) hasta la Ca
 Aunque OSI es un buen modelo teórico, el modelo que realmente usamos es TCP/IP. Se desarrolló en los años 70 y fue adoptado en 1983 como el estándar de Internet.
 
 ##### ¿Para qué sirve?
-TCP/IP define cómo viaja la información en Internet y es el conjunto de protocolos en el que se basa toda la red global.
+TCP/IP es el conjunto de protocolos en el que se basa Internet y que permiten la transmisión de datos entre ordenadores. Recibe este nombre en referencia a los dos protocolos más importantes que lo componen: **Protocolo de Control de Transmisión** *(TCP, Transmission Control Protocol)* y **Protocolo de Internet** *(IP, Internet Protocol)*
 
 ##### Las 4 capas del modelo TCP/IP
 A diferencia de OSI, TCP/IP tiene solo 4 capas que agrupan varias funciones:
 
-- **Capa de enlace** → controla el hardware y la transmisión de datos por cables o WiFi.
+- **Capa de acceso a la red** → controla el hardware y la transmisión de datos por cables o WiFi.
 - **Capa de Internet** → se encarga de encontrar la mejor ruta para los datos usando direcciones IP.
 - **Capa de transporte** → divide los datos en paquetes y verifica que lleguen correctamente (TCP es clave aquí).
 - **Capa de aplicación** → es donde los programas interactúan con la red (navegadores, correos, WhatsApp).
