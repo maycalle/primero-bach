@@ -161,6 +161,7 @@ table, td, th
 
 table {
     width: 80%;
+    margin:auto;
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
@@ -198,14 +199,6 @@ th:first-child, td:first-child {
     color: white;
     font-weight: bold;
 }
-
-/*th:first-child {
-    border-top-left-radius: 10px;
-}
-
-th:last-child {
-    border-top-right-radius: 10px;
-}*/
 
 tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
