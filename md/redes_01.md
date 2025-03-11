@@ -267,7 +267,7 @@ El futuro de las redes informáticas se dirige a un mundo en el que todo estará
 
 - **Medicina a distancia:** cirugías remotas, monitoreo de pacientes en tiempo real y hospitales inteligentes serán una realidad.
 
-📌 **Dato curioso:** En el futuro, se espera que haya más de 100.000 millones de dispositivos conectados en el mundo. ¡Eso es más de 12 dispositivos por persona!
+En el futuro, se espera que haya más de 100.000 millones de dispositivos conectados en el mundo. ¡Eso es más de 12 dispositivos por persona!
 
 # Resumen de la evolución de las redes
 
