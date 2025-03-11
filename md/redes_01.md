@@ -174,6 +174,63 @@ Hemos visto que ambos modelos ayudan a entender cómo viajan los datos en una re
 
 
 
+
+## 1.4 El futuro de las redes informáticas
+
+Las redes informáticas siguen evolucionando a pasos agigantados. Cada día surgen nuevas tecnologías que hacen que la comunicación sea más rápida, segura y eficiente. Pero, ¿cómo serán las redes del futuro?
+
+### 1.4.1 Redes más rápidas y eficientes
+
+El desarrollo de nuevas tecnologías de comunicación permitirá redes más rápidas y con menor latencia (tiempo de respuesta). Algunas tendencias clave son:
+
+- **5G y 6G:** la tecnología 5G ya está en uso, pero el 6G promete velocidades aún mayores y una conectividad casi instantánea. Esto permitirá descargar películas en segundos, mejorar la realidad virtual y facilitar la comunicación entre dispositivos inteligentes.
+
+- **Fibra óptica ultrarrápida:** aunque la fibra óptica ya ofrece grandes velocidades, se están investigando nuevas técnicas que multiplicarán su capacidad, como la fibra óptica cuántica.
+
+- **Redes de baja latencia:** tecnologías como el "edge computing" permiten procesar datos más cerca de donde se generan, reduciendo el tiempo de respuesta en aplicaciones críticas como vehículos autónomos o cirugías remotas.
+
+### 1.4.2 Redes más seguras y privadas
+
+La ciberseguridad será un aspecto fundamental en el futuro de las redes. Con cada vez más datos circulando por Internet, es esencial proteger la información de ataques y accesos no autorizados.
+
+- **Cifrado cuántico:** se están desarrollando métodos de cifrado basados en la computación cuántica, que harían prácticamente imposible descifrar la información sin la clave correcta.
+
+- **Blockchain en redes:** la tecnología blockchain, famosa por las criptomonedas, también se usará para mejorar la seguridad en redes, evitando fraudes y ataques.
+
+- **IA contra ciberataques:** la inteligencia artificial (IA) permitirá detectar amenazas en tiempo real y bloquear posibles ataques antes de que causen daño.
+
+### 1.4.3 Redes inteligentes y automatizadas
+
+Las redes del futuro serán más autónomas y capaces de gestionarse solas, gracias a la inteligencia artificial y al "machine learning". Algunas aplicaciones incluyen:
+
+- **Redes autoadaptables:** sistemas que ajustan automáticamente el tráfico de datos para evitar sobrecargas y mejorar la eficiencia.
+
+- **Automatización de infraestructuras:** las empresas podrán configurar y administrar redes con menos intervención humana, reduciendo errores y mejorando la velocidad de respuesta.
+
+- **Internet de las Cosas (IoT):** miles de dispositivos conectados (sensores, electrodomésticos, vehículos, fábricas) intercambiarán información en tiempo real, facilitando la toma de decisiones automatizada.
+
+### 1.4.4 Internet en todo el planeta
+
+La conectividad global será una realidad, eliminando las barreras geográficas para acceder a Internet.
+
+- **Satélites de Internet (Starlink y OneWeb):** empresas como SpaceX están desplegando constelaciones de satélites para llevar Internet a zonas remotas.
+
+- **Redes en la estratósfera:** proyectos como globos de alta altitud (Google Loon) o drones autónomos podrían proporcionar acceso a Internet en áreas sin infraestructura terrestre.
+
+- **Redes en otros planetas:** a medida que avanzamos en la exploración espacial, se están desarrollando redes de comunicación para futuras colonias en la Luna o Marte.
+
+### 1.4.5 Hacia un mundo hiperconectado
+
+El futuro de las redes informáticas se dirige a un mundo en el que todo estará interconectado. Desde hogares inteligentes hasta ciudades enteras, la conectividad será un pilar fundamental para la sociedad.
+
+- **Ciudades inteligentes:** semáforos conectados, transporte autónomo y edificios con sensores mejorarán la eficiencia urbana.
+
+- **Vehículos autónomos:** los coches conectados podrán comunicarse entre sí y con la infraestructura vial para evitar accidentes y mejorar el tráfico.
+
+- **Medicina a distancia:** cirugías remotas, monitoreo de pacientes en tiempo real y hospitales inteligentes serán una realidad.
+
+📌 **Dato curioso:** En el futuro, se espera que haya más de 100.000 millones de dispositivos conectados en el mundo. ¡Eso es más de 12 dispositivos por persona!
+
 # Resumen de la evolución de las redes
 
 - **1950-1960:** ordenadores aislados, sin conexión entre sí.
