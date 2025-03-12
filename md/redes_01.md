@@ -94,7 +94,7 @@ En los años 80, las empresas comenzaron a descubrir las ventajas de conectar su
 
 Sin embargo, hubo un problema: cada fabricante diseñaba su propia tecnología y no existía un estándar común. Esto significaba que, si una empresa tenía computadoras de diferentes marcas, muchas veces no podían comunicarse entre sí.
 
-Para solucionar esto, en 1984, la Organización Internacional para la Estandarización (ISO) desarrolló el **modelo OSI** *(Open Systems Interconnection)*, que establecía una estructura estándar para la comunicación entre redes.
+Para solucionar esto, en 1984, la Organización Internacional para la Estandarización (ISO, Internacional Organization for Standardization) desarrolló el **modelo OSI** *(Open Systems Interconnection)*, que establecía una estructura estándar para la comunicación entre redes.
 
 ### 1.3.4 Internet: la red de redes
 
@@ -127,7 +127,8 @@ El modelo OSI es una estructura teórica que divide la comunicación que se real
 Cada vez que envías un mensaje o navegas por la web, los datos atraviesan 7 capas que garantizan que lleguen correctamente a su destino. A medida que los datos pasan de una capa a otra inferior, se encapsulan y se les añade información adicional. En cada capa, las unidades de datos con las que se trabaja, reciben nombres diferentes. Veámoslo de manera sencilla:
 
 - **Capa Física → El camino de los datos**
-    - Define por dónde viaja la información: cables de par trenzado, fibra óptica o señales WiFi. Aquí, los datos se transforman en señales eléctricas, ópticas o inalámbricas para moverse por la red, como si circularan por una autopista.
+    - Transmite bits a través del medio físico: cables (UTP, fibra óptica)
+    . Define por dónde viaja la información: cables de par trenzado, fibra óptica o señales WiFi. Aquí, los datos se transforman en señales eléctricas, ópticas o inalámbricas para moverse por la red, como si circularan por una autopista.
 - **Capa de Enlace de Datos → Organiza los paquetes**
     - Divide la información en paquetes pequeños y los dirige dentro de una red local. También asigna una dirección física (MAC) a cada dispositivo, funcionando como un transportista que agrupa y gestiona los envíos dentro de una ciudad.
 - **Capa de Red → Encuentra la mejor ruta**
@@ -282,3 +283,6 @@ En el futuro, se espera que haya más de 100.000 millones de dispositivos conect
 - **Años 90-2000:** Internet se vuelve global con la World Wide Web.
 - **Hoy:** conexiones inalámbricas, redes inteligentes y tecnología en la nube.
 - **Futuro:** redes más rápidas, seguras y con inteligencia artificial.
+
+# Enlaces de interés
+- [Vídeo sobre las capas del modelo OSI](https://www.youtube.com/watch?v=ODY4q4_3Acc)
