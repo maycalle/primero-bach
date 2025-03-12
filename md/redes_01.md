@@ -227,7 +227,7 @@ El desarrollo de nuevas tecnologías de comunicación permitirá redes más ráp
 
 - **5G y 6G:** la tecnología 5G ya está en uso, pero el 6G promete velocidades aún mayores y una conectividad casi instantánea. Esto permitirá descargar películas en segundos, mejorar la realidad virtual y facilitar la comunicación entre dispositivos inteligentes.
 
-- **Fibra óptica ultrarrápida:** aunque la fibra óptica ya ofrece grandes velocidades, se están investigando nuevas técnicas que multiplicarán su capacidad, como la fibra óptica cuántica.
+- **Fibra óptica ultrarrápida:** aunque la fibra óptica ya ofrece grandes velocidades, se están investigando nuevas técnicas que multiplicarán su capacidad, como la fibra óptica cuántica. Países como China y EE.UU. han desarrollado redes experimentales de fibra óptica cuántica para pruebas de seguridad y comunicaciones de alto nivel.
 
 - **Redes de baja latencia:** tecnologías como el "edge computing" permiten procesar datos más cerca de donde se generan, reduciendo el tiempo de respuesta en aplicaciones críticas como vehículos autónomos o cirugías remotas.
 
