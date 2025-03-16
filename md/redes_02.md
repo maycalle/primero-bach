@@ -23,10 +23,10 @@ Este conjunto de protocolos, que ya conoces, es el estándar global en redes, y 
 
 Además de TCP/IP, existen otros protocolos fundamentales en el funcionamiento de Internet:
 
-**DNS (*Domain Name System*)** 
+##### DNS (*Domain Name System*) 
 El DNS es el protocolo que traduce nombres de dominio como *www.google.com* en direcciones IP numéricas, permitiendo que los navegadores localicen los servidores donde están alojadas las páginas web. Por ejemplo, cuando escribes www.wikipedia.org en tu navegador, el DNS traduce este nombre en una dirección IP específica (por ejemplo, 198.35.26.96), permitiendo que accedas al sitio web.
 
-**HTTP  (*HyperText Transfer Protocol*) y HTTPS (HyperText Transfer Protocol Secure)**
+##### HTTP  (*HyperText Transfer Protocol*) y HTTPS (HyperText Transfer Protocol Secure)
 Ambos protocolos permiten la navegación en la web, pero existen diferencias importantes en seguridad.
 
 **HTTP** 
@@ -39,24 +39,21 @@ Ambos protocolos permiten la navegación en la web, pero existen diferencias imp
 - Un sitio web usa HTTPS si en la barra de direcciones aparece un candado 🔒.
    
 **Cifrado SSL/TLS: ¿cómo protege los datos?**
-El cifrado SSL/TLS convierte los datos en un código incomprensible para quien no tenga la clave adecuada.
-
-📌 Funcionamiento básico:
+El cifrado SSL/TLS convierte los datos en un código incomprensible para quien no tenga la clave adecuada. Su funcionamiento básico es el siguiente: 
 - Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
 - A partir de ese momento, toda la información se cifra antes de enviarse.
 - Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
 
-📌 Analogía: Es como enviar una carta dentro de una caja con candado. Solo el destinatario tiene la llave para abrirla y leer el mensaje. 
+Es como enviar una carta dentro de una caja con candado. Solo el destinatario tiene la llave para abrirla y leer el mensaje. 
 
-**FTP (*File Transfer Protocol*)**: 
+##### FTP (*File Transfer Protocol*) 
 FTP es un protocolo que permite la transferencia de archivos entre un cliente (ordenador) y un servidor a través de una red, ya sea una red local o Internet. Imagina que estás diseñando una página web. Una vez terminada en tu computadora, necesitas subir los archivos al servidor donde estará publicada. Para esto, usas un programa FTP como FileZilla y envías los archivos al servidor.
 
-**Protocolos de correo electrónico: SMTP/IMAP/POP3:** 
+##### Protocolos de correo electrónico: SMTP/IMAP/POP3 
 Son protocolos utilizados en el envío y recepción de correos electrónicos desde el remitente hasta el destinatario. 
 - **SMTP (*Simple Mail Transfer Protocol*):** para enviar correos. Por ejemplo, cuando envías un correo desde Gmail, tu mensaje viaja a través del servidor SMTP de Google antes de llegar al destinatario.
 - **IMAP (*Internet Message Access Protocol*):** permite acceder al correo electrónico directamente desde el servidor sin necesidad de descargar los mensajes. Si usas tu correo en el móvil y la computadora, IMAP sincroniza los mensajes para que puedas acceder a ellos desde cualquier dispositivo. Su principal ventaja es que no ocupa espacio en el dispositivo, ya que los correos permanecen en el servidor.
 - **POP3 (*Post Office Protocol v3*):** descarga los correos en un dispositivo y, por defecto, los borra del servidor después de descargarlos. Si configuras tu correo en Outlook con POP3, los mensajes se almacenan en tu computadora, pero si accedes desde otro dispositivo, no los verás. Su principal ventaja es que permite acceder a los correos sin necesidad de estar conectado a Internet.
-
 
 ### 2.1.2 Direcciones IP y MAC: concepto y utilidad
 
