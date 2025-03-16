@@ -4,11 +4,13 @@ Hasta ahora, hemos explorado qué son las redes informáticas, su evolución his
 
 ## 2.1 Conceptos básicos sobre redes
 
-Ya hemos visto que las redes funcionan gracias a los protocolos de comunicación, que establecen reglas para el intercambio de datos. Vamos a ver algunos en detalle:
-
 ### 2.1.1 Protocolos de comunicación y su importancia
 
-**TCP/IP: el lenguaje de Internet**
+Los protocolos de comunicación son conjuntos de reglas que permiten la transferencia de datos entre dispositivos en una red. Sin estos protocolos, la comunicación en Internet y en las redes informáticas no sería posible.
+
+A continuación, se explican los principales protocolos que hacen posible la conexión y transmisión de datos en Internet.
+
+#### 2.1.1.1 TCP/IP: el lenguaje de Internet
 
 Este conjunto de protocolos, que ya conoces, es el estándar global en redes, y cada vez que usas Internet, estás utilizando TCP/IP.
 
@@ -17,17 +19,36 @@ Este conjunto de protocolos, que ya conoces, es el estándar global en redes, y 
 
 📌 Ejemplo: Cuando envías un mensaje en WhatsApp, TCP divide el mensaje en fragmentos (paquetes) y los envía con la dirección IP del destinatario. Al llegar, TCP los reconstruye en el mensaje original.
 
-**Otros protocolos esenciales**
+#### 2.1.1.2 Otros protocolos esenciales
 
 Además de TCP/IP, existen otros protocolos fundamentales en el funcionamiento de Internet:
 
-- **DNS (*Domain Name System*):** traduce nombres de dominio como *www.google.com* en direcciones IP numéricas. Cuando buscas una web, tu navegador usa DNS para traducir la dirección que escribes a una dirección IP específica del servidor donde está alojado el sitio.
-- **HTTP  (*HyperText Transfer Protocol*) y HTTPS (HyperText Transfer Protocol Secure)**: los dos protocolos permiten la navegación web, pero existen diferencias importantes entre ellos.
-    - **HTTP** es el protocolo estándar para la transferencia de información en la web. Sin embargo, tiene un problema: no cifra los datos, por lo que cualquier persona que intercepte la comunicación puede ver la información transmitida. Si inicias sesión en una página que usa HTTP, alguien en la misma red WiFi pública podría capturar tu contraseña y leerla sin dificultad.
-    - **HTTPS** es una versión más segura de HTTP, ya que usa cifrado SSL/TLS para proteger la información y evitar que terceros la intercepten. Para saber si un sitio web usa HTTPS debes fijarte en la barra de direcciones del navegador. Si hay un candado cerrado 🔒, usa HTTPS y, por tanto, los datos viajan encriptados. 
-    
-    El cifrado SSL/TLS funciona convirtiendo los datos legibles (en texto plano) en un código incomprensible para cualquiera que no tenga la clave adecuada. En términos simples, tu navegador y el servidor primero acuerdan una clave secreta cuando se inicia la conexión segura (este proceso inicial se denomina handshake o “apretón de manos”). Una vez establecida esa clave compartida, toda la información que se envía se codifica usando dicha clave. Si alguien intercepta los datos en medio del camino, solo verá una serie de caracteres sin sentido. Solo el receptor legítimo, que posee la clave correcta, puede descifrar ese mensaje y leer la información original. En analogía, es como enviar una carta dentro de una caja cerrada con candado: cualquiera podría ver la caja, pero solo quien tiene la llave (el destinatario previsto) puede abrirla y entender el contenido de la carta. 
-- **FTP (*File Transfer Protocol*)**: permite la transferencia de archivos entre un cliente (tu ordenador) y un servidor a través de una red, ya sea una red local o Internet. Imagina que estás diseñando una página web. Una vez terminada en tu computadora, necesitas subir los archivos al servidor donde estará publicada. Para esto, usas un programa FTP como FileZilla y envías los archivos al servidor.
+**DNS (*Domain Name System*)** 
+El DNS es el protocolo que traduce nombres de dominio como *www.google.com* en direcciones IP numéricas, permitiendo que los navegadores localicen los servidores donde están alojadas las páginas web. Por ejemplo, cuando escribes www.wikipedia.org en tu navegador, el DNS traduce este nombre en una dirección IP específica (por ejemplo, 198.35.26.96), permitiendo que accedas al sitio web.
+
+**HTTP  (*HyperText Transfer Protocol*) y HTTPS (HyperText Transfer Protocol Secure)**
+Ambos protocolos permiten la navegación en la web, pero existen diferencias importantes en seguridad.
+
+**HTTP** 
+- Es el protocolo estándar para la transferencia de información en la web. 
+- No cifra los datos, por lo que cualquier persona que intercepte la comunicación puede ver la información transmitida. 
+- Si inicias sesión en una página que usa HTTP, alguien en la misma red WiFi pública podría capturar tu contraseña y leerla sin dificultad.
+
+**HTTPS** 
+- Versión más segura de HTTP, ya que usa cifrado SSL/TLS para proteger la información. 
+- Un sitio web usa HTTPS si en la barra de direcciones aparece un candado 🔒.
+   
+**Cifrado SSL/TLS: ¿cómo protege los datos?**
+El cifrado SSL/TLS convierte los datos en un código incomprensible para quien no tenga la clave adecuada.
+
+📌 Funcionamiento básico:
+Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
+A partir de ese momento, toda la información se cifra antes de enviarse.
+Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
+
+📌 Analogía: Es como enviar una carta dentro de una caja con candado. Solo el destinatario tiene la llave para abrirla y leer el mensaje. 
+
+**FTP (*File Transfer Protocol*)**: permite la transferencia de archivos entre un cliente (tu ordenador) y un servidor a través de una red, ya sea una red local o Internet. Imagina que estás diseñando una página web. Una vez terminada en tu computadora, necesitas subir los archivos al servidor donde estará publicada. Para esto, usas un programa FTP como FileZilla y envías los archivos al servidor.
 - **SMTP/IMAP/POP3:** protocolos utilizados en el envío y recepción de correos electrónicos.
     - **SMTP (*Simple Mail Transfer Protocol*):** para enviar correos
     - **IMAP (*Internet Message Access Protocol*):** para recibir y gestionar correos en múltiples dispositivos.
