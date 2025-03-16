@@ -42,17 +42,20 @@ Ambos protocolos permiten la navegación en la web, pero existen diferencias imp
 El cifrado SSL/TLS convierte los datos en un código incomprensible para quien no tenga la clave adecuada.
 
 📌 Funcionamiento básico:
-Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
-A partir de ese momento, toda la información se cifra antes de enviarse.
-Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
+- Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
+- A partir de ese momento, toda la información se cifra antes de enviarse.
+- Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
 
 📌 Analogía: Es como enviar una carta dentro de una caja con candado. Solo el destinatario tiene la llave para abrirla y leer el mensaje. 
 
-**FTP (*File Transfer Protocol*)**: permite la transferencia de archivos entre un cliente (tu ordenador) y un servidor a través de una red, ya sea una red local o Internet. Imagina que estás diseñando una página web. Una vez terminada en tu computadora, necesitas subir los archivos al servidor donde estará publicada. Para esto, usas un programa FTP como FileZilla y envías los archivos al servidor.
-- **SMTP/IMAP/POP3:** protocolos utilizados en el envío y recepción de correos electrónicos.
-    - **SMTP (*Simple Mail Transfer Protocol*):** para enviar correos
-    - **IMAP (*Internet Message Access Protocol*):** para recibir y gestionar correos en múltiples dispositivos.
-    - **POP3 (*Post Office Protocol v3*):** para descargar correos en un solo dispositivo.
+**FTP (*File Transfer Protocol*)**: 
+FTP es un protocolo que permite la transferencia de archivos entre un cliente (ordenador) y un servidor a través de una red, ya sea una red local o Internet. Imagina que estás diseñando una página web. Una vez terminada en tu computadora, necesitas subir los archivos al servidor donde estará publicada. Para esto, usas un programa FTP como FileZilla y envías los archivos al servidor.
+
+**Protocolos de correo electrónico: SMTP/IMAP/POP3:** 
+Son protocolos utilizados en el envío y recepción de correos electrónicos desde el remitente hasta el destinatario. 
+- **SMTP (*Simple Mail Transfer Protocol*):** para enviar correos. Por ejemplo, cuando envías un correo desde Gmail, tu mensaje viaja a través del servidor SMTP de Google antes de llegar al destinatario.
+- **IMAP (*Internet Message Access Protocol*):** permite acceder al correo electrónico directamente desde el servidor sin necesidad de descargar los mensajes. Si usas tu correo en el móvil y la computadora, IMAP sincroniza los mensajes para que puedas acceder a ellos desde cualquier dispositivo. Su principal ventaja es que no ocupa espacio en el dispositivo, ya que los correos permanecen en el servidor.
+- **POP3 (*Post Office Protocol v3*):** descarga los correos en un dispositivo y, por defecto, los borra del servidor después de descargarlos. Si configuras tu correo en Outlook con POP3, los mensajes se almacenan en tu computadora, pero si accedes desde otro dispositivo, no los verás. Su principal ventaja es que permite acceder a los correos sin necesidad de estar conectado a Internet.
 
 
 ### 2.1.2 Direcciones IP y MAC: concepto y utilidad
