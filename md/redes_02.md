@@ -137,6 +137,41 @@ Cuando estas redes utilizan conexiones inalámbricas, se antepone la letra W (Wi
 - WLAN (Wireless LAN): versión inalámbrica de una LAN, basada en WiFi.
 - WPAN (Wireless PAN): versión inalámbrica de una PAN, como Bluetooth o NFC.
 
+Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnologías específicas para garantizar velocidad, estabilidad y conectividad.
+
+<table>
+    <tr>
+        <th>Tipo de red</th>
+        <th>Cobertura</th>
+        <th>Tecnologías clave</th>
+        <th>Eejmplo</th>
+    </tr>
+    <tr>
+        <td>WAN</td>
+        <td>Global</td>
+        <td>Fibra óptica submarina, satélites, 4G/5G</td>
+        <td>Internet</td>
+    </tr>
+    <tr>
+        <td>MAN</td>
+        <td>Ciudad o región</td>
+        <td>Fibra óptica, WiMax, FDDI</td>
+        <td>Red de una universidad</td>
+    </tr>
+    <tr>
+        <td>LAN</td>
+        <td>Edificio o campus</td>
+        <td>Ethernet, WiFi, PLC</td>
+        <td>WiFi en una oficina</td>
+    </tr>
+    <tr>
+        <td>PAN</td>
+        <td>Pocos metros</td>
+        <td>Bluetooth, NFC, Zigbee</td>
+        <td>Smartwatch conectado al móvil</td>
+    </tr>
+</table>
+
 
 ### 2.2.2 Según su topología
 Estrella, bus, anillo, malla, híbrida 
