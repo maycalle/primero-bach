@@ -144,7 +144,7 @@ Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnol
         <th>Tipo de red</th>
         <th>Cobertura</th>
         <th>Tecnologías clave</th>
-        <th>Eejmplo</th>
+        <th>Ejemplo</th>
     </tr>
     <tr>
         <td>WAN</td>
