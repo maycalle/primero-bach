@@ -13,14 +13,14 @@ TCP/IP es el estándar global en redes, y cada vez que usas Internet, estás uti
 - **TCP (*Transmission Control Protocol*):** se encarga de dividir los datos en paquetes, asegurar de que lleguen sin errores y en el orden correcto.
 - **IP (*Internet Protocol*):** se ocupa de enrutar esos paquetes para que lleguen a la dirección correcta.
 
-📌 Ejemplo: Cuando envías un mensaje en WhatsApp, TCP divide el mensaje en fragmentos (paquetes) y los envía con la dirección IP del destinatario. Al llegar, TCP los reconstruye en el mensaje original.
+Cuando envías un mensaje en WhatsApp, TCP divide el mensaje en fragmentos (paquetes) y los envía con la dirección IP del destinatario. Al llegar, TCP los reconstruye en el mensaje original.
 
 ### 2.1.2 Otros protocolos esenciales
 
 Además de TCP/IP, existen otros protocolos fundamentales en el funcionamiento de Internet:
 
 #### DNS (*Domain Name System*) 
-El DNS es el protocolo que traduce nombres de dominio como *www.google.com* en direcciones IP numéricas, permitiendo que los navegadores localicen los servidores donde están alojadas las páginas web. Por ejemplo, cuando escribes www.wikipedia.org en tu navegador, el DNS traduce este nombre en una dirección IP específica (por ejemplo, 198.35.26.96), permitiendo que accedas al sitio web.
+El DNS es el protocolo que traduce nombres de dominio como *www.google.com* en direcciones IP numéricas, permitiendo que los navegadores localicen los servidores donde están alojadas las páginas web. Realmente se trata de una base de datos distribuida. Por ejemplo, cuando escribes www.wikipedia.org en tu navegador, el DNS traduce este nombre en una dirección IP específica (por ejemplo, 198.35.26.96), permitiendo que accedas al sitio web.
 
 #### HTTP  (*HyperText Transfer Protocol*) y HTTPS (HyperText Transfer Protocol Secure)
 Ambos protocolos permiten la navegación en la web, pero existen diferencias importantes en seguridad.
@@ -35,11 +35,11 @@ Ambos protocolos permiten la navegación en la web, pero existen diferencias imp
     - Un sitio web usa HTTPS si en la barra de direcciones aparece un candado 🔒.
    
 - **Cifrado SSL/TLS: ¿cómo protege los datos?**
-El cifrado SSL/TLS convierte los datos en un código incomprensible para quien no tenga la clave adecuada. Su funcionamiento básico es el siguiente: 
-    - Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
-    - A partir de ese momento, toda la información se cifra antes de enviarse.
-    - Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
-Es como enviar una carta dentro de una caja con candado. Solo el destinatario tiene la llave para abrirla y leer el mensaje. 
+    - El cifrado SSL/TLS convierte los datos en un código incomprensible para quien no tenga la clave adecuada. Su funcionamiento básico es el siguiente: 
+        - Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
+        - A partir de ese momento, toda la información se cifra antes de enviarse.
+        - Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
+    - Es como enviar una carta dentro de una caja con candado. Solo el destinatario tiene la llave para abrirla y leer el mensaje. 
 
 #### FTP (*File Transfer Protocol*) 
 FTP es un protocolo que permite la transferencia de archivos entre un cliente (ordenador) y un servidor a través de una red, ya sea una red local o Internet. Imagina que estás diseñando una página web. Una vez terminada en tu computadora, necesitas subir los archivos al servidor donde estará publicada. Para esto, usas un programa FTP como FileZilla y envías los archivos al servidor.
@@ -52,10 +52,12 @@ Son protocolos utilizados en el envío y recepción de correos electrónicos des
 
 ## 2.2 Direcciones IP y MAC: concepto y utilidad
 
-Para que los dispositivos puedan comunicarse, necesitan identificarse dentro de la red. Aquí entran en juego dos tipos de direcciones:
+Para que los dispositivos puedan comunicarse en una red, necesitan identificarse correctamente. Para ello, utilizan dos tipos de direcciones:
+- Dirección IP: identifica un dispositivo dentro de una red y le permite conectarse a Internet.
+- Dirección MAC: es un identificador único que distingue físicamente a cada dispositivo.
 
 **Dirección IP: el domicilio de tu dispositivo**
-La dirección IP *(Internet Protocol)* es el identificador lógico que se asigna a cada dispositivo en una red. Existen dos versiones:
+La dirección IP *(Internet Protocol)* es el identificador lógico que se asigna a cada dispositivo en una red. Funciona como la dirección de tu casa: si alguien quiere enviarte información en Internet, necesita saber dónde encontrarte. 
 
 - IPv4 (32 bits): formato clásico con números como 192.168.1.1. Limitado a unos 4,3 mil millones de direcciones.
 - IPv6 (128 bits): nuevo estándar con muchas más combinaciones (2001:db8::ff00:42:8329).
@@ -105,8 +107,36 @@ Cuando usamos Internet, no solo importa que estemos conectados, sino cómo de bu
 
 ## 2.2 Clasificación de las redes 
 
+Las redes de comunicación pueden clasificarse según diferentes criterios, como su área de cobertura, topología, medio de transmisión y gestión de acceso.
+
 ### 2.2.1 Según su área de cobertura
-LAN, MAN, WAN
+
+Este criterio clasifica las redes según la distancia que abarcan y el tamaño del área en la que operan. Cada tipo de red emplea tecnologías específicas para su funcionamiento.
+ 
+**WAN (Wide Area Network - Red de Área Extensa)** 
+- Las redes WAN conectan dispositivos en áreas geográficas muy amplias, como ciudades, países o incluso continentes, utilizando una combinación de tecnologías para lograr esta conexión a gran escala. 
+- La columna vertebral de las redes WAN son los cables de fibra óptica, especialmente los cables submarinos que cruzan los océanos, como el cable "Marea" que une Europa y Estados Unidos con una capacidad de 160 Terabits por segundo (Tbps). Para la conectividad en áreas urbanas y suburbanas, se emplean conexiones móviles (4G/5G) que utilizan torres de telecomunicaciones, con la tecnología 5G permitiendo velocidades de hasta 10 Gbps. En áreas remotas donde el cableado no es viable, como zonas rurales, barcos o aviones, se utilizan satélites de comunicaciones. 
+- El ejemplo más representativo de una WAN es Internet, que interconecta millones de dispositivos a nivel global.
+
+**MAN (Metropolitan Area Network - Red de Área Metropolitana)** 
+- Las redes MAN interconectan edificios, universidades, hospitales o empresas dentro de una misma ciudad o región. Se caracterizan por su alta velocidad y gran ancho de banda.
+- Se construyen principalmente sobre fibra óptica, que proporciona la alta velocidad y ancho de banda necesarios para conectar múltiples ubicaciones dentro de una ciudad. Para extender la conectividad donde el cableado es difícil, se utiliza WiMAX, una tecnología inalámbrica que alcanza hasta 1 Gbps en distancias de hasta 50 km. Además, se emplean anillos de fibra óptica como FDDI y SDH/SONET, diseñados con redundancia para asegurar la disponibilidad continua de la red.
+- Un ejemplo de MAN es una red de fibra óptica que conecta varias sedes de una empresa en una ciudad.
+
+**LAN (Local Area Network - Red de Área Local)** 
+- Las redes LAN operan en espacios reducidos, como hogares, oficinas o colegios. Se caracterizan por ofrecer altas velocidades de transmisión en comparación con MAN y WAN.
+- Las tecnologías que sustentan las redes LAN son diversas y permiten tanto conexiones cableadas como inalámbricas. Ethernet (IEEE 802.3) es el estándar para redes cableadas, utilizando cables de par trenzado o fibra óptica y alcanzando velocidades de 100 Mbps, 1 Gbps o incluso 10 Gbps. Por otro lado, Wi-Fi (IEEE 802.11) proporciona conectividad inalámbrica, con estándares como Wi-Fi 6 (802.11ax) y el futuro Wi-Fi 7, que mejoran la velocidad y la eficiencia. Adicionalmente, Powerline Communications (PLC) permite transmitir datos a través del cableado eléctrico existente, siendo una opción útil en entornos donde la instalación de cables de red es complicada.
+- Un ejemplo de red LAN es la red de un colegio donde los ordenadores están conectados por cable Ethernet o Wi-Fi.
+
+**PAN (Personal Area Network - Red de Área Personal)** 
+- Las redes PAN conectan dispositivos cercanos dentro de un radio de pocos metros, facilitando la comunicación entre periféricos y dispositivos personales.
+- Las redes PAN se basan en tecnologías inalámbricas de corto alcance. Bluetooth (IEEE 802.15.1) permite conectar dispositivos a distancias de hasta 10 metros, siendo común en auriculares, teclados y ratones. NFC (Near Field Communication) posibilita la comunicación en distancias aún más cortas, ideales para pagos móviles y tarjetas de acceso. Por otro lado, Zigbee y Z-Wave son protocolos diseñados para domótica y automatización del hogar, permitiendo controlar luces, sensores y cerraduras de forma inalámbrica.
+- Un ejemplo de red PAN es un smartphone conectado a auriculares Bluetooth o a un smartwatch
+
+Cuando estas redes utilizan conexiones inalámbricas, se antepone la letra W (Wireless) al nombre de la red:
+- WLAN (Wireless LAN): versión inalámbrica de una LAN, basada en WiFi.
+- WPAN (Wireless PAN): versión inalámbrica de una PAN, como Bluetooth o NFC.
+
 
 ### 2.2.2 Según su topología
 Estrella, bus, anillo, malla, híbrida 
