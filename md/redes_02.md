@@ -26,19 +26,19 @@ El DNS es el protocolo que traduce nombres de dominio como *www.google.com* en d
 Ambos protocolos permiten la navegación en la web, pero existen diferencias importantes en seguridad.
 
 - **HTTP** 
-        - Es el protocolo estándar para la transferencia de información en la web. 
-        - No cifra los datos, por lo que cualquier persona que intercepte la comunicación puede ver la información transmitida. 
-        - Si inicias sesión en una página que usa HTTP, alguien en la misma red WiFi pública podría capturar tu contraseña y leerla sin dificultad.
+    - Es el protocolo estándar para la transferencia de información en la web. 
+    - No cifra los datos, por lo que cualquier persona que intercepte la comunicación puede ver la información transmitida. 
+    - Si inicias sesión en una página que usa HTTP, alguien en la misma red WiFi pública podría capturar tu contraseña y leerla sin dificultad.
 
 - **HTTPS** 
-        - Versión más segura de HTTP, ya que usa cifrado SSL/TLS para proteger la información. 
-        - Un sitio web usa HTTPS si en la barra de direcciones aparece un candado 🔒.
+    - Versión más segura de HTTP, ya que usa cifrado SSL/TLS para proteger la información. 
+    - Un sitio web usa HTTPS si en la barra de direcciones aparece un candado 🔒.
    
 - **Cifrado SSL/TLS: ¿cómo protege los datos?**
 El cifrado SSL/TLS convierte los datos en un código incomprensible para quien no tenga la clave adecuada. Su funcionamiento básico es el siguiente: 
-        - Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
-        - A partir de ese momento, toda la información se cifra antes de enviarse.
-        - Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
+    - Tu navegador y el servidor acuerdan una clave secreta (handshake o apretón de manos).
+    - A partir de ese momento, toda la información se cifra antes de enviarse.
+    - Si un atacante intercepta los datos, solo verá un conjunto de caracteres sin sentido.
 Es como enviar una carta dentro de una caja con candado. Solo el destinatario tiene la llave para abrirla y leer el mensaje. 
 
 #### FTP (*File Transfer Protocol*) 
