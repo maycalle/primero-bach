@@ -84,7 +84,15 @@ Los mainframes marcaron el inicio de la informática moderna y sentaron las base
 
 ### 1.3.2 ARPANET: la red que cambió todo
 
-En los años 60, en plena Guerra Fría, el Departamento de Defensa de EE.UU. buscaba una forma de comunicar computadoras a distancia sin que la información se perdiera en caso de un ataque enemigo. Así nació ARPANET, la primera red de computadoras.
+En los años 60, en plena Guerra Fría, el Departamento de Defensa de EE.UU., a través de **ARPA** *(Advanced Research Projects Agency)*, impulsó la creación de una red informática para mejorar la comunicación entre instituciones de investigación y permitir el uso compartido de computadoras. Así nació ARPANET, la primera red de computadoras, que sentó las bases de Internet.
+
+En 1969, ARPANET comenzó con solo cuatro nodos en EE.UU.:
+- UCLA (Universidad de California, Los Ángeles)
+- SRI (Stanford Research Institute)
+- UCSB (Universidad de California, Santa Bárbara)
+- Universidad de Utah. 
+
+En la década de los 70 y principios de los 80, la red creció exponencialmente, incorporando más universidades, instituciones militares y centros de investigación. En 1973, ARPANET se convirtió en una red internacional al conectar computadoras en Noruega y el Reino Unido. En 1983, adoptó el protocolo TCP/IP, un cambio fundamental que permitió la interconexión de redes y la creación de Internet. Finalmente, en 1990, ARPANET fue desactivada, dejando un legado tecnológico que transformó el mundo.
 
 <div align="center">
     <figure>
@@ -94,13 +102,11 @@ En los años 60, en plena Guerra Fría, el Departamento de Defensa de EE.UU. bus
 </div>
 
 **Momentos clave de ARPANET:**
-- **1969** → Se envió el primer mensaje entre dos computadoras conectadas a ARPANET. 
-- **1971** → Se envió el primer correo electrónico entre ordenadores.
-- **1973** → ARPANET se hace internacional, conectando por primera vez ordenadores en Noruega y Reino Unido. Este fue un gran paso hacia la globalización de Internet.
-- **1983** → Se implementa el protocolo TCP/IP, permitiendo la interconexión de redes y la expansión de lo que luego sería Internet.
-- **1990** → ARPANET se apaga oficialmente, después de haber servido como el cimiento de la actual Internet. Su tecnología y estructura dieron paso a la red que hoy conecta al mundo.
-
-📌 Dato curioso: En 1969, ARPANET envió su primer mensaje, pero… ¡falló en el segundo carácter! Querían escribir "LOGIN", pero solo llegó "LO" antes de que el sistema colapsara. 😅
+- **1969** → Se envía el primer mensaje entre dos computadoras conectadas a ARPANET. Querían escribir "LOGIN", pero solo llegó "LO" antes de que el sistema colapsara. 😅
+- **1971** → Se envía el primer correo electrónico, creado por Ray Tomlinson, quien introdujo el uso de "@" en las direcciones de email.
+- **1973** → ARPANET se expande internacionalmente con conexiones a Noruega y el Reino Unido.
+- **1983** → Se implementa el protocolo TCP/IP, permitiendo la interconexión de redes, lo que dio origen a Internet.
+- **1990** → ARPANET se apaga oficialmente, dando paso a la Internet moderna.
 
 ### 1.3.3 La explosión de las redes en los años 80
 
