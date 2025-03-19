@@ -177,7 +177,7 @@ Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnol
 
 En una red informática, la topología se refiere a la forma en que los dispositivos están conectados entre sí. Existen diferentes tipos de topologías, cada una con sus ventajas y desventajas. A continuación, exploramos las más comunes:
 
-**Topología en estrella**
+#### Topología en estrella
 En esta configuración, todos los dispositivos están conectados a un nodo central (como un switch o un router).
 - El nodo central controla toda la comunicación.
 - Si un dispositivo falla, el resto de la red sigue funcionando.
@@ -185,7 +185,7 @@ En esta configuración, todos los dispositivos están conectados a un nodo centr
 
 Ejemplo: Las redes WiFi domésticas donde todos los dispositivos se conectan a un router.
 
-**Topologia en bus**
+#### Topologia en bus
 Todos los dispositivos están conectados a un único cable principal (bus o troncal), que transporta los datos en ambas direcciones.
 - Es fácil y económica de implementar.
 - Si el cable principal se daña, toda la red falla.
@@ -193,7 +193,7 @@ Todos los dispositivos están conectados a un único cable principal (bus o tron
 
 Ejemplo: Redes locales antiguas con cable coaxial en oficinas o escuelas.
 
-**Topología en anillo**
+#### Topología en anillo
 Los dispositivos están conectados en círculo y los datos viajan en una sola dirección o en ambas.
 - No hay nodo central, por lo que no depende de un único punto de fallo.
 - Es eficiente para transmitir datos, pero si un dispositivo falla, toda la red se interrumpe.
@@ -201,7 +201,7 @@ Los dispositivos están conectados en círculo y los datos viajan en una sola di
 
 Ejemplo: Redes en estaciones de trabajo o antiguas redes de fibra óptica.
 
-**Topología en malla**
+#### Topología en malla
 Cada dispositivo está conectado a varios otros de forma redundante, lo que crea múltiples caminos para enviar los datos.
 - Es muy fiable porque si un enlace falla, los datos encuentran otro camino.
 - Alta velocidad y rendimiento.
@@ -209,7 +209,7 @@ Cada dispositivo está conectado a varios otros de forma redundante, lo que crea
 
 Ejemplo: Internet en su conjunto funciona con una topología de malla parcial, donde hay múltiples rutas entre servidores y dispositivos.
 
-**Topología híbrida**
+#### Topología híbrida
 Combina dos o más de las topologías anteriores, adaptándose a las necesidades específicas de la red.
 - Es muy flexible y escalable.
 - Puede integrar lo mejor de cada topología.
