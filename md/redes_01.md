@@ -6,7 +6,14 @@ Las redes informáticas son parte fundamental de nuestra vida diaria. Gracias a 
 
 Una **red informática** es un conjunto de dispositivos conectados entre sí que permiten enviar y recibir datos. Estos dispositivos pueden ser ordenadores, teléfonos, impresoras, servidores o incluso tu smartwatch.
 
-📌 Imagina que en tu casa tienes varios dispositivos conectados al WiFi. Todos ellos pueden navegar por Internet y, en algunos casos, compartir archivos o impresoras. ¡Eso ya es una red!
+**Ejemplo de red informática**
+Si en tu casa tienes varios dispositivos conectados a la misma red WiFi, todos ellos pueden acceder a Internet y, en algunos casos, compartir archivos o impresoras. ¡Eso ya es una red informática!
+
+Otro ejemplo es una oficina donde varios ordenadores están conectados mediante un router, permitiendo compartir impresoras, archivos y otros recursos.
+Imagina que en tu casa tienes varios dispositivos conectados al WiFi. Todos ellos pueden navegar por Internet y, en algunos casos, compartir archivos o impresoras. ¡Eso ya es una red! Una oficina con varios ordenadores conectados entre sí mediante un router y compartiendo impresoras y archivos, también es una red. 
+
+**¿Un ordenador conectado a Internet es una red?**
+No, un ordenador conectado a Internet no es una red informática por sí solo. Es simplemente un dispositivo dentro de una red más grande, en este caso, Internet. Para que exista una red informática, deben estar conectados varios dispositivos que se comuniquen entre sí.
 
 ### 1.1.1 ¿Para qué sirven las redes?
 Las redes informáticas tienen muchísimos usos, pero algunos de los más importantes son:
@@ -78,6 +85,13 @@ Los mainframes marcaron el inicio de la informática moderna y sentaron las base
 ### 1.3.2 ARPANET: la red que cambió todo
 
 En los años 60, en plena Guerra Fría, el Departamento de Defensa de EE.UU. buscaba una forma de comunicar computadoras a distancia sin que la información se perdiera en caso de un ataque enemigo. Así nació ARPANET, la primera red de computadoras.
+
+<div align="center">
+    <figure>
+        <img src="/primero-bach/img/historia_arpanet.png" width="60%">
+        <figcaption><i>Evolución de ARPANET, la primera red de computadoras, desde su inicio en 1969 con solo cuatro nodos hasta su expansión en 1982, cuando ya era una red internacional que sentó las bases para Internet.</i><figcaption>
+    </figure>
+</div>
 
 **Momentos clave de ARPANET:**
 - **1969** → Se envió el primer mensaje entre dos computadoras conectadas a ARPANET. 
