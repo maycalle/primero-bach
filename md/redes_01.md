@@ -168,32 +168,32 @@ Hemos visto que ambos modelos ayudan a entender cómo viajan los datos en una re
         <th>Modelo TCP/IP</th>
     </tr>
     <tr>
-        <td>Origen</th>
+        <td>Origen</td>
         <td>Creado por la ISO en 1984 como un estándar teórico para la comunicación en redes</td>
         <td>Desarrollado en los años 70 por el Departamento de Defensa de EE.UU. para ARPANET e implementado en Internet en 1983.</td>
     </tr>
     <tr>
-        <td>Capas</th>
+        <td>Capas</td>
         <td>7 capas (Física, Enlace de datos, Red, Transporte, Sesión, Presentación, Aplicación).</td>
         <td>4 capas (Enlace, Internet, Transporte, Aplicación).</td>
     </tr>
     <tr>
-        <td>Uso</th>
+        <td>USO</td>
         <td>Modelo conceptual para entender la comunicación en redes, pero no se usa directamente en Internet.	</td>
         <td>Modelo práctico en el que se basa toda la comunicación en Internet.</td>
     </tr>
     <tr>
-        <td>Protocolos</th>
+        <td>PROTOCOLOS</td>
         <td>No define protocolos específicos, solo describe funciones.</td>
         <td>Usa protocolos reales como TCP, IP, HTTP, FTP, UDP, etc.</td>
     </tr>
     <tr>
-        <td>Flexibilidad</th>
+        <td>FLEXIBILIDAD</td>
         <td>Más detallado y estructurado, pero menos flexible en la práctica.</td>
         <td>Más simple y flexible, adaptado a la realidad de las redes.</td>
     </tr>
     <tr>
-        <td>Compatibilidad</th>
+        <td>COMPATIBILIDAD</td>
         <td>Diseñado para cualquier tipo de red, pero no se adoptó completamente.</td>
         <td>Es el estándar global y funciona en todas las redes modernas.</td>
     </tr>
