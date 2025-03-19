@@ -168,12 +168,12 @@ Hemos visto que ambos modelos ayudan a entender cómo viajan los datos en una re
         <th>Modelo TCP/IP</th>
     </tr>
     <tr>
-        <td>Origen</td>
+        <td>ORIGEN</td>
         <td>Creado por la ISO en 1984 como un estándar teórico para la comunicación en redes</td>
         <td>Desarrollado en los años 70 por el Departamento de Defensa de EE.UU. para ARPANET e implementado en Internet en 1983.</td>
     </tr>
     <tr>
-        <td>Capas</td>
+        <td>CAPAS</td>
         <td>7 capas (Física, Enlace de datos, Red, Transporte, Sesión, Presentación, Aplicación).</td>
         <td>4 capas (Enlace, Internet, Transporte, Aplicación).</td>
     </tr>
