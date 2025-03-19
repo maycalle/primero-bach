@@ -88,7 +88,7 @@ En los años 60, en plena Guerra Fría, el Departamento de Defensa de EE.UU. bus
 
 <div align="center">
     <figure>
-        <img src="/primero-bach/img/historia_arpanet.png" width="60%">
+        <img src="/primero-bach/img/historia_arpanet.png" width="50%">
         <figcaption><i>Evolución de ARPANET, la primera red de computadoras, desde su inicio en 1969 con solo cuatro nodos hasta su expansión en 1982, cuando ya era una red internacional que sentó las bases para Internet.</i><figcaption>
     </figure>
 </div>
