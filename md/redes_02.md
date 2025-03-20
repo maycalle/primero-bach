@@ -8,51 +8,45 @@ Los dispositivos de red permiten la conexión, gestión y flujo de datos entre d
 
 A continuación, se describen los principales dispositivos de red y su función:
 
-### 2.1.1 Router
-Un router es un dispositivo de red que dirige el tráfico de datos entre diferentes dispositivos y redes, permitiendo la conexión a Internet y la comunicación dentro de una red local. Cuando te conectas al Wi-Fi de casa, tu móvil o portátil se comunica con el router, y este se encarga de enviar y recibir datos de Internet.
+### 2.1.1 Hub
+Un hub es un dispositivo de red que permite conectar múltiples dispositivos dentro de una misma red local (LAN). Su función principal es recibir los datos de un dispositivo y enviarlos a todos los demás dispositivos conectados, sin distinguir el destinatario correcto. Cuantos más dispositivos estén conectados, más tráfico se genera, lo que puede ralentizar la red.
+
+Aunque fue común en las primeras redes, hoy en día ha sido sustituido por switches, que son más rápidos y optimizados.
 
 #### Funciones principales
-🔹 Conectar dispositivos a Internet: actúa como un intermediario entre los dispositivos de una red local (móvil, ordenador, Smart TV, etc.) e Internet. Recibe la señal de Internet del proveedor (por fibra óptica, ADSL o cable) y la distribuye a los dispositivos.
-🔹 Asignar direcciones IP internas: para que los dispositivos dentro de una misma red puedan comunicarse, el router les asigna direcciones IP privadas mediante un sistema llamado DHCP.
-Esto evita que haya conflictos de direcciones IP y organiza el tráfico de datos dentro de la red.
-🔹 Dirigir los datos de manera eficiente: analiza los datos que recibe y decide la mejor ruta para enviarlos a su destino, asegurando que la información llegue de forma rápida y sin interferencias.
-🔹 Proporcionar conexión inalámbrica (Wi-Fi): la mayoría de los routers incluyen una función de punto de acceso Wi-Fi, permitiendo que los dispositivos se conecten sin cables.
-También pueden funcionar con redes cableadas (Ethernet), que son más estables y rápidas.
-🔹 Seguridad y control de la red: incluyen firewalls y sistemas de cifrado para proteger la red contra accesos no autorizados. Permiten configurar contraseñas Wi-Fi, control parental y restricciones de acceso para mejorar la seguridad.
-
-#### Partes de un router
-🔹 Puertos Ethernet: Para conectar dispositivos mediante cable.
-🔹 Antenas Wi-Fi: Emiten la señal inalámbrica.
-🔹 Puerto WAN: Se conecta al módem o a la red del proveedor de Internet.
-🔹 Fuente de alimentación: Proporciona energía al dispositivo.
-🔹 Botón de reinicio (Reset): Permite restaurar la configuración en caso de fallos.
+- Conectar dispositivos en una LAN: permite que ordenadores, impresoras y otros dispositivos puedan comunicarse entre sí dentro de la misma red.
+- Repetir la señal: recibe datos de un dispositivo y los retransmite a todos los demás dispositivos conectados, sin filtrar destinatarios.
+- Extender la red: se usa para ampliar el número de dispositivos que pueden conectarse a una red cuando hay pocos puertos disponibles.
 
 ### 2.1.2 Switch
 Un switch es un dispositivo de red que conecta múltiples dispositivos dentro de una misma red local (LAN) y permite que intercambien datos de manera eficiente. Se encarga de recibir, procesar y enviar paquetes de datos solo al dispositivo de destino correcto, optimizando el tráfico y evitando colisiones. Por ejemplo, en una oficina con varios ordenadores, impresoras y servidores, el switch permite que todos se comuniquen entre sí sin interferencias, mejorando la velocidad y el rendimiento de la red.
 
+#### Funciones principales
+- Interconectar dispositivos en una red local (LAN): permite que ordenadores, impresoras, cámaras de seguridad y otros dispositivos se comuniquen directamente sin necesidad de acceder a Internet.
+- Optimizar el tráfico de datos: a diferencia de un hub, que envía los datos a todos los dispositivos conectados, el switch identifica la dirección del destinatario y solo envía la información a quien corresponde, evitando tráfico innecesario.
+- Asignar ancho de banda de manera eficiente: un switch administra la velocidad de cada conexión para que los dispositivos reciban el ancho de banda necesario sin sobrecargar la red.
 
+### 2.1.3 Router
+Un router es un dispositivo de red que dirige el tráfico de datos entre diferentes dispositivos y redes, permitiendo la conexión a Internet y la comunicación dentro de una red local. Cuando te conectas al Wi-Fi de casa, tu móvil o portátil se comunica con el router, y este se encarga de enviar y recibir datos de Internet.
 
-### 2.1.3 Hub
+#### Funciones principales
+- Conectar dispositivos a Internet: actúa como un intermediario entre los dispositivos de una red local (móvil, ordenador, Smart TV, etc.) e Internet. Recibe la señal de Internet del proveedor (por fibra óptica, ADSL o cable) y la distribuye a los dispositivos.
+- Asignar direcciones IP internas: para que los dispositivos dentro de una misma red puedan comunicarse, el router les asigna direcciones IP privadas mediante un sistema llamado DHCP.
+Esto evita que haya conflictos de direcciones IP y organiza el tráfico de datos dentro de la red.
+- Dirigir los datos de manera eficiente: analiza los datos que recibe y decide la mejor ruta para enviarlos a su destino, asegurando que la información llegue de forma rápida y sin interferencias.
+- Proporcionar conexión inalámbrica (Wi-Fi): la mayoría de los routers incluyen una función de punto de acceso Wi-Fi, permitiendo que los dispositivos se conecten sin cables.
+También pueden funcionar con redes cableadas (Ethernet), que son más estables y rápidas.
+- Seguridad y control de la red: incluyen firewalls y sistemas de cifrado para proteger la red contra accesos no autorizados. Permiten configurar contraseñas Wi-Fi, control parental y restricciones de acceso para mejorar la seguridad.
 
+#### Partes de un router
+- Puertos Ethernet: Para conectar dispositivos mediante cable.
+- Antenas Wi-Fi: Emiten la señal inalámbrica.
+- Puerto WAN: Se conecta al módem o a la red del proveedor de Internet.
+- Fuente de alimentación: Proporciona energía al dispositivo.
+- Botón de reinicio (Reset): Permite restaurar la configuración en caso de fallos.
 
 ### 2.1.4 Punto de acceso
-
-
-### 2.1.5 Firewall
-
-
-### 2.1.6 Otros dispositivos
-
-Módem
-Repetidor wi-Fi
-Proxy
-
-
-Cada dispositivo de red cumple un papel esencial en la comunicación y seguridad de la red:
-- Routers y módems conectan la red a Internet.
-- Switches y hubs gestionan el tráfico dentro de la red.
-- Access Points y repetidores Wi-Fi permiten la conectividad inalámbrica.
-- Firewalls y servidores protegen y administran los datos.
+Un Punto de Acceso (AP) es un dispositivo que permite conectar dispositivos inalámbricos a una red cableada, ampliando la cobertura Wi-Fi y mejorando la conectividad en zonas con señal débil o inexistente.
 
 ## 2.2 Clasificación de las redes 
 
