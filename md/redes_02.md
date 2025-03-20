@@ -9,9 +9,27 @@ Los dispositivos de red permiten la conexión, gestión y flujo de datos entre d
 A continuación, se describen los principales dispositivos de red y su función:
 
 ### 2.1.1 Router
+Un router es un dispositivo de red que dirige el tráfico de datos entre diferentes dispositivos y redes, permitiendo la conexión a Internet y la comunicación dentro de una red local. Cuando te conectas al Wi-Fi de casa, tu móvil o portátil se comunica con el router, y este se encarga de enviar y recibir datos de Internet.
 
+#### Funciones principales
+🔹 Conectar dispositivos a Internet: actúa como un intermediario entre los dispositivos de una red local (móvil, ordenador, Smart TV, etc.) e Internet. Recibe la señal de Internet del proveedor (por fibra óptica, ADSL o cable) y la distribuye a los dispositivos.
+🔹 Asignar direcciones IP internas: para que los dispositivos dentro de una misma red puedan comunicarse, el router les asigna direcciones IP privadas mediante un sistema llamado DHCP.
+Esto evita que haya conflictos de direcciones IP y organiza el tráfico de datos dentro de la red.
+🔹 Dirigir los datos de manera eficiente: analiza los datos que recibe y decide la mejor ruta para enviarlos a su destino, asegurando que la información llegue de forma rápida y sin interferencias.
+🔹 Proporcionar conexión inalámbrica (Wi-Fi): la mayoría de los routers incluyen una función de punto de acceso Wi-Fi, permitiendo que los dispositivos se conecten sin cables.
+También pueden funcionar con redes cableadas (Ethernet), que son más estables y rápidas.
+🔹 Seguridad y control de la red: incluyen firewalls y sistemas de cifrado para proteger la red contra accesos no autorizados. Permiten configurar contraseñas Wi-Fi, control parental y restricciones de acceso para mejorar la seguridad.
+
+#### Partes de un router
+🔹 Puertos Ethernet: Para conectar dispositivos mediante cable.
+🔹 Antenas Wi-Fi: Emiten la señal inalámbrica.
+🔹 Puerto WAN: Se conecta al módem o a la red del proveedor de Internet.
+🔹 Fuente de alimentación: Proporciona energía al dispositivo.
+🔹 Botón de reinicio (Reset): Permite restaurar la configuración en caso de fallos.
 
 ### 2.1.2 Switch
+Un switch es un dispositivo de red que conecta múltiples dispositivos dentro de una misma red local (LAN) y permite que intercambien datos de manera eficiente. Se encarga de recibir, procesar y enviar paquetes de datos solo al dispositivo de destino correcto, optimizando el tráfico y evitando colisiones. Por ejemplo, en una oficina con varios ordenadores, impresoras y servidores, el switch permite que todos se comuniquen entre sí sin interferencias, mejorando la velocidad y el rendimiento de la red.
+
 
 
 ### 2.1.3 Hub
@@ -112,7 +130,7 @@ Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnol
 
 ### 2.2.2 Según su topología
 
-En una red informática, la topología se refiere a la forma en que los dispositivos están conectados entre sí. A continuación, exploramos las más comunes:
+La topología de una red especifica la forma física que tendrá. A continuación, exploramos las más comunes:
 
 #### Topología en estrella
 En esta configuración, todos los dispositivos están conectados a un nodo central (como un switch o un router).
@@ -164,18 +182,24 @@ Las redes pueden clasificarse según el tipo de conexión utilizada para transmi
 
 Utilizan medios físicos para la transmisión de datos, como **cables de cobre o fibra óptica**. Son más estables que las redes inalámbricas, ya que no sufren interferencias externas con la misma facilidad.
 
-##### Tipos de cableado
+#### *Tipos de cableado*
 
-###### Cable coaxial
-Fue ampliamente utilizado en las primeras redes de datos y sigue empleándose en **televisión por cable, sistemas de videovigilancia y telecomunicaciones**. Aunque su uso en redes informáticas ha disminuido, sigue siendo útil en ciertos entornos debido a su resistencia a interferencias.
+##### Cable coaxial
 
-###### Par trenzado
+Fue ampliamente utilizado en las primeras redes de datos y, aunque ha sido reemplazado en gran medida por la fibra óptica y los cables de par trenzado en redes informáticas, sigue siendo fundamental en diversas aplicaciones. Actualmente, se usa en **televisión por cable, sistemas de videovigilancia, telecomunicaciones y conexiones de antenas** debido a su capacidad para transmitir señales de alta frecuencia con baja pérdida y gran resistencia a interferencias electromagnéticas.
+
+Su diseño, compuesto por un conductor central, una capa aislante, un blindaje metálico y una cubierta exterior, le permite ofrecer una transmisión estable, lo que lo hace adecuado para entornos donde se requiere una señal fuerte y sin interferencias.
+
+##### Par trenzado
 
 Está formado por **pares de hilos de cobre entrelazados**, lo que ayuda a **reducir interferencias electromagnéticas** y mejorar la calidad de la señal. Es el más utilizado en **redes Ethernet**, que son redes de comunicación cableadas que permiten la conexión de dispositivos como ordenadores, routers y switches dentro de una misma área, como hogares, oficinas o empresas.
 
+Utiliza **conectores RJ-45**. Hoy en día, la mayoría de las redes de área local cableadas emplean este tipo de cable.
+
 **Tipos par trenzado**
-- **UTP (*Unshielded Twisted Pair*):** sin blindaje adicional. Más económico y flexible, pero menos protegido contra interferencias. Se usa en redes domésticas y de oficina.
-- **STP (*Shielded Twisted Pair*):** tiene un blindaje para proteger contra interferencias electromagnéticas externas, mejorando su rendimiento en entornos con muchos dispositivos electrónicos o instalaciones industriales.
+- **UTP (*Unshielded Twisted Pair*):** sin apantallamiento, solo protege contra interferencias gracias al trenzado de los hilos. Es económico y flexible, ideal para redes domésticas y de oficina, pero poco recomendable en entornos industriales.
+- **FTP (*Foiled Twisted Pair*):** cuenta con una lámina de aluminio que envuelve todos los pares, ofreciendo mayor protección contra interferencias sin perder flexibilidad. Se usa en oficinas y lugares con cableado eléctrico cercano.
+- **STP (*Shielded Twisted Pair*):** cada par de hilos tiene su propia malla metálica, proporcionando la mejor protección contra interferencias. Es ideal para entornos industriales y zonas con alta concentración de dispositivos electrónicos.
 
 **Categorías de cable de par trenzado**
 Cada categoría indica el nivel de velocidad y rendimiento del cable:
@@ -183,42 +207,48 @@ Cada categoría indica el nivel de velocidad y rendimiento del cable:
 - **Cat 6:** hasta 10 Gbps en 55 metros. Mayor aislamiento frente a interferencias.
 - **Cat 7 y superiores:** mejor rendimiento, mayor velocidad y más blindaje. Usados en centros de datos y redes de alto rendimiento.
 
-###### Fibra óptica
+La categoría y el tipo de apantallado vienen impresos en la propia cubierta de plástico del cable, por lo que es posible identificarlos con solo echar un vistazo.
 
-En lugar de cobre, usa **hilos delgados de vidrio o plástico** para transmitir datos mediante **pulsos de luz**, logrando velocidades más altas y mayores distancias sin pérdida de señal.
+⚠️ **ATENCIÓN:** Si contratáis un servicio de Internet de, por ejemplo, 600 Mbps, pero utilizáis un cable de categoría 5, estaréis limitando la velocidad a la máxima que permite el cable (en este caso, 100 Mbps).
+
+##### Fibra óptica
+
+En lugar de cobre, usa **hilos delgados de vidrio o plástico** para transmitir datos mediante **pulsos de luz**, lo que permite mayores velocidades y distancias sin pérdida de señal en comparación con el cableado de cobre.
+
+Existen varios tipos de conectores según la aplicación y el equipo utilizado, entre ellos: SC, FC, LC, ST, FDDI, entre otros.
 
 **Tipos de fibra óptica**
-- **Monomodo (*SMF - Single Mode Fiber*):**  núcleo delgado que guía la luz en un solo camino, permitiendo mayores distancias (más de 100 km) y alta velocidad. Usada en conexiones entre ciudades o países.
-- **Multimodo (*MMF - Multi Mode Fiber*):** núcleo más ancho que permite que la luz viaje en varios caminos, pero con más dispersión. Más económica y fácil de instalar, utilizada en redes dentro de edificios y centros de datos (hasta 2 km).
+- **Monomodo:** transmite un único haz de luz en línea recta sin rebotes, lo que reduce la pérdida de señal y permite alcanzar distancias superiores a 100 km con alta velocidad. Se usa en conexiones de larga distancia, como la comunicación entre distintas ciudades o países.
+- **Multimodo:** permite la transmisión de varios haces de luz simultáneamente, los cuales rebotan dentro del núcleo de la fibra. Es más económica y fácil de instalar, aunque pierde calidad con la distancia. Se utiliza en redes dentro de edificios, universidades, centros de datos y oficinas, con un alcance de hasta 2 km.
 
 #### 2.2.3.2 Redes inalámbricas
 
-Transmiten información a través de **ondas electromagnéticas**, eliminando la necesidad de cables físicos. Son más flexibles y permiten movilidad, aunque pueden ser más susceptibles a interferencias.
+Transmiten información a través de **ondas electromagnéticas**, eliminando la necesidad de cables físicos. Son más flexibles y permiten movilidad, aunque pueden ser más vulnerables a interferencias y variaciones en la señal.
 
-##### Tecnologías inalámbricas
+#### *Tecnologías inalámbricas*
 
-###### Wi-Fi (Wireless Fidelity)
+##### Wi-Fi (Wireless Fidelity)
 Usado en redes domésticas, empresas y lugares públicos. Su velocidad y alcance dependen de la versión:
 - Wi-Fi 4 (802.11n): Hasta 600 Mbps.
 - Wi-Fi 5 (802.11ac): Hasta 1.3 Gbps, mayor estabilidad.
 - Wi-Fi 6 (802.11ax): Hasta 9.6 Gbps, mejor cobertura y menor latencia.
-- Wi-Fi 7 (en desarrollo): mejor rendimiento y capacidad.
+- Wi-Fi 7 (en desarrollo): Mejor rendimiento y capacidad para entornos con múltiples dispositivos conectados.
 
-###### Bluetooth
-Tecnología para comunicación de corto alcance entre dispositivos.
-- Bluetooth 4.0 - 4.2: bajo consumo de energía, ideal para wearables.
-- Bluetooth 5.0: mayor alcance (hasta 240 metros) y mejor rendimiento.
+##### Bluetooth
+Diseñado para comunicación de corto alcance entre dispositivos.
+- Bluetooth 4.0 - 4.2: bajo consumo de energía, ideal para wearables y accesorios inteligentes.
+- Bluetooth 5.0: mayor alcance (hasta 240 metros) y mejor rendimiento en la transmisión de datos.
 
-###### Zigbee y Z-Wave
+##### Zigbee y Z-Wave
 Utilizados en automatización del hogar e Internet de las Cosas (IoT).
 - Zigbee: Opera en la banda de 2.4 GHz, bajo consumo energético.  Ideal para sensores y dispositivos inteligentes.
-- Z-Wave: Opera en 900 MHz, menos interferencias.
+- Z-Wave: Opera en 900 MHz, con menos interferencias y mayor estabilidad en entornos domésticos.
 
-###### 5G y su impacto en redes
-Tecnología de nueva generación para dispositivos móviles.
-- Mayor velocidad de transmisión (hasta 10 Gbps).
-- Menor latencia (respuesta más rápida, ideal para videojuegos y realidad virtual).
-- Soporte para más dispositivos conectados simultáneamente.
+##### 5G y su impacto en redes
+Tecnología de nueva generación para dispositivos móviles y conectividad avanzada.
+- Velocidades ultra rápidas (hasta 10 Gbps).
+- Latencia mínima, ideal para videojuegos en la nube, realidad virtual y vehículos autónomos.
+- Mayor capacidad, soportando más dispositivos conectados sin perder rendimiento.
 
 #### 2.2.3.3 Redes mixtas
 
@@ -240,22 +270,24 @@ Una empresa puede tener servidores y ordenadores de escritorio conectados por ca
 Las redes pueden clasificarse según el nivel de acceso permitido a los usuarios. Algunas están restringidas a ciertos grupos o instituciones, mientras que otras son de acceso libre. También existen redes híbridas que combinan ambas características.
 
 #### Redes privadas
-Son redes de acceso exclusivo, donde solo los usuarios autorizados pueden conectarse y utilizar sus servicios. Se utilizan en empresas, instituciones y organizaciones para garantizar seguridad, control y privacidad de la información.
+Son redes cerradas y seguras, donde solo los usuarios autorizados pueden acceder y utilizar sus servicios. Se usan en empresas, instituciones y organizaciones para garantizar privacidad y control. Por ejemplo, la red interna de una empresa a la que solo pueden acceder empleados desde sus oficinas.
 
-Cuando una red privada ofrece servicios como páginas web, correo electrónico y almacenamiento de archivos, pero solo accesibles para sus miembros, se llama **Intranet**. Es común en empresas y centros educativos para compartir información interna de forma segura.
+Si la red privada ofrece servicios como páginas web, correo electrónico o almacenamiento de archivos solo accesibles para sus miembros, se denomina **Intranet**. Es común en universidades, hospitales y corporaciones.
 
 #### Redes públicas
-Son redes de acceso libre, donde cualquier persona puede conectarse para comunicarse, compartir información y utilizar servicios sin restricciones.
-Un ejemplo claro es Internet, la red pública global que conecta millones de dispositivos en todo el mundo. Otras redes públicas más pequeñas las encontramos cuando se ofrece Wi-Fi gratuito en aeropuertos, bibliotecas o cafeterías, o en redes móviles 4G/5G que permiten el acceso a internet sin restricciones.
+Son abiertas a cualquier usuario, permitiendo la comunicación y el intercambio de información sin restricciones de acceso. Sin embaro, pueden ser menos seguras, ya que cualquier usuario puede conectarse sin autenticación.
+
+- Internet, la red pública global.
+- Wi-Fi gratuito en cafeterías, bibliotecas o aeropuertos.
+- Redes móviles 4G/5G accesibles sin credenciales especiales.
 
 #### Redes híbridas
-Son aquellas que combinan elementos de redes privadas y públicas, permitiendo que algunas secciones sean accesibles para todos, mientras que otras están restringidas a usuarios específicos. Por ejemplo, una universidad que ofrece Wi-Fi público para estudiantes y visitantes, pero restringe el acceso a ciertos sistemas administrativos o bases de datos internas.
+Combinan elementos de redes privadas y públicas. Algunas partes son accesibles para cualquier usuario, mientras que otras requieren autorización. Por ejemplo, una universidad que ofrece Wi-Fi público para estudiantes y visitantes, pero restringe el acceso a ciertos sistemas administrativos o bases de datos internas solo para empleados.
 
 #### VPN (Virtual Private Network)
-Una VPN o Red Privada Virtual es una tecnología que permite acceder de forma segura a una red privada a través de internet. Se usa para proteger datos y garantizar privacidad en conexiones remotas. La VPN crea un túnel seguro y cifrado entre el usuario y la red privada, evitando que terceros puedan interceptar la información.
+Una VPN no es una red en sí misma, sino una tecnología que crea un canal seguro para acceder a una red privada a través de Internet. Se usa para proteger datos y garantizar privacidad en conexiones remotas. La VPN crea un túnel seguro y cifrado entre el usuario y la red privada, evitando que terceros puedan interceptar la información.
 
-Por ejemplo, un empleado de una empresa accede desde su casa a la red interna de la oficina mediante una VPN corporativa.
-
+Por ejemplo, un empleado que trabaja desde casa usa una VPN corporativa para conectarse a la red privada de su empresa y acceder a documentos internos como si estuviera en la oficina. También se usa para mejorar la privacidad en redes públicas, evitando que los proveedores de Internet o hackers puedan rastrear la actividad del usuario.
 
 ## 2.2 Dispositivos de red
 
