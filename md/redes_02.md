@@ -39,7 +39,7 @@ Este criterio clasifica las redes según la distancia que abarcan y el tamaño d
 - Un ejemplo de red PAN es un smartphone conectado a auriculares Bluetooth o a un smartwatch.
 
 <div align="center">
-    <img src="/primero-bach/img/tipos_redes_extension.png" width="40%">
+    <img src="/primero-bach/img/tipos_redes_extension.png" width="60%">
 </div>
 
 Cuando estas redes utilizan conexiones inalámbricas, se antepone la letra W (Wireless) al nombre de la red:
@@ -128,7 +128,7 @@ Ejemplo: Redes empresariales donde los departamentos pueden tener topología en 
 
 
 <div align="center">
-    <img src="/primero-bach/img/topologias-de-red-1.jpg" width="60%">
+    <img src="/primero-bach/img/topologias-de-red-1.jpg" width="80%">
 </div>
 
 Cada topología tiene sus ventajas y desventajas, y la elección depende del costo, rendimiento y seguridad que se necesite. En la actualidad, las más utilizadas son estrella y malla, debido a su eficiencia y estabilidad.
