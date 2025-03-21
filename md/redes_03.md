@@ -19,15 +19,15 @@ Todos estos dispositivos se conocen también como **hosts o nodos finales**, ya 
 
 Son los encargados de gestionar el tráfico de datos dentro de la red, asegurando que la información llegue a su destino.
 
-#### 3.1.2.1 Dispositivos básicos
+#### 3.1.2.1 Básicos
 Son esenciales para la creación y funcionamiento de una red informática.
 - **Hub:** dispositivo simple que replica los datos a todos los dispositivos conectados. Ya no se usa mucho porque no optimiza el tráfico de la red.
 - **Switch:** similar al hub, pero más inteligente. Solo envía los datos al dispositivo al que están destinados, mejorando la eficiencia de la red.
 - **Router:** permite conectar diferentes redes entre sí y gestionar la conexión a Internet. Es el dispositivo clave para el acceso a la red en hogares y empresas.
 - **Módem:** dispositivo que convierte la señal del proveedor de Internet (fibra óptica, ADSL, cable, etc.) en una señal digital que los dispositivos pueden usar. En la mayoría de los casos, el módem está integrado dentro del router.
 
-#### 3.1.2.2 Dispositivos complementarios
-Son equipos que mejoran la cobertura, estabilidad y alcance de la red.
+#### 3.1.2.2 Complementarios
+Son dispositivos que mejoran la cobertura, estabilidad y alcance de la red.
 - **Punto de acceso (*Access Point, AP*):** dispositivo que permite conectar dispositivos inalámbricos a una red cableada, ampliando la cobertura Wi-Fi y mejorando la conectividad en zonas con señal débil o inexistente. Se usa en oficinas, empresas y grandes espacios donde la cobertura de un router no es suficiente.
 - **Repetidor Wi-Fi:** dispositivo que capta una señal WiFi existente y la retransmite para ampliar su cobertura en zonas con baja conectividad. A diferencia del punto de acceso, no se conecta por cable, lo que puede reducir su velocidad en algunos casos.
 - **Firewall (cortafuegos):** dispositivo de seguridad que protege la red frente a accesos no autorizados y ciberataques, filtrando el tráfico de datos. Puede estar integrado en el router o ser un equipo independiente, aunque también existen versiones en software.
