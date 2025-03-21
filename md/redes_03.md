@@ -84,7 +84,7 @@ Tecnología diseñada para la transmisión de datos a corta distancia, , donde n
 - Bluetooth 4.0 - 4.2: bajo consumo de energía, ideal para wearables y accesorios inteligentes.
 - Bluetooth 5.0: mayor alcance (hasta 240 metros) y mejor rendimiento en la transmisión de datos.
 
-##### Radiofrecuencia y satélites
+##### Redes móviles y satélites
 Se utilizan en comunicaciones de larga distancia. Por ejemplo:
     - Redes móviles 4G y 5G, que permiten la conexión a Internet desde teléfonos y dispositivos móviles.
     - Internet por satélite, útil en zonas donde no llega la fibra óptica, como en áreas rurales o en barcos.
