@@ -38,6 +38,10 @@ Este criterio clasifica las redes según la distancia que abarcan y el tamaño d
     - **NFC (Near Field Communication)** posibilita la comunicación en distancias aún más cortas, ideales para pagos móviles y tarjetas de acceso.     
 - Un ejemplo de red PAN es un smartphone conectado a auriculares Bluetooth o a un smartwatch.
 
+<div align="center">
+    <img src="/primero-bach/img/tipos_redes_extension.png" width="40%">
+</div>
+
 Cuando estas redes utilizan conexiones inalámbricas, se antepone la letra W (Wireless) al nombre de la red:
 - **WLAN (Wireless LAN):** versión inalámbrica de una LAN, basada en WiFi.
 - **WPAN (Wireless PAN):** versión inalámbrica de una PAN, como Bluetooth o NFC.
