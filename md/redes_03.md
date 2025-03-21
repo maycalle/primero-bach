@@ -44,7 +44,7 @@ Los datos se transmiten a través de cables físicos, como **cables de cobre o f
 Antiguamente se usaba en redes locales, pero hoy en día se emplea más en televisión por cable y sistemas de videovigilancia. Tiene una buena resistencia a interferencias, pero ha sido reemplazado en muchas redes por otros tipos de cable de mejor rendimiento y más fáciles de instalar.
 
 <div align="center">
-    <img src="/primero-bach/img/coaxial.jpg" width="40%">
+    <img src="/primero-bach/img/coaxial.jpg" width="30%">
 </div>
 
 ##### Par trenzado

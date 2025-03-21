@@ -151,6 +151,16 @@ h2, h3
     background-color: #fca311;
 }
 
+/* IMÁGENES */
+
+img {
+    border: 3px solid #333; /* Borde de 3px en color gris oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra con efecto difuminado */
+    padding: 5px; /* Espaciado interno para separar la imagen del borde */
+    background-color: #fff; /* Fondo blanco para resaltar la imagen */
+}
+
 /* TABLA */ 
 
 table {
