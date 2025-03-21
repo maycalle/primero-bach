@@ -92,6 +92,10 @@ Todos los dispositivos están conectados a un único cable principal (bus o tron
 - Si el cable principal se daña, toda la red falla.
 - A medida que se agregan más dispositivos, la velocidad disminuye por la congestión en el bus.
 
+<div align="center">
+    <img src="/primero-bach/img/topologia-bus.jpg" width="40%">
+</div>
+
 Ejemplo: Redes locales antiguas con cable coaxial en oficinas o escuelas.
 
 ### 2.2.2 Topología en estrella
