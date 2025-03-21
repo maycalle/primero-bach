@@ -43,6 +43,10 @@ Los datos se transmiten a través de cables físicos, como **cables de cobre o f
 ##### Cable coaxial
 Antiguamente se usaba en redes locales, pero hoy en día se emplea más en televisión por cable y sistemas de videovigilancia. Tiene una buena resistencia a interferencias, pero ha sido reemplazado en muchas redes por otros tipos de cable de mejor rendimiento y más fáciles de instalar.
 
+<div align="center">
+    <img src="/primero-bach/img/coaxial.jpg" width="80%">
+</div>
+
 ##### Par trenzado
 Es el cable más utilizado en redes Ethernet (las que usan cable para conectarse a Internet). Está compuesto por pares de hilos de cobre trenzados, lo que ayuda a reducir interferencias. Se conecta a los dispositivos mediante conectores RJ-45 y se clasifica según su tipo de apantallamiento y categoría de rendimiento. Estos vienen impresos en la propia cubierta de plástico del cable, por lo que es posible identificarlos con solo echar un vistazo.
 
@@ -50,6 +54,10 @@ Según su tipo de apantallamiento, los cables de par trenzado pueden ser:
 - **UTP (*Unshielded Twisted Pair*):** sin apantallamiento adicional, solo protege por el trenzado de los hilos. Es el más común en redes domésticas y de oficina.
 - **FTP (*Foiled Twisted Pair*):** tiene una lámina de aluminio que cubre todos los pares, ofreciendo mayor protección sin perder flexibilidad. Se usa en lugares con cableado eléctrico cercano.
 - **STP (*Shielded Twisted Pair*):** cada par de hilos tiene su propia malla metálica, lo que brinda la mejor protección contra interferencias. Se usa en entornos industriales o con muchos dispositivos electrónicos.
+
+<div align="center">
+    <img src="/primero-bach/img/par_trenzado.webp" width="80%">
+</div>
 
 La categoría indica el nivel de velocidad y rendimiento del cable:
 - **Cat 5e:** hasta 1 Gbps en 100 metros. Mejor que el Cat 5 en reducción de interferencias.
