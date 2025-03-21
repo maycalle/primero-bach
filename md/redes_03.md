@@ -44,7 +44,7 @@ Los datos se transmiten a través de cables físicos, como **cables de cobre o f
 Antiguamente se usaba en redes locales, pero hoy en día se emplea más en televisión por cable y sistemas de videovigilancia. Tiene una buena resistencia a interferencias, pero ha sido reemplazado en muchas redes por otros tipos de cable de mejor rendimiento y más fáciles de instalar.
 
 <div align="center">
-    <img src="/primero-bach/img/coaxial.jpg" width="80%">
+    <img src="/primero-bach/img/coaxial.jpg" width="60%">
 </div>
 
 ##### Par trenzado
@@ -54,9 +54,10 @@ Según su tipo de apantallamiento, los cables de par trenzado pueden ser:
 - **UTP (*Unshielded Twisted Pair*):** sin apantallamiento adicional, solo protege por el trenzado de los hilos. Es el más común en redes domésticas y de oficina.
 - **FTP (*Foiled Twisted Pair*):** tiene una lámina de aluminio que cubre todos los pares, ofreciendo mayor protección sin perder flexibilidad. Se usa en lugares con cableado eléctrico cercano.
 - **STP (*Shielded Twisted Pair*):** cada par de hilos tiene su propia malla metálica, lo que brinda la mejor protección contra interferencias. Se usa en entornos industriales o con muchos dispositivos electrónicos.
+- **SFTP (*Shielded and Foiled Twisted Pair*):** combina una lámina de aluminio general que recubre todos los pares (como el FTP) y una malla metálica individual para cada par (como el STP). Ofrece una protección superior frente a interferencias electromagnéticas y de radiofrecuencia. Es ideal para entornos muy exigentes donde la integridad de la señal es crítica, como centros de datos o instalaciones con alta densidad de equipos electrónicos.
 
 <div align="center">
-    <img src="/primero-bach/img/par_trenzado.webp" width="80%">
+    <img src="/primero-bach/img/par_trenzado.webp" width="60%">
 </div>
 
 La categoría indica el nivel de velocidad y rendimiento del cable:
