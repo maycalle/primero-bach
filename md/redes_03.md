@@ -56,7 +56,7 @@ La categoría indica el nivel de velocidad y rendimiento del cable:
 - **Cat 6:** hasta 10 Gbps en 55 metros. Mayor aislamiento frente a interferencias.
 - **Cat 7 y superiores:** mejor rendimiento, mayor velocidad y más blindaje. Usados en centros de datos y redes de alto rendimiento.
 
-⚠️ **ATENCIÓN:** Si contratáis un servicio de Internet de, por ejemplo, 600 Mbps, pero utilizáis un cable de categoría 5, estaréis limitando la velocidad a la máxima que permite el cable (en este caso, 100 Mbps).
+Cuidado si contratáis un servicio de Internet de, por ejemplo, 600 Mbps, pero utilizáis un cable de categoría 5, ya que estaréis limitando la velocidad a la máxima que permite el cable (en este caso, 100 Mbps).
 
 ##### Fibra óptica 
 En lugar de cobre, usa **hilos delgados de vidrio o plástico** para transmitir datos mediante **pulsos de luz**, lo que permite mayores velocidades y distancias sin pérdida de señal. Es la tecnología más usada hoy en día para conexiones de Internet rápidas, como las que instalan los operadores en hogares y empresas.
