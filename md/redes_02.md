@@ -92,10 +92,6 @@ Todos los dispositivos están conectados a un único cable principal (bus o tron
 - Si el cable principal se daña, toda la red falla.
 - A medida que se agregan más dispositivos, la velocidad disminuye por la congestión en el bus.
 
-<div align="center">
-    <img src="/primero-bach/img/topologia-bus.jpg" width="40%">
-</div>
-
 Ejemplo: Redes locales antiguas con cable coaxial en oficinas o escuelas.
 
 ### 2.2.2 Topología en estrella
@@ -129,6 +125,11 @@ Combina dos o más de las topologías anteriores, adaptándose a las necesidades
 - Puede ser costosa y compleja de administrar.
 
 Ejemplo: Redes empresariales donde los departamentos pueden tener topología en estrella, pero conectarse entre sí mediante malla o bus.
+
+
+<div align="center">
+    <img src="/primero-bach/img/topologias-de-red-1.jpg" width="60%">
+</div>
 
 Cada topología tiene sus ventajas y desventajas, y la elección depende del costo, rendimiento y seguridad que se necesite. En la actualidad, las más utilizadas son estrella y malla, debido a su eficiencia y estabilidad.
 
