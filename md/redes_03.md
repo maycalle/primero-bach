@@ -25,7 +25,10 @@ Son esenciales para la creación y funcionamiento de una red informática.
 - **Switch:** similar al hub, pero más inteligente. Solo envía los datos al dispositivo al que están destinados, mejorando la eficiencia de la red.
 
 <div align="center">
-    <img src="/primero-bach/img/switch.webp" width="30%">
+    <figure>
+        <img src="/primero-bach/img/switch.webp" width="50%">
+        <figcaption><i>Switch D-Link con 8 puertos Gigabit Ethernet (1000 Mbps). Se conecta al router con un cable de par trenzado y conector RJ-45.</i><figcaption>
+    </figure>
 </div>
 
 - **Router:** permite conectar diferentes redes entre sí y gestionar la conexión a Internet. Es el dispositivo clave para el acceso a la red en hogares y empresas.
