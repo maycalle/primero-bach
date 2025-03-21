@@ -86,21 +86,21 @@ Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnol
 
 La topología de una red especifica la forma física que tendrá. A continuación, exploramos las más comunes:
 
-### 2.2.1 Topología en estrella
-En esta configuración, todos los dispositivos están conectados a un nodo central (como un switch o un router).
-- El nodo central controla toda la comunicación.
-- Si un dispositivo falla, el resto de la red sigue funcionando.
-- Si el nodo central falla, la red completa deja de operar.
-
-Ejemplo: Las redes WiFi domésticas donde todos los dispositivos se conectan a un router.
-
-### 2.2.2 Topologia en bus
+### 2.2.1 Topologia en bus
 Todos los dispositivos están conectados a un único cable principal (bus o troncal), que transporta los datos en ambas direcciones.
 - Es fácil y económica de implementar.
 - Si el cable principal se daña, toda la red falla.
 - A medida que se agregan más dispositivos, la velocidad disminuye por la congestión en el bus.
 
 Ejemplo: Redes locales antiguas con cable coaxial en oficinas o escuelas.
+
+### 2.2.2 Topología en estrella
+En esta configuración, todos los dispositivos están conectados a un nodo central (como un switch o un router).
+- El nodo central controla toda la comunicación.
+- Si un dispositivo falla, el resto de la red sigue funcionando.
+- Si el nodo central falla, la red completa deja de operar.
+
+Ejemplo: Las redes WiFi domésticas donde todos los dispositivos se conectan a un router.
 
 ### 2.2.3 Topología en anillo
 Los dispositivos están conectados en círculo y los datos viajan en una sola dirección o en ambas.
