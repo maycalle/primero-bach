@@ -1,42 +1,42 @@
 # 2. Tipos de redes
 
-En el mundo interconectado actual, las redes informáticas permiten la comunicación y el intercambio de datos entre dispositivos de todo tipo. Sin embargo, no todas las redes son iguales: se diferencian según su tamaño, forma de conexión y nivel de acceso. En esta unidad, exploraremos los diferentes tipos de redes según su **área de cobertura**, su **topología** y su **privacidad**.
+En el mundo actual, cada vez más conectado, las redes informáticas permiten la comunicación y el intercambio de datos entre todo tipo de dispositivos. Sin embargo, no todas las redes son iguales.  En esta unidad, exploraremos los diferentes tipos de redes según su **área de cobertura**, su **topología** y su **privacidad**.
 
-Cada una de estas clasificaciones determina la forma en que los dispositivos se conectan y cómo se comunican dentro de una red.
+Cada una de estas clasificaciones determina cómo se conectan los dispositivos y cómo circula la información dentro de la red.
 
 ## 2.1 Según su área de cobertura
 
 Este criterio clasifica las redes según la distancia que abarcan y el tamaño del área en la que operan. 
  
 ### 2.1.1 WAN (Wide Area Network, Red de Área Extensa) 
-- Las **redes WAN** conectan dispositivos en áreas geográficas muy amplias, como **ciudades, países o incluso continentes**, utilizando una combinación de tecnologías para lograr esta conexión a gran escala. 
-- La columna vertebral de las redes WAN son los **cables de fibra óptica**, especialmente los cables submarinos que cruzan los océanos, como el cable "Marea" que une Europa y Estados Unidos con una capacidad de 160 Terabits por segundo (Tbps). 
-- Para la conectividad en áreas urbanas y suburbanas, se emplean **conexiones móviles (4G/5G)** que utilizan torres de telecomunicaciones, con la tecnología 5G permitiendo velocidades de hasta 10 Gbps. 
-- En áreas remotas donde el cableado no es viable, como zonas rurales, barcos o aviones, se utilizan **satélites de comunicaciones**. 
+- Las **redes WAN** conectan dispositivos que se encuentran en **grandes áreas geográficas**, como ciudades, países o incluso continentes.
+- Utilizan una combinación de tecnologías para lograr esta conexión a gran escala: 
+    - **Cables de fibra óptica**, como los cables submarinos (por ejemplo, el cable “Marea” que conecta Europa con Estados Unidos, con una capacidad de 160 Terabits por segundo).
+    - **Redes móviles 4G y 5G**, en áreas urbanas y suburbanas, que permiten velocidades de hasta 10 Gbps.
+    - **Satélites de comunicaciones**, para zonas remotas o de difícil acceso donde el cableado no es viable.    
 - El ejemplo más representativo de una WAN es Internet, que interconecta millones de dispositivos a nivel global.
 
 ### 2.1.2 MAN (Metropolitan Area Network, Red de Área Metropolitana)
-- Las **redes MAN** interconectan **edificios, universidades, hospitales o empresas dentro de una misma ciudad o región**. Se caracterizan por su alta velocidad y gran ancho de banda.
-- Se construyen principalmente sobre **fibra óptica**, que proporciona la alta velocidad y ancho de banda necesarios para conectar múltiples ubicaciones dentro de una ciudad. 
-- Para extender la conectividad donde el cableado es difícil, se utiliza **WiMAX**, una tecnología inalámbrica que alcanza hasta 1 Gbps en distancias de hasta 50 km. 
-- Además, se emplean anillos de fibra óptica, como FDDI y SDH/SONET, diseñados con redundancia para asegurar la disponibilidad continua de la red.
-- Un ejemplo de MAN es una red de fibra óptica que conecta varias sedes de una empresa en una ciudad.
+- Las **redes MAN** conectan **varios edificios** (como oficinas, centros de salud, campus universitarios…) dentro de una misma ciudad o región.
+- Suelen utilizar **fibra óptica** para ofrecer alta velocidad y gran capacidad de transmisión.
+- También se emplean tecnologías como **WiMAX** (inalámbrica, hasta 50 km) o **anillos de fibra** con protocolos como FDDI o SDH/SONET.
+- Un ejemplo de MAN sería una red de fibra óptica que conecta las distintas sedes de una empresa en una ciudad.
 
 ### 2.1.3 LAN (Local Area Network, Red de Área Local)
-- Las **redes LAN** operan en espacios reducidos, como **hogares, oficinas o colegios**. Se caracterizan por ofrecer altas velocidades de transmisión en comparación con MAN y WAN.
-- Las tecnologías que sustentan las redes LAN son diversas y permiten tanto conexiones cableadas como inalámbricas. 
-    - **Ethernet (IEEE 802.3)** es el estándar para redes cableadas, utilizando cables de par trenzado o fibra óptica y alcanzando velocidades de 100 Mbps, 1 Gbps o incluso 10 Gbps. 
-    - **Wi-Fi (IEEE 802.11)** proporciona conectividad inalámbrica, con estándares como Wi-Fi 6 (802.11ax) y el futuro Wi-Fi 7, que mejoran la velocidad y la eficiencia. 
-    - **Powerline Communications (PLC)** permite transmitir datos a través del cableado eléctrico existente, siendo una opción útil en entornos donde la instalación de cables de red es complicada.
-- Un ejemplo de red LAN es la red de un colegio donde los ordenadores están conectados por cable Ethernet o Wi-Fi.
+- Las **redes LAN** funcionan en **espacios reducidos**, como hogares, aulas, oficinas o laboratorios.
+- Permiten velocidades muy altas y son fáciles de gestionar.
+- Las tecnologías más habituales son:
+    - **Ethernet (IEEE 802.3)** con cables de par trenzado o fibra óptica.
+    - **Wi-Fi (IEEE 802.11)** para conexiones inalámbricas, con estándares como Wi-Fi 6 (802.11ax) y el futuro Wi-Fi 7, que mejoran la velocidad y la eficiencia.
+    - **PLC**, que transmite datos a través del cableado eléctrico.
+- Un ejemplo de red LAN es la red de un colegio donde los ordenadores están conectados por cable Ethernet o por Wi-Fi.
 
 ### 2.1.4 PAN (Personal Area Network, Red de Área Personal)
 - Las **redes PAN** conectan dispositivos cercanos dentro de un radio de **pocos metros**, facilitando la comunicación entre periféricos y dispositivos personales.
 - Se basan en tecnologías inalámbricas de corto alcance:
     - **Bluetooth (IEEE 802.15.1)** permite conectar dispositivos a distancias de hasta 10 metros, siendo común en auriculares, teclados y ratones. 
-    - **NFC (Near Field Communication)** posibilita la comunicación en distancias aún más cortas, ideales para pagos móviles y tarjetas de acceso. 
-    - **Zigbee y Z-Wave** son protocolos diseñados para domótica y automatización del hogar, permitiendo controlar luces, sensores y cerraduras de forma inalámbrica.
-- Un ejemplo de red PAN es un smartphone conectado a auriculares Bluetooth o a un smartwatch
+    - **NFC (Near Field Communication)** posibilita la comunicación en distancias aún más cortas, ideales para pagos móviles y tarjetas de acceso.     
+- Un ejemplo de red PAN es un smartphone conectado a auriculares Bluetooth o a un smartwatch.
 
 Cuando estas redes utilizan conexiones inalámbricas, se antepone la letra W (Wireless) al nombre de la red:
 - **WLAN (Wireless LAN):** versión inalámbrica de una LAN, basada en WiFi.
