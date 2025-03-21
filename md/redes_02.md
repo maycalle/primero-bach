@@ -157,4 +157,50 @@ Una VPN no es una red en sí misma, sino una tecnología que crea un canal segur
 
 Por ejemplo, un empleado que trabaja desde casa usa una VPN corporativa para conectarse a la red privada de su empresa y acceder a documentos internos como si estuviera en la oficina. También se usa para mejorar la privacidad en redes públicas, evitando que los proveedores de Internet o hackers puedan rastrear la actividad del usuario.
 
+## 2.4 Ejercicios
+
+**1. Preguntas de comprensión (respuesta breve)**
+- ¿Qué diferencia principal hay entre una red LAN y una red WAN?
+- Pon un ejemplo real de una red MAN y explica por qué se clasifica como tal.
+- ¿Cuál es la diferencia entre Wi-Fi y Bluetooth? ¿En qué tipo de red se usa cada uno?
+- ¿Por qué las redes públicas pueden ser menos seguras que las privadas?
+- ¿Qué ventaja tiene una topología en estrella frente a una topología en bus?
+
+**2. Verdadero o falso (justifica si es falso)**
+- Las redes WAN solo se usan dentro de edificios pequeños.
+- La red de una universidad que conecta varios campus es un ejemplo de red MAN.
+- Una red PAN utiliza tecnologías de largo alcance como 4G o satélite.
+- En una topología en malla, los datos solo pueden ir por un único camino.
+- Las redes híbridas combinan características de redes públicas y privadas.
+
+**3. Relaciona columnas**
+Relaciona correctamente cada concepto con su descripción o ejemplo.
+
+<table>
+    <tr>
+        <th>Concepto</th>
+        <th>Descripción o ejemplo</th>
+    </tr>
+    <tr>
+        <td>WiMax</td>
+        <td>A. Comunicación inalámbrica de muy corto alcance</td>
+    </tr>
+    <tr>
+        <td>VPN</td>
+        <td>B. Canal seguro para acceder a una red privada</td>
+    </tr>
+    <tr>
+        <td>NFC</td>
+        <td>c: Tecnología usada en redes MAN (hasta 50km)</td>
+    </tr>
+    <tr>
+        <td>LAN</td>
+        <td>D. Red dentro de un edificio como una oficina</td>
+    </tr>
+    <tr>
+        <td>Topología en anillo</td>
+        <td>E. Dispositivos conectados en círculo</td>
+    </tr>    
+</table>
+
 
