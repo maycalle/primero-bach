@@ -1,10 +1,6 @@
 # 2. Tipos de redes
 
-En el mundo interconectado actual, las redes informáticas permiten la comunicación y el intercambio de datos entre dispositivos de todo tipo. Sin embargo, no todas las redes son iguales: se diferencian según su tamaño, forma de conexión, medio de transmisión y nivel de acceso. En esta unidad, exploraremos los diferentes tipos de redes según diferentes criterios:
-- Según su área de cobertura
-- Según su topología
-- Según su medio de transmisión 
-- Según su gestión y acceso. 
+En el mundo interconectado actual, las redes informáticas permiten la comunicación y el intercambio de datos entre dispositivos de todo tipo. Sin embargo, no todas las redes son iguales: se diferencian según su tamaño, forma de conexión y nivel de acceso. En esta unidad, exploraremos los diferentes tipos de redes según su área de cobertura, su topología y su privacidad
 
 Cada una de estas clasificaciones determina la forma en que los dispositivos se conectan y cómo se comunican dentro de una red.
 
