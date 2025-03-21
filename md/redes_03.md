@@ -23,6 +23,11 @@ Son los encargados de gestionar el tráfico de datos dentro de la red, asegurand
 Son esenciales para la creación y funcionamiento de una red informática.
 - **Hub:** dispositivo simple que replica los datos a todos los dispositivos conectados. Ya no se usa mucho porque no optimiza el tráfico de la red.
 - **Switch:** similar al hub, pero más inteligente. Solo envía los datos al dispositivo al que están destinados, mejorando la eficiencia de la red.
+
+<div align="center">
+    <img src="/primero-bach/img/switch.webp" width="30%">
+</div>
+
 - **Router:** permite conectar diferentes redes entre sí y gestionar la conexión a Internet. Es el dispositivo clave para el acceso a la red en hogares y empresas.
 - **Módem:** dispositivo que convierte la señal del proveedor de Internet (fibra óptica, ADSL, cable, etc.) en una señal digital que los dispositivos pueden usar. En la mayoría de los casos, el módem está integrado dentro del router.
 
