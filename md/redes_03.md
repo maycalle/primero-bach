@@ -26,8 +26,8 @@ Son esenciales para la creación y funcionamiento de una red informática.
 
 <div align="center">
     <figure>
-        <img src="/primero-bach/img/switch.webp" width="50%">
-        <figcaption><i>Switch D-Link con 8 puertos Gigabit Ethernet (1000 Mbps). Se conecta al router con un cable de par trenzado y conector RJ-45.</i><figcaption>
+        <img src="/primero-bach/img/switch.png" width="30%">
+        <figcaption><i>Switch con 8 puertos Gigabit Ethernet (1000 Mbps)</i><figcaption>
     </figure>
 </div>
 
