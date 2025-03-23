@@ -107,7 +107,7 @@ Se utilizan en comunicaciones de larga distancia. Por ejemplo:
 
 # Ejercicios
 
-1. **Comparativa de switches**. Investiga al menos tres modelos de switches que se venden actualmente. Anota:
+**1. Comparativa de switches**. Investiga al menos tres modelos de switches que se venden actualmente. Anota:
 - Marca y modelo
 - Foto y enlace a la web donde lo has encontrado 
 - Número de puertos
@@ -116,24 +116,24 @@ Se utilizan en comunicaciones de larga distancia. Por ejemplo:
 - Precio aproximado
 - Ejemplo de búsqueda: “switch 8 puertos Gigabit Amazon” o en la web de fabricantes como TP-Link, D-Link o Cisco.
 
-2. **Busca un router doméstico**. Anota sus características principales:
+**2. Busca un router doméstico**. Anota sus características principales:
 - Marca y modelo
 - Foto y enlace a la web donde lo has encontrado
 - Version Wi-Fi que ofrece
 - Número de puertos LAN
 - Si integra módem o no
 
-3. **Sobre cableado**. Encuentra un cable Cat 6 y un Cat 5e en una tienda online. Compara:
+**3. Sobre cableado**. Encuentra un cable Cat 6 y un Cat 5e en una tienda online. Compara:
 - Foto y enlace a la web donde lo has encontrado
 - Precio por metro
 - Diferencias visibles o especificaciones destacadas
 - ¿Por qué el Cat 6 es más caro?
 
-4. **Sobre par trenzado**. Lee cada una de las siguientes situaciones y elige el tipo de cable de par trenzado más adecuado (UTP, FTP, STP o SFTP). Justifica tu elección brevemente con una frase.
-A. Una vivienda particular donde solo se va a conectar un router al ordenador mediante cable de red y no hay interferencias eléctricas cerca.
-B. Una oficina con impresoras y ordenadores donde el cableado pasa muy cerca de tubos fluorescentes y enchufes múltiples.
-C. Una fábrica con maquinaria industrial y motores eléctricos que generan muchas interferencias electromagnéticas.
-D. Un centro de datos de alto rendimiento, donde hay cientos de servidores y switches en armarios de red muy próximos entre sí.
+**4. Sobre par trenzado**. Lee cada una de las siguientes situaciones y elige el tipo de cable de par trenzado más adecuado (UTP, FTP, STP o SFTP). Justifica tu elección brevemente con una frase.
+A. Una vivienda particular donde solo se va a conectar un router al ordenador mediante cable de red y no hay interferencias eléctricas cerca.<br>
+B. Una oficina con impresoras y ordenadores donde el cableado pasa muy cerca de tubos fluorescentes y enchufes múltiples.<br>
+C. Una fábrica con maquinaria industrial y motores eléctricos que generan muchas interferencias electromagnéticas.<br>
+D. Un centro de datos de alto rendimiento, donde hay cientos de servidores y switches en armarios de red muy próximos entre sí.<br>
 
 
 
