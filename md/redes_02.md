@@ -1,50 +1,60 @@
 # 2. Tipos de redes
 
-En el mundo actual, cada vez más conectado, las redes informáticas permiten la comunicación y el intercambio de datos entre todo tipo de dispositivos. Sin embargo, no todas las redes son iguales.  En esta unidad, exploraremos los diferentes tipos de redes según su **área de cobertura**, su **topología** y su **privacidad**.
-
-Cada una de estas clasificaciones determina cómo se conectan los dispositivos y cómo circula la información dentro de la red.
+Vivimos en un mundo hiperconectado. Móviles, ordenadores, tablets, smartwatches… Todos estos dispositivos pueden comunicarse entre sí gracias a las redes informáticas. Pero no todas las redes son iguales: hay distintos tipos según el espacio que abarcan, cómo están organizadas o quién puede acceder a ellas.
 
 ## 2.1 Según su área de cobertura
 
-Este criterio clasifica las redes según la distancia que abarcan y el tamaño del área en la que operan. 
+Este criterio clasifica las redes según la distancia que abarcan y el tamaño del área en la que operan. No es lo mismo conectar dos dispositivos en una habitación que unir miles en distintos países.
  
 ### 2.1.1 WAN (Wide Area Network, Red de Área Extensa) 
-- Las **redes WAN** conectan dispositivos que se encuentran en **grandes áreas geográficas**, como ciudades, países o incluso continentes.
-- Utilizan una combinación de tecnologías para lograr esta conexión a gran escala: 
-    - **Cables de fibra óptica**, como los cables submarinos (por ejemplo, el cable “Marea” que conecta Europa con Estados Unidos, con una capacidad de 160 Terabits por segundo).
-    - **Redes móviles 4G y 5G**, en áreas urbanas y suburbanas, que permiten velocidades de hasta 10 Gbps.
+- Las **redes WAN** son las más grandes que existen. Sirven para conectar dispositivos que están **muy alejados geográficamente**, incluso en **países o continentes distintos**. Su principal objetivo es permitir la comunicación a gran escala.
+- Para lograr estas conexiones enormes, se utilizan diferentes tecnologías:
+    - **Cables submarinos de fibra óptica**, ruzan océanos y mares llevando datos de un continente a otro.     
+    - **Redes móviles 4G y 5G**, muy comunes en ciudades y pueblos. Permiten velocidades de hasta 10 Gbps.
     - **Satélites de comunicaciones**, para zonas remotas o de difícil acceso donde el cableado no es viable.    
-- El ejemplo más representativo de una WAN es Internet, que interconecta millones de dispositivos a nivel global.
+- Internet es la red WAN más conocida y utilizada. Gracias a ella, millones de personas pueden navegar, enviar mensajes o hacer videollamadas desde cualquier rincón del mundo.
+
+***Curiosidad tecnológica:*** Actualmente hay más de 500 cables que cruzan océanos y mares conectando países. Si quieres ver cómo es esa red invisible que sostiene Internet, puedes visitar esta web interactiva: 👉 https://www.submarinecablemap.com/. Ahí puedes explorar un mapa en tiempo real de todos los cables submarinos activos, en construcción o planificados. Por ejemplo, el cable “Marea”, que conecta España (Bilbao) con Estados Unidos (Virginia), tiene una capacidad de 160 terabits por segundo. Fue financiado por empresas como Microsoft y Facebook y recorre más de 6.600 kilómetros por el fondo del océano Atlántico.
 
 ### 2.1.2 MAN (Metropolitan Area Network, Red de Área Metropolitana)
-- Las **redes MAN** conectan **varios edificios** (como oficinas, centros de salud, campus universitarios…) dentro de una misma ciudad o región.
-- Suelen utilizar **fibra óptica** para ofrecer alta velocidad y gran capacidad de transmisión.
-- También se emplean tecnologías como **WiMAX** (inalámbrica, hasta 50 km) o **anillos de fibra** con protocolos como FDDI o SDH/SONET.
-- Un ejemplo de MAN sería una red de fibra óptica que conecta las distintas sedes de una empresa en una ciudad.
+- Las **redes MAN** conectan **varios edificios dentro de una misma ciudad**. Son más grandes que una red LAN, pero más pequeña que una WAN.
+- Las tecnologías que usan son las siguientes: 
+    - **Fibra óptica**, que permite enviar grandes cantidades de datos a alta velocidad.
+    - **WiMAX**, una tecnología inalámbrica capaz de cubrir hasta 50 km sin necesidad de cables.     
+- Se utiliza, por ejemplo, para unir diferentes edificios de una empresa, hospitales, bibliotecas, ayuntamientos o facultades universitarias que están en distintas partes de una ciudad.
+
+***Curiosidad tecnológica***: Barcelona es una de las ciudades más avanzadas en el uso de tecnologías para gestionar servicios urbanos de forma eficiente y sostenible. Entre sus iniciativas destacan:
+- Contenedores inteligentes, que avisan cuando están llenos.
+- Farolas adaptativas, que ajustan su luz según la presencia de personas.
+- Riego automático, según la humedad del suelo.
+- Aparcamiento inteligente, con sensores que muestran plazas libres en una app.
+Todo esto funciona gracias a una infraestructura de red urbana que combina **redes MAN** con otras redes inalámbricas para dispositivos IoT, como **LoRa** o **NB-IoT**.
 
 ### 2.1.3 LAN (Local Area Network, Red de Área Local)
-- Las **redes LAN** funcionan en **espacios reducidos**, como hogares, aulas, oficinas o laboratorios.
-- Permiten velocidades muy altas y son fáciles de gestionar.
+- Las **redes LAN** se utilizan para conectar dispositivos dentro de un **espacio pequeño, como una casa, un aula, una oficina o un laboratorio**. Son las redes más comunes en el día a día. Permiten compartir archivos, impresoras, conexión a Internet o jugar en red local con gran velocidad y poco retraso.
 - Las tecnologías más habituales son:
-    - **Ethernet (IEEE 802.3)** con cables de par trenzado o fibra óptica.
-    - **Wi-Fi (IEEE 802.11)** para conexiones inalámbricas, con estándares como Wi-Fi 6 (802.11ax) y el futuro Wi-Fi 7, que mejoran la velocidad y la eficiencia.
-    - **PLC**, que transmite datos a través del cableado eléctrico.
-- Un ejemplo de red LAN es la red de un colegio donde los ordenadores están conectados por cable Ethernet o por Wi-Fi.
+    - **Ethernet (cable)**, conexión por cable de par trenzado o fibra óptica. Es estable y muy rápida.
+    - **Wi-Fi (inalámbrica)** permite conectar dispositivos sin cables. Hoy se usan estándares como **Wi-Fi 6**, y pronto llegará **Wi-Fi 7**, aún más rápido y eficiente.
+    - **PLC**, tecnología que permite enviar datos a través del cableado eléctrico de casa o del edificio.
+- La red de un instituto donde los ordenadores de las aulas están conectados al mismo router por Ethernet o Wi-Fi es una LAN. También lo es la red doméstica de una casa con varios móviles, ordenadores y una Smart TV conectados al mismo Wi-Fi.
 
 ### 2.1.4 PAN (Personal Area Network, Red de Área Personal)
-- Las **redes PAN** conectan dispositivos cercanos dentro de un radio de **pocos metros**, facilitando la comunicación entre periféricos y dispositivos personales.
+- Una **red PAN** conecta dispositivos personales que están **muy cerca unos de otros**, normalmente a menos de 10 metros de distancia. Aunque pueden ser cableadas, lo habitual es que sean inalámbricas. 
 - Se basan en tecnologías inalámbricas de corto alcance:
-    - **Bluetooth (IEEE 802.15.1)** permite conectar dispositivos a distancias de hasta 10 metros, siendo común en auriculares, teclados y ratones. 
-    - **NFC (Near Field Communication)** posibilita la comunicación en distancias aún más cortas, ideales para pagos móviles y tarjetas de acceso.     
-- Un ejemplo de red PAN es un smartphone conectado a auriculares Bluetooth o a un smartwatch.
+    - **Bluetooth** muy común en móviles, portátiles, relojes inteligentes, altavoces, teclados, ratones, etc. Funciona sin cables y permite la transferencia de datos a corta distancia (hasta 10 metros, en condiciones normales).. 
+    - **NFC (*Near Field Communication*)** funciona a una distancia aún más corta (menos de 4 cm), pero es extremadamente rápida. Se usa para pagar con el móvil, acceder a edificios con tarjetas sin contacto o compartir archivos entre teléfonos con solo acercarlos.     
+- Tu smartphone conectado por Bluetooth a unos auriculares o a una pulsera de actividad es una red PAN. También cuando usas el móvil para pagar en una tienda mediante NFC estás usando una red PAN.
+
+***Curiosidad tecnológica***: ¿Sabías que el nombre *“Bluetooth”* viene del rey Harald "Blåtand" Gormsson de Dinamarca, que en el siglo X unificó varias tribus escandinavas?
+Los creadores de la tecnología eligieron ese nombre porque Bluetooth une diferentes dispositivos, igual que aquel rey unió pueblos. De hecho, el logotipo de Bluetooth combina dos runas nórdicas que representan sus iniciales: H y B. 
 
 <div align="center">
     <img src="/primero-bach/img/tipos_redes_extension.png" width="60%">
 </div>
 
-Cuando estas redes utilizan conexiones inalámbricas, se antepone la letra W (Wireless) al nombre de la red:
-- **WLAN (Wireless LAN):** versión inalámbrica de una LAN, basada en WiFi.
-- **WPAN (Wireless PAN):** versión inalámbrica de una PAN, como Bluetooth o NFC.
+Cuando estas redes utilizan conexiones inalámbricas, se antepone la letra W (Wireless) al nombre de la red. Por ejemplo:
+- **WWAN ( Wireless WAN):** es una red de área extensa sin cables. Usa tecnologías móviles como 4G o 5G para ofrecer conexión a Internet en grandes zonas, incluso en movimiento.Por ejemplo, cuando te conectas a Internet desde el móvil usando datos, estás usando una WWAN. 
+- **WLAN (Wireless LAN):** es una red de área local inalámbrica. Lo que normalmente llamamos Wi-Fi en casa, en clase o en una cafetería.
 
 Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnologías específicas para garantizar velocidad, estabilidad y conectividad.
 
@@ -84,11 +94,29 @@ Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnol
 
 ## 2.2 Según su topología
 
-La topología de una red especifica la forma física que tendrá. A continuación, exploramos las más comunes:
+La topología de red describe la forma física o lógica en la que se conectan los dispositivos entre sí. Es como el plano o el esquema de la red.
 
 ### 2.2.1 Topologia en bus
-Todos los dispositivos están conectados a un único cable principal (bus o troncal), que transporta los datos en ambas direcciones.
-- Es fácil y económica de implementar.
+Todos los dispositivos están conectados a un único cable central (llamado “bus” o “troncal”), por donde circulan todos los datos en ambas direcciones.
+
+<table>
+    <caption>Topología BUS</caption>
+    <tr>
+        <th>Ventajas</th>
+        <th>Inconvenientes</th>
+    </tr>
+    <tr>
+        <td>
+            - Es económica y fácil de instalar.
+        </td>
+        <td> 
+            - Si el cable principal se rompe, toda la red deja de funcionar.
+            - Cuantos más dispositivos se conectan, más lenta se vuelve por la congestión.
+        </td>
+    </tr>
+</table>
+
+- Es económica y fácil de instalar.
 - Si el cable principal se daña, toda la red falla.
 - A medida que se agregan más dispositivos, la velocidad disminuye por la congestión en el bus.
 
