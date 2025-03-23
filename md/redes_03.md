@@ -80,6 +80,10 @@ En lugar de cobre, usa **hilos delgados de vidrio o plástico** para transmitir 
 - **Fibra monomodo:** transmite un único haz de luz en línea recta sin rebotes, lo que reduce la pérdida de señal y permite alcanzar distancias superiores a 100 km con alta velocidad. Se usa en conexiones de larga distancia, como la comunicación entre distintas ciudades o países.
 - **Fibra multimodo:** permite la transmisión de varios haces de luz simultáneamente, los cuales rebotan dentro del núcleo de la fibra. Es más económica y fácil de instalar, aunque pierde calidad con la distancia. Se utiliza en redes dentro de edificios, universidades, centros de datos y oficinas, con un alcance de hasta 2 km.
 
+<div align="center">
+    <img src="/primero-bach/img/tipos_fibra.webp" width="40%">
+</div>
+
 Para conectar la fibra óptica a los dispositivos de red, se utilizan diferentes tipos de conectores, según el tipo de instalación y equipo utilizado. Los más comunes son: SC, LC, ST, FC, entre otros.
 
 #### 3.3.2 Medios inalámbricos
@@ -129,7 +133,7 @@ Se utilizan en comunicaciones de larga distancia. Por ejemplo:
 - Diferencias visibles o especificaciones destacadas
 - ¿Por qué el Cat 6 es más caro?
 
-**4. Sobre par trenzado**. Lee cada una de las siguientes situaciones y elige el tipo de cable de par trenzado más adecuado (UTP, FTP, STP o SFTP). Justifica tu elección brevemente con una frase.
+**4. Sobre par trenzado**. Lee cada una de las siguientes situaciones y elige el tipo de cable de par trenzado más adecuado (UTP, FTP, STP o SFTP). Justifica tu elección brevemente con una frase.<br>
 A. Una vivienda particular donde solo se va a conectar un router al ordenador mediante cable de red y no hay interferencias eléctricas cerca.<br>
 B. Una oficina con impresoras y ordenadores donde el cableado pasa muy cerca de tubos fluorescentes y enchufes múltiples.<br>
 C. Una fábrica con maquinaria industrial y motores eléctricos que generan muchas interferencias electromagnéticas.<br>
