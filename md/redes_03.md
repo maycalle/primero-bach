@@ -97,8 +97,8 @@ Tecnología diseñada para la transmisión de datos a corta distancia, , donde n
 
 ##### Redes móviles y satélites
 Se utilizan en comunicaciones de larga distancia. Por ejemplo:
-    - **Redes móviles 4G y 5G**, que permiten la conexión a Internet desde teléfonos y dispositivos móviles.
-    - **Internet por satélite**, útil en zonas donde no llega la fibra óptica, como en áreas rurales o en barcos.
+- **Redes móviles 4G y 5G**, que permiten la conexión a Internet desde teléfonos y dispositivos móviles.
+- **Internet por satélite**, útil en zonas donde no llega la fibra óptica, como en áreas rurales o en barcos.
 
 ## 3.2 Estructura de una red local
 - Diseño básico de una LAN.
