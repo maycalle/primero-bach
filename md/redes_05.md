@@ -1,5 +1,7 @@
 # 5. Diseño y estructura lógica de una red local
 
+## 5.1 ¿Qué es diseñar una red local (LAN)?
+
 Diseñar una red local (LAN) consiste en organizar y configurar los dispositivos para que puedan comunicarse entre sí y, normalmente, acceder a Internet. Esto incluye:
 - **Elegir los dispositivos:** ordenadores, impresoras, router, switch, etc.
 - **Determinar el tipo de conexión:** por cable (Ethernet) o inalámbrica (WiFi).
@@ -16,6 +18,22 @@ Esto nos permite saber qué dispositivos están en la misma red. Ejemplo: 255.25
 - Si dos dispositivos tienen la misma IP, la red dará error (conflicto de IP).
 - Si la IP no está en la misma red que el router, no habrá conexión a Internet.
 - Si no se pone bien la máscara o el gateway, el equipo no podrá comunicarse con otros.
+
+
+## 5.2 Dirección IP + máscara + gateway en la práctica
+Ejemplos simples de configuración manual
+
+## 5.3 Dirección de red y broadcast (con ejercicios)
+
+## 5.4 Diseño básico de una red sin segmentación
+Asignación IP manual
+Diagrama de red sencilla
+
+## 5.5 Diseño de redes con subredes
+Segmentación por áreas funcionales
+Ejemplos con tablas
+
+## 5.6 Introducción a VLANs
 
 #### Ejemplo práctico: LAN sencilla con 4 equipos
 Imagina que eres el encargado o encargada de configurar la red local de un aula de informática en tu instituto. En el aula hay:
