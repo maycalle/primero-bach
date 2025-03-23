@@ -2,37 +2,31 @@
 
 ## 3.1 Elementos de una red informática
 
-Una red informática es un conjunto de dispositivos interconectados que permiten la comunicación y el intercambio de datos. Para que una red funcione, es necesario contar con varios elementos fundamentales, que se dividen en dispositivos finales, dispositivos de red y medios de transmisión.
+Una red informática es un conjunto de dispositivos conectados entre sí para compartir información, recursos (como impresoras o archivos) o acceder a Internet. Para que una red funcione correctamente, se necesita una serie de elementos que pueden clasificarse en tres grandes grupos:
+- **Dispositivos finales (o nodos):** los que usamos directamente, como ordenadores o móviles.
+- **Dispositivos de red:** gestionan el tráfico de datos entre los dispositivos.
+- **Medios de transmisión:** los canales por donde viaja la información, como cables o señales inalámbricas.
 
 ### 3.1.1 Dispositivos finales
 
-Son los equipos que los usuarios utilizan para enviar y recibir información en una red. Algunos ejemplos son:
+Son los usuarios finales de la red, es decir, los equipos con los que interactuamos directamente.
+- **Ordenadores (de sobremesa y portátiles):** permiten navegar por Internet, acceder a archivos en red o comunicarse con otros equipos. 
+- **Teléfonos inteligentes y tablets:** acceden a la red mediante Wi-Fi o redes móviles para chatear, ver vídeos o usar apps.
+- **Servidores:** almacenan información para que otros dispositivos la consulten. Por ejemplo, un servidor web almacena páginas web.
+- **Impresoras y periféricos en red:** pueden ser compartidos por varios usuarios sin conexión física directa.
 
-- **Ordenadores (PCs y portátiles):** permiten acceder a internet, compartir archivos y ejecutar programas en red.
-- **Teléfonos inteligentes y tablets:** se conectan a la red a través de WiFi o datos móviles para la comunicación y el acceso a servicios en línea.
-- **Servidores:** equipos que almacenan y distribuyen información dentro de una red. Pueden alojar páginas web, bases de datos, archivos compartidos, etc.
-- **Impresoras y otros periféricos en red:** permiten compartir recursos sin necesidad de conexión directa a cada dispositivo.
-
-Todos estos dispositivos se conocen también como **hosts o nodos finales**, ya que son el punto de origen o destino de la información dentro de la red.
+Estos dispositivos se llaman también **hosts o nodos finales**. Son los puntos donde nace o termina la información que circula por la red.
 
 ### 3.1.2 Dispositivos de red
 
-Son los encargados de gestionar el tráfico de datos dentro de la red, asegurando que la información llegue a su destino.
+Son los intermediarios que hacen posible la conexión y la comunicación entre dispositivos finales. Se encargan de dirigir y controlar el flujo de datos para que llegue al destino correcto.
 
 #### 3.1.2.1 Básicos
 Son esenciales para la creación y funcionamiento de una red informática.
-- **Hub:** dispositivo simple que replica los datos a todos los dispositivos conectados. Ya no se usa mucho porque no optimiza el tráfico de la red.
-- **Switch:** similar al hub, pero más inteligente. Solo envía los datos al dispositivo al que están destinados, mejorando la eficiencia de la red.
-
-<div align="center">
-    <figure>
-        <img src="/primero-bach/img/switch.png" width="30%">
-        <figcaption><i>Switch con 8 puertos Gigabit Ethernet (1000 Mbps)</i><figcaption>
-    </figure>
-</div>
-
-- **Router:** permite conectar diferentes redes entre sí y gestionar la conexión a Internet. Es el dispositivo clave para el acceso a la red en hogares y empresas.
-- **Módem:** dispositivo que convierte la señal del proveedor de Internet (fibra óptica, ADSL, cable, etc.) en una señal digital que los dispositivos pueden usar. En la mayoría de los casos, el módem está integrado dentro del router.
+- **Hub:** envía los datos a todos los dispositivos conectados. No es eficiente, por eso hoy casi no se usa.
+- **Switch:** mucho más inteligente que el hub. Envía los datos solo al destinatario correcto, mejorando el rendimiento de la red.
+- **Router:** conecta distintas redes entre sí (por ejemplo, una red local con Internet). También reparte direcciones IP dentro de la red.
+- **Módem:** convierte la señal de Internet del proveedor (fibra, ADSL, cable) en señal digital para nuestros dispositivos. A menudo está integrado dentro del router.
 
 #### 3.1.2.2 Complementarios
 Son dispositivos que mejoran la cobertura, estabilidad y alcance de la red.
@@ -73,7 +67,7 @@ La categoría indica el nivel de velocidad y rendimiento del cable:
 - **Cat 6:** hasta 10 Gbps en 55 metros. Mayor aislamiento frente a interferencias.
 - **Cat 7 y superiores:** mejor rendimiento, mayor velocidad y más blindaje. Usados en centros de datos y redes de alto rendimiento.
 
-Cuidado si contratáis un servicio de Internet de, por ejemplo, 600 Mbps, pero utilizáis un cable de categoría 5, ya que estaréis limitando la velocidad a la máxima que permite el cable (en este caso, 100 Mbps).
+⚠️ **Dato importante:** cuidado si contratas un servicio de Internet de, por ejemplo, 600 Mbps, pero utilizáis un cable de categoría 5, ya que estarás limitando la velocidad a la máxima que permite el cable (en este caso, 100 Mbps).
 
 ##### Fibra óptica 
 En lugar de cobre, usa **hilos delgados de vidrio o plástico** para transmitir datos mediante **pulsos de luz**, lo que permite mayores velocidades y distancias sin pérdida de señal. Es la tecnología más usada hoy en día para conexiones de Internet rápidas, como las que instalan los operadores en hogares y empresas.
@@ -89,22 +83,22 @@ Transmiten información a través de **ondas electromagnéticas**, eliminando la
 
 ##### WiFi (Wireless Fidelity)
 Tecnología que permite conectar dispositivos a Internet sin necesidad de cables. Se utiliza en hogares, oficinas y lugares públicos. Su velocidad y alcance dependen de la versión:
-- Wi-Fi 4 (802.11n): Hasta 600 Mbps.
-- Wi-Fi 5 (802.11ac): Hasta 1.3 Gbps, mayor estabilidad.
-- Wi-Fi 6 (802.11ax): Hasta 9.6 Gbps, mejor cobertura y menor latencia.
-- Wi-Fi 7 (en desarrollo): Mejor rendimiento y capacidad para entornos con múltiples dispositivos conectados.
+- **Wi-Fi 4:** Hasta 600 Mbps.
+- **Wi-Fi 5:** Hasta 1.3 Gbps, mayor estabilidad.
+- **Wi-Fi 6:** Hasta 9.6 Gbps, mejor cobertura y menor latencia.
+- **Wi-Fi 7 (en desarrollo):** Mejor rendimiento y capacidad para entornos con múltiples dispositivos conectados.
 
 Cuanto más reciente es la versión, mayor velocidad y mejor cobertura ofrece. No obstante, también depende del router y de si los dispositivos son compatibles con esa versión.
 
 ##### Bluetooth
 Tecnología diseñada para la transmisión de datos a corta distancia, , donde no se necesita gran velocidad, pero sí comodidad y bajo consumo de energía. Por ejemplo como en auriculares, ratones, teclados inalámbricos y algunos dispositivos inteligentes.
-- Bluetooth 4.0 - 4.2: bajo consumo de energía, ideal para wearables y accesorios inteligentes.
-- Bluetooth 5.0: mayor alcance (hasta 240 metros) y mejor rendimiento en la transmisión de datos.
+- **Bluetooth 4.0 - 4.2:** bajo consumo de energía, ideal para wearables y accesorios inteligentes.
+- **Bluetooth 5.0:** mayor alcance (hasta 240 metros) y mejor rendimiento en la transmisión de datos.
 
 ##### Redes móviles y satélites
 Se utilizan en comunicaciones de larga distancia. Por ejemplo:
-    - Redes móviles 4G y 5G, que permiten la conexión a Internet desde teléfonos y dispositivos móviles.
-    - Internet por satélite, útil en zonas donde no llega la fibra óptica, como en áreas rurales o en barcos.
+    - **Redes móviles 4G y 5G**, que permiten la conexión a Internet desde teléfonos y dispositivos móviles.
+    - **Internet por satélite**, útil en zonas donde no llega la fibra óptica, como en áreas rurales o en barcos.
 
 ## 3.2 Estructura de una red local
 - Diseño básico de una LAN.
@@ -116,8 +110,16 @@ Se utilizan en comunicaciones de larga distancia. Por ejemplo:
 - Subnetting: concepto y utilidad.
 - DHCP: asignación dinámica de direcciones.
 
-## 3.4 El acceso a Internet y redes WAN
-- Cómo funciona el acceso a Internet (ISP, DNS, NAT)
-- Conexiones de redes WAN: MPLS, VPN, enlaces satelitales, redes 5G
+## 3.4 El acceso a Internet
+
+### 3.4.1 ¿Cómo accedemos a Internet?
+
+- ISP (Proveedor de Internet): la empresa que nos da conexión (ej.: Movistar, Vodafone).
+- Módem/router: conecta tu casa a Internet.
+- DNS (Domain Name System): convierte direcciones web (como www.google.com) en direcciones IP.
+- NAT (Network Address Translation): permite que varios dispositivos compartan una única IP pública para salir a Internet.
+
+
+
 
 
