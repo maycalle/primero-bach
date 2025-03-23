@@ -1,13 +1,15 @@
-# 3. Elementos y estructura de una red
+# 3. Elementos físicos de una red
 
-## 3.1 Elementos de una red informática
+## 3.1 Introducción 
 
 Una red informática es un conjunto de dispositivos conectados entre sí para compartir información, recursos (como impresoras o archivos) o acceder a Internet. Para que una red funcione correctamente, se necesita una serie de elementos que pueden clasificarse en tres grandes grupos:
 - **Dispositivos finales (o nodos):** los que usamos directamente, como ordenadores o móviles.
 - **Dispositivos de red:** gestionan el tráfico de datos entre los dispositivos.
 - **Medios de transmisión:** los canales por donde viaja la información, como cables o señales inalámbricas.
 
-### 3.1.1 Dispositivos finales
+## 3.2 Dispositivos de una red
+
+### 3.2.1 Dispositivos finales
 
 Son los usuarios finales de la red, es decir, los equipos con los que interactuamos directamente.
 - **Ordenadores (de sobremesa y portátiles):** permiten navegar por Internet, acceder a archivos en red o comunicarse con otros equipos. 
@@ -17,28 +19,28 @@ Son los usuarios finales de la red, es decir, los equipos con los que interactua
 
 Estos dispositivos se llaman también **hosts o nodos finales**. Son los puntos donde nace o termina la información que circula por la red.
 
-### 3.1.2 Dispositivos de red
+### 3.2.2 Dispositivos de red
 
 Son los intermediarios que hacen posible la conexión y la comunicación entre dispositivos finales. Se encargan de dirigir y controlar el flujo de datos para que llegue al destino correcto.
 
-#### 3.1.2.1 Básicos
+#### Básicos
 Son esenciales para la creación y funcionamiento de una red informática.
 - **Hub:** envía los datos a todos los dispositivos conectados. No es eficiente, por eso hoy casi no se usa.
 - **Switch:** mucho más inteligente que el hub. Envía los datos solo al destinatario correcto, mejorando el rendimiento de la red.
 - **Router:** conecta distintas redes entre sí (por ejemplo, una red local con Internet). También reparte direcciones IP dentro de la red.
 - **Módem:** convierte la señal de Internet del proveedor (fibra, ADSL, cable) en señal digital para nuestros dispositivos. A menudo está integrado dentro del router.
 
-#### 3.1.2.2 Complementarios
+#### Complementarios
 Son dispositivos que mejoran la cobertura, estabilidad y alcance de la red.
 - **Punto de acceso (*Access Point, AP*):** dispositivo que permite conectar dispositivos inalámbricos a una red cableada, ampliando la cobertura Wi-Fi y mejorando la conectividad en zonas con señal débil o inexistente. Se usa en oficinas, empresas y grandes espacios donde la cobertura de un router no es suficiente.
 - **Repetidor Wi-Fi:** dispositivo que capta una señal WiFi existente y la retransmite para ampliar su cobertura en zonas con baja conectividad. A diferencia del punto de acceso, no se conecta por cable, lo que puede reducir su velocidad en algunos casos.
 - **Firewall (cortafuegos):** dispositivo de seguridad que protege la red frente a accesos no autorizados y ciberataques, filtrando el tráfico de datos. Puede estar integrado en el router o ser un equipo independiente, aunque también existen versiones en software.
 
-### 3.1.3 Medios de transmisión
+## 3.3 Medios de transmisión
 
 Son los canales a través de los cuales viajan los datos en la red. Se dividen en medios cableados e inalámbricos.
 
-#### 3.1.3.1 Medios cableados
+#### 3.3.1 Medios cableados
 
 Los datos se transmiten a través de cables físicos, como **cables de cobre o fibra óptica**, ofreciendo una conexión más estable y segura.
 
@@ -77,7 +79,7 @@ En lugar de cobre, usa **hilos delgados de vidrio o plástico** para transmitir 
 
 Para conectar la fibra óptica a los dispositivos de red, se utilizan diferentes tipos de conectores, según el tipo de instalación y equipo utilizado. Los más comunes son: SC, LC, ST, FC, entre otros.
 
-#### 3.1.3.2 Medios inalámbricos
+#### 3.3.2 Medios inalámbricos
 
 Transmiten información a través de **ondas electromagnéticas**, eliminando la necesidad de cables físicos. Son más flexibles y permiten movilidad, aunque pueden ser más vulnerables a interferencias y variaciones en la señal.
 
@@ -100,24 +102,7 @@ Se utilizan en comunicaciones de larga distancia. Por ejemplo:
 - **Redes móviles 4G y 5G**, que permiten la conexión a Internet desde teléfonos y dispositivos móviles.
 - **Internet por satélite**, útil en zonas donde no llega la fibra óptica, como en áreas rurales o en barcos.
 
-## 3.2 Estructura de una red local
-- Diseño básico de una LAN.
-- Subredes y segmentación de redes.
-- Introducción a VLANs (Redes de Área Local Virtuales).
 
-## 3.3 Protocolo de direccionamiento en redes
-- Funcionamiento del direccionamiento IPv4 e IPv6.
-- Subnetting: concepto y utilidad.
-- DHCP: asignación dinámica de direcciones.
-
-## 3.4 El acceso a Internet
-
-### 3.4.1 ¿Cómo accedemos a Internet?
-
-- ISP (Proveedor de Internet): la empresa que nos da conexión (ej.: Movistar, Vodafone).
-- Módem/router: conecta tu casa a Internet.
-- DNS (Domain Name System): convierte direcciones web (como www.google.com) en direcciones IP.
-- NAT (Network Address Translation): permite que varios dispositivos compartan una única IP pública para salir a Internet.
 
 
 
