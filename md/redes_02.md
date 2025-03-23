@@ -23,12 +23,7 @@ Este criterio clasifica las redes según la distancia que abarcan y el tamaño d
     - **WiMAX**, una tecnología inalámbrica capaz de cubrir hasta 50 km sin necesidad de cables.     
 - Se utiliza, por ejemplo, para unir diferentes edificios de una empresa, hospitales, bibliotecas, ayuntamientos o facultades universitarias que están en distintas partes de una ciudad.
 
-***Curiosidad tecnológica***: Barcelona es una de las ciudades más avanzadas en el uso de tecnologías para gestionar servicios urbanos de forma eficiente y sostenible. Entre sus iniciativas destacan:
-- Contenedores inteligentes, que avisan cuando están llenos.
-- Farolas adaptativas, que ajustan su luz según la presencia de personas.
-- Riego automático, según la humedad del suelo.
-- Aparcamiento inteligente, con sensores que muestran plazas libres en una app.
-Todo esto funciona gracias a una infraestructura de red urbana que combina **redes MAN** con otras redes inalámbricas para dispositivos IoT, como **LoRa** o **NB-IoT**.
+***Curiosidad tecnológica***: Barcelona es una de las ciudades más avanzadas en el uso de tecnologías para gestionar servicios urbanos de forma eficiente y sostenible. Entre sus iniciativas destacan: contenedores inteligentes (avisan cuando están llenos), farolas adaptativas (ajustan su luz según la presencia de personas), riego automático (según la humedad del suelo), aparcamiento inteligente (con sensores que muestran plazas libres en una app). Todo esto funciona gracias a una infraestructura de red urbana que combina **redes MAN** con otras redes inalámbricas para dispositivos IoT, como **LoRa** o **NB-IoT**.
 
 ### 2.1.3 LAN (Local Area Network, Red de Área Local)
 - Las **redes LAN** se utilizan para conectar dispositivos dentro de un **espacio pequeño, como una casa, un aula, una oficina o un laboratorio**. Son las redes más comunes en el día a día. Permiten compartir archivos, impresoras, conexión a Internet o jugar en red local con gran velocidad y poco retraso.
@@ -97,63 +92,55 @@ Cada tipo de red se adapta a diferentes necesidades y escalas, utilizando tecnol
 La topología de red describe la forma física o lógica en la que se conectan los dispositivos entre sí. Es como el plano o el esquema de la red.
 
 ### 2.2.1 Topologia en bus
-Todos los dispositivos están conectados a un único cable central (llamado “bus” o “troncal”), por donde circulan todos los datos en ambas direcciones.
-
-<table>
-    <caption>Topología BUS</caption>
-    <tr>
-        <th>Ventajas</th>
-        <th>Inconvenientes</th>
-    </tr>
-    <tr>
-        <td>
-            - Es económica y fácil de instalar.
-        </td>
-        <td> 
-            - Si el cable principal se rompe, toda la red deja de funcionar.
-            - Cuantos más dispositivos se conectan, más lenta se vuelve por la congestión.
-        </td>
-    </tr>
-</table>
-
-- Es económica y fácil de instalar.
-- Si el cable principal se daña, toda la red falla.
-- A medida que se agregan más dispositivos, la velocidad disminuye por la congestión en el bus.
-
-Ejemplo: Redes locales antiguas con cable coaxial en oficinas o escuelas.
+- Todos los dispositivos están conectados a un **único cable central (llamado “bus” o “troncal”)**, por donde circulan todos los datos en ambas direcciones.
+- **Ventajas:**
+    - Es económica y fácil de instalar.
+- **Inconvenientes:** 
+    - Si el cable principal se rompe, toda la red deja de funcionar.
+    - Cuantos más dispositivos se conectan, más lenta se vuelve por la congestión.
+- **Ejemplo:** redes antiguas en escuelas u oficinas que usaban cable coaxial. Hoy casi no se utiliza.
 
 ### 2.2.2 Topología en estrella
-En esta configuración, todos los dispositivos están conectados a un nodo central (como un switch o un router).
-- El nodo central controla toda la comunicación.
-- Si un dispositivo falla, el resto de la red sigue funcionando.
-- Si el nodo central falla, la red completa deja de operar.
-
-Ejemplo: Las redes WiFi domésticas donde todos los dispositivos se conectan a un router.
+- Todos los dispositivos están conectados a un nodo central (como un switch o un router). Ese nodo dirige todo el tráfico de datos.
+- **Ventajas:** 
+    - Si un dispositivo falla, la red sigue funcionando con normalidad.
+    - Fácil de gestionar.
+- **Inconvenientes:**
+    - Si el nodo central falla, la red completa deja de operar.
+- **Ejemplo:** la mayoría de redes domésticas: todos los móviles, portátiles y consolas se conectan al router Wi-Fi.
 
 ### 2.2.3 Topología en anillo
-Los dispositivos están conectados en círculo y los datos viajan en una sola dirección o en ambas.
-- No hay nodo central, por lo que no depende de un único punto de fallo.
-- Es eficiente para transmitir datos, pero si un dispositivo falla, toda la red se interrumpe.
-- Puede ser lenta en redes grandes, ya que los datos deben pasar por cada nodo.
-
-Ejemplo: Redes en estaciones de trabajo o antiguas redes de fibra óptica.
+- En esta topología, los dispositivos están conectados formando un círculo cerrado. Cada uno se comunica con el siguiente, y los datos viajan de nodo en nodo hasta llegar a su destino. El envío puede ser en una sola dirección (anillo simple) o en ambas (anillo doble).
+- **Ventajas:**
+    - No necesita un nodo central, por lo que no depende de un único punto de fallo, como en la topología en estrella.     
+    - El tráfico de datos es ordenado y predecible, lo que puede mejorar la eficiencia en redes pequeñas.
+- **Inconvenientes:**
+    - Si un solo dispositivo o conexión falla, toda la red puede quedar inutilizada.
+    - En redes grandes, puede ser más lenta, ya que los datos deben pasar por muchos nodos hasta llegar al destino.
+    - La instalación y el mantenimiento pueden ser más complejos que en otras topologías.
+- **Ejemplo:** algunas antiguas redes de fibra óptica o estaciones de trabajo especializadas. Hoy en día están casi en desuso, pero se siguen estudiando por su valor histórico y conceptual.
 
 ### 2.2.4 Topología en malla
-Cada dispositivo está conectado a varios otros de forma redundante, lo que crea múltiples caminos para enviar los datos.
-- Es muy fiable porque si un enlace falla, los datos encuentran otro camino.
-- Alta velocidad y rendimiento.
-- Es costosa y compleja de implementar por la cantidad de cables y conexiones necesarias.
-
-Ejemplo: Internet en su conjunto funciona con una topología de malla parcial, donde hay múltiples rutas entre servidores y dispositivos.
+En una topología en malla, cada dispositivo está conectado a varios otros dispositivos dentro de la red. Esto crea múltiples caminos posibles para enviar los datos. No hay una única ruta: los datos pueden circular por diferentes caminos, lo que hace que la red sea muy resistente y eficiente.
+- **Ventajas:**
+    - Es muy fiable porque si una conexión falla, los datos pueden tomar otra ruta.
+    - Ofrece alta velocidad y buen rendimiento, ya que el tráfico se reparte por distintos caminos.
+    - Ideal para entornos donde la disponibilidad constante es fundamental.
+- **Inconvenientes:**
+    - Es costosa y compleja de implementar por la cantidad de cables y conexiones necesarias.
+    - Necesita una gestión más avanzada.
+- **Ejemplo:** la estructura de Internet se basa en una malla parcial, donde los servidores y routers de todo el mundo están interconectados por múltiples rutas. Así, si una parte de la red falla (por ejemplo, un cable submarino), los datos pueden redirigirse automáticamente por otro camino.
 
 ### 2.2.5 Topología híbrida
-Combina dos o más de las topologías anteriores, adaptándose a las necesidades específicas de la red.
-- Es muy flexible y escalable.
-- Puede integrar lo mejor de cada topología.
-- Puede ser costosa y compleja de administrar.
-
-Ejemplo: Redes empresariales donde los departamentos pueden tener topología en estrella, pero conectarse entre sí mediante malla o bus.
-
+La topología híbrida combina dos o más topologías diferentes (como estrella, bus, anillo o malla) dentro de una misma red. Se diseña así para adaptarse mejor a las necesidades reales de una organización o sistema. 
+- **Ventajas:**
+    - Es muy flexible y escalable: se adapta fácilmente al crecimiento o a nuevas necesidades.
+    - Permite aprovechar lo mejor de cada topología según el caso.
+    - Ideal para redes grandes o complejas, como las de empresas, universidades o instituciones públicas.
+- **Inconvenientes:**
+    - Puede ser más costosa y compleja de diseñar, configurar y mantener.
+    - Requiere una planificación cuidadosa para que todos los componentes se integren correctamente.
+- **Ejemplo:** en una empresa grande, cada departamento puede tener una red en estrella (con todos los dispositivos conectados a un switch), y luego todos los departamentos están conectados entre sí mediante una red en malla o en bus, formando una topología híbrida.
 
 <div align="center">
     <img src="/primero-bach/img/topologias-de-red-1.jpg" width="80%">
@@ -163,27 +150,30 @@ Cada topología tiene sus ventajas y desventajas, y la elección depende del cos
 
 ## 2.3 Según su nivel de acceso o privacidad
 
-Las redes pueden clasificarse según el nivel de acceso permitido a los usuarios. Algunas están restringidas a ciertos grupos o instituciones, mientras que otras son de acceso libre. También existen redes híbridas que combinan ambas características.
+Las redes no solo se diferencian por su tamaño o forma, sino también por quién puede acceder a ellas. Algunas redes están cerradas y protegidas, mientras que otras son abiertas para cualquiera. También existen redes mixtas, que combinan zonas públicas y privadas. Y por último, tenemos las VPN, una herramienta que ayuda a conectarse a redes privadas de forma segura desde cualquier lugar.
 
 ### 2.3.1 Redes privadas
-Son redes cerradas y seguras, donde solo los usuarios autorizados pueden acceder y utilizar sus servicios. Se usan en empresas, instituciones y organizaciones para garantizar privacidad y control. Por ejemplo, la red interna de una empresa a la que solo pueden acceder empleados desde sus oficinas.
+Son redes cerradas y seguras, donde solo los usuarios autorizados pueden acceder y utilizar sus servicios. Se usan en empresas, hospitales, instituciones y organizaciones para garantizar privacidad y control. Por ejemplo, la red interna de una empresa a la que solo pueden acceder empleados desde sus oficinas.
 
-Si la red privada ofrece servicios como páginas web, correo electrónico o almacenamiento de archivos solo accesibles para sus miembros, se denomina **Intranet**. Es común en universidades, hospitales y corporaciones.
+Si esta red privada incluye servicios como correo, páginas web internas o almacenamiento solo accesible desde dentro, se llama **Intranet**.
 
 ### 2.3.2 Redes públicas
-Son abiertas a cualquier usuario, permitiendo la comunicación y el intercambio de información sin restricciones de acceso. Sin embaro, pueden ser menos seguras, ya que cualquier usuario puede conectarse sin autenticación.
+Son abiertas a cualquier usuario, permitiendo la comunicación y el intercambio de información sin restricciones de acceso. Son muy prácticas, pero hay que tener cuidado: como están abiertas a todos, también son más vulnerables a ataques, virus o robo de datos.
 
-- Internet, la red pública global.
+Ejemplos: 
+- Internet, en general, es la mayor red pública del mundo.
 - Wi-Fi gratuito en cafeterías, bibliotecas o aeropuertos.
 - Redes móviles 4G/5G accesibles sin credenciales especiales.
 
+📌 **Consejo:** nunca envíes información personal o sensible desde una red pública sin protección adicional.
+
 ### 2.3.3 Redes híbridas
-Combinan elementos de redes privadas y públicas. Algunas partes son accesibles para cualquier usuario, mientras que otras requieren autorización. Por ejemplo, una universidad que ofrece Wi-Fi público para estudiantes y visitantes, pero restringe el acceso a ciertos sistemas administrativos o bases de datos internas solo para empleados.
+Son redes que combinan partes públicas y privadas. Algunas zonas están abiertas a todos, y otras están protegidas y requieren usuario y contraseña. Por ejemplo, una universidad que ofrece Wi-Fi público para estudiantes y visitantes, pero restringe el acceso a ciertos sistemas administrativos o bases de datos internas solo para empleados.
 
 ### 2.3.4 VPN (Virtual Private Network)
 Una VPN no es una red en sí misma, sino una tecnología que crea un canal seguro para acceder a una red privada a través de Internet. Se usa para proteger datos y garantizar privacidad en conexiones remotas. La VPN crea un túnel seguro y cifrado entre el usuario y la red privada, evitando que terceros puedan interceptar la información.
 
-Por ejemplo, un empleado que trabaja desde casa usa una VPN corporativa para conectarse a la red privada de su empresa y acceder a documentos internos como si estuviera en la oficina. También se usa para mejorar la privacidad en redes públicas, evitando que los proveedores de Internet o hackers puedan rastrear la actividad del usuario.
+Por ejemplo, un empleado que trabaja desde casa usa una VPN corporativa para conectarse a la red privada de su empresa y acceder a documentos internos como si estuviera en la oficina. También se usa para navegar con mayor privacidad, ya que impide que otros (como hackers o tu propio proveedor de Internet) rastreen lo que haces online.
 
 ## 2.4 Ejercicios
 
