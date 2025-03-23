@@ -2,7 +2,7 @@
 
 ## 3.1 Introducción 
 
-Una red informática es un conjunto de dispositivos conectados entre sí para compartir información, recursos (como impresoras o archivos) o acceder a Internet. Para que una red funcione correctamente, se necesita una serie de elementos que pueden clasificarse en tres grandes grupos:
+Para que una red funcione correctamente, se necesita una serie de elementos que pueden clasificarse en tres grandes grupos:
 - **Dispositivos finales (o nodos):** los que usamos directamente, como ordenadores o móviles.
 - **Dispositivos de red:** gestionan el tráfico de datos entre los dispositivos.
 - **Medios de transmisión:** los canales por donde viaja la información, como cables o señales inalámbricas.
@@ -26,7 +26,10 @@ Son los intermediarios que hacen posible la conexión y la comunicación entre d
 #### Básicos
 Son esenciales para la creación y funcionamiento de una red informática.
 - **Hub:** envía los datos a todos los dispositivos conectados. No es eficiente, por eso hoy casi no se usa.
-- **Switch:** mucho más inteligente que el hub. Envía los datos solo al destinatario correcto, mejorando el rendimiento de la red.
+- **Switch:** mucho más inteligente que el hub. Envía los datos solo al destinatario correcto, mejorando el rendimiento de la red. existen distintos tipos de switches según sus características y usos:
+    - **Switch no gestionable:** es el más sencillo y económico, no requiere configuración y funciona automáticamente, por lo que es ideal para redes domésticas o pequeñas oficinas. 
+    - **Switch gestionable:** permite configurar opciones avanzadas como VLANs y control de tráfico, siendo apropiado para redes profesionales o educativas que necesitan mayor control y seguridad.
+    - **Switch con PoE (Power over Ethernet):** puede alimentar dispositivos como cámaras IP o puntos de acceso WiFi a través del mismo cable de red que transmite los datos, lo que lo hace muy útil en instalaciones donde no se dispone de tomas de corriente cerca de los dispositivos.
 - **Router:** conecta distintas redes entre sí (por ejemplo, una red local con Internet). También reparte direcciones IP dentro de la red.
 - **Módem:** convierte la señal de Internet del proveedor (fibra, ADSL, cable) en señal digital para nuestros dispositivos. A menudo está integrado dentro del router.
 
@@ -101,6 +104,37 @@ Tecnología diseñada para la transmisión de datos a corta distancia, , donde n
 Se utilizan en comunicaciones de larga distancia. Por ejemplo:
 - **Redes móviles 4G y 5G**, que permiten la conexión a Internet desde teléfonos y dispositivos móviles.
 - **Internet por satélite**, útil en zonas donde no llega la fibra óptica, como en áreas rurales o en barcos.
+
+# Ejercicios
+
+1. **Comparativa de switches**. Investiga al menos tres modelos de switches que se venden actualmente. Anota:
+- Marca y modelo
+- Foto y enlace a la web donde lo has encontrado 
+- Número de puertos
+- Velocidad (100 Mbps, 1 Gbps…)
+- Si son gestionables o no
+- Precio aproximado
+- Ejemplo de búsqueda: “switch 8 puertos Gigabit Amazon” o en la web de fabricantes como TP-Link, D-Link o Cisco.
+
+2. **Busca un router doméstico**. Anota sus características principales:
+- Marca y modelo
+- Foto y enlace a la web donde lo has encontrado
+- Version Wi-Fi que ofrece
+- Número de puertos LAN
+- Si integra módem o no
+
+3. **Sobre cableado**. Encuentra un cable Cat 6 y un Cat 5e en una tienda online. Compara:
+- Foto y enlace a la web donde lo has encontrado
+- Precio por metro
+- Diferencias visibles o especificaciones destacadas
+- ¿Por qué el Cat 6 es más caro?
+
+4. **Sobre par trenzado**. Lee cada una de las siguientes situaciones y elige el tipo de cable de par trenzado más adecuado (UTP, FTP, STP o SFTP). Justifica tu elección brevemente con una frase.
+A. Una vivienda particular donde solo se va a conectar un router al ordenador mediante cable de red y no hay interferencias eléctricas cerca.
+B. Una oficina con impresoras y ordenadores donde el cableado pasa muy cerca de tubos fluorescentes y enchufes múltiples.
+C. Una fábrica con maquinaria industrial y motores eléctricos que generan muchas interferencias electromagnéticas.
+D. Un centro de datos de alto rendimiento, donde hay cientos de servidores y switches en armarios de red muy próximos entre sí.
+
 
 
 
