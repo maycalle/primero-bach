@@ -253,12 +253,11 @@ IPs válidas: de 192.168.1.1 a 192.168.1.254 (254 direcciones disponibles)
 **1. Comprensión básica (tipo test o respuesta corta)**
 - ¿Qué función cumple una dirección IP en una red?
 - ¿Qué diferencia hay entre una dirección IP pública y una privada?
-- Elige la opción correcta: 
-    - Una dirección IPv4 está formada por: 
-        a) 16 bits
-        b) 128 bits
-        c) 32 bits
-        d) 64 bits
+- Una dirección IPv4 está formada por:
+    - a) 16 bits
+    - b) 128 bits
+    - c) 32 bits
+    - d) 64 bits
 - Verdadero o falso (si es falso, justifica la respuesta)
     - ___ La dirección de broadcast se puede asignar a un dispositivo.
     - ___ El gateway solo se usa dentro de la red local.
@@ -266,20 +265,18 @@ IPs válidas: de 192.168.1.1 a 192.168.1.254 (254 direcciones disponibles)
     - ___ La máscara de red define cuántos bits se usan para la dirección MAC.
 
 **2. Ejercicios prácticos con IPs (cálculo y análisis)**
-- Dado el siguiente dispositivo:
-    - Dirección IP: 192.168.1.45
-    - Máscara de red: 255.255.255.0
-    a) ¿Cuál es la dirección de red?
-    b) ¿Cuál es la dirección de broadcast?
-    c) ¿Este dispositivo puede comunicarse directamente con uno con IP 192.168.2.20?
+- Dada la siguiente información de un dispositivo: dirección IP: 192.168.1.45 y máscara de red: 255.255.255.0
+    - a) ¿Cuál es la dirección de red?
+    - b) ¿Cuál es la dirección de broadcast?
+    - c) ¿Este dispositivo puede comunicarse directamente con uno con IP 192.168.2.20?
 
 - ¿Cuántos hosts (dispositivos) puedes tener en una red con máscara /12? ¿Y con /28?
 
 - ¿Qué dirección IP es válida dentro de esta red? Dirección de red: 172.16.0.0/16 (Justifica tu respuesta)
-    a) 172.16.25.5
-    b) 172.32.0.10
-    c) 172.16.255.254
-    d) 192.168.0.1
+    - a) 172.16.25.5
+    - b) 172.32.0.10
+    - c) 172.16.255.254
+    - d) 192.168.0.1
 
 **3. Identificación y clasificación**
 - Clasifica las siguientes direcciones como privadas o públicas:
@@ -289,7 +286,10 @@ IPs válidas: de 192.168.1.1 a 192.168.1.254 (254 direcciones disponibles)
     - 192.168.100.100
     - 200.45.0.1
 
-- Clasifica las siguientes IPs según su clase (A, B o C) y especifica el número máximo aproximado de hosts: 9.12.255.10, 150.25.34.7 y 192.168.2.55
+- Clasifica las siguientes IPs según su clase (A, B o C) y especifica el número máximo aproximado de hosts: 
+    - 9.12.255.10
+    - 150.25.34.7
+    - 192.168.2.55
 
 **4. Aplicación de CIDR**
 - ¿Cuál es la máscara equivalente a /25? ¿Y cuántos dispositivos permite?
