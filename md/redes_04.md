@@ -258,7 +258,7 @@ IPs válidas: de 192.168.1.1 a 192.168.1.254 (254 direcciones disponibles)
     - b) 128 bits
     - c) 32 bits
     - d) 64 bits
-- Verdadero o falso (si es falso, justifica la respuesta)
+- Verdadero o falso (si es falso, justifica la respuesta)    
     - ___ La dirección de broadcast se puede asignar a un dispositivo.
     - ___ El gateway solo se usa dentro de la red local.
     - ___ El rango 10.0.0.0 – 10.255.255.255 es un rango de IP privadas.
