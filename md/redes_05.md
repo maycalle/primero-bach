@@ -236,7 +236,7 @@ Cada subred tiene 64 hosts disponibles (2^6 - 2)
 
 Hasta ahora hemos visto cómo dividir una red en subredes a nivel IP (usando el subnetting). Sin embargo, también se puede dividir lógicamente una red física usando una tecnología llamada VLAN (Virtual LAN).
 
-#### ¿Qué es una VLAN?
+### 5.4.1 ¿Qué es una VLAN?
 Una VLAN es una red virtual que permite separar el tráfico de red dentro de una misma infraestructura física (por ejemplo, un switch o router). Es decir: “Varias redes independientes funcionando sobre el mismo cableado”.
 
 #### ¿Por qué usar VLANs?
@@ -246,97 +246,103 @@ Una VLAN es una red virtual que permite separar el tráfico de red dentro de una
 - Facilitar la administración: permite aplicar políticas por grupo, sin necesidad de nuevos cables.
 
 #### Ejemplo: red de un instituto
-Un instituto tiene una red física común (un switch central), pero quiere separar el tráfico de estos tres grupos:
-Administración
-Profesorado
-Alumnado
+Un instituto tiene una red física común (un switch central), pero quiere separar el tráfico de estos tres grupos: administración, profesorado y alumnado.
 
 Con VLANs, se pueden crear tres redes virtuales:
 - VLAN 10: Administración
 - VLAN 20: Profesorado
 - VLAN 30: Alumnado
 
---- 
+Aunque todos los ordenadores estén conectados al mismo switch físico, no podrán verse ni comunicarse entre sí si no pertenecen a la misma VLAN.
 
-#### Ejemplo práctico: LAN sencilla con 4 equipos
-Imagina que eres el encargado o encargada de configurar la red local de un aula de informática en tu instituto. En el aula hay:
-- Un router que proporciona conexión a Internet.
-- Tres ordenadores para el alumnado (PC1, PC2 y PC3).
-- Una impresora compartida para que todos puedan imprimir.
+**Consideraciones:**
+- Para usar VLANs se necesita un switch gestionable (capaz de configurar VLANs).
+- El router debe estar configurado para enrutar entre VLANs (si queremos que haya comunicación controlada entre ellas).
+- Es compatible con el subnetting: cada VLAN puede tener su propia subred IP.
 
-Todos los dispositivos estarán conectados al router mediante cables de red.
+**Actividad**
+Dibuja un esquema de red de un centro educativo con:
+- Un router
+- Un switch gestionable
+- 3 departamentos (admin, profes, alumnos)
+- Asigna una VLAN y una subred a cada uno.
 
-Sabes que la red que se utilizará es la **192.168.1.0/24**, lo que significa que:
-- Las direcciones IP válidas para los dispositivos van de 192.168.1.1 a 192.168.1.254.
-- La máscara de red es 255.255.255.0.
-- La dirección IP del router (puerta de enlace) será 192.168.1.1.
+### 5.4.2 Caso práctico final: diseño completo de una red con subredes y VLANs
+Vamos a aplicar lo aprendido a un caso realista de diseño completo de red.
 
-**TAREA:** asigna una dirección IP a cada uno de los siguientes dispositivos (PC1, PC2, PC3 e impresora), asegurándote de que:
-- No se repitan direcciones IP.
-- Todas estén dentro de la red 192.168.1.0/24.
-- Todos los dispositivos puedan comunicarse entre sí y acceder a Internet.
+Escenario: red de un centro educativo
+El centro tiene:
+- Un router con acceso a Internet.
+- Un switch gestionable con varias bocas.
+- Tres áreas principales:
+    - Administración (4 PCs + impresora)
+    - Profesorado (10 portátiles)
+    - Alumnado (30 equipos en el aula de informática)
 
-Completa la siguiente tabla con la IP, la máscara de red y la puerta de enlace para cada dispositivo:
+Cada área debe estar aislada del resto, pero tener acceso a Internet.
+Se usará la red base: 192.168.0.0/24.
+
+**Paso 1: crear subredes con subnetting**
+Queremos 3 subredes → usamos una máscara /26 (62 hosts por subred).
+
+**Paso 2: asignar VLANs**
+VLAN 10 → Administración
+VLAN 20 → Profesorado
+VLAN 30 → Alumnado
+
+**Paso 3: configuración ejemplo**
 
 <table>
     <tr>
         <th>Dispositivo</th>
-        <th>Dirección IP</th>
-        <th>Máscara de red</th>
-        <th>Puerta de enlace</th>
+        <th>IP asignada</th>
+        <th>VLAN</th>
+        <th>Gateway</th>
     </tr>
     <tr>
-        <td>Router</td>
-        <td>192.168.1.1</td>
-        <td>255.255.255.0</td>
+        <td>Router (subred 1)</td>
+        <td>192.168.0.1</td>
+        <td>Trunk</td>
         <td>---</td>
     </tr>
     <tr>
-        <td>PC1</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>PC admin1</td>
+        <td>192.168.0.10</td>
+        <td>VLAN 10</td>
+        <td>192.168.0.1</td>
     </tr>
     <tr>
-        <td>PC2</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Impresora admin</td>
+        <td>192.168.0.20</td>
+        <td>VLAN 10</td>
+        <td>192.168.0.1</td>
     </tr>
     <tr>
-        <td>PC3</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Portátil profesor 1</td>
+        <td>192.168.0.70</td>
+        <td>VLAN 20</td>
+        <td>192.168.0.65</td>
     </tr>
     <tr>
-        <td>Impresora</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>    
+        <td>PC alumno 1</td>
+        <td>192.168.0.130</td>
+        <td>VLAN 30</td>
+        <td>192.168.0.129</td>
+    </tr>
 </table>
 
-Contesta a las siguientes preguntas:
-- ¿Cuál es la dirección de red de esta LAN?
-- ¿Cuál sería la dirección de broadcast?
-- ¿Qué pasaría si dos dispositivos tuvieran la misma dirección IP?
+> **Ejercicio 2.** Diseña una red para un pequeño centro con estos requisitos:
 
-### 3.2.2 Subredes y segmentación de redes.
-Aunque todos los dispositivos puedan estar conectados entre sí, organizar la red en partes más pequeñas llamadas subredes permite:
-- Mejorar el rendimiento.
-- Aumentar la seguridad.
-- Hacer más fácil la administración.
-Esta división de una red en subredes es lo que llamamos **segmentación**.**
+- Dos aulas de informática con 15 PCs cada una.
+- Un despacho de orientación (2 PCs y una impresora).
+- Un sistema de cámaras IP (5 cámaras).
+- Quieren separar todo en subredes y VLANs distintas.
 
-Cada subred tiene su propia dirección de red, y los dispositivos dentro de ella comparten el mismo prefijo IP (por ejemplo, 192.168.1.X).
-
-### 3.2.3 Introducción a VLANs (Redes de Área Local Virtuales).
-
-## 3.3 Protocolo de direccionamiento en redes
-- Funcionamiento del direccionamiento IPv4 e IPv6.
-- Subnetting: concepto y utilidad.
-- DHCP: asignación dinámica de direcciones.
+Debes:
+- Dividir una red /24 en subredes adecuadas.
+- Asignar rangos de IPs y direcciones válidas.
+- Proponer VLANs y su función.
+- Hacer un pequeño esquema de red o tabla resumen.
 
 
 --- 
