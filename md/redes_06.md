@@ -103,6 +103,16 @@ Cuando usamos Internet, no solo importa que estemos conectados, sino cómo de bu
 📌 Ejemplo: En una partida online, si hay un 3-5% de pérdida de paquetes, el juego puede volverse injugable con personajes que "se teletransportan".
 
 
-## 2.4 Introducción a la seguridad en las redes
+
+
+
+# Análisis y configuración de redes
+
+## 4.1 Herramientas de análisis de redes
+
+## 4.2 Introducción a la seguridad en las redes
 - Amenazas básicas en redes (interceptación, suplantación, ataques de denegación de servicio)
 - Concepto de firewall y VPN
+
+## 4.3 Configuración básica de una red en Packet Tracer
+
