@@ -120,6 +120,18 @@ Aun así, conocer estas clases nos ayuda a entender cómo se estructuran las dir
         <td>Hasta 254</td>
         <td>Redes domésticas o pequeñas</td>
     </tr>
+    <tr>
+        <td>D</td>
+        <td>224.0.0.0 a 239.255.255.255</td>
+        <td>No se asigna a dispositivos individuales</td>
+        <td>Usada para multicast (enviar información a varios dispositivos a la vez).</td>
+    </tr>
+    <tr>
+        <td>E</td>
+        <td>240.0.0.0 a 255.255.255.255</td>
+        <td>No se asigna a dispositivos actualmente.</td>
+        <td>Reservada para investigación y uso futuro (no se usa comúnmente).</td>
+    </tr>
 </table>
 
 La IP **127.0.0.1 no pertenece a ninguna clase**. Es una dirección especial llamada **localhost** (la usamos para referirnos a nosotros mismos). 
