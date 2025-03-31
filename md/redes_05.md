@@ -2,9 +2,9 @@
 
 ## 5.1 ¿Qué es el diseño lógico de una red?
 
-El **diseño lógico de una red local (LAN)** es la **planificación de cómo se organizan los dispositivos y cómo se comunican entre ellos**, sin tener en cuenta los cables o aparatos físicos.
+El **diseño lógico de una red local (LAN)** es la **planificación de cómo se organizan los dispositivos y cómo se comunican entre ellos**, sin fijarnos en los cables o conexiones físicas..
 
-En otras palabras, es pensar **qué IP tendrá cada equipo, cómo se conectan a Internet y si se van a dividir en grupos** (subredes).
+En otras palabras, es decidir  **qué direcciones IP usará cada equipo, cómo saldrán a Internet y si la red se dividirá en grupos más pequeños** (subredes).
 
 ### 5.1.1 ¿Qué decisiones se toman en el diseño lógico?
 Al diseñar una red, se deben planificar cosas como:
@@ -30,7 +30,7 @@ Todos están en la misma red y pueden comunicarse entre sí.
 Para que un dispositivo funcione bien en la red y tenga acceso a Internet, necesita:
 - **Dirección IP:** identifica de forma única al dispositivo. Ej: 192.168.1.10
 - **Máscara de red:** determina qué parte de la IP pertenece a la red y cuál al host. Ej: 255.255.255.0
-- **Gateway:** dirección del router que da acceso al exterior (normalmente: 192.168.1.1)
+- **Gateway:** dirección del router que da acceso al exterior (Ej: 192.168.1.1)
 
 ### 5.1.4 Errores comunes en una red mal diseñada
 - **IP duplicada:** dos dispositivos con la misma IP entran en conflicto → ninguno se conecta bien.
@@ -109,7 +109,7 @@ Todos los dispositivos usan:
 - Máscara: 255.255.255.0
 - Gateway: 192.168.10.1
 
-### 5.2.3 Limitaciones de este diseño sin segmentación**
+### 5.2.3 Limitaciones de no segmentar**
 - Todo el tráfico circula por la misma red, lo que puede hacerla más lenta.
 - No hay separación entre usuarios y personal, lo que puede afectar la seguridad.
 - Administrar muchos dispositivos se vuelve complicado.
@@ -123,13 +123,13 @@ Por eso, en redes medianas o grandes, es recomendable dividir la red en subredes
 El **subnetting** es una técnica que permite dividir una red grande en varias redes más pequeñas, llamadas subredes. Cada subred funciona de forma independiente dentro de la red general.
 
 #### ¿Por qué dividir una red?
-- Mejor rendimiento: se reduce la congestión.
-- Mayor seguridad: se puede aislar tráfico entre áreas (por ejemplo, separar invitados del personal).
-- Organización: facilita la administración de IPs.
-- Aprovechamiento de IPs: se asigna solo lo necesario a cada grupo.
+- **Rendimiento:** menos tráfico por subred.
+- **Seguridad:** se pueden aislar departamentos.
+- **Organización:** se gestionan mejor las IPs.
+- **Eficiencia:** se asignan solo las IPs necesarias a cada subred.
 
 ### 5.3.2 ¿Cómo se hace el subnetting?
-Partimos de una red original (por ejemplo, 192.168.1.0/24) y la queremos dividir en partes más pequeñas.
+Partimos de una red inicial (por ejemplo, 192.168.1.0/24) y la queremos dividir en partes más pequeñas.
 
 Antes de comenzar, es importante entender algunos **conceptos clave**:
 - Cuando dividimos una red, tomamos bits del campo de host para crear más subredes. A estos bits se les llama **"bits prestados"**. Cuantos más bits prestemos, más subredes podemos crear, pero menos dispositivos podrá tener cada subred.
@@ -206,7 +206,10 @@ Como ves, el proceso de subnetting sigue una lógica clara: identificas cuántas
 >   - Rango de IPs disponibles para hosts
 >   - Dirección de broadcast 
 
-## 5.4 Subnetting con VLSM
+> **Ejercicio 2.** La red base asignada a un campus educativo es 172.16.0.0/16. El campus tiene varios edificios y quiere crear 16 subredes iguales, una para cada área del centro. Divide la red usando subnetting clásico.
+
+
+## 5.4 Subnetting con VLSM (máscara variable)
 
 Cuando usamos subnetting básico (como en el ejemplo anterior), dividimos la red en subredes del mismo tamaño. Esto a veces desperdicia direcciones IP, especialmente si algunos grupos necesitan pocas y otros muchas.
 
@@ -237,57 +240,125 @@ Cuando usamos subnetting básico (como en el ejemplo anterior), dividimos la red
 
 ### 5.4.1 Ejemplo con VLSM
 
-Supongamos que tienes la red 192.168.1.0/24 y necesitas asignar subredes a los siguientes grupos:
-- Departamento A: 100 dispositivos
-- Departamento B: 50 dispositivos
-- Departamento C: 20 dispositivos
-- Departamento D: 10 dispositivos
+Supongamos que tienes la red 192.168.1.0/24 (esto nos da 256 direcciones totales, de las cuales 254 son utilizables), y necesitas asignar subredes a los siguientes grupos:
+- Departamento A: 50 dispositivos
+- Departamento B: 100 dispositivos
+- Departamento C: 10 dispositivos
+- Departamento D: 20 dispositivos
 
 **Paso 1: Ordenar de mayor a menor**
-Se empieza por el grupo más grande para no solaparse.
+Esto es importante porque las subredes más grandes necesitan más espacio, así que hay que asignarlas primero para no quedarse sin sitio.
+1. Departamento B
+2. Departamento A
+3. Departamento D
+4. Departamento C
 
-**Paso 2: Calcula la máscara necesaria para cada grupo**
-Usa la fórmula: Nº de hosts útiles = 2^h - 2 (h = bits disponibles para hosts)
-
-Completa esta tabla:
+**Paso 2: Calcular el tamaño de cada subred**
+- Usa la fórmula: Nº de hosts útiles = 2^h - 2 (h = bits disponibles para hosts)
+- Busca la mínima potencia de 2 que cubra cada grupo:
 
 <table>
     <tr>
         <th>Departamento</th>
         <th>Necesita</th>
-        <th>Máscara (CIDR)</th>
-        <th>Nº IP útiles</th>
-        <th>Rango asignado</th>
-    </tr>
-    <tr>
-        <td>A</td>
-        <td>100</td>
-        <td>/25</td>
-        <td>126</td>
-        <td>192.168.1.0 - 192.168.1.127</td>
+        <th>Potencia de 2 más próxima</th>
+        <th>Nº IPs útiles</th>
+        <th>CIDR</th>
     </tr>
     <tr>
         <td>B</td>
-        <td>50</td>
-        <td>/26</td>
-        <td>62</td>
-        <td>192.168.1.128 - 192.168.1.191</td>
+        <td>100</td>
+        <td>128 → 2⁷</td>
+        <td>126</td>
+        <td>/25</td>
     </tr>
     <tr>
-        <td>C</td>
-        <td>20</td>
-        <td>/27</td>
-        <td>30</td>
-        <td>192.168.1.192 - 192.168.1.223</td>
+        <td>A</td>
+        <td>50</td>
+        <td>64 → 2⁶</td>
+        <td>62</td>
+        <td>/26</td>
     </tr>
     <tr>
         <td>D</td>
+        <td>20</td>
+        <td>32 → 2⁵</td>
+        <td>30</td>
+        <td>/27</td>
+    </tr>
+    <tr>
+        <td>C</td>
         <td>10</td>
-        <td>/28</td>
+        <td>16 → 2⁴</td>
         <td>14</td>
-        <td>192.168.1.224 - 192.168.1.239</td>
+        <td>/28</td>
     </tr>
 </table>
 
-Aún sobran direcciones en el bloque 192.168.1.240 - 192.168.1.255 para futuras ampliaciones.
+**Paso 3: Asignar rangos sin solapamiento**
+Ahora asignamos las subredes empezando desde 192.168.1.0, respetando el tamaño necesario de cada una:
+
+<table>
+    <tr>
+        <th>Departamento</th>
+        <th>CIDR</th>
+        <th>Dirección de red</th>
+        <th>Primer host</th>
+        <th>Último host</th>
+        <th>Broadcast</th>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>/25</td>
+        <td>192.168.1.0</td>
+        <td>192.168.1.1</td>
+        <td>192.168.1.126</td>
+        <td>192.168.1.127</td>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>/26</td>
+        <td>192.168.1.128</td>
+        <td>192.168.1.129</td>
+        <td>192.168.1.190</td>
+        <td>192.168.1.191</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>/27</td>
+        <td>192.168.1.192</td>
+        <td>192.168.1.193</td>
+        <td>192.168.1.222</td>
+        <td>192.168.1.223</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>/28</td>
+        <td>192.168.1.224</td>
+        <td>192.168.1.225</td>
+        <td>192.168.1.238</td>
+        <td>192.168.1.239</td>
+    </tr>
+</table>
+
+Al final aún sobran direcciones:
+192.168.1.240 - 192.168.1.255 → disponibles para futuro uso.
+
+> **Ejercicio 2.**  Dispones de la red 192.168.10.0/24. Necesitas dividirla en subredes para los siguientes grupos utilizando VLSM:
+> - Departamento de Administración: 30 dispositivos 
+> - Sala de profesores: 14 dispositivos 
+> - Conserjería: 6 dispositivos
+> *Intrucciones:* 
+> - Ordena los grupos de mayor a menor según el número de dispositivos.
+> - Calcula cuántas IPs necesita cada grupo y el prefijo CIDR adecuado.
+> - Asigna a cada grupo: dirección de red, primer y último host y dirección de broadcast.
+> Asegúrate de que no hay solapamientos y de que todas las IPs encajan dentro del bloque 192.168.10.0/24.
+> Recuerda usar potencias de 2 y la fórmula 2^h - 2.
+
+> **Ejercicio 3.** Dispones de la red 10.0.0.0/24. Debes segmentarla para los siguientes servicios de un instituto utilizando VLSM:
+> - Aulas de informática: 60 ordenadores
+> - Administración: 25 ordenadores
+> - Laboratorio de ciencias: 12 ordenadores
+> - Dirección: 6 ordenadores
+> - Red de invitados: 4 ordenadores
 
