@@ -34,21 +34,21 @@ Para que un dispositivo funcione bien en la red y tenga acceso a Internet, neces
 
 ### 5.1.4 Errores comunes en una red mal diseñada
 - **IP duplicada:** dos dispositivos con la misma IP entran en conflicto → ninguno se conecta bien.
-- **IP fuera del rango:** el dispositivo no podrá hablar con los demás ni con el router.
+- **IP fuera del rango definido por la red y su máscara.:** el dispositivo no podrá hablar con los demás ni con el router.
 - **Máscara incorrecta:** el equipo no sabrá quién está dentro de su red → no se comunica.
 - **Falta de gateway:** el dispositivo no podrá salir a Internet.
 
 ## 5.2 Diseño básico de una red sin segmentación
 
-Antes de dividir una red en subredes, es importante entender cómo se diseña una red sencilla, con todos los dispositivos en el mismo segmento. Este tipo de red es común en hogares, aulas, pequeñas oficinas o laboratorios.
+Antes de aprender a dividir una red, es importante entender cómo se diseña una red sencilla, donde **todos los dispositivos están conectados en el mismo grupo o segmento**. Este tipo de red se utiliza habitualmente en hogares, aulas, pequeñas oficinas o laboratorios.
 
-#### Elementos comunes
-- **Router:** proporciona acceso a Internet y actúa como gateway.
+### 5.2.1 Elementos comunes en una red local simple
+- **Router:** proporciona acceso a Internet y actúa como puerta de enlace (gateway).
 - **Switch:** conecta los dispositivos entre sí (si la red es cableada).
 - **Dispositivos finales:** ordenadores, impresoras, cámaras, etc.
-- **Asignación IP:** manual o por DHCP.
+- **Asignación IP:** puede hacerse manualmente o mediante DHCP.
 
-#### Ejemplo: red de una biblioteca escolar
+### 5.2.2 Ejemplo: red de una biblioteca escolar
 Supongamos que se necesita conectar:
 - 1 router
 - 1 impresora de red
@@ -109,12 +109,12 @@ Todos los dispositivos usan:
 - Máscara: 255.255.255.0
 - Gateway: 192.168.10.1
 
-Esto facilita la configuración, pero tiene limitaciones en redes grandes:
-- Todo el tráfico se comparte, lo que ralentiza la red.
-- No se puede aislar tráfico entre grupos (por seguridad o rendimiento).
-- Se vuelve más difícil de administrar.
+### 5.2.3 Limitaciones de este diseño sin segmentación**
+- Todo el tráfico circula por la misma red, lo que puede hacerla más lenta.
+- No hay separación entre usuarios y personal, lo que puede afectar la seguridad.
+- Administrar muchos dispositivos se vuelve complicado.
 
-Por eso, para redes medianas o grandes, conviene dividir la red en subredes o usar VLANs.
+Por eso, en redes medianas o grandes, es recomendable dividir la red en subredes, usando subnetting. 
 
 ## 5.3 Diseño de redes con subredes (subnetting)
 
@@ -206,4 +206,88 @@ Como ves, el proceso de subnetting sigue una lógica clara: identificas cuántas
 >   - Rango de IPs disponibles para hosts
 >   - Dirección de broadcast 
 
+## 5.4 Subnetting con VLSM
+
+Cuando usamos subnetting básico (como en el ejemplo anterior), dividimos la red en subredes del mismo tamaño. Esto a veces desperdicia direcciones IP, especialmente si algunos grupos necesitan pocas y otros muchas.
+
+**VLSM (Variable Length Subnet Masking)** permite usar **subredes de distintos tamaños**, adaptadas a lo que necesita cada grupo.
+
+<table>
+    <tr>
+        <th>Subnetting clásico (fijo)</th>
+        <th>VLSM (máscara variable)</th>
+    </tr>
+    <tr>
+        <td>Todas las subredes tienen el mismo tamaño</td>
+        <td>Cada subred puede tener el tamaño que necesite</td>
+    </tr>
+    <tr>
+        <td>Fácil de calcular</td>
+        <td>Requiere más planificación</td>
+    </tr>
+    <tr>
+        <td>Puede desperdiciar IPs</td>
+        <td>Ahorra espacio de direcciones</td>
+    </tr>
+    <tr>
+        <td>Buena para redes simples</td>
+        <td>Ideal para redes organizadas por grupos</td>
+    </tr>
+</table>
+
+### 5.4.1 Ejemplo con VLSM
+
+Supongamos que tienes la red 192.168.1.0/24 y necesitas asignar subredes a los siguientes grupos:
+- Departamento A: 100 dispositivos
+- Departamento B: 50 dispositivos
+- Departamento C: 20 dispositivos
+- Departamento D: 10 dispositivos
+
+**Paso 1: Ordenar de mayor a menor**
+Se empieza por el grupo más grande para no solaparse.
+
+**Paso 2: Calcula la máscara necesaria para cada grupo**
+Usa la fórmula: Nº de hosts útiles = 2^h - 2 (h = bits disponibles para hosts)
+
+Completa esta tabla:
+
+<table>
+    <tr>
+        <th>Departamento</th>
+        <th>Necesita</th>
+        <th>Máscara (CIDR)</th>
+        <th>Nº IP útiles</th>
+        <th>Rango asignado</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>100</td>
+        <td>/25</td>
+        <td>126</td>
+        <td>192.168.1.0 - 192.168.1.127</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>50</td>
+        <td>/26</td>
+        <td>62</td>
+        <td>192.168.1.128 - 192.168.1.191</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>20</td>
+        <td>/27</td>
+        <td>30</td>
+        <td>192.168.1.192 - 192.168.1.223</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>10</td>
+        <td>/28</td>
+        <td>14</td>
+        <td>192.168.1.224 - 192.168.1.239</td>
+    </tr>
+</table>
+
+Aún sobran direcciones en el bloque 192.168.1.240 - 192.168.1.255 para futuras ampliaciones.
 
