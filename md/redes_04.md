@@ -9,7 +9,7 @@ La **dirección IP (Internet Protocol)** es un número que identifica de forma �
 
 Es importante asignar y gestionar bien las direcciones IP, ya que si dos dispositivos comparten la misma, se produce un conflicto de red que impide su correcto funcionamiento.
 
-Existen dos versiones principales de direcciones IP: **IPv4** e **IPv6**.
+Existen dos versiones principales de direcciones IP: IPv4 e IPv6.
 
 #### IPv4
 Una dirección IPv4 se representa así:
@@ -53,7 +53,6 @@ Con esta máscara, todos los dispositivos que comparten los tres primeros númer
 ### 4.1.3 Gateway
 El **gateway** (también llamado **puerta de enlace**) es la dirección IP del dispositivo que actúa como intermediario entre la red local y otras redes, como por ejemplo, Internet.
 
-#### ¿Para qué sirve?
 Cuando un dispositivo necesita comunicarse con otro que no está en su misma red local, el mensaje debe salir de la red. Para eso, se envía al gateway, que se encarga de reenviarlo al destino correcto.
 
 El gateway suele ser el router de la red.
@@ -89,68 +88,7 @@ Eso quiere decir que si enviamos un mensaje a 192.168.1.255, todos los dispositi
 
 ¡IMPORTANTE! No se debe asignar la dirección de broadcast a ningún dispositivo, porque no es un equipo, ¡es una dirección especial!
 
-## 4.2 Tipos de direcciones IP
-Las direcciones IP se pueden clasificar de varias formas, según cómo se usan y cómo se asignan. Conocer estos tipos nos ayuda a entender mejor cómo se organizan las redes y cómo se conectan con el exterior, como por ejemplo, con Internet.
-
-### 4.2.1 Direcciones públicas y privadas
-
-#### IP privadas
-Las **direcciones IP privadas** son aquellas que solo se utilizan dentro de redes locales: en una casa, un centro educativo, una empresa, etc. No pueden usarse directamente en Internet.
-
-Por ejemplo, en tu casa, el móvil, el portátil o la impresora usan IPs privadas como: 192.168.1.5 ó 10.0.0.23
-
-Estas IPs las asigna el router y no son visibles desde fuera de la red.
-
-<table>
-    <caption>Rangos reservados para IP privadas</caption>
-    <tr>
-        <th>Clase</th>
-        <th>Rango privado</th>
-    <tr>
-    <tr>
-        <td>A</td>
-        <td>10.0.0.0 – 10.255.255.255</td>
-    </tr>
-    <tr>
-        <td>B</td>
-        <td>172.16.0.0 – 172.31.255.255</td>
-    </tr>
-    <tr>
-        <td>C</td>
-        <td>192.168.0.0 – 192.168.255.255</td>
-    </tr>
-</table>
-
-Cualquier dirección fuera de estos rangos no se considera privada.
-
-#### IP públicas
-Las **direcciones IP públicas** son las que se usan para comunicarse a través de Internet. Son únicas a nivel mundial y permiten que los dispositivos sean accesibles desde fuera de la red local.
-
-Por ejemplo, el router de tu casa tiene una IP pública asignada por tu proveedor de Internet (ISP). Desde fuera, se puede acceder a tu red a través de esa dirección.
-
-**Ejemplo de IP pública:** 85.120.45.33
-
-### 4.2.2 Direcciones estáticas vs dinámicas
-
-#### IP estática
-Una **IP estática** es una dirección que se asigna manualmente a un dispositivo y permanece fija en el tiempo. Siempre será la misma, aunque se reinicie el dispositivo o se desconecte de la red.
-
-Se usa en casos donde es importante que la IP no cambie, como:
-- Servidores
-- Impresoras en red
-- Cámaras de seguridad
-
-#### IP dinámica
-Una **IP dinámica** es una dirección que se asigna automáticamente a un dispositivo cada vez que se conecta a la red. Esta dirección puede cambiar con el tiempo.
-
-La asignación la realiza un **servidor DHCP**, que normalmente es el propio router en redes domésticas.
-
-El **DHCP** ***(Dynamic Host Configuration Protocol)*** es un servicio que se encarga de dar una IP automáticamente a cada dispositivo que se conecta, sin necesidad de configurarla manualmente.
-Es como si el router fuera un “repartidor de direcciones” que entrega una IP libre a cada nuevo dispositivo que entra en la red.
-
-En casa, la mayoría de tus dispositivos (móvil, portátil, tablet…) usan IP dinámica gracias al DHCP.
-
-### 4.2.3 Clases de direcciones IP y notación CIDR
+### 4.1.6 Clases de direcciones IP y notación CIDR
 Antes del sistema actual, las direcciones IP se organizaban en clases (A, B y C) según el tamaño de la red y la cantidad de dispositivos que podía albergar. 
 
 Este sistema fue útil inicialmente, pero tenía un problema importante: era muy poco flexible porque cada clase reservaba una cantidad fija de bits para la parte de red y otra para los dispositivos (hosts), y muchas veces se asignaban rangos enormes a redes que solo necesitaban unas pocas direcciones, lo que provocaba desperdicio de IPs. Por ejemplo, una empresa que necesitaba 200 direcciones tenía que usar una red de clase B con más de 65.000.
@@ -229,7 +167,68 @@ Gracias a CIDR, es posible crear redes del tamaño exacto que se necesita, sin a
 - **Sistema por clases:** fijo, limitado y con desperdicio de IPs.
 - **CIDR:** flexible, eficiente y el sistema más utilizado actualmente.
 
-### 4.2.4 Rango de IPs disponibles según la máscara
+## 4.2 Tipos de direcciones IP
+Las direcciones IP se pueden clasificar de varias formas, según cómo se usan y cómo se asignan. Conocer estos tipos nos ayuda a entender mejor cómo se organizan las redes y cómo se conectan con el exterior, como por ejemplo, con Internet.
+
+### 4.2.1 Direcciones públicas y privadas
+
+#### IP privadas
+Las **direcciones IP privadas** son aquellas que solo se utilizan dentro de redes locales: en una casa, un centro educativo, una empresa, etc. No pueden usarse directamente en Internet.
+
+Por ejemplo, en tu casa, el móvil, el portátil o la impresora usan IPs privadas como: 192.168.1.5 ó 10.0.0.23
+
+Estas IPs las asigna el router y no son visibles desde fuera de la red.
+
+<table>
+    <caption>Rangos reservados para IP privadas</caption>
+    <tr>
+        <th>Clase</th>
+        <th>Rango privado</th>
+    <tr>
+    <tr>
+        <td>A</td>
+        <td>10.0.0.0 – 10.255.255.255</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>172.16.0.0 – 172.31.255.255</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>192.168.0.0 – 192.168.255.255</td>
+    </tr>
+</table>
+
+Cualquier dirección fuera de estos rangos no se considera privada.
+
+#### IP públicas
+Las **direcciones IP públicas** son las que se usan para comunicarse a través de Internet. Son únicas a nivel mundial y permiten que los dispositivos sean accesibles desde fuera de la red local.
+
+Por ejemplo, el router de tu casa tiene una IP pública asignada por tu proveedor de Internet (ISP). Desde fuera, se puede acceder a tu red a través de esa dirección.
+
+**Ejemplo de IP pública:** 85.120.45.33
+
+### 4.2.2 Direcciones estáticas vs dinámicas
+
+#### IP estática
+Una **IP estática** es una dirección que se asigna manualmente a un dispositivo y permanece fija en el tiempo. Siempre será la misma, aunque se reinicie el dispositivo o se desconecte de la red.
+
+Se usa en casos donde es importante que la IP no cambie, como:
+- Servidores
+- Impresoras en red
+- Cámaras de seguridad
+
+#### IP dinámica
+Una **IP dinámica** es una dirección que se asigna automáticamente a un dispositivo cada vez que se conecta a la red. Esta dirección puede cambiar con el tiempo.
+
+La asignación la realiza un **servidor DHCP**, que normalmente es el propio router en redes domésticas.
+
+El **DHCP** ***(Dynamic Host Configuration Protocol)*** es un servicio que se encarga de dar una IP automáticamente a cada dispositivo que se conecta, sin necesidad de configurarla manualmente.
+Es como si el router fuera un “repartidor de direcciones” que entrega una IP libre a cada nuevo dispositivo que entra en la red.
+
+En casa, la mayoría de tus dispositivos (móvil, portátil, tablet…) usan IP dinámica gracias al DHCP.
+
+### 4.2.3 Rango de IPs disponibles según la máscara
 
 La máscara de red define cuántas direcciones IP pueden usarse dentro de una red. Cuanto más grande es la red, más bits se reservan para los dispositivos (hosts).
 
