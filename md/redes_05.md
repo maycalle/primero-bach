@@ -344,7 +344,7 @@ Ahora asignamos las subredes empezando desde 192.168.1.0, respetando el tamaño 
 Al final aún sobran direcciones:
 192.168.1.240 - 192.168.1.255 → disponibles para futuro uso.
 
-> **Ejercicio 2.**  Dispones de la red 192.168.10.0/24. Necesitas dividirla en subredes para los siguientes grupos utilizando VLSM:
+> **Ejercicio 3.**  Dispones de la red 192.168.10.0/24. Necesitas dividirla en subredes para los siguientes grupos utilizando VLSM:
 > - Departamento de Administración: 30 dispositivos 
 > - Sala de profesores: 14 dispositivos 
 > - Conserjería: 6 dispositivos
@@ -355,7 +355,7 @@ Al final aún sobran direcciones:
 > Asegúrate de que no hay solapamientos y de que todas las IPs encajan dentro del bloque 192.168.10.0/24.
 > Recuerda usar potencias de 2 y la fórmula 2^h - 2.
 
-> **Ejercicio 3.** Dispones de la red 10.0.0.0/24. Debes segmentarla para los siguientes servicios de un instituto utilizando VLSM:
+> **Ejercicio 4.** Dispones de la red 10.0.0.0/24. Debes segmentarla para los siguientes servicios de un instituto utilizando VLSM:
 > - Aulas de informática: 60 ordenadores
 > - Administración: 25 ordenadores
 > - Laboratorio de ciencias: 12 ordenadores
