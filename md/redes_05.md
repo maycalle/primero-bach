@@ -1,27 +1,42 @@
-# 5. Diseño y estructura lógica de una red local
+# 5. Diseño lógico y segmentación de una red local
 
-## 5.1 ¿Qué es diseñar una red local (LAN)?
+## 5.1 ¿Qué es el diseño lógico de una red?
 
-Diseñar una red local (LAN) consiste en planificar la estructura lógica y física de la red para que todos los dispositivos puedan comunicarse entre sí de forma eficiente, segura y, si es necesario, acceder a Internet.
+El **diseño lógico de una red local (LAN)** es la **planificación de cómo se organizan los dispositivos y cómo se comunican entre ellos**, sin tener en cuenta los cables o aparatos físicos.
 
-#### Aspectos clave del diseño
-- **Elección de dispositivos:** ordenadores, impresoras, router, switch, etc.
-- **Tipo de conexión:** cableada (Ethernet), inalámbrica (WiFi), o mixta.
-- **Asignación de direcciones IP:** cada dispositivo debe tener una dirección única en la red.
-- **Salida a Internet:** configurar correctamente la puerta de enlace (gateway).
-- **Segmentación lógica:** si es necesario, dividir la red en subredes por departamentos o zonas.
+En otras palabras, es pensar **qué IP tendrá cada equipo, cómo se conectan a Internet y si se van a dividir en grupos** (subredes).
 
-#### Parámetros básicos de configuración
-Para que un dispositivo se conecte correctamente a la red y acceda a Internet, necesita estos tres parámetros:
+### 5.1.1 ¿Qué decisiones se toman en el diseño lógico?
+Al diseñar una red, se deben planificar cosas como:
+- Qué direcciones IP usarán los dispositivos
+- Qué dispositivos habrá (ordenadores, impresoras, routers, etc.)
+- Si todos estarán en la misma red o en subredes separadas
+- Cómo saldrán a Internet (por qué puerta de enlace o router)
+- Qué dispositivos deben comunicarse entre sí, y cuáles conviene mantener separados (por ejemplo: separar el tráfico del personal del tráfico del alumnado)
+
+En este curso aprenderemos a hacer esa organización mediante segmentación, una forma sencilla y muy útil de dividir una red en partes más pequeñas.
+
+### 5.1.2 Ejemplo simple de diseño lógico
+Imagina que queremos conectar los dispositivos de una oficina:
+- Red IP elegida: 192.168.10.0/24
+- Router (salida a Internet): 192.168.10.1
+- Impresora con IP fija: 192.168.10.10
+- Servidor de archivos con IP fija: 192.168.10.20
+- Ordenadores de los empleados: reciben IP automáticamente entre 192.168.10.100 y 192.168.10.200 (por DHCP)
+
+Todos están en la misma red y pueden comunicarse entre sí.
+
+### 5.1.3 Parámetros básicos que necesita cada dispostivo
+Para que un dispositivo funcione bien en la red y tenga acceso a Internet, necesita:
 - **Dirección IP:** identifica de forma única al dispositivo. Ej: 192.168.1.10
 - **Máscara de red:** determina qué parte de la IP pertenece a la red y cuál al host. Ej: 255.255.255.0
 - **Gateway:** dirección del router que da acceso al exterior (normalmente: 192.168.1.1)
 
-#### ¿Qué puede salir mal?
-- IP duplicada: dos dispositivos con la misma IP generan conflicto → sin conexión.
-- IP fuera de la red: el dispositivo no podrá comunicarse con el resto ni con el router.
-- Máscara incorrecta: no sabrá quién está en su red o fuera de ella.
-- Falta de gateway: no tendrá acceso a Internet.
+### 5.1.4 Errores comunes en una red mal diseñada
+- **IP duplicada:** dos dispositivos con la misma IP entran en conflicto → ninguno se conecta bien.
+- **IP fuera del rango:** el dispositivo no podrá hablar con los demás ni con el router.
+- **Máscara incorrecta:** el equipo no sabrá quién está dentro de su red → no se comunica.
+- **Falta de gateway:** el dispositivo no podrá salir a Internet.
 
 ## 5.2 Diseño básico de una red sin segmentación
 
