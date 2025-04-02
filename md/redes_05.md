@@ -240,125 +240,73 @@ Cuando usamos subnetting básico (como en el ejemplo anterior), dividimos la red
 
 ### 5.4.1 Ejemplo con VLSM
 
-Supongamos que tienes la red 192.168.1.0/24 (esto nos da 256 direcciones totales, de las cuales 254 son utilizables), y necesitas asignar subredes a los siguientes grupos:
-- Departamento A: 50 dispositivos
-- Departamento B: 100 dispositivos
-- Departamento C: 10 dispositivos
-- Departamento D: 20 dispositivos
+Queremos utilizar una dirección estándar de clase C, 192.168.5.0 /24, para crear cuatro subredes en una empresa, con 10, 25, 30 y 60 equipos respectivamente. Además, necesitamos interconectar tres routers entre sí. El esquema básico de conexiones es éste:
 
-**Paso 1: Ordenar de mayor a menor**
-Esto es importante porque las subredes más grandes necesitan más espacio, así que hay que asignarlas primero para no quedarse sin sitio.
-1. Departamento B
-2. Departamento A
-3. Departamento D
-4. Departamento C
+<div align="center">
+    <figure>
+        <img src="/primero-bach/img/ejemplo_vlsm.jpg" width="50%">        
+    </figure>
+</div>
 
-**Paso 2: Calcular el tamaño de cada subred**
-- Usa la fórmula: Nº de hosts útiles = 2^h - 2 (h = bits disponibles para hosts)
-- Busca la mínima potencia de 2 que cubra cada grupo:
+Vemos en la imagen anterior que hay conexiones WAN. Una conexión WAN (Wide Area Network) se refiere a los enlaces punto a punto entre routers. Cada uno de estos enlaces necesita una subred propia, aunque solo va a conectar dos dispositivos (los routers en cada extremo).
 
-<table>
-    <tr>
-        <th>Departamento</th>
-        <th>Necesita</th>
-        <th>Potencia de 2 más próxima</th>
-        <th>Nº IPs útiles</th>
-        <th>CIDR</th>
-    </tr>
-    <tr>
-        <td>B</td>
-        <td>100</td>
-        <td>128 → 2⁷</td>
-        <td>126</td>
-        <td>/25</td>
-    </tr>
-    <tr>
-        <td>A</td>
-        <td>50</td>
-        <td>64 → 2⁶</td>
-        <td>62</td>
-        <td>/26</td>
-    </tr>
-    <tr>
-        <td>D</td>
-        <td>20</td>
-        <td>32 → 2⁵</td>
-        <td>30</td>
-        <td>/27</td>
-    </tr>
-    <tr>
-        <td>C</td>
-        <td>10</td>
-        <td>16 → 2⁴</td>
-        <td>14</td>
-        <td>/28</td>
-    </tr>
-</table>
+En este caso, la topología tiene 3 routers: R1, R2 y R3. Y están conectados de esta forma:
+- R1 se conecta a R3 (WAN1)
+- R2 se conecta a R3 (WAN2)
 
-**Paso 3: Asignar rangos sin solapamiento**
-Ahora asignamos las subredes empezando desde 192.168.1.0, respetando el tamaño necesario de cada una:
+Por tanto, necesitamos dos subredes WAN, una para cada conexión.
 
-<table>
-    <tr>
-        <th>Departamento</th>
-        <th>CIDR</th>
-        <th>Dirección de red</th>
-        <th>Primer host</th>
-        <th>Último host</th>
-        <th>Broadcast</th>
-    </tr>
-    <tr>
-        <td>B</td>
-        <td>/25</td>
-        <td>192.168.1.0</td>
-        <td>192.168.1.1</td>
-        <td>192.168.1.126</td>
-        <td>192.168.1.127</td>
-    </tr>
-    <tr>
-        <td>A</td>
-        <td>/26</td>
-        <td>192.168.1.128</td>
-        <td>192.168.1.129</td>
-        <td>192.168.1.190</td>
-        <td>192.168.1.191</td>
-    </tr>
-    <tr>
-        <td>D</td>
-        <td>/27</td>
-        <td>192.168.1.192</td>
-        <td>192.168.1.193</td>
-        <td>192.168.1.222</td>
-        <td>192.168.1.223</td>
-    </tr>
-    <tr>
-        <td>C</td>
-        <td>/28</td>
-        <td>192.168.1.224</td>
-        <td>192.168.1.225</td>
-        <td>192.168.1.238</td>
-        <td>192.168.1.239</td>
-    </tr>
-</table>
+Necesitaremos en total 6 subredes (cuatro para las cuatro LANs, y dos más para las dos conexiones entre routers). Lo que hacemos es ordenarlas de mayor a menor número de direcciones necesarias:
 
-Al final aún sobran direcciones:
-192.168.1.240 - 192.168.1.255 → disponibles para futuro uso.
+- La red de mayor tamaño será la **LAN1 (60 equipos)**. Necesitaremos 6 bits para asignarles direcciones a todos (2^6 = 64 direcciones, menos la de red y broadcast, quedan 62 disponibles). Por lo tanto, usaremos 32 – 6 = 26 bits para la máscara. Usando la dirección base 192.168.5.0 /24, esta red quedaría así:
+        - Dirección de red: 192.168.5.0 /26
+        - Direcciones asignables: 192.168.5.1 hasta 192.168.5.62
+        - Dirección de broadcast: 192.168.5.63
 
-> **Ejercicio 3.**  Dispones de la red 192.168.10.0/24. Necesitas dividirla en subredes para los siguientes grupos utilizando VLSM:
-> - Departamento de Administración: 30 dispositivos 
-> - Sala de profesores: 14 dispositivos 
-> - Conserjería: 6 dispositivos
-> *Intrucciones:* 
-> - Ordena los grupos de mayor a menor según el número de dispositivos.
-> - Calcula cuántas IPs necesita cada grupo y el prefijo CIDR adecuado.
-> - Asigna a cada grupo: dirección de red, primer y último host y dirección de broadcast.
-> Asegúrate de que no hay solapamientos y de que todas las IPs encajan dentro del bloque 192.168.10.0/24.
-> Recuerda usar potencias de 2 y la fórmula 2^h - 2.
+- Pasamos a la siguiente red, que es la **LAN2 (30 equipos)**. Necesitaremos 5 bits para direccionarlos (2^5 – 2 = 30 direcciones justas), y por tanto usaremos 32 – 5 = 27 bits para la máscara, empezando por donde nos quedamos antes:
+        - Dirección de red: 192.168.5.64 /27
+        - Direcciones asignables: 192.168.5.65 hasta 192.168.5.94
+        - Dirección de broadcast: 192.168.5.95
+ 
+ - La siguiente es la **LAN3 (25 equipos)**. Volveremos a necesitar 5 bits, y usaremos 27 para la máscara. Continuamos asignando direcciones donde lo dejamos:
+        - Dirección de red: 192.168.5.96 /27
+        - Direcciones asignables: 192.168.5.97 hasta 192.168.5.126
+        - Dirección de broadcast: 192.168.5.127
 
-> **Ejercicio 4.** Dispones de la red 10.0.0.0/24. Debes segmentarla para los siguientes servicios de un instituto utilizando VLSM:
-> - Aulas de informática: 60 ordenadores
-> - Administración: 25 ordenadores
-> - Laboratorio de ciencias: 12 ordenadores
-> - Dirección: 6 ordenadores
-> - Red de invitados: 4 ordenadores
+- La siguiente es la **LAN4 (10 equipos)**. Para ellos necesitaremos 4 bits (2^4 - 2 = 14 direcciones disponibles), y usaremos 32 – 4 = 28 bits de máscara.
+        - Dirección de red: 192.168.5.128 /28
+        - Direcciones asignables: 192.168.5.129 a 192.168.5.142
+        - Dirección de broadcast: 192.168.5.143
+
+- Nos quedan las **conexiones WAN**. En ambas necesitaremos dos direcciones (una para cada router conectado a la WAN), y por tanto harán falta 2 bits (2^2 - 2 = 2 direcciones justas). Usaremos 32 – 2 = 30 bits de máscara. Así, la **primera WAN** quedaría así:
+        - Dirección de red: 192.168.5.144 /30
+        - Direcciones asignables: 192.168.5.145 y 192.168.5.146
+        - Dirección de broadcast: 192.168.5.147
+
+ - Y la **segunda WAN** así:
+        - Dirección de red: 192.168.5.148 /30
+        - Direcciones asignables: 192.168.5.149 y 192.168.5.150
+        - Dirección de broadcast: 192.168.5.151
+
+**Direcciones usadas:**
+- /26: 64 direcciones
+- /27: 32 + 32 = 64 
+- /28: 16
+- /30: 4 + 4 = 8 
+Total utilizadas: 64 + 64 + 16 + 8 = 152 direcciones
+Disponibles en /24: 256 direcciones
+Aún quedan 104 direcciones disponible para crecimiento o más subredes. Aunque VLSM usa diferentes máscaras, todas las subredes creadas deben caber dentro del bloque principal (en este caso, un /24 = 256 direcciones).
+
+
+> **Ejercicio 3.**  Repite los pasos vistos en la técnica de subredes con VLSM para una empresa que necesite crear 3 subredes de 15, 30 y 80 equipos, conectadas todas al mismo router
+
+> **Ejercicio 4.** Repite los pasos para otra empresa con el siguiente diseño de red:
+
+<div align="center">
+    <figure>
+        <img src="/primero-bach/img/ejercicio_vlsm.jpg" width="50%">        
+    </figure>
+</div>
+
+> **Ejercicio 5.** Queremos utilizar una dirección IP de clase C, 192.168.5.0/24, para crear cuatro subredes dentro de una empresa, que albergarán 10, 25, 55 y 70 equipos, respectivamente. Todas las subredes estarán conectadas a un mismo router. Utiliza la técnica de subnetting con longitud de máscara variable (VLSM) para diseñar la configuración de las subredes. Para cada subred, debes indicar: la dirección de red, la máscara de subred, el rango de direcciones IP válidas para hosts y la dirección de broadcast.
 
