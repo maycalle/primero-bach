@@ -142,9 +142,9 @@ Como ves, los bucles son una herramienta muy poderosa para hacer que tu código 
     **Opcional:** si el número no es positivo, pide otro hasta que sea correcto. 
 
 4. Crea un programa llamado **factura.py** que le pida al usuario precios para una factura, hasta que escriba 0. Entonces, el programa debe mostrar el total de la factura con 2 dígitos decimales.**Pistas:**
-- Usa un while con condición de corte.
-- Acumula en una variable `total`.
-- Usa `round(total, 2)` o formato `:.2f`.
+    - Usa un while con condición de corte.
+    - Acumula en una variable `total`.
+    - Usa `round(total, 2)` o formato `:.2f`.
 
 
 5. Crea un programa llamado **mayor_menor.py** que le pida al usuario que introduzca una secuencia de N números positivos (primero el usuario deberá indicar cuántos números va a introducir). Al final del proceso, el programa deberá mostrar por pantalla el valor del número **mayor** y el **menor** introducidos por el usuario. Por ejemplo:
