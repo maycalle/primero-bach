@@ -183,14 +183,15 @@ Como ves, los bucles son una herramienta muy poderosa para hacer que tu código 
 - Importa random → `import random`
 - Número secreto: `random.randint(1, 100)`
 
-10. Crea un programa llamado menu_interactivo.py, que muestre el siguiente menú y se repita hasta elegir la opción 3. 
+10. Crea un programa llamado **menu_interactivo.py**, que muestre el siguiente menú y se repita hasta elegir la opción 3. 
+    
     1. Saludar
     2. Mostrar un número al azar
     3. Salir
 
 **Pistas:**
-- Usa un `while True`.
-- Para opción 2, usa `random.randint(1, 100)`.
-- Sal con `break` si la opción es 3.
+    - Usa un `while True`.
+    - Para opción 2, usa `random.randint(1, 100)`.
+    - Sal con `break` si la opción es 3.
     
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
