@@ -186,8 +186,57 @@ prueba()  # Imprime 10
     es_par(4)  # Esto devolverá True
     es_par(7)  # Esto devolverá False
     ```
+5. **Gestión de una lista de la compra**. Crea un programa que tenga funciones para:
 
-5. **Conversión entre decimal y binario**.
+   - añadir_producto(lista, producto)
+   - eliminar_producto(lista, producto)
+   - mostrar_lista(lista)
+   - vaciar_lista(lista)
+
+    El programa debe mostrar un menú para que el usuario elija qué acción realizar.
+
+6. **Generador de contraseñas**. Crea las siguientes funciones:
+
+   - generar_contraseña(longitud):genere una contraseña aleatoria usando letras y números.
+   - es_segura(contraseña): devuelva True si tiene al menos 8 caracteres, una mayúscula, una minúscula y un número.
+
+    En este ejercicio usamos el **módulo random**, que permite generar valores aleatorios en Python. En concreto, la función `random.choice(secuencia)` selecciona un elemento al azar de la secuencia que le indiquemos (por ejemplo, una lista o una cadena de texto). 
+
+    Además, los métodos de cadenas como `isupper()`, `islower()` e `isdigit()` nos ayudan a comprobar el tipo de cada carácter:
+
+    - `isupper()` → devuelve `True` si el carácter es una letra mayúscula.
+    - `islower()` → devuelve `True` si el carácter es una letra minúscula.
+    - `isdigit()` → devuelve `True` si el carácter es un dígito numérico (0–9).
+
+7. **El juego del ahorcado**. En este ejercicio, vamos a programar una versión sencilla del juego en Python, usando funciones para organizar el código. No será necesario dibujar el ahorcado; basta con contar los intentos restantes y mostrar el progreso de la palabra.
+
+   - El programa elegirá una palabra al azar de una lista de palabras y el jugador deberá adivinarla introduciendo letras.
+   - Cada vez que el jugador acierte una letra, se mostrará su posición en la palabra.
+   - El juego termina cuando el jugador adivina todas las letras, o se queda sin intentos.
+
+    Funciones que debes crear:
+
+    - `elegir_palabra(lista_palabras)`: recibe una lista de palabras y devuelve una palabra elegida al azar de la lista.
+    - `mostrar_progreso(palabra, letras_acertadas)`: muestra la palabra oculta, reemplazando las letras no adivinadas por guiones bajos _. Por ejemplo, si la palabra es "python" y las letras acertadas son ['p', 'o'], mostrará: p _ _ _ o _
+    - `pedir_letra()`: pide al usuario que introduzca una letra. Valida que solo sea una letra y que no se haya introducido antes (opcional). Devuelve la letra en minúscula.
+    - `jugar(lista_palabras)`: es la función principal del juego. Pasos que debe realizar:
+      - Elegir una palabra al azar con `elegir_palabra(lista_palabras)`.
+      - Inicializar una lista vacía letras_acertadas y un número máximo de intentos (por ejemplo, 6).
+      - Mientras el jugador tenga intentos y queden letras por adivinar:
+        - Mostrar el progreso con `mostrar_progreso(palabra, letras_acertadas)`.
+        - Pedir una letra con `pedir_letra()`.
+        - Si la letra está en la palabra, añadirla a letras_acertadas.
+        - Si no, restar un intento y avisar al jugador.
+      - Cuando termine el juego, mostrar un mensaje de *“¡Has ganado!”* o *“Has perdido. La palabra era…”*.
+
+    **Pistas:** 
+     - Usa `random.choice(lista_palabras)` para elegir la palabra.
+     - Conviene usar `palabra.lower()` para evitar problemas con mayúsculas.
+     - Puedes guardar las letras acertadas y también las falladas para informar al jugador.
+     - Recuerda que puedes usar bucles para recorrer la palabra y mostrar su progreso.
+
+
+8. **Conversión entre decimal y binario**.
 * Escribe una función que convierta un número decimal en su equivalente binario.
 * Escribe otra función que convierta un número binario en su equivalente decimal.
 
