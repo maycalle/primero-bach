@@ -7,7 +7,7 @@ En los videojuegos, la detección de colisiones es fundamental para la interacci
 Para detectar colisiones entre dos objetos de forma circular (como un personaje y una moneda), podemos calcular la distancia entre sus centros y compararla con el radio de los objetos. Si la distancia es menor o igual a la suma de los radios, decimos que los objetos están colisionando.
 
 <div align="center">
-    <img src="/primero-bach/img/colision-entre-objetos-circulares.png" width="80%">
+    <img src="/primero-bach/img/colision-entre-objetos-circulares.png" width="90%">
 </div> 
 
 **Ejemplo 1: Colisión entre el jugador y un tesoro**

@@ -124,7 +124,7 @@ Para lograrlo:
 3. Avanza en esa dirección en pequeños pasos, de forma que el personaje se desplace suavemente hacia el destino.
 
 <div align="center">
-    <img src="/primero-bach/img/justificacion-pitagoras.png" width="100%">
+    <img src="/primero-bach/img/justificacion-pitagoras.png" width="90%">
 </div> 
 
 En el ejemplo siguiente se muestra este efecto: 
