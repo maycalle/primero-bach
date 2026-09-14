@@ -182,9 +182,11 @@ En estos ejemplos, los comentarios `# Este es un comentario` y `# Puedes hacer o
 
 ## 7. Es tu turno
 
-¡Es tu turno de modificar el código y experimentar con `print()`! Aquí tienes algunas ideas para empezar:
+¡Es tu turno de modificar el código y experimentar con `print()`! 
 
-1. **Piensa antes de probar.** Python también permite imprimir números. Sin embargo, hay una diferencia importante: los números no necesitan comillas. Si pones comillas, Python tratará el número como texto, pero sin comillas lo verá como un valor numérico. ¡Haz la prueba y verás la diferencia! 
+Aquí tienes algunas ideas para empezar:
+
+**Ejercicio 1. Piensa antes de probar.** Python también permite imprimir números. Sin embargo, hay una diferencia importante: los números no necesitan comillas. Si pones comillas, Python tratará el número como texto, pero sin comillas lo verá como un valor numérico. ¡Haz la prueba y verás la diferencia! 
 
 En este código Python, ¿qué aparecerá exactamente en pantalla en cada caso? 
 
@@ -195,7 +197,7 @@ print(25 + 5)
 print("25 + 5")
 ```
 
-2. **Sobre ti**. Crea un programa que muestre por pantalla algo sobre ti. Debe mostrar: 
+**Ejercicio 2. Sobre ti**. Crea un programa que muestre por pantalla algo sobre ti. Debe mostrar: 
 
 - Tu nombre
 - Tu año de nacimiento
