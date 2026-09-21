@@ -105,10 +105,53 @@ A veces, necesitarás convertir un tipo de dato en otro para realizar ciertas op
 
 ¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
 
-* **1. Calculadora personalizada:** crea un programa que pida al usuario dos números y realice varias operaciones matemáticas con ellos (suma, resta, multiplicación y división).
-* **2. Conversión de temperaturas:** crea un programa que convierta una temperatura en grados Celsius introducida por el usuario a grados Fahrenheit usando la siguiente fórmula: Fahrenheit = Celsius * 9/5  + 32
-* **3. Cálculo del área de un rectángulo:** pide al usuario que introduzca el ancho y el alto de un rectángulo, y calcula el área del rectángulo.
-* **4. Concatenación de nombres:** pide al usuario que introduzca su nombre y su apellido por separado. Luego, combina ambos en una única cadena que muestre el nombre completo. 
-* **5. Repetición de texto:** pide al usuario que escriba una palabra y un número. Muestra la palabra repetida el número de veces que el usuario haya indicado.
-* **6. Cálculo de la media:** crea un programa que le pida al usuario 4 números enteros y calcule su media (real). La media debe mostrarse en pantalla con 3 cifras decimales.
+1. **El amplificador de mensajes**. Un streamer quiere un comando para su chat que repita un grito de ánimo varias veces. 
 
+    - Pide al usuario que introduzca una palabra o grito (ej. "¡Gol! ") y el número de veces que quiere repetirlo. 
+    - Convierte la cantidad al tipo de dato adecuado y muestra en pantalla la repetición usando el operador * y una f-string.
+
+2. **Tu contador de días**. Crea un programa que calcule aproximadamente cuántos días lleva en el mundo una persona.
+
+    - Pide al usuario su nombre y su edad actual en años cumplidos (número entero).
+    - Calcula cuántos días ha vivido aproximadamente (asume 365 días por año).
+    - Muestra un mensaje personalizado usando f-strings con el siguiente formato: Hola, [Nombre]. Has vivido aproximadamente [Días] días.
+
+3. **Viaje a EEUU: el termómetro digital**. Aterrizas en Nueva York y los paneles de la calle muestran la temperatura en grados Fahrenheit, pero necesitas saber qué ropa ponerte. 
+
+    - Pide la temperatura actual en grados Fahrenheit (debe admitir decimales con float()).
+    - Conviértela a grados Celsius mediante la fórmula: Celsius = (Fahrenheit - 32) * 5/9
+    - Muestra el resultado por pantalla con exactamente 1 cifra decimal usando el especificador de formato :.1f
+
+4. **La cena con amigos**. Un grupo de 4 amigos va a cenar a una pizzería y deciden pagar la cuenta a partes iguales.
+
+    - Pide por teclado el importe total de la cuenta en euros (número con decimales) y el porcentaje de propina que desean dejar (por ejemplo, 10 para un 10%).
+    - Calcula el total a pagar sumando la propina y divídelo entre los 4 comensales.
+    - Imprime cuánto debe poner cada persona, asegurándote de mostrar el resultado con 2 cifras decimales:.2f
+
+5. **El relojero digital**. En programación de videojuegos es habitual recibir duraciones expresadas solo en segundos y tener que transformarlas a un formato comprensible para el jugador.
+
+    - Pide al usuario una cantidad total de segundos (número entero, ej. 195).
+    - Utiliza la división entera (//) para calcular cuántos minutos completos contiene ese tiempo.
+    - Utiliza el operador módulo/resto (%) para calcular los segundos sobrantes.
+    - Muestra el resultado formateado: `195 segundos equivalen a 3 minutos y 15 segundos.`
+
+6. **El boletín de notas**. Un tutor necesita una pequeña herramienta para calcular la nota media exacta de un alumno en cuatro materias clave: Matemáticas, Lengua, Inglés y Tecnología.
+
+    - Pide por teclado: el nombre y apellidos del alumno.
+    - La calificación de cada una de las 4 asignaturas por separado (deben admitir decimales con float()).
+    - El programa debe calcular la media aritmética de las cuatro notas.
+    - Muestra por pantalla un informe claro y ordenado usando f-strings, mostrando cada nota individual y la nota media final calculada con 3 cifras decimales(.3f)
+
+Por ejemplo, genera una salida como esta: 
+
+```txt
+    --- INFORME ACADÉMICO ---
+    Alumno: Laura Navarro Martínez
+    Matemáticas: 8.5
+    Lengua: 7.25
+    Inglés: 9.0
+    Tecnología: 6.8
+    ------------------------
+    Nota media final: 7.888
+    ------------------------
+```
