@@ -125,61 +125,66 @@ Estas herramientas te permiten tomar decisiones en tu código y hacer que tu pro
 
 ¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
 
-* **1. Edad (adulto o no):** escribe un programa que pida la edad de una persona y muestre si es mayor de edad (18 años o más) o menor de edad.
-* **2. Validador de contraseña:** escribe un programa que pida una contraseña. Si la contraseña es 1111 o 4444, debe mostrar "Bienvenido/a". En cualquier otro caso, "Acceso no permitido". 
-* **3. Impuesto básico (edad y sueldo):** para pagar un impuesto se deben cumplir dos condiciones a la vez: tener al menos 16 años y cobrar más de 1000 euros mensuales. Escribe un programa que le pida al usuario su edad y su sueldo mensual y le diga si tiene que pagar el impuesto o no.
-* **4. Validador de usuario y contraseña:** escribe un programa que pida un nombre de usuario y una contraseña. Solo si el usuario es "alumno" y la contraseña es "1234", mostrará "Acceso permitido". En cualquier otro caso, "Usuario o contraseña incorrectos".
+### Decisiones básicas (if / if - else / if - elif)
+* **1. Mayoría de edad:** Pide la edad de una persona. Si tiene 18 años o más, muestra "Mayor de edad"; en caso contrario, muestra "Menor de edad".
+
+* **2. Número positivo, negativo o cero:** Pide un número entero e indica si es positivo, negativo o cero.
+
+### Condiciones compuestas (and / or)
+
+* **3. Validador de contraseña:** Pide un código o contraseña. Si la contraseña es `1111` o `4444`, debe mostrar *"Bienvenido/a"*. En cualquier otro caso, *"Acceso no permitido"*.
+
+* **4. Control de acceso de doble factor:**  Pide un nombre de usuario y una contraseña. Solo si el usuario es `alumno` y la contraseña es `1234`, muestra *"Acceso permitido"*. En cualquier otro caso, muestra *"Usuario o contraseña incorrectos".*
+
+### Decisiones de múltiples caminos
+
 * **5. Juego de adivinanza simple**: el programa guarda un número secreto (elige uno, por ejemplo 7). El usuario introduce un número:
    - Si acierta → “¡Has ganado!”
    - Si es menor → “Demasiado bajo”
    - Si es mayor → “Demasiado alto”
-* **6. Número positivo, negativo o cero:** escribe un programa que pida un número y diga si es positivo, negativo o cero.
-* **7. Notas de examen:** escribe un programa que pida al usuario introducir una nota (entre 0 y 10) y muestre:
-    - Menos de 5 → "Suspenso".
-    - 5 o 6 → "Aprobado".
-    - 7 u 8 → "Notable".
-    - 9 o 10 → "Sobresaliente".
 
-* **8. Comprobador de divisibilidad**: escribe un programa que pida un número entero y muestre:
 
-    - "Divisible por 2 y 3" si lo es por ambos.
-    - "Divisible por 2" si solo lo es por 2.
-    - "Divisible por 3" si solo lo es por 3.
-    - "No divisible por 2 ni por 3" en cualquier otro caso.
+* **6. Calificaciones académicas:** pide una nota con decimales (float) entre 0 y 10 e imprime su tramo. 
+    (Pista: ordena las condiciones con `elif` aprovechando que las anteriores ya han descartado los valores más bajos o más altos).
+    - Menor que 5 → *"Suspenso"*.
+    - De 5 a menos de 7 → *"Aprobado"*.
+    - De 7 a menos de 9 → *"Notable"*.
+    - De 9 a 10 → *"Sobresaliente"*.
 
-   *Pistas:* 
+### Retos integradores
 
-    - Usa el operador módulo %.
-    - Ejemplo: numero % 2 == 0 significa “es divisible por 2”.
-    - Combina con and y elif.
+* **7. Comprobador de divisibilidad:** pide un número entero. El programa debe indicar:
 
-* **9. Calculadora de impuestos (por tramos):** escribe un programa que pida el sueldo anual y calcule el impuesto según los siguientes tramos:
+    - *"Divisible por 2 y por 3"* (si cumple ambas condiciones simultáneamente).
+    - *"Divisible solo por 2"*
+    - *"Divisible solo por 3"*
+    - *"No divisible ni por 2 ni por 3"*
 
-    - Menos de 10.000 € → 5%.
-    - Entre 10.000 y 19.999 € → 15%.
-    - Entre 20.000 y 34.999 € → 20%.
-    - 35.000 € o más → 30%.
+    (Nota técnica: para saber si un número es divisible por otro usamos el operador `%`. Ejemplo: si `numero % 2 == 0` significa *“ número es divisible por 2”* ).
 
-    El programa debe mostrar:
+* **8. Calculadora IRPF por tramos:** pide el sueldo anual (como `float`) y calcula la retención aplicable:
 
-    - El impuesto que se paga.
-    - El dinero que queda después de pagar impuestos.
-   
-    *Pistas:*
+    - Menos de 10.000 € → 5%
+    - De 10.000 € a menos de 20.000 € → 15%
+    - De 20.000 € a menos de 35.000 € → 20%
+    - 35.000 € o más → 30%
 
-    - Pide sueldo como float.
-    - Usa elif para comprobar rangos.
-    - Calcula el impuesto como: impuesto = sueldo * 0.15 y restante = sueldo - impuesto
-   
+El programa debe imprimir:
 
-* **10. Calculadora de becas:** escribe un programa que pida la edad y la nota media de un estudiante.
+    - El importe exacto del impuesto (*impuesto = sueldo * porcentaje*).
+    - El sueldo neto restante (*sueldo - impuesto*).
+
+* **9. Concesión de becas:** pide la edad (`entero`) y la nota media de un estudiante (`float`).
 
     El sistema funciona así:
 
-    - Si la nota < 5 o la edad > 18 → el estudiante no tiene beca.
-    - Si la nota ≥ 9 → el estudiante recibe una beca del 100%.
-    - Si la nota ≥ 7 y < 9 → el estudiante recibe una beca del 50%.
-    - Si la nota ≥ 5 y < 7 → el estudiante recibe una beca del 25%.
+    - Si la edad es mayor de 18 o la nota es menor que 5: "No hay beca".
+
+    Si cumple los requisitos de entrada, evalúa la cuantía según su nota:
+
+    - Nota de 9 o más: "Beca del 100%"
+    - Nota entre 7 y menos de 9: "Beca del 50%"
+    - Nota entre 5 y menos de 7: "Beca del 25%"
 
     El programa debe mostrar al final un mensaje que indique claramente el resultado, por ejemplo:
 
@@ -189,8 +194,7 @@ Estas herramientas te permiten tomar decisiones en tu código y hacer que tu pro
     - "Beca del 25%"
 
     *Pistas:*
-
-    - Primero descarta a los que no cumplen (if nota < 5 or edad > 18).
+    - Primero descarta a los que no cumplen el requisito de entrada.
     - Después usa elif para comprobar los tramos de nota.
     - Ordena las condiciones de mayor a menor para evitar errores.
     - Recuerda mostrar siempre un mensaje con print().
