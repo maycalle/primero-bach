@@ -125,56 +125,53 @@ Estas herramientas te permiten tomar decisiones en tu código y hacer que tu pro
 
 ¡Ahora es tu momento de aplicar lo que has aprendido! Aquí tienes algunos ejercicios:
 
-### Decisiones básicas (if / if - else / if - elif)
-* **1. Mayoría de edad:** Pide la edad de una persona. Si tiene 18 años o más, muestra "Mayor de edad"; en caso contrario, muestra "Menor de edad".
+**Ejercicio 1. Mayoría de edad:** pide la edad de una persona. Si tiene 18 años o más, muestra "Mayor de edad"; en caso contrario, muestra "Menor de edad".
 
-* **2. Número positivo, negativo o cero:** Pide un número entero e indica si es positivo, negativo o cero.
+**Ejercicio 2. Número positivo, negativo o cero:** pide un número entero e indica si es positivo, negativo o cero.
 
-### Condiciones compuestas (and / or)
+**Ejercicio 3. Validador de contraseña:** Pide un código o contraseña. Si la contraseña es `1111` o `4444`, debe mostrar *"Bienvenido/a"*. En cualquier otro caso, *"Acceso no permitido"*.
 
-* **3. Validador de contraseña:** Pide un código o contraseña. Si la contraseña es `1111` o `4444`, debe mostrar *"Bienvenido/a"*. En cualquier otro caso, *"Acceso no permitido"*.
+**Ejercicio 4. Control de acceso de doble factor:**  Pide un nombre de usuario y una contraseña. Solo si el usuario es `alumno` y la contraseña es `1234`, muestra *"Acceso permitido"*. En cualquier otro caso, muestra *"Usuario o contraseña incorrectos".*
 
-* **4. Control de acceso de doble factor:**  Pide un nombre de usuario y una contraseña. Solo si el usuario es `alumno` y la contraseña es `1234`, muestra *"Acceso permitido"*. En cualquier otro caso, muestra *"Usuario o contraseña incorrectos".*
-
-### Decisiones de múltiples caminos
-
-* **5. Juego de adivinanza simple**: el programa guarda un número secreto (elige uno, por ejemplo 7). El usuario introduce un número:
+**Ejercicio 5. Juego de adivinanza simple**: el programa guarda un número secreto (elige uno, por ejemplo 7). El usuario introduce un número:
+   
    - Si acierta → “¡Has ganado!”
    - Si es menor → “Demasiado bajo”
    - Si es mayor → “Demasiado alto”
 
-
-* **6. Calificaciones académicas:** pide una nota con decimales (float) entre 0 y 10 e imprime su tramo. 
-    (Pista: ordena las condiciones con `elif` aprovechando que las anteriores ya han descartado los valores más bajos o más altos).
+**Ejercicio 6. Calificaciones académicas:** pide una nota con decimales (float) entre 0 y 10 e imprime su tramo. 
+    
     - Menor que 5 → *"Suspenso"*.
     - De 5 a menos de 7 → *"Aprobado"*.
     - De 7 a menos de 9 → *"Notable"*.
     - De 9 a 10 → *"Sobresaliente"*.
 
+    > (Pista: ordena las condiciones con `elif` aprovechando que las anteriores ya han descartado los valores más bajos o más altos).
+
 ### Retos integradores
 
-* **7. Comprobador de divisibilidad:** pide un número entero. El programa debe indicar:
+**Ejercicio 7. Comprobador de divisibilidad:** pide un número entero. El programa debe indicar:
 
     - *"Divisible por 2 y por 3"* (si cumple ambas condiciones simultáneamente).
     - *"Divisible solo por 2"*
     - *"Divisible solo por 3"*
     - *"No divisible ni por 2 ni por 3"*
 
-    (Nota técnica: para saber si un número es divisible por otro usamos el operador `%`. Ejemplo: si `numero % 2 == 0` significa *“ número es divisible por 2”* ).
+    >Pista: para saber si un número es divisible por otro usamos el operador `%`. Ejemplo: si `numero % 2 == 0` significa *“ número es divisible por 2”* ).
 
-* **8. Calculadora IRPF por tramos:** pide el sueldo anual (como `float`) y calcula la retención aplicable:
+**Ejercicio 8. Calculadora IRPF por tramos:** pide el sueldo anual (como `float`) y calcula la retención aplicable:
 
     - Menos de 10.000 € → 5%
     - De 10.000 € a menos de 20.000 € → 15%
     - De 20.000 € a menos de 35.000 € → 20%
     - 35.000 € o más → 30%
 
-El programa debe imprimir:
+    El programa debe imprimir:
 
     - El importe exacto del impuesto (*impuesto = sueldo * porcentaje*).
     - El sueldo neto restante (*sueldo - impuesto*).
 
-* **9. Concesión de becas:** pide la edad (`entero`) y la nota media de un estudiante (`float`).
+ **Ejercicio 9. Concesión de becas:** pide la edad (`entero`) y la nota media de un estudiante (`float`).
 
     El sistema funciona así:
 
