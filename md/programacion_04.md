@@ -190,6 +190,9 @@ El programa debe mostrar al final un mensaje que indique claramente el resultado
 
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
+- [**Quadrant selection**](https://open.kattis.com/contests/hzsr8d/problems/quadrant)
+
+
 
 
 
