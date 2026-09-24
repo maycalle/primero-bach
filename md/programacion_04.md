@@ -148,8 +148,6 @@ Estas herramientas te permiten tomar decisiones en tu código y hacer que tu pro
 
     > (Pista: ordena las condiciones con `elif` aprovechando que las anteriores ya han descartado los valores más bajos o más altos).
 
-### Retos integradores
-
 **Ejercicio 7. Comprobador de divisibilidad:** pide un número entero. El programa debe indicar:
 
   - *"Divisible por 2 y por 3"* (si cumple ambas condiciones simultáneamente).
