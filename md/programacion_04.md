@@ -191,6 +191,23 @@ El programa debe mostrar al final un mensaje que indique claramente el resultado
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
 - [**Quadrant selection**](https://open.kattis.com/contests/hzsr8d/problems/quadrant)
+- [**One chicken per person**](https://open.kattis.com/problems/onechicken)
+    
+    En **"One chicken per person"** los dos números (N y M) vienen separados por un espacio en una única línea (por ejemplo: 20 100). Como la función normal *input()* lee toda la línea entera junta, necesitamos una forma de separar esos dos valores. Para resolver la entrada de datos, copia y pega esta estructura al principio de tu programa:
+
+    ```py
+    datos = input().split()
+    n = int(datos[0])  # Número de personas
+    m = int(datos[1])  # Piezas de pollo
+    ```
+
+    **¿Qué hace este código?**
+
+    - .split() corta la línea por el espacio en blanco y guarda las dos partes en una colección llamada datos.
+    - datos[0] accede a la primera parte y int(...) la transforma en un número entero (N).
+    - datos[1] accede a la segunda parte y la transforma en el segundo número entero (M).
+
+    Más adelante en el curso aprenderemos a fondo cómo funcionan las listas y los textos; por ahora, concéntrate en programar las condiciones if/else usando directamente las variables n y m.
 
 
 
