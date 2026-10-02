@@ -224,7 +224,7 @@ El menor es 2
 
 **Ejercicio 6.** Escribir un programa llamado **primos.py** que pida al usuario un número entero y muestre por pantalla si es un número primo o no. Recuerda que un número es primo si es mayor que 1 y solo es divisible por 1 y él mismo.  
 
-    **Pista:** un número *a* es divisible por otro número *b* si el resto de dividir *a* entre *b* es igual a 0 (es decir, `a % b == 0`).
+**Pista:** un número *a* es divisible por otro número *b* si el resto de dividir *a* entre *b* es igual a 0 (es decir, `a % b == 0`).
 
 **Ejercicio 7.** Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
       * Si ninguna nota es mayor que 4, la nota final es 0
