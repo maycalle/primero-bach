@@ -119,48 +119,101 @@ Este bucle seguirá pidiendo al usuario que adivine el número hasta que el valo
 
 Como ves, los bucles son una herramienta muy poderosa para hacer que tu código sea más eficiente y flexible. Python te da toda la libertad para controlar cómo y cuántas veces se repiten las cosas.
 
-## 4. Es tu turno
+## 5. Control avanzado de bucles: break
+
+Hasta ahora, los bucles se ejecutan de principio a fin según su condición de parada. Sin embargo, en programación competitiva y en la resolución de problemas reales, a menudo necesitamos alterar ese orden de ejecución de forma inmediata.
+
+Para ello existe una instrucción clave: `break`.
+
+### 5.1 La instrucción break
+
+Usar `break` es como pulsar el botón rojo de parada de una máquina. En el instante en que el programa lee `break`, el bucle se detiene por completo y la ejecución continúa con la línea que esté justo debajo del bucle.
+
+```py
+PIN_CORRECTO = 1234
+
+for intento in range(1, 4):
+    clave = int(input("Introduce tu PIN: "))
+    
+    if clave == PIN_CORRECTO:
+        print("¡Acceso concedido!")
+        break  # Se rompe el bucle; no te vuelve a pedir el PIN
+    
+    print("PIN incorrecto.")
+
+print("Fin del proceso de identificación.")
+```
+
+> **¡Ojo con los bucles anidados!** Si tienes un bucle dentro de otro, `break` solo rompe el bucle interno en el que se encuentra. El bucle exterior seguirá su curso habitual.
+
+El uso de `break` puede resultar útil en ciertas situaciones donde se necesitan resultados rápidos, como en la **programación competitiva**. Sin embargo, en el diseño habitual de software su uso general está desaconsejado: al esconder salidas a mitad del código, resulta menos evidente a simple vista saber cuándo y por qué termina el bucle. Siempre que sea posible, es preferible diseñar la condición de parada explícitamente en la cabecera.
+
+Esta sería la solución equivalente a la anterior con `break`: 
+
+```py
+PIN_CORRECTO = 1234
+intentos = 0
+acertado = False
+
+# La condición del bucle explica EXACTAMENTE cuándo se repite y cuándo para
+while intentos < 3 and not acertado:
+    clave = int(input("Introduce PIN: "))
+    if clave == PIN_CORRECTO:
+        acertado = True
+    else:
+        print("Incorrecto.")
+    intentos += 1
+
+if acertado:
+    print("Acceso concedido.")
+else:
+    print("Bloqueado: agotaste los intentos.")
+```
+
+## 6. Es tu turno
 
 1. Escribe un programa llamado **impares.py** que pida al usuario un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
 
-    Para separar los números con comas, puedes usar el parámetro `end` del comando `print`, que define qué carácter colocar al final de lo que se imprime (por defecto es un salto de línea `\n`). Utilízalo así: `print("hola", end=",")`
+Para separar los números con comas, puedes usar el parámetro `end` del comando `print`, que define qué carácter colocar al final de lo que se imprime (por defecto es un salto de línea `\n`). Utilízalo así: `print("hola", end=",")`
 
-    **Pista:** un número es impar si el resto de su división entre 2 es distinto de 0 (es decir, `n % 2 != 0`).
+- **Pista:** un número es impar si el resto de su división entre 2 es distinto de 0 (es decir, `n % 2 != 0`).
 
 2. Escribe un programa llamado **dibuja_triangulo.py** que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido. Por ejemplo, para n=5: 
 
-    ```py
-    *
-    **
-    ***
-    ****
-    *****
-    ``` 
+```py
+*
+**
+***
+****
+*****
+``` 
 
 3. Escribe un programa llamado **tabla_multiplicar.py** que pida un número positivo y muestre su tabla de multiplicar del 1 al 10. 
-    **Pista:** puedes usar f-strings: print(f"{n} x {i} = {n*i}").
-    **Opcional:** si el número no es positivo, pide otro hasta que sea correcto. 
+
+- **Pista:** puedes usar f-strings: print(f"{n} x {i} = {n*i}").
+- **Opcional:** si el número no es positivo, pide otro hasta que sea correcto. 
 
 4. Crea un programa llamado **factura.py** que le pida al usuario precios para una factura, hasta que escriba 0. Entonces, el programa debe mostrar el total de la factura con 2 dígitos decimales.**Pistas:**
-    - Usa un while con condición de corte.
-    - Acumula en una variable `total`.
-    - Usa `round(total, 2)` o formato `:.2f`.
+
+- Usa un while con condición de corte.
+- Acumula en una variable `total`.
+- Usa `round(total, 2)` o formato `:.2f`.
 
 
 5. Crea un programa llamado **mayor_menor.py** que le pida al usuario que introduzca una secuencia de N números positivos (primero el usuario deberá indicar cuántos números va a introducir). Al final del proceso, el programa deberá mostrar por pantalla el valor del número **mayor** y el **menor** introducidos por el usuario. Por ejemplo:
 
-    ```py
-    Dime cuántos números vas a introducir:
-    3
-    Escribe 3 números:
-    3
-    7
-    2
-    El mayor es 7
-    El menor es 2
-    ```
+```py
+Dime cuántos números vas a introducir:
+3
+Escribe 3 números:
+3
+7
+2
+El mayor es 7
+El menor es 2
+```
 
-    **Pista:** puedes usar variables acumulativas para almacenar el número mayor y el número menor conforme se van introduciendo los números. Comienza asignando a ambas variables el valor del primer número, y luego actualízalas si encuentras un número mayor o menor.
+- **Pista:** puedes usar variables acumulativas para almacenar el número mayor y el número menor conforme se van introduciendo los números. Comienza asignando a ambas variables el valor del primer número, y luego actualízalas si encuentras un número mayor o menor.
 
 
 
