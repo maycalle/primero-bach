@@ -227,9 +227,9 @@ El menor es 2
 - **Pista:** un número *a* es divisible por otro número *b* si el resto de dividir *a* entre *b* es igual a 0 (es decir, `a % b == 0`).
 
 **Ejercicio 7.** Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
-      * Si ninguna nota es mayor que 4, la nota final es 0
-      * Si algunas notas son mayores que 4 (pero no todas), la nota final es 2
-      * Si todas las notas son mayores que 4, la nota final será el 30% de la primera más el 20% de la segunda más el 50% de la tercera
+- Si ninguna nota es mayor que 4, la nota final es 0
+- Si algunas notas son mayores que 4 (pero no todas), la nota final es 2
+- Si todas las notas son mayores que 4, la nota final será el 30% de la primera más el 20% de la segunda más el 50% de la tercera
 
 **Ejercicio 8.** Escribe un programa llamado **login_intentos.py** que pida un nombre de *usuario* y una *contraseña*. Solo si es "alumno" y "1234" entra al sistema. Máximo 3 intentos. Si no lo acierta en 3 intentos, mostrará un mensaje de "Cuenta bloqueada".
 
