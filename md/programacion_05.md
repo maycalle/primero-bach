@@ -148,7 +148,7 @@ print("Fin del proceso de identificación.")
 
 El uso de `break` puede resultar útil en ciertas situaciones donde se necesitan resultados rápidos, como en la **programación competitiva**. Sin embargo, en el diseño habitual de software su uso general está desaconsejado: al esconder salidas a mitad del código, resulta menos evidente a simple vista saber cuándo y por qué termina el bucle. Siempre que sea posible, es preferible diseñar la condición de parada explícitamente en la cabecera.
 
-Esta sería la solución equivalente a la anterior con `break`: 
+Esta sería la solución equivalente a la anterior sin usar `break`: 
 
 ```py
 PIN_CORRECTO = 1234
@@ -175,18 +175,16 @@ else:
 1. Escribe un programa llamado **impares.py** que pida al usuario un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
 
 - **Pista:** un número es impar si el resto de su división entre 2 es distinto de 0 (es decir, `n % 2 != 0`).
+    Para separar los números con comas, puedes usar el parámetro `end` del comando `print`, que define qué carácter colocar al final de lo que se imprime (por defecto es un salto de línea `\n`). Utilízalo así: `print("hola", end=",")`
 
-Para separar los números con comas, puedes usar el parámetro `end` del comando `print`, que define qué carácter colocar al final de lo que se imprime (por defecto es un salto de línea `\n`). Utilízalo así: `print("hola", end=",")`
+    Puedes utilizar una variable booleana, por ejemplo `primero`, que indique si estás imprimiendo el primer número:
 
-Puedes utilizar una variable booleana, por ejemplo `primero`, que indique si estás imprimiendo el primer número:
+    - Antes del bucle: `primero = True`
+    - Si es el primer número, no escribas una coma delante.
+    - Después de imprimir el primer número, cambia `primero` a `False`.
+    - A partir de entonces, escribe una coma antes de cada número.
 
-- Antes del bucle: `primero = True`
-- Si es el primer número, no escribas una coma delante.
-- Después de imprimir el primer número, cambia `primero` a `False`.
- - A partir de entonces, escribe una coma antes de cada número.
-
-De esta forma, las comas quedan entre los números y nunca aparece una coma al principio ni al final.
-
+    De esta forma, las comas quedan entre los números y nunca aparece una coma al principio ni al final.
 
 2. Escribe un programa llamado **dibuja_triangulo.py** que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido. Por ejemplo, para n=5: 
 
