@@ -172,7 +172,7 @@ else:
 
 ## 6. Es tu turno
 
-1. Escribe un programa llamado **impares.py** que pida al usuario un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
+**Ejercicio 1.** Escribe un programa llamado **impares.py** que pida al usuario un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
 
 - **Pista:** un número es impar si el resto de su división entre 2 es distinto de 0 (es decir, `n % 2 != 0`).
     Para separar los números con comas, puedes usar el parámetro `end` del comando `print`, que define qué carácter colocar al final de lo que se imprime (por defecto es un salto de línea `\n`). Utilízalo así: `print("hola", end=",")`
@@ -186,7 +186,7 @@ else:
 
     De esta forma, las comas quedan entre los números y nunca aparece una coma al principio ni al final.
 
-2. Escribe un programa llamado **dibuja_triangulo.py** que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido. Por ejemplo, para n=5: 
+**Ejercicio 2.** Escribe un programa llamado **dibuja_triangulo.py** que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido. Por ejemplo, para n=5: 
 
 ```py
 *
@@ -196,19 +196,18 @@ else:
 *****
 ``` 
 
-3. Escribe un programa llamado **tabla_multiplicar.py** que pida un número positivo y muestre su tabla de multiplicar del 1 al 10. 
+**Ejercicio 3.** Escribe un programa llamado **tabla_multiplicar.py** que pida un número positivo y muestre su tabla de multiplicar del 1 al 10. 
 
 - **Pista:** puedes usar f-strings: print(f"{n} x {i} = {n*i}").
 - **Opcional:** si el número no es positivo, pide otro hasta que sea correcto. 
 
-4. Crea un programa llamado **factura.py** que le pida al usuario precios para una factura, hasta que escriba 0. Entonces, el programa debe mostrar el total de la factura con 2 dígitos decimales.**Pistas:**
+**Ejercicio 4.** Crea un programa llamado **factura.py** que le pida al usuario precios para una factura, hasta que escriba 0. Entonces, el programa debe mostrar el total de la factura con 2 dígitos decimales.**Pistas:**
 
 - Usa un while con condición de corte.
 - Acumula en una variable `total`.
 - Usa `round(total, 2)` o formato `:.2f`.
 
-
-5. Crea un programa llamado **mayor_menor.py** que le pida al usuario que introduzca una secuencia de N números positivos (primero el usuario deberá indicar cuántos números va a introducir). Al final del proceso, el programa deberá mostrar por pantalla el valor del número **mayor** y el **menor** introducidos por el usuario. Por ejemplo:
+**Ejercicio 5.** Crea un programa llamado **mayor_menor.py** que le pida al usuario que introduzca una secuencia de N números positivos (primero el usuario deberá indicar cuántos números va a introducir). Al final del proceso, el programa deberá mostrar por pantalla el valor del número **mayor** y el **menor** introducidos por el usuario. Por ejemplo:
 
 ```py
 Dime cuántos números vas a introducir:
@@ -223,20 +222,18 @@ El menor es 2
 
 - **Pista:** puedes usar variables acumulativas para almacenar el número mayor y el número menor conforme se van introduciendo los números. Comienza asignando a ambas variables el valor del primer número, y luego actualízalas si encuentras un número mayor o menor.
 
-
-
-6. Escribir un programa llamado **primos.py** que pida al usuario un número entero y muestre por pantalla si es un número primo o no. Recuerda que un número es primo si es mayor que 1 y solo es divisible por 1 y él mismo.  
+**Ejercicio 6.** Escribir un programa llamado **primos.py** que pida al usuario un número entero y muestre por pantalla si es un número primo o no. Recuerda que un número es primo si es mayor que 1 y solo es divisible por 1 y él mismo.  
 
     **Pista:** un número *a* es divisible por otro número *b* si el resto de dividir *a* entre *b* es igual a 0 (es decir, `a % b == 0`).
 
-7. Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
+**Ejercicio 7.** Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
       * Si ninguna nota es mayor que 4, la nota final es 0
       * Si algunas notas son mayores que 4 (pero no todas), la nota final es 2
       * Si todas las notas son mayores que 4, la nota final será el 30% de la primera más el 20% de la segunda más el 50% de la tercera
 
-8. Escribe un programa llamado **login_intentos.py** que pida un nombre de *usuario* y una *contraseña*. Solo si es "alumno" y "1234" entra al sistema. Máximo 3 intentos. Si no lo acierta en 3 intentos, mostrará un mensaje de "Cuenta bloqueada".
+**Ejercicio 8.** Escribe un programa llamado **login_intentos.py** que pida un nombre de *usuario* y una *contraseña*. Solo si es "alumno" y "1234" entra al sistema. Máximo 3 intentos. Si no lo acierta en 3 intentos, mostrará un mensaje de "Cuenta bloqueada".
 
-9. Crea un programa llamado juego_numero_secreto.py en el que el ordenador elige un número entre 1 y 100. El usuario intenta adivinarlo.
+** Ejercicio 9.** Crea un programa llamado juego_numero_secreto.py en el que el ordenador elige un número entre 1 y 100. El usuario intenta adivinarlo.
 - Si acierta → “¡Correcto!”
 - Si falla → “Demasiado alto” o “Demasiado bajo”.
 
@@ -244,7 +241,7 @@ El menor es 2
 - Importa random → `import random`
 - Número secreto: `random.randint(1, 100)`
 
-10. Crea un programa llamado **menu_interactivo.py**, que muestre el siguiente menú y se repita hasta elegir la opción 3. 
+**Ejercicio 10.** Crea un programa llamado **menu_interactivo.py**, que muestre el siguiente menú y se repita hasta elegir la opción 3. 
     
     1. Saludar
     2. Mostrar un número al azar
