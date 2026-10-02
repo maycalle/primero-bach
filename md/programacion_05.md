@@ -224,7 +224,7 @@ El menor es 2
 
 **Ejercicio 6.** Escribir un programa llamado **primos.py** que pida al usuario un número entero y muestre por pantalla si es un número primo o no. Recuerda que un número es primo si es mayor que 1 y solo es divisible por 1 y él mismo.  
 
-**Pista:** un número *a* es divisible por otro número *b* si el resto de dividir *a* entre *b* es igual a 0 (es decir, `a % b == 0`).
+- **Pista:** un número *a* es divisible por otro número *b* si el resto de dividir *a* entre *b* es igual a 0 (es decir, `a % b == 0`).
 
 **Ejercicio 7.** Crea un programa llamado **notas.py** que le pida al usuario 3 notas, y calcule la nota final según estas reglas:
       * Si ninguna nota es mayor que 4, la nota final es 0
@@ -233,7 +233,7 @@ El menor es 2
 
 **Ejercicio 8.** Escribe un programa llamado **login_intentos.py** que pida un nombre de *usuario* y una *contraseña*. Solo si es "alumno" y "1234" entra al sistema. Máximo 3 intentos. Si no lo acierta en 3 intentos, mostrará un mensaje de "Cuenta bloqueada".
 
-** Ejercicio 9.** Crea un programa llamado juego_numero_secreto.py en el que el ordenador elige un número entre 1 y 100. El usuario intenta adivinarlo.
+**Ejercicio 9.** Crea un programa llamado juego_numero_secreto.py en el que el ordenador elige un número entre 1 y 100. El usuario intenta adivinarlo.
 - Si acierta → “¡Correcto!”
 - Si falla → “Demasiado alto” o “Demasiado bajo”.
 
@@ -248,8 +248,8 @@ El menor es 2
     3. Salir
 
 **Pistas:**
-    - Usa un `while True`.
-    - Para opción 2, usa `random.randint(1, 100)`.
-    - Sal con `break` si la opción es 3.
+   - Usa un `while True`.
+   - Para opción 2, usa `random.randint(1, 100)`.
+   - Sal con `break` si la opción es 3.
     
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
