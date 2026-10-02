@@ -174,9 +174,19 @@ else:
 
 1. Escribe un programa llamado **impares.py** que pida al usuario un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
 
+- **Pista:** un número es impar si el resto de su división entre 2 es distinto de 0 (es decir, `n % 2 != 0`).
+
 Para separar los números con comas, puedes usar el parámetro `end` del comando `print`, que define qué carácter colocar al final de lo que se imprime (por defecto es un salto de línea `\n`). Utilízalo así: `print("hola", end=",")`
 
-- **Pista:** un número es impar si el resto de su división entre 2 es distinto de 0 (es decir, `n % 2 != 0`).
+Puedes utilizar una variable booleana, por ejemplo `primero`, que indique si estás imprimiendo el primer número:
+
+- Antes del bucle: `primero = True`
+- Si es el primer número, no escribas una coma delante.
+- Después de imprimir el primer número, cambia `primero` a `False`.
+ - A partir de entonces, escribe una coma antes de cada número.
+
+De esta forma, las comas quedan entre los números y nunca aparece una coma al principio ni al final.
+
 
 2. Escribe un programa llamado **dibuja_triangulo.py** que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido. Por ejemplo, para n=5: 
 
