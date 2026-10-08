@@ -60,7 +60,7 @@ for elemento in mi_lista:
     print(elemento) # Salida: 10 20 30 40 50 (cada número en una línea diferente)
 ```
 
-### 2.2 Sublistas
+### 2.2 Sublistas (slicing)
 
 Podemos obtener una sublista de una lista dada de la siguiente forma:
 
@@ -132,6 +132,23 @@ Donde:
     print(mi_lista)  # Salida: ['B', 'C']
     ```
 
+**¡Cuidado al usar remove()!**
+
+Si intentas eliminar un valor que no está en la lista, Python lanzará un error (`ValueError`) y el programa se detendrá.
+
+Para evitar que el programa falle, es una buena práctica comprobar primero si el elemento existe usando el operador `in`:
+
+```py
+mi_lista = ['B', 'C', 'D']
+
+# Comprobamos si el elemento existe antes de borrarlo
+if 'A' in mi_lista:
+    mi_lista.remove('A')
+    print("Elemento eliminado correctamente.")
+else:
+    print("El elemento no se encuentra en la lista.")
+```
+
 ## 4. Copiar listas
 
 Existen dos formas de copiar listas:
@@ -160,7 +177,7 @@ Tanto lista1 como lista2 apuntan a la misma lista, por lo que los cambios en lis
 
 Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no modifican a lista1.
 
-## 5. Otras funciones interesantes sobre listas
+## 5. Métodos y funciones integradas útiles
 
 * El método `sort()` ordena los elementos de la lista de menor a mayor. Si quieres que sea en orden inverso, puedes usar el argumento `reverse=True`.
 
@@ -173,12 +190,13 @@ Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no
     print(mi_lista)  # Salida: [3, 2, 1]
     ```
 
-* La función `len()` devuelve la cantidad de elementos en la lista.
+* El método `reverse()` invierte los elementos de la lista, modificando directamente la lista sin crear una nueva. A diferencia de `sort(reverse=True)`, `reverse()` no ordena los elementos, solo cambia su orden.
 
-    ```py
-    mi_lista = [1, 2, 3, 4]
-    print(len(mi_lista))  # Salida: 4
-    ```
+```py
+mi_lista = [1, 2, 3, 4]
+mi_lista.reverse()
+print(mi_lista)  # Salida: [4, 3, 2, 1]
+```
 
 * El método `count()` cuenta cuántas veces aparece un valor en la lista.
 
@@ -199,27 +217,52 @@ Aquí, lista1 y lista2 son listas separadas, por lo que los cambios en lista2 no
     print(sum(lista))  # Salida: 10
     ```
 
-* El método `reverse()` invierte los elementos de la lista, modificando directamente la lista sin crear una nueva. A diferencia de `sort(reverse=True)`, `reverse()` no ordena los elementos, solo cambia su orden.
+* La función `len()` devuelve la cantidad de elementos en la lista.
 
-```py
-mi_lista = [1, 2, 3, 4]
-mi_lista.reverse()
-print(mi_lista)  # Salida: [4, 3, 2, 1]
-```
+    ```py
+    mi_lista = [1, 2, 3, 4]
+    print(len(mi_lista))  # Salida: 4
+    ```
 
 ## 6. Es tu turno
 
-* 1. Escribe un programa llamado **loterias.py** que pregunte al usuario los números ganadores de la lotería primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
+* 1. Escribe un programa llamado **sentido_inverso.py** que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso, en una sola línea y separados por comas.
 
-* 2. Escribe un programa llamado **sentido_inverso.py** que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso separados por comas.
+> Pista: Puedes invertir el orden de la lista antes con el método `.reverse()` y luego recorrerla con un bucle `for`, o recorrer los índices hacia atrás. Para que los números salgan en la misma línea separados por comas, recuerda el uso del parámetro `end=","` en la función `print()`.
 
-* 3. Escribe un programa llamado **precios.py** que almacene en una lista 10 precios diferentes y muestre por pantalla el menor y el mayor de los precios.
+* 2. Escribe un programa llamado **loteria.py** que pida al usuario los 6 números ganadores de la lotería primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
-* 3. Escribe un programa llamado **abecedario.py** que almacene el abecedario en una lista, elimine de la lista las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
+```txt
+Introduce el número 1: 34
+Introduce el número 2: 7
+Introduce el número 3: 12
+Introduce el número 4: 45
+Introduce el número 5: 3
+Introduce el número 6: 19
 
-* 4. Escribe un programa llamado **vocales.py** que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+Combinación ganadora ordenada: [3, 7, 12, 19, 34, 45]
+```
 
-* 5. Escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
+* 3. Escribe un programa llamado **precios.py** que almacene en una lista 10 precios diferentes y muestre por pantalla el precio más barato, el precio más caro y el coste total del ticket, formateando los importes con 2 decimales (`:.2f`). 
+
+```txt
+Introduce el precio 1: 12.50
+Introduce el precio 2: 3.99
+Introduce el precio 3: 25.00
+Introduce el precio 4: 1.20
+Introduce el precio 5: 8.75
+
+Precios registrados: [12.5, 3.99, 25.0, 1.2, 8.75]
+Precio más barato: 1.20 €
+Precio más caro: 25.00 €
+Total de la compra: 51.44 €
+```
+
+* 4. Escribe un programa llamado **abecedario.py** que almacene el abecedario en una lista, elimine de la lista las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
+
+* 5. Escribe un programa llamado **vocales.py** que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+
+* 6. Escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
     * **Crea una lista** que contenga las asignaturas de un curso (por ejemplo: Física, Química, Matemáticas, Historia y Lengua). Puedes ordenarla de acuerdo a tu nivel de interés (de más a menos interesante para ti). A continuación, muestra la lista por pantalla.
     * **Añadir una asignatura:** el programa debe pedir al usuario que introduzca el nombre de una nueva asignatura y la posición en la que quiere insertarla dentro de la lista. Una vez insertada, el programa debe mostrar la lista actualizada con la nueva asignatura en la posición elegida.
     * **Eliminar una asignatura:** El programa debe pedir al usuario que elimine una asignatura de la lista por su nombre. Después de eliminarla, muestra la lista actualizada sin esa asignatura.
