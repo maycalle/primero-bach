@@ -226,89 +226,59 @@ print(mi_lista)  # Salida: [4, 3, 2, 1]
 
 ## 6. Es tu turno
 
-* 1. Escribe un programa llamado **sentido_inverso.py** que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso, en una sola línea y separados por comas.
+**Ejercicio 1.** Escribe un programa llamado `sentido_inverso.py` que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso, en una sola línea y separados por comas.
 
 > Pista: Puedes invertir el orden de la lista antes con el método `.reverse()` y luego recorrerla con un bucle `for`, o recorrer los índices hacia atrás. Para que los números salgan en la misma línea separados por comas, recuerda el uso del parámetro `end=","` en la función `print()`.
 
-* 2. Escribe un programa llamado **loteria.py** que pida al usuario los 6 números ganadores de la lotería primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
+- **Reto:** Con `print(..., end=", ")`, el último número dejará una coma suelta al final (10, 9, ..., 1, ). Haz que no aparezca esa última coma (puedes usar la condición `if i != len(...) - 1` o `", ".join(...)`).
 
-```txt
-Introduce el número 1: 34
-Introduce el número 2: 7
-Introduce el número 3: 12
-Introduce el número 4: 45
-Introduce el número 5: 3
-Introduce el número 6: 19
+**Ejercicio 2.** Escribe un programa llamado `loteria.py` que solicite al usuario los 6 números de una apuesta de la **Lotería Primitiva** (valores entre 1 y 49).
+   - El programa debe pedir los números uno a uno.
+   - Si el usuario introduce un número fuera del rango (1-49) o un número que ya ha introducido antes, el programa debe mostrar un mensaje de aviso y volver a pedir ese mismo número sin avanzar el contador.
+   - Al finalizar, muestra la combinación ordenada de menor a mayor (`.sort()`).
 
-Combinación ganadora ordenada: [3, 7, 12, 19, 34, 45]
+**Ejercicio 3.** Un observatorio meteorológico toma 8 registros de temperatura a lo largo del día. Escribe un programa llamado `radar_temperaturas.py` que:
+
+- Pida al usuario las 8 temperaturas (números reales) y las guarde en una lista.
+- Calcule y muestre:
+   - La **temperatura mínima** y cuándo se tomó (número de medición de 1 a 8).
+   - La **temperatura máxima**.
+   - La **media del día** con 2 decimales.
+   - El número de registros que estuvieron por **encima de la media**.
+
+
+**Ejercicio 4.** Queremos eliminar las letras que ocupan posiciones múltiplos de 3 (la 3ª letra 'c', la 6ª letra 'f', la 9ª 'i', etc.).
+
+- Crea una lista con todas las letras del abecedario
+
+```py
+abecedario = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+]
 ```
+- **Método seguro (lista nueva):** crea una nueva lista vacía `resultado = []`. Recorre abecedario con un bucle y añade a resultado únicamente aquellas letras cuya posición humana no sea múltiplo de 3 (pista: usa el índice del bucle o un contador).
+- **El reto del borrado inverso:** ahora intenta resolverlo sobre la lista original, eliminando elementos con `del` o `.pop()`.
+- **Pregunta de reflexión:** Si intentas borrar recorriendo de izquierda a derecha (0 a 25), ¿por qué falla o se salta letras?
+- **Solución ingeniosa:** ¿Qué ocurre si recorres los índices hacia atrás (desde el final hacia el principio)? Pruébalo usando `range(inicio, fin, paso)` con un paso negativo.
 
-* 3. Escribe un programa llamado **precios.py** que almacene en una lista 10 precios diferentes y muestre por pantalla el precio más barato, el precio más caro y el coste total del ticket, formateando los importes con 2 decimales (`:.2f`). 
+**Ejercicio 5.** Escribe un programa llamado `frecuencia_vocales.py` que pida al usuario una frase. 
+   - Conviértela a minúsculas con `.lower()`
+   - Utiliza dos listas sincronizadas: 
+      - una para las vocales ['a', 'e', 'i', 'o', 'u'] 
+      - otra para contar apariciones inicializada a ceros [0, 0, 0, 0, 0].
+   - Recorre la frase y actualiza el contador correspondiente a cada vocal.
+   - Muestra un informe final con un pequeño histograma de texto (ejemplo: si hay 4 'a', dibuja a: **** (4)).
+   - Indica cuál fue la vocal más frecuente utilizando `max()` sobre la lista de frecuencias.
 
-```txt
-Introduce el precio 1: 12.50
-Introduce el precio 2: 3.99
-Introduce el precio 3: 25.00
-Introduce el precio 4: 1.20
-Introduce el precio 5: 8.75
+**Ejercicio 6**. Crea un programa llamado `gestion_calificaciones.py` para gestionar las asignaturas y calificaciones de un alumno usando dos listas sincronizadas: asignaturas y notas. 
 
-Precios registrados: [12.5, 3.99, 25.0, 1.2, 8.75]
-Precio más barato: 1.20 €
-Precio más caro: 25.00 €
-Total de la compra: 51.44 €
-```
-
-* 4. Escribe un programa llamado **abecedario.py** que almacene el abecedario en una lista, elimine de la lista las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
-
-* 5. Escribe un programa llamado **vocales.py** que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
-
-* 6. Escribe un programa llamado **asignaturas.py** que realice las siguientes acciones:
-    * **Crea una lista** que contenga las asignaturas de un curso (por ejemplo: Física, Química, Matemáticas, Historia y Lengua). Puedes ordenarla de acuerdo a tu nivel de interés (de más a menos interesante para ti). A continuación, muestra la lista por pantalla.
-    * **Añadir una asignatura:** el programa debe pedir al usuario que introduzca el nombre de una nueva asignatura y la posición en la que quiere insertarla dentro de la lista. Una vez insertada, el programa debe mostrar la lista actualizada con la nueva asignatura en la posición elegida.
-    * **Eliminar una asignatura:** El programa debe pedir al usuario que elimine una asignatura de la lista por su nombre. Después de eliminarla, muestra la lista actualizada sin esa asignatura.
-
-    **Ejemplo de funcionamiento:** 
-
-    ```
-    Asignaturas ordenadas de más a menos interesantes:
-    ['Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
-
-    Introduce una nueva asignatura: Programación
-    ¿En qué posición quieres añadirla (1-5)? 1
-    Lista de asignaturas actualizada:
-    ['Programación', 'Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
-
-    ¿Qué asignatura deseas eliminar?: Historia
-    Lista de asignaturas tras la eliminación:
-    ['Programación', 'Física', 'Química', 'Matemáticas', 'Lengua']
-    ```
-
-* 6. Escribe un programa llamado **notas_asignaturas.py** que realice las siguientes acciones:
-    * **Crear una lista de asignaturas:** crea una lista con varias asignaturas (como en el ejercicio anterior). Muestra esta lista de asignaturas por pantalla.
-    * **Solicitar las notas:** pide al usuario que introduzca una nota para cada asignatura en el mismo orden en el que aparecen en la lista de asignaturas. Las notas deben guardarse en una nueva lista de notas, asegurando que las posiciones de las notas coincidan con las asignaturas correspondientes.
-    * **Calcular el promedio:** calcula el promedio de todas las notas introducidas y muéstralo con 2 cifras decimales por pantalla.
-    * **Mostrar asignaturas y notas:** finalmente, muestra la lista de asignaturas con sus respectivas notas, utilizando el siguiente formato: `Asignatura: Nota`
-
-    **Ejemplo de funcionamiento:**
-           
-    ```
-    Asignaturas: ['Física', 'Química', 'Matemáticas', 'Historia', 'Lengua']
-
-    Introduce la nota para Física: 8
-    Introduce la nota para Química: 7.5
-    Introduce la nota para Matemáticas: 9
-    Introduce la nota para Historia: 6
-    Introduce la nota para Lengua: 7
-
-    Asignaturas y notas:
-    Física: 8.0
-    Química: 7.5
-    Matemáticas: 9.0
-    Historia: 6.0
-    Lengua: 7.0
-
-    El promedio de las notas es: 7.50
-    ```
+- El programa arrancará con una **lista predefinida** (ej. ['Matemáticas', 'Física', 'Lengua', 'Historia']) y pedirá al inicio la nota de cada una. Luego mostrará un menú interactivo con un bucle while:
+- **Ver boletín:** Muestra cada asignatura junto a su nota y la nota media global del curso.
+- **Modificar nota:** Pide el nombre de la asignatura. Si existe, pide la nueva nota y la actualiza; si no existe, avisa con un mensaje de error.
+- **Añadir asignatura:** Pide el nombre de la nueva materia, la posición donde se desea colocar y su calificación (insertando en ambas listas con .insert()).
+- **Eliminar asignatura:** Solicita el nombre de la materia a dar de baja. Debe buscar su índice, eliminarla de asignaturas y retirar también su calificación correspondiente en notas.
+- **Salir**.
 
 Si has terminado todos los ejercicios, puedes continuar con más **retos** en la [**web kattis**](https://open.kattis.com/)
 
