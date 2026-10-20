@@ -32,6 +32,38 @@ Puedes crear una lista de dos maneras:
     print(mi_lista)  # Salida: ['Juan', 25, True]
     ```
 
+### 1.1 Creación de listas numéricas consecutivas con range()
+
+Escribir a mano una lista de muchos números (por ejemplo, del 1 al 100) resulta tedioso y propenso a errores. Para automatizarlo, podemos combina la función `range()` con la función `list()`.
+
+La función `range(inicio, fin, salto)` genera una secuencia de números enteros, donde:
+
+- **inicio:** el primer número de la secuencia (incluido). Si se omite, empieza en 0 por defecto.
+- **fin:** el límite superior ( no incluido, se detiene uno antes).
+- **salto (opcional):** la distancia entre números consecutivos. Por defecto vale 1.
+
+Para transformar esa secuencia en una lista real modificable, la envolvemos dentro de list()
+
+```py
+# Lista de números del 1 al 10 (el 11 se excluye)
+numeros = list(range(1, 11))
+print(numeros)  # Salida: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Lista del 0 al 4 (omitiendo el inicio)
+cero_a_cuatro = list(range(5))
+print(cero_a_cuatro)  # Salida: [0, 1, 2, 3, 4]
+
+# Lista de números pares del 2 al 10 (con salto de 2)
+pares = list(range(2, 11, 2))
+print(pares)  # Salida: [2, 4, 6, 8, 10]
+
+# Secuencia descendente del 10 al 1 (con salto negativo)
+cuenta_atras = list(range(10, 0, -1))
+print(cuenta_atras)  # Salida: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+
+>**Nota:** `range()` no crea la lista por sí solo; genera una secuencia bajo demanda. Por eso es obligatorio envolverlo con `list(...)` si queremos almacenar los valores como una lista en memoria.
+
 ## 2. Acceder a los elementos
 
 * Para obtener un elemento de una lista, usamos su **índice**, que empieza en 0. Por ejemplo, si tenemos la lista `mi_lista = ['A', 'B', 'C']`, el primer elemento será `mi_lista[0]`, y el segundo `mi_lista[1]`.
@@ -48,6 +80,32 @@ Puedes crear una lista de dos maneras:
     mi_lista = ['A', 'B', 'C']
     print(mi_lista[-1])  # Salida: 'C' (último elemento)
     print(mi_lista[-2])  # Salida: 'B' (penúltimo elemento)
+    ```
+
+* Podemos **buscar la posición de un elemento** dentro de una lista con el método `.index()`. Le pasamos el valor que queremos buscar y nos devuelve el primer índice donde aparece. Si el elemento aparece repetido varias veces, `.index()` devolverá únicamente la posición de la primera aparición.
+
+    ```py
+    colores = ['rojo', 'verde', 'azul', 'verde']
+
+    posicion = colores.index('azul')
+    print(posicion)  # Salida: 2 (el primer elemento es 0)
+    ```
+
+Si buscas un elemento que no existe en la lista, Python lanzará un error (`ValueError`) y el programa se detendrá. Para evitar que el programa falle, comprueba siempre antes con el operador `in` que el elemento existe previamente en la lista: 
+
+    ```py
+    colores = ['rojo', 'verde', 'azul', 'verde']
+
+    # Color que queremos buscar
+    color_buscado = 'azul'
+
+    # Comprobamos previamente si el elemento existe en la lista
+    if color_buscado in colores:
+        # Obtenemos su posición con .index() de forma segura
+        posicion = colores.index(color_buscado)
+        print(f"El color '{color_buscado}' se encuentra en la posición {posicion}.")
+    else:
+        print(f"El color '{color_buscado}' no existe en la lista.")
     ```
 
 ### 2.1 Recorrer una lista 
