@@ -329,6 +329,21 @@ abecedario = [
    - Muestra un informe final con un pequeño histograma de texto (ejemplo: si hay 4 'a', dibuja a: **** (4)).
    - Indica cuál fue la vocal más frecuente utilizando `max()` sobre la lista de frecuencias.
 
+**Ejemplo de ejecución:**
+
+```txt
+Introduce una frase: Programar en Python es entretenido
+
+--- Histograma de Vocales ---
+a: **         (2)
+e: ********   (8)
+i: **         (2)
+o: ***        (3)
+u: *          (1)
+
+La vocal más repetida es la 'e' con 8 apariciones.
+```
+
 **Ejercicio 6**. Crea un programa llamado `gestion_calificaciones.py` para gestionar las asignaturas y calificaciones de un alumno usando dos listas sincronizadas: asignaturas y notas. 
 
 - El programa arrancará con una **lista predefinida** (ej. ['Matemáticas', 'Física', 'Lengua', 'Historia']) y pedirá al inicio la nota de cada una. Luego mostrará un menú interactivo con un bucle while:
