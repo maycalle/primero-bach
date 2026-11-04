@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuaderno de Trabajo: Bucles en Python | 1º Bachillerato</title>
+    <style>
+        :root {
+            --navy: #14213d;
+            --navy-light: #1f325c;
+            --amber: #fca311;
+            --amber-dark: #d98800;
+            --amber-soft: #fff8eb;
+            --teal: #005f7f;
+            --teal-light: #008cba;
+            --bg: #f4f6fa;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #cbd5e1;
+            --success: #16a34a;
+            --success-bg: #dcfce7;
+            --error: #dc2626;
+            --error-bg: #fee2e2;
+            --warning: #d97706;
+            --warning-bg: #fef3c7;
+            --code-bg: #0f172a;
+            --code-text: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* CABECERA Y BARRA FIJA */
+        header.top-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0b1324 100%);
+            color: white;
+            padding: 28px 24px 20px;
+            border-bottom: 5px solid var(--amber);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .brand-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .brand-title h1 {
+            font-size: 1.9rem;
+            color: var(--amber);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .brand-title p {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .badge-course {
+            background: rgba(252, 163, 17, 0.18);
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        /* DATOS DEL ALUMNO Y PANEL DE CONTROL */
+        .student-bar {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr auto;
+            gap: 14px;
+            align-items: end;
+        }
+
+        @media (max-width: 850px) {
+            .student-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 540px) {
+            .student-bar {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .field-group label {
+            display: block;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #cbd5e1;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .field-group input, .field-group select {
+            width: 100%;
+            padding: 9px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(15, 23, 42, 0.75);
+            color: white;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .field-group input:focus, .field-group select:focus {
+            border-color: var(--amber);
+            box-shadow: 0 0 0 3px rgba(252, 163, 17, 0.25);
+        }
+
+        /* BARRA DE PROGRESO Y ACCIONES STICKY */
+        .sticky-toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-bottom: 2px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            padding: 10px 24px;
+        }
+
+        .toolbar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-pills {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .nav-pill {
+            text-decoration: none;
+            color: var(--navy);
+            background: #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-pill:hover {
+            background: var(--amber);
+            color: #000;
+        }
+
+        .score-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .score-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--navy);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .score-box span.val {
+            color: var(--amber);
+            font-size: 1.15rem;
+        }
+
+        .btn {
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--amber);
+            color: #000;
+        }
+        .btn-primary:hover {
+            background: var(--amber-dark);
+            color: #fff;
+        }
+
+        .btn-navy {
+            background: var(--navy);
+            color: #fff;
+        }
+        .btn-navy:hover {
+            background: var(--navy-light);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--navy);
+            color: var(--navy);
+        }
+        .btn-outline:hover {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .btn-danger-outline {
+            background: transparent;
+            border: 1.5px solid var(--error);
+            color: var(--error);
+        }
+        .btn-danger-outline:hover {
+            background: var(--error);
+            color: #fff;
+        }
+
+        /* SECCIONES DE EJERCICIOS */
+        main.container {
+            padding: 28px 20px;
+        }
+
+        .exercise-section {
+            background: var(--card);
+            border: 2px solid #e2e8f0;
+            border-top: 5px solid var(--navy);
+            border-radius: 14px;
+            padding: 26px;
+            margin-bottom: 32px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .section-title-group h2 {
+            color: var(--navy);
+            font-size: 1.45rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title-group p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        .points-badge {
+            background: var(--amber-soft);
+            border: 1.5px solid var(--amber);
+            color: #9a5b00;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        /* TARJETAS DE SUB-PROGRAMAS */
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .sub-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sub-card {
+            background: #f8fafc;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: border-color 0.2s;
+        }
+
+        .sub-card.correct {
+            border-color: var(--success);
+            background: #f0fdf4;
+        }
+
+        .sub-card.partial {
+            border-color: var(--warning);
+            background: #fffbeb;
+        }
+
+        .sub-card.incorrect {
+            border-color: var(--error);
+            background: #fef2f2;
+        }
+
+        .sub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 1.05rem;
+        }
+
+        /* BLOQUES DE CÓDIGO PYTHON */
+        pre.py-code {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 14px 16px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.92rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            border-left: 4px solid var(--amber);
+        }
+
+        .kw { color: #ff7b72; font-weight: bold; }
+        .fn { color: #d2a8ff; }
+        .num { color: #79c0ff; }
+        .str { color: #a5d6ff; }
+        .cm { color: #8b949e; font-style: italic; }
+
+        /* INPUTS Y TEXTAREAS */
+        label.input-label {
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        textarea.ans-input, input.ans-input, select.ans-input {
+            width: 100%;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.93rem;
+            padding: 10px 12px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            background: #ffffff;
+            color: #0f172a;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            resize: vertical;
+        }
+
+        textarea.ans-text {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        textarea.code-editor {
+            background: #1e293b;
+            color: #f8fafc;
+            border: 1.5px solid #334155;
+            line-height: 1.5;
+            tab-size: 4;
+        }
+
+        textarea.ans-input:focus, input.ans-input:focus, select.ans-input:focus {
+            outline: none;
+            border-color: var(--teal-light);
+            box-shadow: 0 0 0 3px rgba(0, 140, 186, 0.15);
+        }
+
+        /* TABLAS DE TRAZA (EJERCICIO 2) */
+        table.trace-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--teal);
+            background: white;
+            margin: 6px 0;
+        }
+
+        table.trace-table th {
+            background: var(--teal-light);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            padding: 10px;
+            text-align: center;
+            border: 1.5px solid var(--teal);
+        }
+
+        table.trace-table td {
+            padding: 6px 8px;
+            border: 1.5px solid var(--teal);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        table.trace-table td:first-child {
+            background: #e3f2fd;
+            color: var(--teal);
+            width: 90px;
+        }
+
+        table.trace-table input.cell-input {
+            width: 100%;
+            max-width: 90px;
+            text-align: center;
+            padding: 5px 6px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        table.trace-table input.cell-input.cell-ok {
+            background: var(--success-bg);
+            border-color: var(--success);
+            color: #065f46;
+        }
+
+        table.trace-table input.cell-input.cell-err {
+            background: var(--error-bg);
+            border-color: var(--error);
+            color: #991b1b;
+        }
+
+        /* CONSOLA SIMULADA Y FEEDBACK */
+        .feedback-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .feedback-box.show {
+            display: block;
+        }
+
+        .feedback-box.ok {
+            background: var(--success-bg);
+            color: #14532d;
+            border-left: 4px solid var(--success);
+        }
+
+        .feedback-box.warn {
+            background: var(--warning-bg);
+            color: #78350f;
+            border-left: 4px solid var(--warning);
+        }
+
+        .feedback-box.err {
+            background: var(--error-bg);
+            color: #7f1d1d;
+            border-left: 4px solid var(--error);
+        }
+
+        .terminal-output {
+            display: none;
+            background: #090d16;
+            color: #4ade80;
+            font-family: 'Consolas', monospace;
+            font-size: 0.85rem;
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            white-space: pre-wrap;
+        }
+
+        .terminal-output.show {
+            display: block;
+        }
+
+        .terminal-header {
+            color: #94a3b8;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 3px;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 6px;
+        }
+
+        .hint-box {
+            display: none;
+            background: var(--amber-soft);
+            border: 1px dashed var(--amber-dark);
+            color: #78350f;
+            padding: 9px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        .hint-box.show {
+            display: block;
+        }
+
+        /* TABLA DE PLANIFICACIÓN DE VARIABLES (EJ 5) */
+        .planning-box {
+            background: var(--amber-soft);
+            border: 1.5px solid var(--amber);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .planning-box h4 {
+            color: var(--navy);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* RESUMEN FINAL DE ENTREGA */
+        .delivery-panel {
+            background: linear-gradient(135deg, var(--navy) 0%, #1d3557 100%);
+            color: white;
+            border-radius: 14px;
+            padding: 28px;
+            margin-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border: 3px solid var(--amber);
+        }
+
+        .delivery-info h3 {
+            color: var(--amber);
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .delivery-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* PIE DE PÁGINA */
+        footer.pie {
+            background-color: #000000;
+            color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            height: 32px;
+            line-height: 32px;
+            font-size: 0.85rem;
+            z-index: 90;
+        }
+
+        /* ESTILOS DE IMPRESIÓN / PDF PARA ENTREGA AL PROFESOR */
+        .print-only-report {
+            display: none;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding-bottom: 0;
+                font-size: 11pt;
+            }
+            .sticky-toolbar,
+            .card-actions,
+            .delivery-panel,
+            footer.pie,
+            .no-print {
+                display: none !important;
+            }
+            header.top-header {
+                background: white !important;
+                color: black !important;
+                border-bottom: 2px solid var(--navy);
+                padding: 10px 0;
+                box-shadow: none;
+            }
+            .brand-title h1 {
+                color: var(--navy) !important;
+                font-size: 1.5rem;
+            }
+            .brand-title p {
+                color: #333 !important;
+            }
+            .student-bar {
+                background: #f8fafc !important;
+                border: 1px solid #94a3b8 !important;
+                color: black !important;
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+            .field-group label {
+                color: #334155 !important;
+            }
+            .field-group input, .field-group select {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+            .print-only-report {
+                display: flex !important;
+                justify-content: space-between;
+                align-items: center;
+                background: #f1f5f9;
+                border: 2px solid var(--navy);
+                border-radius: 8px;
+                padding: 12px 18px;
+                margin: 14px 0;
+                font-weight: bold;
+            }
+            .exercise-section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #94a3b8;
+                margin-bottom: 18px;
+                padding: 16px;
+            }
+            .sub-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .sub-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                padding: 12px;
+            }
+            textarea.code-editor {
+                background: #f8fafc !important;
+                color: #000 !important;
+                border: 1px solid #64748b !important;
+            }
+            pre.py-code {
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                border: 1px solid #cbd5e1;
+                border-left: 4px solid var(--navy);
+            }
+            .kw, .fn, .num, .str, .cm {
+                color: inherit !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA CON DATOS DEL ALUMNO -->
+    <header class="top-header">
+        <div class="container">
+            <div class="brand-row">
+                <div class="brand-title">
+                    <h1>🐍 Cuaderno de Trabajo: Bucles en Python</h1>
+                    <p>Programación, Redes y Sistemas Informáticos I · <strong>IES San Vicente</strong></p>
+                </div>
+                <span class="badge-course">1º Bachillerato · Unidad 5</span>
+            </div>
+
+            <div class="student-bar">
+                <div class="field-group">
+                    <label for="st-name">Nombre y Apellidos del Alumno/a *</label>
+                    <input type="text" id="st-name" placeholder="Escribe tu nombre y apellidos completos..." oninput="saveState()">
+                </div>
+                <div class="field-group">
+                    <label for="st-group">Grupo</label>
+                    <select id="st-group" onchange="saveState()">
+                        <option value="1º Bach A">1º Bachillerato A</option>
+                        <option value="1º Bach B">1º Bachillerato B</option>
+                        <option value="1º Bach C">1º Bachillerato C</option>
+                        <option value="Otro">Otro grupo</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="st-date">Fecha de entrega</label>
+                    <input type="date" id="st-date" onchange="saveState()">
+                </div>
+                <div class="field-group no-print">
+                    <button class="btn btn-primary" onclick="evaluateAll(true)" style="width:100%; justify-content:center; padding: 10px 16px;">
+                        ✅ Evaluar Todo el Cuaderno
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resumen visible solo al imprimir/guardar PDF -->
+            <div class="print-only-report" id="print-summary-banner">
+                <div>INFORME DE ENTREGA - CUADERNO DE BUCLES PYTHON</div>
+                <div id="print-score-text">Calificación Autoevaluada: 0.00 / 10.00</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BARRA DE HERRAMIENTAS STICKY -->
+    <div class="sticky-toolbar">
+        <div class="toolbar-inner">
+            <div class="nav-pills">
+                <a href="#ej1" class="nav-pill">Ej. 1 · Salidas (2p)</a>
+                <a href="#ej2" class="nav-pill">Ej. 2 · Trazas (2p)</a>
+                <a href="#ej3" class="nav-pill">Ej. 3 · Errores (2p)</a>
+                <a href="#ej4" class="nav-pill">Ej. 4 · Contar (2p)</a>
+                <a href="#ej5" class="nav-pill">Ej. 5 · Acumular (2p)</a>
+            </div>
+            <div class="score-actions">
+                <span id="autosave-indicator" style="font-size: 0.78rem; color: var(--muted);">💾 Guardado automático</span>
+                <div class="score-box" title="Calificación calculada sobre 10 puntos">
+                    Nota: <span class="val" id="global-score">0.00</span> / 10
+                </div>
+                <button class="btn btn-navy" onclick="exportToPrint()" title="Generar PDF o imprimir para entregar al profesor">
+                    🖨️ Imprimir / Guardar PDF
+                </button>
+                <button class="btn btn-outline" onclick="exportHTMLReport()" title="Descargar archivo HTML con tus respuestas y nota">
+                    📥 Descargar Entrega (.html)
+                </button>
+                <button class="btn btn-danger-outline" onclick="resetNotebook()" title="Borrar todas las respuestas">
+                    🗑️ Reiniciar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- ===================================================================
+             EJERCICIO 1: ¿QUÉ APARECERÁ POR PANTALLA?
+             =================================================================== -->
+        <section class="exercise-section" id="ej1">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2>Ejercicio 1. ¿Qué aparecerá por pantalla?</h2>
+                    <p>Sin ejecutar los programas, indica <strong>exactamente</strong> qué mostrarán por pantalla (escribe cada salida en una línea nueva, tal y como hace <code>print()</code>).</p>
+                </div>
+                <span class="points-badge" id="badge-ej1">0.00 / 2.00 ptos</span>
+            </div>
+
+            <div class="sub-grid">
+                <!-- Programa 1.1 -->
+                <div class="sub-card" id="card-e1p1">
+                    <div class="sub-header">
+                        <span>Programa 1</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">5</span>):
+    <span class="fn">print</span>(i)</pre>
+                    <label class="input-label" for="e1p1-ans">Salida por pantalla:</label>
+                    <textarea class="ans-input" id="e1p1-ans" rows="5" placeholder="Escribe aquí lo que imprime cada vuelta..." oninput="saveState()"></textarea>
+                    <div class="hint-box" id="hint-e1p1">
+                        💡 <strong>Pista:</strong> Recuerda que <code>range(5)</code> comienza en <code>0</code> y termina justo antes del <code>5</code> (es decir, en <code>4</code>).
+                    </div>
+                    <div class="feedback-box" id="fb-e1p1"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e1p1')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj1('e1p1')">Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- Programa 1.2 -->
+                <div class="sub-card" id="card-e1p2">
+                    <div class="sub-header">
+                        <span>Programa 2</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">2</span>, <span class="num">7</span>):
+    <span class="fn">print</span>(i)</pre>
+                    <label class="input-label" for="e1p2-ans">Salida por pantalla:</label>
+                    <textarea class="ans-input" id="e1p2-ans" rows="5" placeholder="Escribe aquí la salida línea por línea..." oninput="saveState()"></textarea>
+                    <div class="hint-box" id="hint-e1p2">
+                        💡 <strong>Pista:</strong> En <code>range(inicio, fin)</code>, la secuencia empieza en <code>2</code> y se detiene en <code>fin - 1</code> (el 7 no se incluye).
+                    </div>
+                    <div class="feedback-box" id="fb-e1p2"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e1p2')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj1('e1p2')">Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- Programa 1.3 -->
+                <div class="sub-card" id="card-e1p3">
+                    <div class="sub-header">
+                        <span>Programa 3</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>, <span class="num">0</span>, -<span class="num">2</span>):
+    <span class="fn">print</span>(i)</pre>
+                    <label class="input-label" for="e1p3-ans">Salida por pantalla:</label>
+                    <textarea class="ans-input" id="e1p3-ans" rows="5" placeholder="Escribe aquí la salida línea por línea..." oninput="saveState()"></textarea>
+                    <div class="hint-box" id="hint-e1p3">
+                        💡 <strong>Pista:</strong> Empieza en <code>10</code> y resta <code>2</code> en cada paso (paso <code>-2</code>). Se detiene antes de llegar a <code>0</code> (el 0 no se imprime).
+                    </div>
+                    <div class="feedback-box" id="fb-e1p3"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e1p3')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj1('e1p3')">Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- Programa 1.4 -->
+                <div class="sub-card" id="card-e1p4">
+                    <div class="sub-header">
+                        <span>Programa 4</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">4</span>):
+    <span class="fn">print</span>(<span class="str">"Python"</span>)
+    <span class="fn">print</span>(i)</pre>
+                    <label class="input-label" for="e1p4-ans">Salida por pantalla (8 líneas en total):</label>
+                    <textarea class="ans-input" id="e1p4-ans" rows="8" placeholder="Python&#10;0&#10;..." oninput="saveState()"></textarea>
+                    <div class="hint-box" id="hint-e1p4">
+                        💡 <strong>Pista:</strong> Dentro del bucle hay dos <code>print</code>: en cada una de las 4 repeticiones (<code>i = 0, 1, 2, 3</code>) primero imprime la palabra <code>Python</code> y debajo el valor de <code>i</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e1p4"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e1p4')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj1('e1p4')">Comprobar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             EJERCICIO 2: SIGUE LA EVOLUCIÓN DE LAS VARIABLES
+             =================================================================== -->
+        <section class="exercise-section" id="ej2">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2>Ejercicio 2. Sigue la evolución de las variables</h2>
+                    <p>Completa las tablas de traza indicando el valor de cada variable al finalizar cada repetición del bucle.</p>
+                </div>
+                <span class="points-badge" id="badge-ej2">0.00 / 2.00 ptos</span>
+            </div>
+
+            <div class="sub-grid">
+                <!-- Programa 2.1 -->
+                <div class="sub-card" id="card-e2p1">
+                    <div class="sub-header">
+                        <span>Programa 1: Evolución de <code>contador</code></span>
+                        <span style="font-size:0.8rem; color:var(--muted);">1.00 pto</span>
+                    </div>
+                    <pre class="py-code">contador = <span class="num">0</span>
+
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">5</span>):
+    contador = contador + <span class="num">2</span>
+    <span class="fn">print</span>(contador)</pre>
+
+                    <table class="trace-table">
+                        <thead>
+                            <tr>
+                                <th>Iteración</th>
+                                <th>i</th>
+                                <th>contador</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="text" class="cell-input" id="e2p1-i1" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p1-c1" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="text" class="cell-input" id="e2p1-i2" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p1-c2" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="text" class="cell-input" id="e2p1-i3" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p1-c3" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input type="text" class="cell-input" id="e2p1-i4" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p1-c4" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><input type="text" class="cell-input" id="e2p1-i5" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p1-c5" oninput="saveState()"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <label class="input-label" for="e2p1-final">¿Qué valor tendrá <strong>contador</strong> al terminar?</label>
+                    <input type="text" class="ans-input" id="e2p1-final" placeholder="Valor final de contador..." oninput="saveState()">
+
+                    <div class="hint-box" id="hint-e2p1">
+                        💡 <strong>Pista:</strong> En la 1ª iteración, <code>i</code> vale <code>0</code> y a <code>contador</code> (que era 0) se le suma 2. En cada vuelta <code>contador</code> aumenta de 2 en 2.
+                    </div>
+                    <div class="feedback-box" id="fb-e2p1"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e2p1')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj2P1()">Comprobar Tabla 1</button>
+                    </div>
+                </div>
+
+                <!-- Programa 2.2 -->
+                <div class="sub-card" id="card-e2p2">
+                    <div class="sub-header">
+                        <span>Programa 2: Evolución de <code>suma</code></span>
+                        <span style="font-size:0.8rem; color:var(--muted);">1.00 pto</span>
+                    </div>
+                    <pre class="py-code">suma = <span class="num">0</span>
+
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">5</span>):
+    suma = suma + i
+
+<span class="fn">print</span>(suma)</pre>
+
+                    <table class="trace-table">
+                        <thead>
+                            <tr>
+                                <th>Iteración</th>
+                                <th>i</th>
+                                <th>suma</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="text" class="cell-input" id="e2p2-i1" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p2-s1" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="text" class="cell-input" id="e2p2-i2" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p2-s2" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="text" class="cell-input" id="e2p2-i3" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p2-s3" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input type="text" class="cell-input" id="e2p2-i4" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p2-s4" oninput="saveState()"></td>
+                            </tr>
+                            <tr>
+                                <td>5 <span style="font-weight:normal; font-size:0.75rem;">(¿existe?)</span></td>
+                                <td><input type="text" class="cell-input" id="e2p2-i5" placeholder="-" oninput="saveState()"></td>
+                                <td><input type="text" class="cell-input" id="e2p2-s5" placeholder="-" oninput="saveState()"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <label class="input-label" for="e2p2-seq">¿Qué valores va tomando <strong>suma</strong> separados por comas?</label>
+                    <input type="text" class="ans-input" id="e2p2-seq" placeholder="Ej: 1, 3, ..." oninput="saveState()">
+
+                    <label class="input-label" for="e2p2-final">¿Qué muestra finalmente <code>print(suma)</code>?</label>
+                    <input type="text" class="ans-input" id="e2p2-final" placeholder="Valor impreso al final..." oninput="saveState()">
+
+                    <div class="hint-box" id="hint-e2p2">
+                        💡 <strong>¡Ojo con la fila 5!</strong> <code>range(1, 5)</code> solo genera los números <code>1, 2, 3, 4</code> (4 iteraciones). La 5ª iteración no se llega a ejecutar (puedes dejarla vacía o poner <code>-</code>).
+                    </div>
+                    <div class="feedback-box" id="fb-e2p2"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e2p2')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj2P2()">Comprobar Tabla 2</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             EJERCICIO 3: ENCUENTRA EL ERROR
+             =================================================================== -->
+        <section class="exercise-section" id="ej3">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2>Ejercicio 3. Encuentra el error</h2>
+                    <p>Los siguientes programas tienen errores sintácticos o lógicos. Indica qué ocurre al ejecutarlos y escribe el código corregido.</p>
+                </div>
+                <span class="points-badge" id="badge-ej3">0.00 / 2.00 ptos</span>
+            </div>
+
+            <div class="sub-grid">
+                <!-- Programa 3.1 -->
+                <div class="sub-card" id="card-e3p1">
+                    <div class="sub-header">
+                        <span>Programa 1: Mostrar del 1 al 10</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">10</span>):
+    <span class="fn">print</span>(i)</pre>
+
+                    <label class="input-label" for="e3p1-what">¿Qué hace realmente este programa?</label>
+                    <select class="ans-input ans-text" id="e3p1-what" onchange="saveState()">
+                        <option value="">-- Selecciona qué ocurre --</option>
+                        <option value="wrong1">Da un error de sintaxis (SyntaxError)</option>
+                        <option value="correct">Muestra solo los números del 1 al 9 (no incluye el 10)</option>
+                        <option value="wrong2">Muestra los números del 0 al 10</option>
+                        <option value="wrong3">Se queda en un bucle infinito</option>
+                    </select>
+
+                    <label class="input-label" for="e3p1-explain">Explica brevemente con tus palabras por qué ocurre:</label>
+                    <textarea class="ans-input ans-text" id="e3p1-explain" rows="2" placeholder="Explica por qué no llega al 10..." oninput="saveState()"></textarea>
+
+                    <label class="input-label" for="e3p1-fix">¿Cómo se soluciona? (Corrige el código Python):</label>
+                    <textarea class="ans-input code-editor" id="e3p1-fix" rows="3" oninput="saveState()">for i in range(1, 10):
+    print(i)</textarea>
+
+                    <div class="feedback-box" id="fb-e3p1"></div>
+                    <div class="card-actions">
+                        <span style="font-size:0.8rem; color:var(--muted);">Recuerda cómo funciona el límite superior de <code>range</code></span>
+                        <button class="btn btn-navy" onclick="checkEj3('e3p1')">Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- Programa 3.2 -->
+                <div class="sub-card" id="card-e3p2">
+                    <div class="sub-header">
+                        <span>Programa 2: Mostrar 5 veces "Hola"</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">5</span>)
+    <span class="fn">print</span>(<span class="str">"Hola"</span>)</pre>
+
+                    <label class="input-label" for="e3p2-what">¿Qué hace realmente este programa?</label>
+                    <select class="ans-input ans-text" id="e3p2-what" onchange="saveState()">
+                        <option value="">-- Selecciona qué ocurre --</option>
+                        <option value="wrong1">Muestra "Hola" 4 veces</option>
+                        <option value="correct">Produce un error de sintaxis (SyntaxError) porque faltan los dos puntos (:)</option>
+                        <option value="wrong2">Imprime los números del 0 al 4 en vez de "Hola"</option>
+                        <option value="wrong3">Se queda en un bucle infinito</option>
+                    </select>
+
+                    <label class="input-label" for="e3p2-explain">Explica brevemente qué le falta y cómo solucionarlo:</label>
+                    <textarea class="ans-input ans-text" id="e3p2-explain" rows="2" placeholder="Explica el error sintáctico..." oninput="saveState()"></textarea>
+
+                    <label class="input-label" for="e3p2-fix">¿Cómo se soluciona? (Corrige el código Python):</label>
+                    <textarea class="ans-input code-editor" id="e3p2-fix" rows="3" oninput="saveState()">for i in range(5)
+    print("Hola")</textarea>
+
+                    <div class="feedback-box" id="fb-e3p2"></div>
+                    <div class="card-actions">
+                        <span style="font-size:0.8rem; color:var(--muted);">Fíjate en el final de la cabecera del <code>for</code></span>
+                        <button class="btn btn-navy" onclick="checkEj3('e3p2')">Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- Programa 3.3 -->
+                <div class="sub-card" id="card-e3p3">
+                    <div class="sub-header">
+                        <span>Programa 3: Contar desde 1 hasta 5</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code">contador = <span class="num">1</span>
+
+<span class="kw">while</span> contador &lt;= <span class="num">5</span>:
+    <span class="fn">print</span>(contador)</pre>
+
+                    <label class="input-label" for="e3p3-what">¿Qué hace realmente este programa?</label>
+                    <select class="ans-input ans-text" id="e3p3-what" onchange="saveState()">
+                        <option value="">-- Selecciona qué ocurre --</option>
+                        <option value="wrong1">Muestra solo el 1 y termina</option>
+                        <option value="wrong2">Cuenta del 1 al 4</option>
+                        <option value="correct">Entra en un bucle infinito imprimiendo 1 sin parar (contador nunca aumenta)</option>
+                        <option value="wrong3">Da un error porque while no acepta &lt;=</option>
+                    </select>
+
+                    <label class="input-label" for="e3p3-explain">Explica brevemente por qué ocurre:</label>
+                    <textarea class="ans-input ans-text" id="e3p3-explain" rows="2" placeholder="Explica por qué no termina el bucle..." oninput="saveState()"></textarea>
+
+                    <label class="input-label" for="e3p3-fix">¿Cómo se soluciona? (Añade la línea que falta):</label>
+                    <textarea class="ans-input code-editor" id="e3p3-fix" rows="5" oninput="saveState()">contador = 1
+
+while contador <= 5:
+    print(contador)</textarea>
+
+                    <div class="feedback-box" id="fb-e3p3"></div>
+                    <div class="card-actions">
+                        <span style="font-size:0.8rem; color:var(--muted);">¿Cómo avanza <code>contador</code> en cada vuelta?</span>
+                        <button class="btn btn-navy" onclick="checkEj3('e3p3')">Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- Programa 3.4 -->
+                <div class="sub-card" id="card-e3p4">
+                    <div class="sub-header">
+                        <span>Programa 4: Sumar los números del 1 al 5</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <pre class="py-code">suma = <span class="num">0</span>
+
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">6</span>):
+    suma = i
+
+<span class="fn">print</span>(suma)</pre>
+
+                    <label class="input-label" for="e3p4-what">¿Qué hace realmente este programa?</label>
+                    <select class="ans-input ans-text" id="e3p4-what" onchange="saveState()">
+                        <option value="">-- Selecciona qué ocurre --</option>
+                        <option value="correct">No acumula la suma: sobrescribe 'suma' con 'i' y al final muestra solo 5</option>
+                        <option value="wrong1">Muestra 15 correctamente</option>
+                        <option value="wrong2">Muestra 0 porque suma empieza en 0</option>
+                        <option value="wrong3">Suma solo del 1 al 4 y muestra 10</option>
+                    </select>
+
+                    <label class="input-label" for="e3p4-explain">Explica brevemente qué diferencia hay entre asignar y acumular:</label>
+                    <textarea class="ans-input ans-text" id="e3p4-explain" rows="2" placeholder="Explica qué pasa con suma = i..." oninput="saveState()"></textarea>
+
+                    <label class="input-label" for="e3p4-fix">¿Cómo se soluciona? (Corrige el código Python):</label>
+                    <textarea class="ans-input code-editor" id="e3p4-fix" rows="6" oninput="saveState()">suma = 0
+
+for i in range(1, 6):
+    suma = i
+
+print(suma)</textarea>
+
+                    <div class="feedback-box" id="fb-e3p4"></div>
+                    <div class="card-actions">
+                        <span style="font-size:0.8rem; color:var(--muted);">Usa un acumulador: <code>suma = suma + i</code> o <code>suma += i</code></span>
+                        <button class="btn btn-navy" onclick="checkEj3('e3p4')">Comprobar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             EJERCICIO 4: CUENTA DE DIFERENTES FORMAS
+             =================================================================== -->
+        <section class="exercise-section" id="ej4">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2>Ejercicio 4. Cuenta de diferentes formas</h2>
+                    <p>Crea cuatro programas independientes en Python. Puedes usar bucles <code>for</code> o <code>while</code> y probar tu código con el simulador integrado.</p>
+                </div>
+                <span class="points-badge" id="badge-ej4">0.00 / 2.00 ptos</span>
+            </div>
+
+            <div class="sub-grid">
+                <!-- 4a -->
+                <div class="sub-card" id="card-e4a">
+                    <div class="sub-header">
+                        <span>a) Muestra los números del 1 al 20</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Escribe un bucle que imprima los números desde el <code>1</code> hasta el <code>20</code> (ambos incluidos).</p>
+                    <textarea class="ans-input code-editor" id="e4a-code" rows="4" placeholder="# Escribe aquí tu programa Python..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e4a"></div>
+                    <div class="hint-box" id="hint-e4a">
+                        💡 <strong>Pista:</strong> Con <code>for</code> puedes usar <code>for i in range(1, 21):</code> y dentro <code>print(i)</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e4a"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e4a')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj4('e4a')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- 4b -->
+                <div class="sub-card" id="card-e4b">
+                    <div class="sub-header">
+                        <span>b) Muestra los números pares del 2 al 30</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Imprime únicamente los números pares empezando en <code>2</code> y terminando en <code>30</code>.</p>
+                    <textarea class="ans-input code-editor" id="e4b-code" rows="4" placeholder="# Escribe aquí tu programa Python..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e4b"></div>
+                    <div class="hint-box" id="hint-e4b">
+                        💡 <strong>Pista:</strong> Usa el tercer parámetro (salto) de <code>range</code>: <code>range(2, 31, 2)</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e4b"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e4b')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj4('e4b')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- 4c -->
+                <div class="sub-card" id="card-e4c">
+                    <div class="sub-header">
+                        <span>c) Del 50 al 0, descendiendo de 5 en 5</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Muestra la secuencia regresiva: <code>50, 45, 40, ..., 5, 0</code> (el 0 incluido).</p>
+                    <textarea class="ans-input code-editor" id="e4c-code" rows="4" placeholder="# Escribe aquí tu programa Python..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e4c"></div>
+                    <div class="hint-box" id="hint-e4c">
+                        💡 <strong>Pista:</strong> Para que el <code>0</code> entre en un paso negativo, el límite final de <code>range</code> debe ser menor que 0, por ejemplo: <code>range(50, -1, -5)</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e4c"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e4c')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj4('e4c')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- 4d -->
+                <div class="sub-card" id="card-e4d">
+                    <div class="sub-header">
+                        <span>d) Cuenta atrás desde un número del usuario hasta 0</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Pide un número entero al usuario con <code>int(input(...))</code> y muestra su cuenta atrás hasta llegar a <code>0</code>.</p>
+                    <textarea class="ans-input code-editor" id="e4d-code" rows="5" placeholder="n = int(input('Introduce un número: '))&#10;# Continúa tu bucle aquí..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e4d"></div>
+                    <div class="hint-box" id="hint-e4d">
+                        💡 <strong>Pista:</strong> Si guardas el número en <code>n</code>, puedes hacer <code>for i in range(n, -1, -1): print(i)</code> o bien usar <code>while n >= 0:</code> restando 1 en cada vuelta.
+                    </div>
+                    <div class="feedback-box" id="fb-e4d"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e4d')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj4('e4d')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             EJERCICIO 5: CONTAMOS Y ACUMULAMOS
+             =================================================================== -->
+        <section class="exercise-section" id="ej5">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2>Ejercicio 5. Contamos y acumulamos</h2>
+                    <p>Estos dos conceptos son fundamentales para resolver problemas con bucles. <em>Antes de programar, piensa qué variables necesitas y para qué sirve cada una.</em></p>
+                </div>
+                <span class="points-badge" id="badge-ej5">0.00 / 2.00 ptos</span>
+            </div>
+
+            <!-- Reflexión previa de variables -->
+            <div class="planning-box">
+                <h4>🧠 Fase previa: ¿Qué variables necesitas y para qué sirve cada una?</h4>
+                <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;">
+                    Antes de escribir el código de los apartados a, b, c y d, anota qué diferencia hay entre una variable <strong>contadora</strong> y una variable <strong>acumuladora</strong>, y cuáles vas a utilizar:
+                </p>
+                <textarea class="ans-input ans-text" id="e5-plan" rows="2" placeholder="Ej: Un contador suma 1 cada vez que ocurre algo (contador += 1), mientras que un acumulador suma el valor del número introducido (suma += num)..." oninput="saveState()"></textarea>
+            </div>
+
+            <div class="sub-grid">
+                <!-- 5a -->
+                <div class="sub-card" id="card-e5a">
+                    <div class="sub-header">
+                        <span>a) Pide 5 números y muestra cuántos ha introducido</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Usa un bucle para pedir 5 números con <code>input()</code>, lleva la cuenta en una variable contadora y muéstrala al final.</p>
+                    <textarea class="ans-input code-editor" id="e5a-code" rows="7" placeholder="contador = 0&#10;for i in range(5):&#10;    ..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e5a"></div>
+                    <div class="hint-box" id="hint-e5a">
+                        💡 <strong>Pista:</strong> Inicializa <code>contador = 0</code> antes del bucle. Dentro del bucle pide el número y haz <code>contador = contador + 1</code> (o <code>contador += 1</code>). Al salir del bucle, haz <code>print(contador)</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e5a"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e5a')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj5('e5a')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- 5b -->
+                <div class="sub-card" id="card-e5b">
+                    <div class="sub-header">
+                        <span>b) Pide 5 números y calcula su suma</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Pide 5 números en un bucle, acumula su suma total en una variable y muestra el resultado al terminar.</p>
+                    <textarea class="ans-input code-editor" id="e5b-code" rows="7" placeholder="suma = 0&#10;for i in range(5):&#10;    ..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e5b"></div>
+                    <div class="hint-box" id="hint-e5b">
+                        💡 <strong>Pista:</strong> Inicializa <code>suma = 0</code>. En cada vuelta: <code>n = int(input("Número: "))</code> y acumula con <code>suma = suma + n</code> (o <code>suma += n</code>). Finalmente imprime <code>suma</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e5b"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e5b')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj5('e5b')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- 5c -->
+                <div class="sub-card" id="card-e5c">
+                    <div class="sub-header">
+                        <span>c) Pide 5 números y calcula su media</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Pide 5 números, acumula su suma y al salir del bucle calcula y muestra su media aritmética (dividiendo entre 5).</p>
+                    <textarea class="ans-input code-editor" id="e5c-code" rows="8" placeholder="suma = 0&#10;for i in range(5):&#10;    ..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e5c"></div>
+                    <div class="hint-box" id="hint-e5c">
+                        💡 <strong>Pista:</strong> Igual que el apartado b), pero al terminar el bucle calcula <code>media = suma / 5</code> y muéstrala con <code>print(media)</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e5c"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e5c')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj5('e5c')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+
+                <!-- 5d -->
+                <div class="sub-card" id="card-e5d">
+                    <div class="sub-header">
+                        <span>d) Cuenta positivos, negativos y ceros (de 5 números)</span>
+                        <span style="font-size:0.8rem; color:var(--muted);">0.50 ptos</span>
+                    </div>
+                    <p style="font-size:0.88rem; color:var(--muted);">Pide 5 números y utiliza tres contadores con <code>if / elif / else</code> para mostrar cuántos son positivos (&gt;0), negativos (&lt;0) y ceros (==0).</p>
+                    <textarea class="ans-input code-editor" id="e5d-code" rows="11" placeholder="positivos = 0&#10;negativos = 0&#10;ceros = 0&#10;&#10;for i in range(5):&#10;    ..." oninput="saveState()"></textarea>
+                    <div class="terminal-output" id="term-e5d"></div>
+                    <div class="hint-box" id="hint-e5d">
+                        💡 <strong>Pista:</strong> Necesitas 3 contadores inicializados a 0. Dentro del bucle, tras leer <code>n = int(input(...))</code>, comprueba: <code>if n &gt; 0: positivos += 1</code>, <code>elif n &lt; 0: negativos += 1</code>, <code>else: ceros += 1</code>.
+                    </div>
+                    <div class="feedback-box" id="fb-e5d"></div>
+                    <div class="card-actions">
+                        <button class="btn btn-outline" onclick="toggleHint('hint-e5d')">💡 Pista</button>
+                        <button class="btn btn-navy" onclick="checkEj5('e5d')">▶️ Ejecutar y Comprobar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANEL FINAL DE ENTREGA AL PROFESOR -->
+        <div class="delivery-panel">
+            <div class="delivery-info">
+                <h3>🎓 ¿Has terminado tu cuaderno de trabajo?</h3>
+                <p>Revisa tu puntuación con el botón de evaluación y genera tu entrega en PDF o archivo HTML para subirla al aula virtual o entregarla a tu profesora.</p>
+            </div>
+            <div class="delivery-buttons">
+                <button class="btn btn-primary" onclick="evaluateAll(true)">
+                    ✅ Evaluar Todo
+                </button>
+                <button class="btn btn-outline" style="border-color:white; color:white;" onclick="exportToPrint()">
+                    🖨️ Imprimir / Guardar en PDF
+                </button>
+                <button class="btn btn-outline" style="border-color:var(--amber); color:var(--amber);" onclick="exportHTMLReport()">
+                    📥 Descargar Informe (.html)
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="pie">
+        (C) May Calle - I.E.S. San Vicente · Informática I (1º Bachillerato)
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'cuaderno_bucles_python_1bach_v1';
+
+        // Estado de puntuaciones por apartado
+        const scores = {
+            e1p1: 0, e1p2: 0, e1p3: 0, e1p4: 0,
+            e2p1: 0, e2p2: 0,
+            e3p1: 0, e3p2: 0, e3p3: 0, e3p4: 0,
+            e4a: 0, e4b: 0, e4c: 0, e4d: 0,
+            e5a: 0, e5b: 0, e5c: 0, e5d: 0
+        };
+
+        // Inicializar fecha por defecto y cargar progreso guardado
+        window.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('st-date');
+            if (dateInput && !dateInput.value) {
+                dateInput.value = new Date().toISOString().split('T')[0];
+            }
+            loadState();
+            // Permitir tabulación cómoda en los editores de código
+            document.querySelectorAll('textarea.code-editor').forEach(editor => {
+                editor.addEventListener('keydown', function(e) {
+                    if (e.key === 'Tab') {
+                        e.preventDefault();
+                        const start = this.selectionStart;
+                        const end = this.selectionEnd;
+                        this.value = this.value.substring(0, start) + '    ' + this.value.substring(end);
+                        this.selectionStart = this.selectionEnd = start + 4;
+                        saveState();
+                    }
+                });
+            });
+        });
+
+        function toggleHint(id) {
+            const el = document.getElementById(id);
+            if (el) el.classList.toggle('show');
+        }
+
+        function setCardStatus(cardId, fbId, status, message) {
+            const card = document.getElementById(cardId);
+            const fb = document.getElementById(fbId);
+            if (card) {
+                card.classList.remove('correct', 'partial', 'incorrect');
+                if (status === 'ok') card.classList.add('correct');
+                else if (status === 'warn') card.classList.add('partial');
+                else if (status === 'err') card.classList.add('incorrect');
+            }
+            if (fb) {
+                fb.className = 'feedback-box show ' + status;
+                fb.innerHTML = message;
+            }
+        }
+
+        function updateGlobalScore() {
+            const s1 = scores.e1p1 + scores.e1p2 + scores.e1p3 + scores.e1p4;
+            const s2 = scores.e2p1 + scores.e2p2;
+            const s3 = scores.e3p1 + scores.e3p2 + scores.e3p3 + scores.e3p4;
+            const s4 = scores.e4a + scores.e4b + scores.e4c + scores.e4d;
+            const s5 = scores.e5a + scores.e5b + scores.e5c + scores.e5d;
+            const total = s1 + s2 + s3 + s4 + s5;
+
+            document.getElementById('badge-ej1').textContent = `${s1.toFixed(2)} / 2.00 ptos`;
+            document.getElementById('badge-ej2').textContent = `${s2.toFixed(2)} / 2.00 ptos`;
+            document.getElementById('badge-ej3').textContent = `${s3.toFixed(2)} / 2.00 ptos`;
+            document.getElementById('badge-ej4').textContent = `${s4.toFixed(2)} / 2.00 ptos`;
+            document.getElementById('badge-ej5').textContent = `${s5.toFixed(2)} / 2.00 ptos`;
+
+            document.getElementById('global-score').textContent = total.toFixed(2);
+            document.getElementById('print-score-text').textContent = `Calificación Autoevaluada: ${total.toFixed(2)} / 10.00`;
+        }
+
+        // ===================================================================
+        // VALIDADOR EJERCICIO 1
+        // ===================================================================
+        const expectedEj1 = {
+            e1p1: ['0', '1', '2', '3', '4'],
+            e1p2: ['2', '3', '4', '5', '6'],
+            e1p3: ['10', '8', '6', '4', '2'],
+            e1p4: ['Python', '0', 'Python', '1', 'Python', '2', 'Python', '3']
+        };
+
+        function checkEj1(id) {
+            const raw = document.getElementById(id + '-ans').value.trim();
+            if (!raw) {
+                scores[id] = 0;
+                setCardStatus('card-' + id, 'fb-' + id, 'err', '⚠️ Escribe la salida que mostrará el programa antes de comprobar.');
+                updateGlobalScore();
+                return;
+            }
+
+            // Extraer tokens por líneas (o por espacios si los puso en una línea)
+            let lines = raw.split(/\r?\n/).map(l => l.trim()).filter(l => l !== '');
+            const exp = expectedEj1[id];
+
+            // Comparación exacta por líneas
+            const exactLines = lines.length === exp.length && lines.every((val, idx) => val.toLowerCase() === exp[idx].toLowerCase());
+
+            // Comparación flexible si puso los valores separados por espacios o comas en una sola línea
+            const tokens = raw.split(/[\s,]+/).map(t => t.trim()).filter(t => t !== '');
+            const exactTokens = tokens.length === exp.length && tokens.every((val, idx) => val.toLowerCase() === exp[idx].toLowerCase());
+
+            if (exactLines) {
+                scores[id] = 0.5;
+                setCardStatus('card-' + id, 'fb-' + id, 'ok', '✅ ¡Perfecto! La salida coincide línea por línea con lo que imprime Python.');
+            } else if (exactTokens) {
+                scores[id] = 0.45;
+                setCardStatus('card-' + id, 'fb-' + id, 'ok', '✅ ¡Valores correctos! (Recuerda que cada <code>print()</code> escribe en una línea nueva).');
+            } else {
+                scores[id] = 0;
+                setCardStatus('card-' + id, 'fb-' + id, 'err', `❌ No coincide exactamente. Se esperaban ${exp.length} líneas de salida. Revisa los límites de <code>range()</code>.`);
+            }
+            updateGlobalScore();
+            saveState();
+        }
+
+        // ===================================================================
+        // VALIDADOR EJERCICIO 2
+        // ===================================================================
+        function markCell(id, isOk) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.classList.remove('cell-ok', 'cell-err');
+            el.classList.add(isOk ? 'cell-ok' : 'cell-err');
+        }
+
+        function checkEj2P1() {
+            const expI = ['0', '1', '2', '3', '4'];
+            const expC = ['2', '4', '6', '8', '10'];
+            let hits = 0;
+
+            for (let k = 1; k <= 5; k++) {
+                const valI = document.getElementById(`e2p1-i${k}`).value.trim();
+                const valC = document.getElementById(`e2p1-c${k}`).value.trim();
+                const okI = valI === expI[k - 1];
+                const okC = valC === expC[k - 1];
+                markCell(`e2p1-i${k}`, okI);
+                markCell(`e2p1-c${k}`, okC);
+                if (okI) hits++;
+                if (okC) hits++;
+            }
+
+            const finalVal = document.getElementById('e2p1-final').value.trim();
+            const okFinal = /\b10\b/.test(finalVal);
+            if (okFinal) hits += 2; // Peso sobre 12
+
+            scores.e2p1 = Math.round((hits / 12) * 100) / 100;
+
+            if (hits === 12) {
+                setCardStatus('card-e2p1', 'fb-e2p1', 'ok', '✅ ¡Excelente! Has seguido la traza de <code>i</code> (0 a 4) y de <code>contador</code> (2 a 10) a la perfección.');
+            } else if (hits >= 6) {
+                setCardStatus('card-e2p1', 'fb-e2p1', 'warn', `⚠️ Casi lo tienes (${scores.e2p1.toFixed(2)} / 1.00 pto). Revisa las celdas marcadas en rojo y el valor final.`);
+            } else {
+                setCardStatus('card-e2p1', 'fb-e2p1', 'err', '❌ Hay varios errores en la tabla. Recuerda que <code>range(5)</code> toma valores de 0 a 4 y <code>contador</code> suma 2 en cada paso.');
+            }
+            updateGlobalScore();
+            saveState();
+        }
+
+        function checkEj2P2() {
+            const expI = ['1', '2', '3', '4'];
+            const expS = ['1', '3', '6', '10'];
+            let hits = 0;
+
+            for (let k = 1; k <= 4; k++) {
+                const valI = document.getElementById(`e2p2-i${k}`).value.trim();
+                const valS = document.getElementById(`e2p2-s${k}`).value.trim();
+                const okI = valI === expI[k - 1];
+                const okS = valS === expS[k - 1];
+                markCell(`e2p2-i${k}`, okI);
+                markCell(`e2p2-s${k}`, okS);
+                if (okI) hits++;
+                if (okS) hits++;
+            }
+
+            // Fila 5: range(1,5) solo tiene 4 iteraciones (vacío, '-', 'no', 'ninguno')
+            const i5 = document.getElementById('e2p2-i5').value.trim().toLowerCase();
+            const s5 = document.getElementById('e2p2-s5').value.trim().toLowerCase();
+            const validEmpty = ['', '-', 'no', 'ninguno', 'fin', 'x', 'n/a', 'no hay'];
+            const ok5 = validEmpty.includes(i5) && (validEmpty.includes(s5) || s5 === '10');
+            markCell('e2p2-i5', validEmpty.includes(i5));
+            markCell('e2p2-s5', validEmpty.includes(s5) || s5 === '10');
+            if (ok5) hits += 1;
+
+            // Preguntas finales
+            const seqRaw = document.getElementById('e2p2-seq').value.trim();
+            const seqNums = (seqRaw.match(/\d+/g) || []);
+            const okSeq = seqNums.join(',') === '1,3,6,10' || seqNums.join(',') === '0,1,3,6,10';
+            if (okSeq) hits += 1.5;
+
+            const finalVal = document.getElementById('e2p2-final').value.trim();
+            const okFinal = /\b10\b/.test(finalVal);
+            if (okFinal) hits += 1.5;
+
+            scores.e2p2 = Math.round((hits / 12) * 100) / 100;
+
+            if (hits === 12) {
+                setCardStatus('card-e2p2', 'fb-e2p2', 'ok', '✅ ¡Brillante! Has detectado que solo hay 4 iteraciones y cómo <code>suma</code> acumula 1, 3, 6 y 10.');
+            } else if (hits >= 6) {
+                setCardStatus('card-e2p2', 'fb-e2p2', 'warn', `⚠️ Vas por buen camino (${scores.e2p2.toFixed(2)} / 1.00 pto). Revisa las casillas marcadas o las preguntas inferiores.`);
+            } else {
+                setCardStatus('card-e2p2', 'fb-e2p2', 'err', '❌ Revisa la evolución de <code>suma = suma + i</code>. En cada vuelta se le suma el nuevo valor de <code>i</code> al valor que ya tenía <code>suma</code>.');
+            }
+            updateGlobalScore();
+            saveState();
+        }
+
+        // ===================================================================
+        // VALIDADOR EJERCICIO 3
+        // ===================================================================
+        function checkEj3(id) {
+            const what = document.getElementById(`${id}-what`).value;
+            const explain = document.getElementById(`${id}-explain`).value.trim();
+            const fix = document.getElementById(`${id}-fix`).value.trim();
+
+            let pts = 0;
+            let messages = [];
+
+            if (what === 'correct') {
+                pts += 0.2;
+            } else {
+                messages.push('Revisa el desplegable sobre qué hace realmente el programa.');
+            }
+
+            if (explain.length >= 8) {
+                pts += 0.05;
+            } else {
+                messages.push('Añade una breve explicación con tus palabras.');
+            }
+
+            // Validar la corrección del código Python
+            let codeOk = false;
+            if (id === 'e3p1') {
+                codeOk = /for\s+i\s+in\s+range\s*\(\s*1\s*,\s*11\s*\)\s*:/.test(fix) && /print\s*\(\s*i\s*\)/.test(fix);
+                if (!codeOk) messages.push('Para llegar al 10, debes cambiar el rango a <code>range(1, 11)</code>.');
+            } else if (id === 'e3p2') {
+                codeOk = /for\s+i\s+in\s+range\s*\(\s*5\s*\)\s*:/.test(fix) && /print\s*\(\s*["']Hola["']\s*\)/.test(fix);
+                if (!codeOk) messages.push('Asegúrate de colocar los dos puntos <code>:</code> al final de <code>for i in range(5):</code>.');
+            } else if (id === 'e3p3') {
+                const hasWhile = /while\s+contador\s*<=\s*5\s*:/.test(fix) || /while\s+contador\s*<\s*6\s*:/.test(fix);
+                const hasInc = /contador\s*=\s*contador\s*\+\s*1/.test(fix) || /contador\s*\+=\s*1/.test(fix);
+                codeOk = hasWhile && hasInc && /print\s*\(\s*contador\s*\)/.test(fix);
+                if (!codeOk) messages.push('Dentro del bucle <code>while</code> debes incrementar la variable con <code>contador += 1</code> o <code>contador = contador + 1</code>.');
+            } else if (id === 'e3p4') {
+                const hasFor = /for\s+i\s+in\s+range\s*\(\s*1\s*,\s*6\s*\)\s*:/.test(fix);
+                const hasAcc = /suma\s*=\s*suma\s*\+\s*i/.test(fix) || /suma\s*\+=\s*i/.test(fix);
+                codeOk = hasFor && hasAcc && /print\s*\(\s*suma\s*\)/.test(fix);
+                if (!codeOk) messages.push('Cambia <code>suma = i</code> por <code>suma = suma + i</code> (o <code>suma += i</code>) para acumular.');
+            }
+
+            if (codeOk) pts += 0.25;
+            scores[id] = Math.round(pts * 100) / 100;
+
+            if (pts === 0.5) {
+                setCardStatus(`card-${id}`, `fb-${id}`, 'ok', '✅ ¡Error diagnosticado y corregido perfectamente!');
+            } else if (pts >= 0.25) {
+                setCardStatus(`card-${id}`, `fb-${id}`, 'warn', '⚠️ Parcialmente correcto: ' + messages.join(' '));
+            } else {
+                setCardStatus(`card-${id}`, `fb-${id}`, 'err', '❌ ' + messages.join(' '));
+            }
+
+            updateGlobalScore();
+            saveState();
+        }
+
+        // ===================================================================
+        // INTÉRPRETE LIGERO DE PYTHON PARA BUCLES (EJERCICIOS 4 Y 5)
+        // ===================================================================
+        function simulatePython(code, mockInputs = []) {
+            const cleanLines = [];
+            const rawLines = code.split(/\r?\n/);
+
+            for (let idx = 0; idx < rawLines.length; idx++) {
+                // Quitar comentarios respetando strings básicos
+                let line = rawLines[idx].replace(/#.*$/, '');
+                if (line.trim() === '') continue;
+                const indent = line.match(/^\s*/)[0].length;
+                cleanLines.push({ indent, text: line.trim(), lineNum: idx + 1 });
+            }
+
+            if (cleanLines.length === 0) {
+                return { ok: false, error: 'El código está vacío.', outputs: [] };
+            }
+
+            const env = {};
+            const outputs = [];
+            let inputIdx = 0;
+            let steps = 0;
+            const MAX_STEPS = 600;
+
+            function evalExpr(expr) {
+                expr = expr.trim();
+                // int(input(...)) o float(input(...)) o input(...)
+                if (/^(int|float)\s*\(\s*input\s*\(.*\)\s*\)$/.test(expr) || /^input\s*\(.*\)$/.test(expr)) {
+                    const val = inputIdx < mockInputs.length ? mockInputs[inputIdx++] : 5;
+                    return Number(val);
+                }
+
+                // f-strings sencillos: f"..."
+                if (/^f(["'])(.*)\1$/.test(expr)) {
+                    const inner = expr.slice(2, -1);
+                    return inner.replace(/\{([^}]+)\}/g, (_, sub) => evalExpr(sub));
+                }
+
+                // String literal
+                if (/^(["'])(.*)\1$/.test(expr)) {
+                    return expr.slice(1, -1);
+                }
+
+                // Reemplazar variables por sus valores actuales en env
+                const jsExpr = expr
+                    .replace(/\band\b/g, '&&')
+                    .replace(/\bor\b/g, '||')
+                    .replace(/\bnot\b/g, '!')
+                    .replace(/\bTrue\b/g, 'true')
+                    .replace(/\bFalse\b/g, 'false')
+                    .replace(/[a-zA-Z_]\w*/g, (name) => {
+                        if (['true', 'false', 'Math'].includes(name)) return name;
+                        if (Object.prototype.hasOwnProperty.call(env, name)) {
+                            const v = env[name];
+                            return typeof v === 'string' ? JSON.stringify(v) : v;
+                        }
+                        throw new Error(`La variable '${name}' no está definida.`);
+                    });
+
+                return Function(`"use strict"; return (${jsExpr});`)();
+            }
+
+            function parseBlock(startIndex, parentIndent) {
+                const block = [];
+                let i = startIndex;
+                while (i < cleanLines.length && cleanLines[i].indent > parentIndent) {
+                    block.push(i);
+                    i++;
+                }
+                return i;
+            }
+
+            function execRange(startIdx, endIdx) {
+                let i = startIdx;
+                while (i < endIdx) {
+                    if (++steps > MAX_STEPS) {
+                        throw new Error('Se superó el límite de iteraciones (posible bucle infinito).');
+                    }
+
+                    const item = cleanLines[i];
+                    const t = item.text;
+
+                    // 1. Bucle FOR: for var in range(...):
+                    const forMatch = t.match(/^for\s+([a-zA-Z_]\w*)\s+in\s+range\s*\(([^)]*)\)\s*:$/);
+                    if (forMatch) {
+                        const varName = forMatch[1];
+                        const args = forMatch[2].split(',').map(a => Number(evalExpr(a)));
+                        let rStart = 0, rStop = 0, rStep = 1;
+                        if (args.length === 1) { rStop = args[0]; }
+                        else if (args.length === 2) { rStart = args[0]; rStop = args[1]; }
+                        else if (args.length === 3) { rStart = args[0]; rStop = args[1]; rStep = args[2]; }
+
+                        if (rStep === 0 || args.some(isNaN)) {
+                            throw new Error(`Línea ${item.lineNum}: Parámetros inválidos en range().`);
+                        }
+
+                        const nextIdx = parseBlock(i + 1, item.indent);
+                        if (nextIdx === i + 1) {
+                            throw new Error(`Línea ${item.lineNum}: El bloque dentro del 'for' debe estar indentado.`);
+                        }
+
+                        for (let val = rStart; rStep > 0 ? val < rStop : val > rStop; val += rStep) {
+                            env[varName] = val;
+                            execRange(i + 1, nextIdx);
+                        }
+                        i = nextIdx;
+                        continue;
+                    }
+
+                    // 2. Bucle WHILE: while cond:
+                    const whileMatch = t.match(/^while\s+(.+):$/);
+                    if (whileMatch) {
+                        const condExpr = whileMatch[1];
+                        const nextIdx = parseBlock(i + 1, item.indent);
+                        if (nextIdx === i + 1) {
+                            throw new Error(`Línea ${item.lineNum}: El bloque dentro del 'while' debe estar indentado.`);
+                        }
+                        while (evalExpr(condExpr)) {
+                            if (++steps > MAX_STEPS) {
+                                throw new Error('Posible bucle infinito detectado en while.');
+                            }
+                            execRange(i + 1, nextIdx);
+                        }
+                        i = nextIdx;
+                        continue;
+                    }
+
+                    // 3. Estructura IF / ELIF / ELSE
+                    const ifMatch = t.match(/^if\s+(.+):$/);
+                    if (ifMatch) {
+                        let branchExecuted = false;
+                        let cursor = i;
+
+                        while (cursor < endIdx) {
+                            const curLine = cleanLines[cursor];
+                            if (curLine.indent !== item.indent) break;
+
+                            const mIf = curLine.text.match(/^if\s+(.+):$/);
+                            const mElif = curLine.text.match(/^elif\s+(.+):$/);
+                            const mElse = curLine.text.match(/^else\s*:$/);
+
+                            if ((mIf && cursor === i) || mElif || mElse) {
+                                const blockEnd = parseBlock(cursor + 1, curLine.indent);
+                                if (!branchExecuted) {
+                                    const cond = mElse ? true : evalExpr((mIf || mElif)[1]);
+                                    if (cond) {
+                                        execRange(cursor + 1, blockEnd);
+                                        branchExecuted = true;
+                                    }
+                                }
+                                cursor = blockEnd;
+                            } else {
+                                break;
+                            }
+                        }
+                        i = cursor;
+                        continue;
+                    }
+
+                    // 4. Instrucción PRINT(...)
+                    const printMatch = t.match(/^print\s*\((.*)\)$/);
+                    if (printMatch) {
+                        const rawArgs = printMatch[1].trim();
+                        if (rawArgs === '') {
+                            outputs.push('');
+                        } else {
+                            // Dividir argumentos de print por comas fuera de comillas
+                            const parts = [];
+                            let cur = '', inQ = null;
+                            for (let ch of rawArgs) {
+                                if ((ch === '"' || ch === "'") && !inQ) inQ = ch;
+                                else if (ch === inQ) inQ = null;
+                                if (ch === ',' && !inQ) {
+                                    parts.push(cur.trim());
+                                    cur = '';
+                                } else {
+                                    cur += ch;
+                                }
+                            }
+                            if (cur.trim()) parts.push(cur.trim());
+                            const vals = parts
+                                .filter(p => !p.startsWith('end='))
+                                .map(p => evalExpr(p));
+                            outputs.push(vals.join(' '));
+                        }
+                        i++;
+                        continue;
+                    }
+
+                    // 5. Asignación compuesta (+=, -=)
+                    const augMatch = t.match(/^([a-zA-Z_]\w*)\s*(\+=|-=)\s*(.+)$/);
+                    if (augMatch) {
+                        const vName = augMatch[1];
+                        const op = augMatch[2];
+                        const rhs = Number(evalExpr(augMatch[3]));
+                        if (!Object.prototype.hasOwnProperty.call(env, vName)) {
+                            throw new Error(`Línea ${item.lineNum}: Variable '${vName}' usada antes de inicializarla.`);
+                        }
+                        env[vName] = op === '+=' ? env[vName] + rhs : env[vName] - rhs;
+                        i++;
+                        continue;
+                    }
+
+                    // 6. Asignación normal (=)
+                    const assignMatch = t.match(/^([a-zA-Z_]\w*)\s*=\s*(.+)$/);
+                    if (assignMatch) {
+                        const vName = assignMatch[1];
+                        env[vName] = evalExpr(assignMatch[2]);
+                        i++;
+                        continue;
+                    }
+
+                    throw new Error(`Línea ${item.lineNum}: Revisa la sintaxis de <code>${t}</code> (¿faltan dos puntos ':' o paréntesis?).`);
+                }
+            }
+
+            try {
+                execRange(0, cleanLines.length);
+                return { ok: true, outputs, env };
+            } catch (err) {
+                return { ok: false, error: err.message, outputs };
+            }
+        }
+
+        function showTerminal(termId, headerText, lines) {
+            const term = document.getElementById(termId);
+            if (!term) return;
+            term.classList.add('show');
+            const preview = lines.length > 22
+                ? [...lines.slice(0, 10), '...', ...lines.slice(-5)].join('\n')
+                : lines.join('\n');
+            term.innerHTML = `<div class="terminal-header">${headerText}</div>${preview || '(Sin salida por pantalla)'}`;
+        }
+
+        // ===================================================================
+        // VALIDADOR EJERCICIO 4
+        // ===================================================================
+        function checkEj4(id) {
+            const code = document.getElementById(`${id}-code`).value;
+            const hasLoop = /\b(for|while)\b/.test(code);
+
+            if (!code.trim()) {
+                scores[id] = 0;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'err', '⚠️ Escribe tu programa en Python antes de comprobar.');
+                updateGlobalScore();
+                return;
+            }
+
+            if (!hasLoop) {
+                scores[id] = 0;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'err', '❌ Debes utilizar una estructura repetitiva (bucle <code>for</code> o <code>while</code>).');
+                updateGlobalScore();
+                return;
+            }
+
+            const mockIn = id === 'e4d' ? [5] : [];
+            const res = simulatePython(code, mockIn);
+
+            if (!res.ok) {
+                scores[id] = 0;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'err', `❌ Error al ejecutar: ${res.error}`);
+                updateGlobalScore();
+                return;
+            }
+
+            const nums = res.outputs.map(o => Number(String(o).trim())).filter(n => !isNaN(n));
+            let expected = [];
+            let termLabel = 'Consola Python';
+
+            if (id === 'e4a') {
+                for (let k = 1; k <= 20; k++) expected.push(k);
+            } else if (id === 'e4b') {
+                for (let k = 2; k <= 30; k += 2) expected.push(k);
+            } else if (id === 'e4c') {
+                for (let k = 50; k >= 0; k -= 5) expected.push(k);
+            } else if (id === 'e4d') {
+                termLabel = 'Consola Python (Prueba con entrada = 5)';
+                for (let k = 5; k >= 0; k--) expected.push(k);
+            }
+
+            showTerminal(`term-${id}`, termLabel, res.outputs);
+
+            const isMatch = nums.length === expected.length && nums.every((v, idx) => v === expected[idx]);
+
+            // Comprobación extra para 4d: que realmente use input()
+            if (id === 'e4d' && !/\binput\s*\(/.test(code)) {
+                scores[id] = 0.25;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'warn', '⚠️ La cuenta atrás funciona, pero recuerda pedir el número al usuario con <code>int(input(...))</code>.');
+            } else if (isMatch) {
+                scores[id] = 0.5;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'ok', '✅ ¡Programa correcto! La secuencia generada es exacta.');
+            } else {
+                scores[id] = 0;
+                setCardStatus(
+                    `card-${id}`,
+                    `fb-${id}`,
+                    'err',
+                    `❌ La secuencia impresa (${nums.slice(0, 4).join(', ')}... hasta ${nums[nums.length - 1] ?? 'nada'}) no coincide con la pedida (${expected[0]}, ${expected[1]}... hasta ${expected[expected.length - 1]}).`
+                );
+            }
+
+            updateGlobalScore();
+            saveState();
+        }
+
+        // ===================================================================
+        // VALIDADOR EJERCICIO 5
+        // ===================================================================
+        function checkEj5(id) {
+            const code = document.getElementById(`${id}-code`).value;
+            if (!code.trim()) {
+                scores[id] = 0;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'err', '⚠️ Escribe tu programa en Python antes de comprobar.');
+                updateGlobalScore();
+                return;
+            }
+
+            const hasLoop = /\b(for|while)\b/.test(code);
+            const hasInput = /\binput\s*\(/.test(code);
+
+            if (!hasLoop || !hasInput) {
+                scores[id] = 0;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'err', '❌ Tu programa debe usar un bucle (<code>for</code> o <code>while</code>) y pedir los datos con <code>input()</code>.');
+                updateGlobalScore();
+                return;
+            }
+
+            // Batería de datos de prueba
+            let testInputs = [4, 6, 10, 2, 8]; // Suma = 30, Media = 6, Count = 5
+            if (id === 'e5d') {
+                testInputs = [7, -3, 0, 12, -5]; // 2 positivos, 2 negativos, 1 cero
+            }
+
+            const res = simulatePython(code, testInputs);
+            if (!res.ok) {
+                scores[id] = 0;
+                setCardStatus(`card-${id}`, `fb-${id}`, 'err', `❌ Error en el código: ${res.error}`);
+                updateGlobalScore();
+                return;
+            }
+
+            showTerminal(`term-${id}`, `Consola Python (Entrada de prueba: ${testInputs.join(', ')})`, res.outputs);
+            const fullOut = res.outputs.join(' ');
+
+            if (id === 'e5a') {
+                const lastOut = res.outputs[res.outputs.length - 1] || '';
+                if (/\b5\b/.test(lastOut)) {
+                    scores.e5a = 0.5;
+                    setCardStatus('card-e5a', 'fb-e5a', 'ok', '✅ ¡Muy bien! Has utilizado correctamente una variable contadora para contar los 5 números.');
+                } else {
+                    scores.e5a = 0;
+                    setCardStatus('card-e5a', 'fb-e5a', 'err', '❌ Al final debería mostrar <code>5</code>. Asegúrate de incrementar tu contador en cada vuelta e imprimirlo al final.');
+                }
+            } else if (id === 'e5b') {
+                const lastOut = res.outputs[res.outputs.length - 1] || '';
+                if (/\b30\b/.test(lastOut)) {
+                    scores.e5b = 0.5;
+                    setCardStatus('card-e5b', 'fb-e5b', 'ok', '✅ ¡Perfecto! Con la entrada de prueba (4, 6, 10, 2, 8) tu acumulador calcula la suma <code>30</code>.');
+                } else {
+                    scores.e5b = 0;
+                    setCardStatus('card-e5b', 'fb-e5b', 'err', '❌ Con los números de prueba (4, 6, 10, 2, 8) la suma final debe dar <code>30</code>. Revisa tu variable acumuladora.');
+                }
+            } else if (id === 'e5c') {
+                const lastOut = res.outputs[res.outputs.length - 1] || '';
+                if (/\b6(\.0)?\b/.test(lastOut)) {
+                    scores.e5c = 0.5;
+                    setCardStatus('card-e5c', 'fb-e5c', 'ok', '✅ ¡Excelente! Acumulas la suma (30) y calculas la media (<code>6.0</code>) correctamente.');
+                } else {
+                    scores.e5c = 0;
+                    setCardStatus('card-e5c', 'fb-e5c', 'err', '❌ Con los números de prueba (4, 6, 10, 2, 8) la media debería ser <code>6.0</code> (suma / 5).');
+                }
+            } else if (id === 'e5d') {
+                // Para [7, -3, 0, 12, -5] -> 2 positivos, 2 negativos, 1 cero
+                // Probamos también un segundo caso [5, 8, 9, -2, 0] -> 3, 1, 1 para evitar valores fijos
+                const res2 = simulatePython(code, [5, 8, 9, -2, 0]);
+                const out2 = res2.ok ? res2.outputs.join(' ') : '';
+                const envVals1 = Object.values(res.env);
+                const envVals2 = res2.ok ? Object.values(res2.env) : [];
+
+                const ok1 = (/\b2\b/.test(fullOut) && /\b1\b/.test(fullOut)) || (envVals1.includes(2) && envVals1.includes(1));
+                const ok2 = (/\b3\b/.test(out2) && /\b1\b/.test(out2)) || (envVals2.includes(3) && envVals2.includes(1));
+
+                if (ok1 && ok2) {
+                    scores.e5d = 0.5;
+                    setCardStatus('card-e5d', 'fb-e5d', 'ok', '✅ ¡Magnífico! Clasificas y cuentas correctamente los números positivos, negativos y ceros.');
+                } else {
+                    scores.e5d = 0;
+                    setCardStatus('card-e5d', 'fb-e5d', 'err', '❌ Para la entrada (7, -3, 0, 12, -5) debería contar 2 positivos, 2 negativos y 1 cero, e imprimirlos con <code>print()</code>.');
+                }
+            }
+
+            updateGlobalScore();
+            saveState();
+        }
+
+        // ===================================================================
+        // EVALUACIÓN COMPLETA, GUARDADO Y EXPORTACIÓN PARA EL PROFESOR
+        // ===================================================================
+        function evaluateAll(scrollToFirst = false) {
+            ['e1p1', 'e1p2', 'e1p3', 'e1p4'].forEach(checkEj1);
+            checkEj2P1();
+            checkEj2P2();
+            ['e3p1', 'e3p2', 'e3p3', 'e3p4'].forEach(checkEj3);
+            ['e4a', 'e4b', 'e4c', 'e4d'].forEach(checkEj4);
+            ['e5a', 'e5b', 'e5c', 'e5d'].forEach(checkEj5);
+            updateGlobalScore();
+            saveState();
+        }
+
+        function saveState() {
+            const data = {};
+            document.querySelectorAll('input, textarea, select').forEach(el => {
+                if (el.id) data[el.id] = el.value;
+            });
+            data._scores = scores;
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                const ind = document.getElementById('autosave-indicator');
+                if (ind) {
+                    ind.textContent = '💾 Guardado (' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) + ')';
+                }
+            } catch (e) {
+                // Ignorar errores de cuota
+            }
+        }
+
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (!raw) return;
+                const data = JSON.parse(raw);
+                Object.keys(data).forEach(k => {
+                    if (k === '_scores') return;
+                    const el = document.getElementById(k);
+                    if (el) el.value = data[k];
+                });
+                if (data._scores) {
+                    Object.assign(scores, data._scores);
+                    updateGlobalScore();
+                }
+            } catch (e) {
+                console.warn('No se pudo restaurar el estado previo.');
+            }
+        }
+
+        function resetNotebook() {
+            if (!confirm('¿Estás seguro/a de que quieres borrar todas tus respuestas y empezar de cero?')) return;
+            localStorage.removeItem(STORAGE_KEY);
+            location.reload();
+        }
+
+        function exportToPrint() {
+            const stName = document.getElementById('st-name').value.trim();
+            if (!stName) {
+                alert('Por favor, escribe tu Nombre y Apellidos en la parte superior antes de generar el PDF de entrega.');
+                document.getElementById('st-name').focus();
+                return;
+            }
+            evaluateAll();
+            window.print();
+        }
+
+        function exportHTMLReport() {
+            const stName = document.getElementById('st-name').value.trim();
+            if (!stName) {
+                alert('Por favor, escribe tu Nombre y Apellidos en la parte superior antes de descargar tu entrega.');
+                document.getElementById('st-name').focus();
+                return;
+            }
+            evaluateAll();
+
+            // Fijar los valores actuales en los atributos del DOM para que el HTML descargado conserve todo
+            document.querySelectorAll('input').forEach(inp => {
+                inp.setAttribute('value', inp.value);
+            });
+            document.querySelectorAll('textarea').forEach(ta => {
+                ta.textContent = ta.value;
+            });
+            document.querySelectorAll('select').forEach(sel => {
+                Array.from(sel.options).forEach(opt => {
+                    if (opt.value === sel.value) opt.setAttribute('selected', 'selected');
+                    else opt.removeAttribute('selected');
+                });
+            });
+
+            const safeName = stName.toLowerCase().replace(/[^a-z0-9áéíóúñ]+/gi, '_');
+            const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `entrega_bucles_${safeName}.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
+

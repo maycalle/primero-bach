@@ -172,6 +172,8 @@ else:
 
 ## 6. Es tu turno
 
+> 📝 **Práctica inicial guiada:** Antes de empezar con los programas completos, realiza el [**Cuaderno interactivo de trabajo de bucles en Python**](cuaderno_bucles.html) (se abrirá el cuaderno autoevaluable para rellenar y descargar tu entrega).
+
 **Ejercicio 1.** Escribe un programa llamado **impares.py** que pida al usuario un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
 
 - **Pista:** un número es impar si el resto de su división entre 2 es distinto de 0 (es decir, `n % 2 != 0`).
