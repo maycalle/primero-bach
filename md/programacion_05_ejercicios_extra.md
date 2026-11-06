@@ -48,7 +48,7 @@ En 1937, el matemático **Lothar Collatz** propuso un problema que a día de hoy
 
 - Toma cualquier número entero positivo `n`
 - Si es par, divídelo entre 2.
-- Si es impar, multiplícalo por 3 y súmale 1.ç
+- Si es impar, multiplícalo por 3 y súmale 1.
 - Repite el proceso con el resultado obtenido.
 
 La conjetura afirma que siempre se llega al número 1, sin importar con qué número empieces.
