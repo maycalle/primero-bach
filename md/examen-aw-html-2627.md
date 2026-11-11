@@ -1,4 +1,9 @@
-## Ejercicio 1. Listas y formato de texto
+# HTLM EXAM 26-27 SMR
+
+- Name: 
+- Group: 
+
+## Ejercicio 1. Listas y formato de texto (2,5 puntos)
 
 Escribe el código HTML necesario para representar la siguiente información:
 
@@ -14,7 +19,7 @@ Escribe el código HTML necesario para representar la siguiente información:
 
 Añade, después de la lista, el siguiente párrafo:
 
-"Los elementos químicos se clasifican en diferentes grupos según sus propiedades. Algunos, como el hierro, son muy utilizados en la industria".
+"Los elementos químicos se clasifican según sus propiedades. Algunos, como el hierro, son muy utilizados en la industria".
 
 **Requisitos de formato:**
 
@@ -23,7 +28,7 @@ Añade, después de la lista, el siguiente párrafo:
 - "propiedades" debe aparecer en cursiva.
 - "hierro" debe aparecer resaltada en amarillo (como si la hubiéramos destacado con un rotulador fosforito)
 
-## Ejercicio 2. Listas
+## Ejercicio 2. Listas (1,5 puntos)
 
 Escribe el código HTML necesario para mostrar la siguiente información:
 
@@ -36,7 +41,7 @@ Escribe el código HTML necesario para mostrar la siguiente información:
     <dd>A fast storage device that uses flash memory. </dd>
 <dl>
 
-## Ejercicio 3. Construye una tabla HTML
+## Ejercicio 3. Construye una tabla HTML (2,5 puntos)
 
 Escribe el código HTML necesario para crear una tabla con la siguiente información:
 
@@ -66,7 +71,13 @@ Escribe el código HTML necesario para crear una tabla con la siguiente informac
     </tbody>
 </table>
 
-## Ejercicio 4. Imagen, enlace y formato de texto
+**Requisitos:**
+
+- La tabla debe incluir una sección específica para la fila de encabezados y otra para las filas que contienen los datos.
+- La primera fila debe identificar las columnas mediante celdas de encabezado.
+- Debes utilizar las combinaciones de celdas indicadas en el ejemplo.
+
+## Ejercicio 4. Imagen, enlace y formato de texto (3,5 puntos)
 
 Escribe el código HTML necesario para realizar las siguientes tareas:
 
@@ -79,5 +90,6 @@ Escribe el código HTML necesario para realizar las siguientes tareas:
 
 A continuación, añade un párrafo con el siguiente texto:
 
-"Marte tiene una atmósfera muy fina. Su superficie tiene una temperatura media de -65°C. Su atmósfera contiene dióxido de carbono (CO₂) y su gravedad es  un 38 % de la terrestre. La superficie de Marte tiene una extensión de 144.800.000 km²".
+"La superficie de Marte tiene una temperatura media de -65°C y una extensión de 144.800.000 km². Su atmósfera contiene CO₂ y su gravedad es un 38 % de la terrestre."
+
 
